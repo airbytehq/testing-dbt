@@ -1,0 +1,18 @@
+config:
+  partial_parse: true
+  printer_width: 120
+  send_anonymous_usage_stats: false
+  use_colors: true
+tests:
+  outputs:
+    prod:
+      database: test_dbt
+      driver: ODBC Driver 17 for SQL Server
+      password: MyStr0ngP@ssw0rd
+      port: 4000
+      schema: test_dbt
+      server: localhost
+      threads: 32
+      type: sqlserver
+      user: SA
+  target: prod

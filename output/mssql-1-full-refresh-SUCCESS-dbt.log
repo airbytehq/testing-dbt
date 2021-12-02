@@ -1,0 +1,1100 @@
+2021-12-02 20:45:56.744372 (MainThread): Running with dbt=0.21.1
+2021-12-02 20:45:56.855343 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=True, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/data/db_mssql', project_dir='/data/first_project', record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-12-02 20:45:56.863777 (MainThread): Tracking: do not track
+2021-12-02 20:45:56.882602 (MainThread): Unable to do partial parsing because target/partial_parse.msgpack not found
+2021-12-02 20:45:56.958067 (MainThread): Parsing ../macros/boolean_values.sql
+2021-12-02 20:45:56.965259 (MainThread): Parsing ../macros/normalize_identifier.sql
+2021-12-02 20:45:56.970163 (MainThread): Parsing macros/merge.sql
+2021-12-02 20:45:56.973900 (MainThread): Parsing macros/catalog.sql
+2021-12-02 20:45:56.976751 (MainThread): Parsing macros/indexes.sql
+2021-12-02 20:45:56.988853 (MainThread): Parsing macros/adapters.sql
+2021-12-02 20:45:57.066095 (MainThread): Parsing macros/materializations/test.sql
+2021-12-02 20:45:57.080080 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-02 20:45:57.092171 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-02 20:45:57.095318 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-02 20:45:57.097823 (MainThread): Parsing macros/core.sql
+2021-12-02 20:45:57.103882 (MainThread): Parsing macros/etc/datetime.sql
+2021-12-02 20:45:57.117530 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-12-02 20:45:57.121275 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-12-02 20:45:57.126073 (MainThread): Parsing macros/etc/query.sql
+2021-12-02 20:45:57.128934 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-12-02 20:45:57.132743 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-12-02 20:45:57.136009 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-12-02 20:45:57.139387 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-12-02 20:45:57.142759 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-12-02 20:45:57.145568 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-12-02 20:45:57.149903 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-12-02 20:45:57.152993 (MainThread): Parsing macros/materializations/helpers.sql
+2021-12-02 20:45:57.169319 (MainThread): Parsing macros/materializations/test.sql
+2021-12-02 20:45:57.180719 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-02 20:45:57.216819 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-02 20:45:57.269881 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-02 20:45:57.297411 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-12-02 20:45:57.301917 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-12-02 20:45:57.325480 (MainThread): Parsing macros/materializations/table/table.sql
+2021-12-02 20:45:57.338022 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-12-02 20:45:57.344719 (MainThread): Parsing macros/materializations/view/view.sql
+2021-12-02 20:45:57.356242 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-12-02 20:45:57.389244 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-12-02 20:45:57.392876 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-12-02 20:45:57.410035 (MainThread): Parsing macros/adapters/common.sql
+2021-12-02 20:45:57.781944 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:45:57.801962 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:45:57.812379 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:45:57.820103 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:45:57.826338 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:45:57.832155 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:45:57.837230 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:45:57.842254 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:45:57.847729 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:45:57.853826 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:45:57.859134 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:45:57.864412 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:45:57.869575 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:45:57.874778 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:45:57.936231 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-12-02 20:45:57.938384 (MainThread): Found 14 models, 0 tests, 0 snapshots, 0 analyses, 194 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-12-02 20:45:57.941702 (MainThread): 
+2021-12-02 20:45:57.943278 (MainThread): Acquiring new sqlserver connection "master".
+2021-12-02 20:45:57.946308 (ThreadPoolExecutor-0_0): Acquiring new sqlserver connection "list_test_dbt".
+2021-12-02 20:45:57.957292 (ThreadPoolExecutor-0_0): Using sqlserver connection "list_test_dbt".
+2021-12-02 20:45:57.958891 (ThreadPoolExecutor-0_0): On list_test_dbt: USE "test_dbt";
+    select  name as [schema]
+    from sys.schemas
+  
+2021-12-02 20:45:57.960441 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-12-02 20:45:57.961646 (ThreadPoolExecutor-0_0): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:45:57.979046 (ThreadPoolExecutor-0_0): Connected to db: test_dbt
+2021-12-02 20:45:57.983685 (ThreadPoolExecutor-0_0): SQL status: OK in 0.02 seconds
+2021-12-02 20:45:57.986359 (ThreadPoolExecutor-0_0): On list_test_dbt: Close
+2021-12-02 20:45:57.988522 (ThreadPoolExecutor-0_0): Acquiring new sqlserver connection "create_test_dbt_test_dbt".
+2021-12-02 20:45:57.989909 (ThreadPoolExecutor-0_0): Acquiring new sqlserver connection "create_test_dbt_test_dbt".
+2021-12-02 20:45:57.991224 (ThreadPoolExecutor-0_0): Creating schema ""test_dbt"."test_dbt""
+2021-12-02 20:45:57.997708 (ThreadPoolExecutor-0_0): Using sqlserver connection "create_test_dbt_test_dbt".
+2021-12-02 20:45:57.998926 (ThreadPoolExecutor-0_0): On create_test_dbt_test_dbt: USE [test_dbt];
+    IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'test_dbt')
+    BEGIN
+    EXEC('CREATE SCHEMA test_dbt')
+    END
+  
+2021-12-02 20:45:58.000239 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state closed
+2021-12-02 20:45:58.001244 (ThreadPoolExecutor-0_0): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:45:58.009257 (ThreadPoolExecutor-0_0): Connected to db: test_dbt
+2021-12-02 20:45:58.014790 (ThreadPoolExecutor-0_0): SQL status: OK in 0.01 seconds
+2021-12-02 20:45:58.016675 (ThreadPoolExecutor-0_0): On create_test_dbt_test_dbt: COMMIT
+2021-12-02 20:45:58.017797 (ThreadPoolExecutor-0_0): On create_test_dbt_test_dbt: Close
+2021-12-02 20:45:58.021169 (ThreadPoolExecutor-1_0): Acquiring new sqlserver connection "list_test_dbt_test_dbt".
+2021-12-02 20:45:58.028388 (ThreadPoolExecutor-1_0): Using sqlserver connection "list_test_dbt_test_dbt".
+2021-12-02 20:45:58.029812 (ThreadPoolExecutor-1_0): On list_test_dbt_test_dbt: select
+      table_catalog as [database],
+      table_name as [name],
+      table_schema as [schema],
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           else table_type
+      end as table_type
+
+    from [test_dbt].information_schema.tables
+    where table_schema like 'test_dbt'
+  
+2021-12-02 20:45:58.031184 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state init
+2021-12-02 20:45:58.032378 (ThreadPoolExecutor-1_0): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:45:58.041078 (ThreadPoolExecutor-1_0): Connected to db: test_dbt
+2021-12-02 20:45:58.079730 (ThreadPoolExecutor-1_0): SQL status: OK in 0.05 seconds
+2021-12-02 20:45:58.082876 (ThreadPoolExecutor-1_0): On list_test_dbt_test_dbt: ROLLBACK
+2021-12-02 20:45:58.084106 (ThreadPoolExecutor-1_0): On list_test_dbt_test_dbt: Close
+2021-12-02 20:45:58.086124 (MainThread): On master: COMMIT
+2021-12-02 20:45:58.087433 (MainThread): 20:45:58 | Concurrency: 32 threads (target='prod')
+2021-12-02 20:45:58.088577 (MainThread): 20:45:58 | 
+2021-12-02 20:45:58.104318 (Thread-1): Began running node model.incremental_test_schema_change.change_column_names
+2021-12-02 20:45:58.104665 (Thread-2): Began running node model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:45:58.105328 (Thread-3): Began running node model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:45:58.105973 (Thread-4): Began running node model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:45:58.106506 (Thread-5): Began running node model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:45:58.107283 (Thread-6): Began running node model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:45:58.107673 (Thread-1): 20:45:58 | 1 of 14 START incremental model test_dbt.change_column_names................................................. [RUN]
+2021-12-02 20:45:58.107948 (Thread-7): Began running node model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:45:58.108297 (Thread-8): Began running node model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:45:58.108440 (Thread-9): Began running node model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:45:58.123607 (Thread-9): 20:45:58 | 9 of 14 START incremental model test_dbt.convert_column_int_to_boolean....................................... [RUN]
+2021-12-02 20:45:58.108894 (Thread-11): Began running node model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:45:58.126155 (Thread-11): 20:45:58 | 11 of 14 START incremental model test_dbt.convert_column_int_to_string....................................... [RUN]
+2021-12-02 20:45:58.109235 (Thread-13): Began running node model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:45:58.128870 (Thread-13): 20:45:58 | 13 of 14 START incremental model test_dbt.convert_column_string_to_float..................................... [RUN]
+2021-12-02 20:45:58.110602 (Thread-2): 20:45:58 | 2 of 14 START incremental model test_dbt.column_with_quotes.................................................. [RUN]
+2021-12-02 20:45:58.112391 (Thread-3): 20:45:58 | 3 of 14 START incremental model test_dbt.convert_column_boolean_to_float..................................... [RUN]
+2021-12-02 20:45:58.114171 (Thread-4): 20:45:58 | 4 of 14 START incremental model test_dbt.convert_column_boolean_to_int....................................... [RUN]
+2021-12-02 20:45:58.115934 (Thread-5): 20:45:58 | 5 of 14 START incremental model test_dbt.convert_column_boolean_to_string.................................... [RUN]
+2021-12-02 20:45:58.117637 (Thread-6): 20:45:58 | 6 of 14 START incremental model test_dbt.convert_column_float_to_boolean..................................... [RUN]
+2021-12-02 20:45:58.119057 (Thread-1): Acquiring new sqlserver connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:45:58.121081 (Thread-7): 20:45:58 | 7 of 14 START incremental model test_dbt.convert_column_float_to_int......................................... [RUN]
+2021-12-02 20:45:58.122408 (Thread-8): 20:45:58 | 8 of 14 START incremental model test_dbt.convert_column_float_to_string...................................... [RUN]
+2021-12-02 20:45:58.108671 (Thread-10): Began running node model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:45:58.147223 (Thread-10): 20:45:58 | 10 of 14 START incremental model test_dbt.convert_column_int_to_float........................................ [RUN]
+2021-12-02 20:45:58.109071 (Thread-12): Began running node model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:45:58.150863 (Thread-12): 20:45:58 | 12 of 14 START incremental model test_dbt.convert_column_string_to_boolean................................... [RUN]
+2021-12-02 20:45:58.109392 (Thread-14): Began running node model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:45:58.154085 (Thread-14): 20:45:58 | 14 of 14 START incremental model test_dbt.convert_column_string_to_int....................................... [RUN]
+2021-12-02 20:45:58.133028 (Thread-2): Acquiring new sqlserver connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:45:58.134951 (Thread-3): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:45:58.136802 (Thread-4): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:45:58.138305 (Thread-5): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:45:58.140352 (Thread-6): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:45:58.142256 (Thread-1): Compiling model.incremental_test_schema_change.change_column_names
+2021-12-02 20:45:58.143974 (Thread-7): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:45:58.167193 (Thread-7): Compiling model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:45:58.125489 (Thread-9): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:45:58.171851 (Thread-9): Compiling model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:45:58.127854 (Thread-11): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:45:58.153227 (Thread-12): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:45:58.177430 (Thread-12): Compiling model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:45:58.155868 (Thread-14): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:45:58.156793 (Thread-2): Compiling model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:45:58.158101 (Thread-3): Compiling model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:45:58.159591 (Thread-4): Compiling model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:45:58.160823 (Thread-5): Compiling model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:45:58.162164 (Thread-6): Compiling model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:45:58.165936 (Thread-1): Writing injected SQL for node "model.incremental_test_schema_change.change_column_names"
+2021-12-02 20:45:58.146246 (Thread-8): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:45:58.205064 (Thread-8): Compiling model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:45:58.149895 (Thread-10): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:45:58.210753 (Thread-10): Compiling model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:45:58.176293 (Thread-11): Compiling model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:45:58.131233 (Thread-13): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:45:58.180455 (Thread-12): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_boolean"
+2021-12-02 20:45:58.181683 (Thread-14): Compiling model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:45:58.185227 (Thread-2): Writing injected SQL for node "model.incremental_test_schema_change.column_with_quotes"
+2021-12-02 20:45:58.189340 (Thread-3): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_float"
+2021-12-02 20:45:58.193128 (Thread-4): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_int"
+2021-12-02 20:45:58.196807 (Thread-5): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_string"
+2021-12-02 20:45:58.202434 (Thread-6): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_boolean"
+2021-12-02 20:45:58.170618 (Thread-7): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_int"
+2021-12-02 20:45:58.209245 (Thread-8): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_string"
+2021-12-02 20:45:58.175142 (Thread-9): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_boolean"
+2021-12-02 20:45:58.213868 (Thread-10): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_float"
+2021-12-02 20:45:58.217342 (Thread-11): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_string"
+2021-12-02 20:45:58.218516 (Thread-13): Compiling model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:45:58.249390 (Thread-13): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_float"
+2021-12-02 20:45:58.226243 (Thread-1): finished collecting timing info
+2021-12-02 20:45:58.228111 (Thread-12): finished collecting timing info
+2021-12-02 20:45:58.230892 (Thread-2): finished collecting timing info
+2021-12-02 20:45:58.232984 (Thread-3): finished collecting timing info
+2021-12-02 20:45:58.235411 (Thread-4): finished collecting timing info
+2021-12-02 20:45:58.239155 (Thread-5): finished collecting timing info
+2021-12-02 20:45:58.242443 (Thread-6): finished collecting timing info
+2021-12-02 20:45:58.244903 (Thread-7): finished collecting timing info
+2021-12-02 20:45:58.224369 (Thread-14): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_int"
+2021-12-02 20:45:58.250568 (Thread-8): finished collecting timing info
+2021-12-02 20:45:58.278708 (Thread-10): finished collecting timing info
+2021-12-02 20:45:58.290028 (Thread-9): finished collecting timing info
+2021-12-02 20:45:58.307772 (Thread-11): finished collecting timing info
+2021-12-02 20:45:58.381090 (Thread-13): finished collecting timing info
+2021-12-02 20:45:58.432785 (Thread-3): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_float"
+2021-12-02 20:45:58.435097 (Thread-12): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_boolean"
+2021-12-02 20:45:58.436717 (Thread-1): Writing runtime SQL for node "model.incremental_test_schema_change.change_column_names"
+2021-12-02 20:45:58.439632 (Thread-4): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_int"
+2021-12-02 20:45:58.440003 (Thread-2): Writing runtime SQL for node "model.incremental_test_schema_change.column_with_quotes"
+2021-12-02 20:45:58.444680 (Thread-5): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_string"
+2021-12-02 20:45:58.450330 (Thread-6): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_boolean"
+2021-12-02 20:45:58.456498 (Thread-7): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_int"
+2021-12-02 20:45:58.465158 (Thread-8): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_string"
+2021-12-02 20:45:58.466777 (Thread-14): finished collecting timing info
+2021-12-02 20:45:58.470859 (Thread-10): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_float"
+2021-12-02 20:45:58.476503 (Thread-9): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_boolean"
+2021-12-02 20:45:58.481914 (Thread-11): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_string"
+2021-12-02 20:45:58.486676 (Thread-13): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_float"
+2021-12-02 20:45:58.520066 (Thread-3): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:45:58.510839 (Thread-1): Using sqlserver connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:45:58.513155 (Thread-12): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:45:58.514402 (Thread-2): Using sqlserver connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:45:58.508866 (Thread-14): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_int"
+2021-12-02 20:45:58.521963 (Thread-8): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:45:58.542514 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: 
+      
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_float_to_string_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_float_to_string_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_float_to_string"','U') is not null
+      begin
+      drop table "test_dbt"."convert_column_float_to_string"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_float_to_string_temp_view" as
+    select
+    1.1 as column_float_to_string,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."convert_column_float_to_string" FROM
+    "test_dbt"."test_dbt"."convert_column_float_to_string_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_float_to_string_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_float_to_string_temp_view"
+      end
+
+    
+   use [test_dbt];
+  if EXISTS (
+        SELECT * FROM
+        sys.indexes WHERE name = 'test_dbt_convert_column_float_to_string_cci'
+        AND object_id=object_id('test_dbt_convert_column_float_to_string')
+    )
+  DROP index test_dbt.convert_column_float_to_string.test_dbt_convert_column_float_to_string_cci
+  CREATE CLUSTERED COLUMNSTORE INDEX test_dbt_convert_column_float_to_string_cci
+    ON test_dbt.convert_column_float_to_string
+
+   
+
+
+  
+2021-12-02 20:45:58.545662 (Thread-8): Opening a new connection, currently in state init
+2021-12-02 20:45:58.529573 (Thread-1): On model.incremental_test_schema_change.change_column_names: 
+      
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."change_column_names_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."change_column_names_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."change_column_names"','U') is not null
+      begin
+      drop table "test_dbt"."change_column_names"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."change_column_names_temp_view" as
+    select
+    ''a column with underscore'' as column_name,
+    ''a column to rename'' as column_to_rename,
+    ''a column to be deleted'' as column_to_delete,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."change_column_names" FROM
+    "test_dbt"."test_dbt"."change_column_names_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."change_column_names_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."change_column_names_temp_view"
+      end
+
+    
+   use [test_dbt];
+  if EXISTS (
+        SELECT * FROM
+        sys.indexes WHERE name = 'test_dbt_change_column_names_cci'
+        AND object_id=object_id('test_dbt_change_column_names')
+    )
+  DROP index test_dbt.change_column_names.test_dbt_change_column_names_cci
+  CREATE CLUSTERED COLUMNSTORE INDEX test_dbt_change_column_names_cci
+    ON test_dbt.change_column_names
+
+   
+
+
+  
+2021-12-02 20:45:58.532675 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: 
+      
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_string_to_boolean_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_string_to_boolean_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_string_to_boolean"','U') is not null
+      begin
+      drop table "test_dbt"."convert_column_string_to_boolean"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_string_to_boolean_temp_view" as
+    select
+    ''true'' as column_string_to_boolean,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."convert_column_string_to_boolean" FROM
+    "test_dbt"."test_dbt"."convert_column_string_to_boolean_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_string_to_boolean_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_string_to_boolean_temp_view"
+      end
+
+    
+   use [test_dbt];
+  if EXISTS (
+        SELECT * FROM
+        sys.indexes WHERE name = 'test_dbt_convert_column_string_to_boolean_cci'
+        AND object_id=object_id('test_dbt_convert_column_string_to_boolean')
+    )
+  DROP index test_dbt.convert_column_string_to_boolean.test_dbt_convert_column_string_to_boolean_cci
+  CREATE CLUSTERED COLUMNSTORE INDEX test_dbt_convert_column_string_to_boolean_cci
+    ON test_dbt.convert_column_string_to_boolean
+
+   
+
+
+  
+2021-12-02 20:45:58.532967 (Thread-6): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:45:58.552847 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: 
+      
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_float_to_boolean_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_float_to_boolean_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_float_to_boolean"','U') is not null
+      begin
+      drop table "test_dbt"."convert_column_float_to_boolean"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_float_to_boolean_temp_view" as
+    select
+    1.1 as column_float_to_boolean,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."convert_column_float_to_boolean" FROM
+    "test_dbt"."test_dbt"."convert_column_float_to_boolean_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_float_to_boolean_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_float_to_boolean_temp_view"
+      end
+
+    
+   use [test_dbt];
+  if EXISTS (
+        SELECT * FROM
+        sys.indexes WHERE name = 'test_dbt_convert_column_float_to_boolean_cci'
+        AND object_id=object_id('test_dbt_convert_column_float_to_boolean')
+    )
+  DROP index test_dbt.convert_column_float_to_boolean.test_dbt_convert_column_float_to_boolean_cci
+  CREATE CLUSTERED COLUMNSTORE INDEX test_dbt_convert_column_float_to_boolean_cci
+    ON test_dbt.convert_column_float_to_boolean
+
+   
+
+
+  
+2021-12-02 20:45:58.540975 (Thread-5): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:45:58.523904 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: 
+      
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_boolean_to_float_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_boolean_to_float_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_boolean_to_float"','U') is not null
+      begin
+      drop table "test_dbt"."convert_column_boolean_to_float"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_boolean_to_float_temp_view" as
+    select
+    cast(1 as BIT) as column_boolean_to_float,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."convert_column_boolean_to_float" FROM
+    "test_dbt"."test_dbt"."convert_column_boolean_to_float_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_boolean_to_float_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_boolean_to_float_temp_view"
+      end
+
+    
+   use [test_dbt];
+  if EXISTS (
+        SELECT * FROM
+        sys.indexes WHERE name = 'test_dbt_convert_column_boolean_to_float_cci'
+        AND object_id=object_id('test_dbt_convert_column_boolean_to_float')
+    )
+  DROP index test_dbt.convert_column_boolean_to_float.test_dbt_convert_column_boolean_to_float_cci
+  CREATE CLUSTERED COLUMNSTORE INDEX test_dbt_convert_column_boolean_to_float_cci
+    ON test_dbt.convert_column_boolean_to_float
+
+   
+
+
+  
+2021-12-02 20:45:58.543962 (Thread-7): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:45:58.526244 (Thread-10): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:45:58.547030 (Thread-4): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:45:58.547304 (Thread-8): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:45:58.549012 (Thread-9): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:45:58.549418 (Thread-1): Opening a new connection, currently in state closed
+2021-12-02 20:45:58.576673 (Thread-1): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:45:58.551499 (Thread-11): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:45:58.535763 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: 
+      
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."column_with_quotes_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."column_with_quotes_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."column_with_quotes"','U') is not null
+      begin
+      drop table "test_dbt"."column_with_quotes"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."column_with_quotes_temp_view" as
+    select
+    ''a column with tricky name with quotes'' as  "column`_''with""_quotes",
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."column_with_quotes" FROM
+    "test_dbt"."test_dbt"."column_with_quotes_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."column_with_quotes_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."column_with_quotes_temp_view"
+      end
+
+    
+   use [test_dbt];
+  if EXISTS (
+        SELECT * FROM
+        sys.indexes WHERE name = 'test_dbt_column_with_quotes_cci'
+        AND object_id=object_id('test_dbt_column_with_quotes')
+    )
+  DROP index test_dbt.column_with_quotes.test_dbt_column_with_quotes_cci
+  CREATE CLUSTERED COLUMNSTORE INDEX test_dbt_column_with_quotes_cci
+    ON test_dbt.column_with_quotes
+
+   
+
+
+  
+2021-12-02 20:45:58.585677 (Thread-2): Opening a new connection, currently in state closed
+2021-12-02 20:45:58.555960 (Thread-6): Opening a new connection, currently in state init
+2021-12-02 20:45:58.557901 (Thread-14): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:45:58.590818 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: 
+      
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_string_to_int_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_string_to_int_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_string_to_int"','U') is not null
+      begin
+      drop table "test_dbt"."convert_column_string_to_int"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_string_to_int_temp_view" as
+    select
+    ''1'' as column_string_to_int,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."convert_column_string_to_int" FROM
+    "test_dbt"."test_dbt"."convert_column_string_to_int_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_string_to_int_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_string_to_int_temp_view"
+      end
+
+    
+   use [test_dbt];
+  if EXISTS (
+        SELECT * FROM
+        sys.indexes WHERE name = 'test_dbt_convert_column_string_to_int_cci'
+        AND object_id=object_id('test_dbt_convert_column_string_to_int')
+    )
+  DROP index test_dbt.convert_column_string_to_int.test_dbt_convert_column_string_to_int_cci
+  CREATE CLUSTERED COLUMNSTORE INDEX test_dbt_convert_column_string_to_int_cci
+    ON test_dbt.convert_column_string_to_int
+
+   
+
+
+  
+2021-12-02 20:45:58.561923 (Thread-3): Opening a new connection, currently in state init
+2021-12-02 20:45:58.564250 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: 
+      
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_float_to_int_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_float_to_int_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_float_to_int"','U') is not null
+      begin
+      drop table "test_dbt"."convert_column_float_to_int"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_float_to_int_temp_view" as
+    select
+    1.1 as column_float_to_int,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."convert_column_float_to_int" FROM
+    "test_dbt"."test_dbt"."convert_column_float_to_int_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_float_to_int_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_float_to_int_temp_view"
+      end
+
+    
+   use [test_dbt];
+  if EXISTS (
+        SELECT * FROM
+        sys.indexes WHERE name = 'test_dbt_convert_column_float_to_int_cci'
+        AND object_id=object_id('test_dbt_convert_column_float_to_int')
+    )
+  DROP index test_dbt.convert_column_float_to_int.test_dbt_convert_column_float_to_int_cci
+  CREATE CLUSTERED COLUMNSTORE INDEX test_dbt_convert_column_float_to_int_cci
+    ON test_dbt.convert_column_float_to_int
+
+   
+
+
+  
+2021-12-02 20:45:58.566654 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: 
+      
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_int_to_float_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_int_to_float_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_int_to_float"','U') is not null
+      begin
+      drop table "test_dbt"."convert_column_int_to_float"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_int_to_float_temp_view" as
+    select
+    1 as column_int_to_float,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."convert_column_int_to_float" FROM
+    "test_dbt"."test_dbt"."convert_column_int_to_float_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_int_to_float_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_int_to_float_temp_view"
+      end
+
+    
+   use [test_dbt];
+  if EXISTS (
+        SELECT * FROM
+        sys.indexes WHERE name = 'test_dbt_convert_column_int_to_float_cci'
+        AND object_id=object_id('test_dbt_convert_column_int_to_float')
+    )
+  DROP index test_dbt.convert_column_int_to_float.test_dbt_convert_column_int_to_float_cci
+  CREATE CLUSTERED COLUMNSTORE INDEX test_dbt_convert_column_int_to_float_cci
+    ON test_dbt.convert_column_int_to_float
+
+   
+
+
+  
+2021-12-02 20:45:58.568783 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: 
+      
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_boolean_to_int_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_boolean_to_int_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_boolean_to_int"','U') is not null
+      begin
+      drop table "test_dbt"."convert_column_boolean_to_int"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_boolean_to_int_temp_view" as
+    select
+    cast(1 as BIT) as column_boolean_to_int,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."convert_column_boolean_to_int" FROM
+    "test_dbt"."test_dbt"."convert_column_boolean_to_int_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_boolean_to_int_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_boolean_to_int_temp_view"
+      end
+
+    
+   use [test_dbt];
+  if EXISTS (
+        SELECT * FROM
+        sys.indexes WHERE name = 'test_dbt_convert_column_boolean_to_int_cci'
+        AND object_id=object_id('test_dbt_convert_column_boolean_to_int')
+    )
+  DROP index test_dbt.convert_column_boolean_to_int.test_dbt_convert_column_boolean_to_int_cci
+  CREATE CLUSTERED COLUMNSTORE INDEX test_dbt_convert_column_boolean_to_int_cci
+    ON test_dbt.convert_column_boolean_to_int
+
+   
+
+
+  
+2021-12-02 20:45:58.571863 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: 
+      
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_int_to_boolean_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_int_to_boolean_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_int_to_boolean"','U') is not null
+      begin
+      drop table "test_dbt"."convert_column_int_to_boolean"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_int_to_boolean_temp_view" as
+    select
+    1 as column_int_to_boolean,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."convert_column_int_to_boolean" FROM
+    "test_dbt"."test_dbt"."convert_column_int_to_boolean_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_int_to_boolean_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_int_to_boolean_temp_view"
+      end
+
+    
+   use [test_dbt];
+  if EXISTS (
+        SELECT * FROM
+        sys.indexes WHERE name = 'test_dbt_convert_column_int_to_boolean_cci'
+        AND object_id=object_id('test_dbt_convert_column_int_to_boolean')
+    )
+  DROP index test_dbt.convert_column_int_to_boolean.test_dbt_convert_column_int_to_boolean_cci
+  CREATE CLUSTERED COLUMNSTORE INDEX test_dbt_convert_column_int_to_boolean_cci
+    ON test_dbt.convert_column_int_to_boolean
+
+   
+
+
+  
+2021-12-02 20:45:58.605480 (Thread-9): Opening a new connection, currently in state init
+2021-12-02 20:45:58.608169 (Thread-9): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:45:58.582839 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: 
+      
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_int_to_string_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_int_to_string_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_int_to_string"','U') is not null
+      begin
+      drop table "test_dbt"."convert_column_int_to_string"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_int_to_string_temp_view" as
+    select
+    1 as column_int_to_string,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."convert_column_int_to_string" FROM
+    "test_dbt"."test_dbt"."convert_column_int_to_string_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_int_to_string_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_int_to_string_temp_view"
+      end
+
+    
+   use [test_dbt];
+  if EXISTS (
+        SELECT * FROM
+        sys.indexes WHERE name = 'test_dbt_convert_column_int_to_string_cci'
+        AND object_id=object_id('test_dbt_convert_column_int_to_string')
+    )
+  DROP index test_dbt.convert_column_int_to_string.test_dbt_convert_column_int_to_string_cci
+  CREATE CLUSTERED COLUMNSTORE INDEX test_dbt_convert_column_int_to_string_cci
+    ON test_dbt.convert_column_int_to_string
+
+   
+
+
+  
+2021-12-02 20:45:58.555063 (Thread-13): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:45:58.587601 (Thread-2): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:45:58.589301 (Thread-6): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:45:58.558139 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: 
+      
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_boolean_to_string_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_boolean_to_string_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_boolean_to_string"','U') is not null
+      begin
+      drop table "test_dbt"."convert_column_boolean_to_string"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_boolean_to_string_temp_view" as
+    select
+    cast(1 as BIT) as column_boolean_to_string,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."convert_column_boolean_to_string" FROM
+    "test_dbt"."test_dbt"."convert_column_boolean_to_string_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_boolean_to_string_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_boolean_to_string_temp_view"
+      end
+
+    
+   use [test_dbt];
+  if EXISTS (
+        SELECT * FROM
+        sys.indexes WHERE name = 'test_dbt_convert_column_boolean_to_string_cci'
+        AND object_id=object_id('test_dbt_convert_column_boolean_to_string')
+    )
+  DROP index test_dbt.convert_column_boolean_to_string.test_dbt_convert_column_boolean_to_string_cci
+  CREATE CLUSTERED COLUMNSTORE INDEX test_dbt_convert_column_boolean_to_string_cci
+    ON test_dbt.convert_column_boolean_to_string
+
+   
+
+
+  
+2021-12-02 20:45:58.591599 (Thread-1): Connected to db: test_dbt
+2021-12-02 20:45:58.592306 (Thread-14): Opening a new connection, currently in state init
+2021-12-02 20:45:58.593975 (Thread-3): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:45:58.596485 (Thread-7): Opening a new connection, currently in state init
+2021-12-02 20:45:58.599395 (Thread-10): Opening a new connection, currently in state init
+2021-12-02 20:45:58.661188 (Thread-10): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:45:58.551042 (Thread-12): Opening a new connection, currently in state init
+2021-12-02 20:45:58.580217 (Thread-8): Connected to db: test_dbt
+2021-12-02 20:45:58.617032 (Thread-11): Opening a new connection, currently in state init
+2021-12-02 20:45:58.622124 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: 
+      
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_string_to_float_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_string_to_float_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_string_to_float"','U') is not null
+      begin
+      drop table "test_dbt"."convert_column_string_to_float"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_string_to_float_temp_view" as
+    select
+    ''1.1'' as column_string_to_float,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."convert_column_string_to_float" FROM
+    "test_dbt"."test_dbt"."convert_column_string_to_float_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_string_to_float_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_string_to_float_temp_view"
+      end
+
+    
+   use [test_dbt];
+  if EXISTS (
+        SELECT * FROM
+        sys.indexes WHERE name = 'test_dbt_convert_column_string_to_float_cci'
+        AND object_id=object_id('test_dbt_convert_column_string_to_float')
+    )
+  DROP index test_dbt.convert_column_string_to_float.test_dbt_convert_column_string_to_float_cci
+  CREATE CLUSTERED COLUMNSTORE INDEX test_dbt_convert_column_string_to_float_cci
+    ON test_dbt.convert_column_string_to_float
+
+   
+
+
+  
+2021-12-02 20:45:58.636758 (Thread-9): Connected to db: test_dbt
+2021-12-02 20:45:58.643324 (Thread-5): Opening a new connection, currently in state init
+2021-12-02 20:45:58.688782 (Thread-5): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:45:58.655258 (Thread-2): Connected to db: test_dbt
+2021-12-02 20:45:58.656837 (Thread-7): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:45:58.601884 (Thread-4): Opening a new connection, currently in state init
+2021-12-02 20:45:58.702272 (Thread-4): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:45:58.674615 (Thread-3): Connected to db: test_dbt
+2021-12-02 20:45:58.678221 (Thread-6): Connected to db: test_dbt
+2021-12-02 20:45:58.681746 (Thread-11): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:45:58.684467 (Thread-13): Opening a new connection, currently in state init
+2021-12-02 20:45:58.720605 (Thread-13): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:45:58.649680 (Thread-14): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:45:58.673071 (Thread-12): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:45:58.715385 (Thread-5): Connected to db: test_dbt
+2021-12-02 20:45:58.686295 (Thread-10): Connected to db: test_dbt
+2021-12-02 20:45:58.722698 (Thread-7): Connected to db: test_dbt
+2021-12-02 20:45:58.743440 (Thread-4): Connected to db: test_dbt
+2021-12-02 20:45:58.785317 (Thread-11): Connected to db: test_dbt
+2021-12-02 20:45:58.785890 (Thread-13): Connected to db: test_dbt
+2021-12-02 20:45:58.807181 (Thread-14): Connected to db: test_dbt
+2021-12-02 20:45:58.835101 (Thread-12): Connected to db: test_dbt
+2021-12-02 20:45:58.965939 (Thread-1): SQL status: OK in 0.42 seconds
+2021-12-02 20:45:58.984586 (Thread-1): On model.incremental_test_schema_change.change_column_names: COMMIT
+2021-12-02 20:45:58.988074 (Thread-1): finished collecting timing info
+2021-12-02 20:45:58.989366 (Thread-1): On model.incremental_test_schema_change.change_column_names: Close
+2021-12-02 20:45:58.991385 (Thread-1): 20:45:58 | 1 of 14 OK created incremental model test_dbt.change_column_names............................................ [OK in 0.87s]
+2021-12-02 20:45:58.992796 (Thread-1): Finished running node model.incremental_test_schema_change.change_column_names
+2021-12-02 20:45:59.020109 (Thread-9): SQL status: OK in 0.41 seconds
+2021-12-02 20:45:59.023760 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: COMMIT
+2021-12-02 20:45:59.025986 (Thread-9): finished collecting timing info
+2021-12-02 20:45:59.026394 (Thread-5): SQL status: OK in 0.38 seconds
+2021-12-02 20:45:59.027348 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: Close
+2021-12-02 20:45:59.029311 (Thread-7): SQL status: OK in 0.43 seconds
+2021-12-02 20:45:59.033131 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: COMMIT
+2021-12-02 20:45:59.035258 (Thread-9): 20:45:59 | 9 of 14 OK created incremental model test_dbt.convert_column_int_to_boolean.................................. [OK in 0.91s]
+2021-12-02 20:45:59.035613 (Thread-8): SQL status: OK in 0.49 seconds
+2021-12-02 20:45:59.039814 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: COMMIT
+2021-12-02 20:45:59.042012 (Thread-5): finished collecting timing info
+2021-12-02 20:45:59.042473 (Thread-4): SQL status: OK in 0.44 seconds
+2021-12-02 20:45:59.044005 (Thread-9): Finished running node model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:45:59.047642 (Thread-2): SQL status: OK in 0.46 seconds
+2021-12-02 20:45:59.047861 (Thread-3): SQL status: OK in 0.49 seconds
+2021-12-02 20:45:59.050822 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: COMMIT
+2021-12-02 20:45:59.051849 (Thread-10): SQL status: OK in 0.45 seconds
+2021-12-02 20:45:59.053206 (Thread-7): finished collecting timing info
+2021-12-02 20:45:59.054425 (Thread-14): SQL status: OK in 0.46 seconds
+2021-12-02 20:45:59.055216 (Thread-12): SQL status: OK in 0.50 seconds
+2021-12-02 20:45:59.055809 (Thread-11): SQL status: OK in 0.44 seconds
+2021-12-02 20:45:59.056265 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: Close
+2021-12-02 20:45:59.056466 (Thread-6): SQL status: OK in 0.50 seconds
+2021-12-02 20:45:59.056688 (Thread-13): SQL status: OK in 0.37 seconds
+2021-12-02 20:45:59.058946 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: COMMIT
+2021-12-02 20:45:59.063321 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: COMMIT
+2021-12-02 20:45:59.065219 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: COMMIT
+2021-12-02 20:45:59.091802 (Thread-3): finished collecting timing info
+2021-12-02 20:45:59.069834 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: COMMIT
+2021-12-02 20:45:59.071343 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: Close
+2021-12-02 20:45:59.073868 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: COMMIT
+2021-12-02 20:45:59.078407 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: COMMIT
+2021-12-02 20:45:59.080300 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: COMMIT
+2021-12-02 20:45:59.082144 (Thread-5): 20:45:59 | 5 of 14 OK created incremental model test_dbt.convert_column_boolean_to_string............................... [OK in 0.94s]
+2021-12-02 20:45:59.084756 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: COMMIT
+2021-12-02 20:45:59.086660 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: COMMIT
+2021-12-02 20:45:59.088166 (Thread-4): finished collecting timing info
+2021-12-02 20:45:59.090313 (Thread-2): finished collecting timing info
+2021-12-02 20:45:59.067444 (Thread-8): finished collecting timing info
+2021-12-02 20:45:59.112665 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: Close
+2021-12-02 20:45:59.094773 (Thread-10): finished collecting timing info
+2021-12-02 20:45:59.096938 (Thread-7): 20:45:59 | 7 of 14 OK created incremental model test_dbt.convert_column_float_to_int.................................... [OK in 0.95s]
+2021-12-02 20:45:59.098459 (Thread-14): finished collecting timing info
+2021-12-02 20:45:59.100026 (Thread-12): finished collecting timing info
+2021-12-02 20:45:59.119380 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: Close
+2021-12-02 20:45:59.104045 (Thread-5): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:45:59.106038 (Thread-6): finished collecting timing info
+2021-12-02 20:45:59.108233 (Thread-13): finished collecting timing info
+2021-12-02 20:45:59.109722 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: Close
+2021-12-02 20:45:59.111165 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: Close
+2021-12-02 20:45:59.093111 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: Close
+2021-12-02 20:45:59.129158 (Thread-3): 20:45:59 | 3 of 14 OK created incremental model test_dbt.convert_column_boolean_to_float................................ [OK in 0.99s]
+2021-12-02 20:45:59.115478 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: Close
+2021-12-02 20:45:59.116828 (Thread-7): Finished running node model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:45:59.118183 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: Close
+2021-12-02 20:45:59.101774 (Thread-11): finished collecting timing info
+2021-12-02 20:45:59.137011 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: Close
+2021-12-02 20:45:59.123447 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: Close
+2021-12-02 20:45:59.124621 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: Close
+2021-12-02 20:45:59.126386 (Thread-4): 20:45:59 | 4 of 14 OK created incremental model test_dbt.convert_column_boolean_to_int.................................. [OK in 0.99s]
+2021-12-02 20:45:59.127691 (Thread-2): 20:45:59 | 2 of 14 OK created incremental model test_dbt.column_with_quotes............................................. [OK in 0.99s]
+2021-12-02 20:45:59.114501 (Thread-8): 20:45:59 | 8 of 14 OK created incremental model test_dbt.convert_column_float_to_string................................. [OK in 0.97s]
+2021-12-02 20:45:59.145639 (Thread-8): Finished running node model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:45:59.132893 (Thread-10): 20:45:59 | 10 of 14 OK created incremental model test_dbt.convert_column_int_to_float................................... [OK in 0.98s]
+2021-12-02 20:45:59.135494 (Thread-14): 20:45:59 | 14 of 14 OK created incremental model test_dbt.convert_column_string_to_int.................................. [OK in 0.98s]
+2021-12-02 20:45:59.121143 (Thread-12): 20:45:59 | 12 of 14 OK created incremental model test_dbt.convert_column_string_to_boolean.............................. [OK in 0.97s]
+2021-12-02 20:45:59.151156 (Thread-12): Finished running node model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:45:59.140133 (Thread-6): 20:45:59 | 6 of 14 OK created incremental model test_dbt.convert_column_float_to_boolean................................ [OK in 1.00s]
+2021-12-02 20:45:59.141750 (Thread-13): 20:45:59 | 13 of 14 OK created incremental model test_dbt.convert_column_string_to_float................................ [OK in 1.01s]
+2021-12-02 20:45:59.142560 (Thread-4): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:45:59.143858 (Thread-2): Finished running node model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:45:59.130471 (Thread-3): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:45:59.148126 (Thread-10): Finished running node model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:45:59.149506 (Thread-14): Finished running node model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:45:59.138736 (Thread-11): 20:45:59 | 11 of 14 OK created incremental model test_dbt.convert_column_int_to_string.................................. [OK in 1.01s]
+2021-12-02 20:45:59.153665 (Thread-6): Finished running node model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:45:59.155134 (Thread-13): Finished running node model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:45:59.162350 (Thread-11): Finished running node model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:45:59.171253 (MainThread): Acquiring new sqlserver connection "master".
+2021-12-02 20:45:59.172534 (MainThread): On master: COMMIT
+2021-12-02 20:45:59.174008 (MainThread): 20:45:59 | 
+2021-12-02 20:45:59.175271 (MainThread): 20:45:59 | Finished running 14 incremental models in 1.23s.
+2021-12-02 20:45:59.176598 (MainThread): Connection 'master' was properly closed.
+2021-12-02 20:45:59.177738 (MainThread): Connection 'model.incremental_test_schema_change.column_with_quotes' was properly closed.
+2021-12-02 20:45:59.178866 (MainThread): Connection 'model.incremental_test_schema_change.change_column_names' was properly closed.
+2021-12-02 20:45:59.180074 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_boolean' was properly closed.
+2021-12-02 20:45:59.181150 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_string' was properly closed.
+2021-12-02 20:45:59.182231 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_float' was properly closed.
+2021-12-02 20:45:59.183281 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_float' was properly closed.
+2021-12-02 20:45:59.184391 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_int' was properly closed.
+2021-12-02 20:45:59.185587 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_string' was properly closed.
+2021-12-02 20:45:59.186831 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_boolean' was properly closed.
+2021-12-02 20:45:59.187990 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_int' was properly closed.
+2021-12-02 20:45:59.189501 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_string' was properly closed.
+2021-12-02 20:45:59.190659 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_float' was properly closed.
+2021-12-02 20:45:59.191898 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_boolean' was properly closed.
+2021-12-02 20:45:59.193033 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_int' was properly closed.
+2021-12-02 20:45:59.205358 (MainThread): 
+2021-12-02 20:45:59.206466 (MainThread): Completed successfully
+2021-12-02 20:45:59.207954 (MainThread): 
+Done. PASS=14 WARN=0 ERROR=0 SKIP=0 TOTAL=14
+2021-12-02 20:45:59.209156 (MainThread): Flushing usage events

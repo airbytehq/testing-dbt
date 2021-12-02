@@ -1,0 +1,1037 @@
+2021-12-02 20:50:15.059105 (MainThread): Running with dbt=0.21.0
+2021-12-02 20:50:15.360552 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=True, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/data/db_redshift', project_dir='/data/first_project', record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-12-02 20:50:15.368938 (MainThread): Tracking: do not track
+2021-12-02 20:50:15.392502 (MainThread): Unable to do partial parsing because target/partial_parse.msgpack not found
+2021-12-02 20:50:15.465729 (MainThread): Parsing ../macros/boolean_values.sql
+2021-12-02 20:50:15.470952 (MainThread): Parsing ../macros/normalize_identifier.sql
+2021-12-02 20:50:15.474678 (MainThread): Parsing macros/catalog.sql
+2021-12-02 20:50:15.497710 (MainThread): Parsing macros/relations.sql
+2021-12-02 20:50:15.500266 (MainThread): Parsing macros/adapters.sql
+2021-12-02 20:50:15.550409 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2021-12-02 20:50:15.553420 (MainThread): Parsing macros/catalog.sql
+2021-12-02 20:50:15.558252 (MainThread): Parsing macros/relations.sql
+2021-12-02 20:50:15.561151 (MainThread): Parsing macros/adapters.sql
+2021-12-02 20:50:15.597186 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2021-12-02 20:50:15.601214 (MainThread): Parsing macros/core.sql
+2021-12-02 20:50:15.607821 (MainThread): Parsing macros/etc/datetime.sql
+2021-12-02 20:50:15.622006 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-12-02 20:50:15.625497 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-12-02 20:50:15.630218 (MainThread): Parsing macros/etc/query.sql
+2021-12-02 20:50:15.632897 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-12-02 20:50:15.636306 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-12-02 20:50:15.639165 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-12-02 20:50:15.642140 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-12-02 20:50:15.645472 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-12-02 20:50:15.647971 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-12-02 20:50:15.652080 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-12-02 20:50:15.655093 (MainThread): Parsing macros/materializations/helpers.sql
+2021-12-02 20:50:15.670935 (MainThread): Parsing macros/materializations/test.sql
+2021-12-02 20:50:15.681771 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-02 20:50:15.718498 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-02 20:50:15.771679 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-02 20:50:15.798530 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-12-02 20:50:15.802718 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-12-02 20:50:15.826845 (MainThread): Parsing macros/materializations/table/table.sql
+2021-12-02 20:50:15.838991 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-12-02 20:50:15.846135 (MainThread): Parsing macros/materializations/view/view.sql
+2021-12-02 20:50:15.858005 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-12-02 20:50:15.893836 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-12-02 20:50:15.898003 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-12-02 20:50:15.914254 (MainThread): Parsing macros/adapters/common.sql
+2021-12-02 20:50:16.251301 (MainThread): Acquiring new redshift connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:50:16.269414 (MainThread): Acquiring new redshift connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:50:16.278815 (MainThread): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:50:16.287219 (MainThread): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:50:16.293387 (MainThread): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:50:16.299230 (MainThread): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:50:16.304940 (MainThread): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:50:16.310381 (MainThread): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:50:16.315735 (MainThread): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:50:16.321978 (MainThread): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:50:16.330624 (MainThread): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:50:16.336212 (MainThread): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:50:16.341467 (MainThread): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:50:16.346940 (MainThread): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:50:16.418913 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-12-02 20:50:16.421262 (MainThread): Found 14 models, 0 tests, 0 snapshots, 0 analyses, 197 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-12-02 20:50:16.426358 (MainThread): 
+2021-12-02 20:50:16.428021 (MainThread): Acquiring new redshift connection "master".
+2021-12-02 20:50:16.431191 (ThreadPoolExecutor-0_0): Acquiring new redshift connection "list_integrationtests".
+2021-12-02 20:50:16.443888 (ThreadPoolExecutor-0_0): Using redshift connection "list_integrationtests".
+2021-12-02 20:50:16.445608 (ThreadPoolExecutor-0_0): On list_integrationtests: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "connection_name": "list_integrationtests"} */
+
+    select distinct nspname from pg_namespace
+  
+2021-12-02 20:50:16.446725 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-12-02 20:50:16.447784 (ThreadPoolExecutor-0_0): Connecting to Redshift using 'database' credentials
+2021-12-02 20:50:23.488329 (ThreadPoolExecutor-0_0): SQL status: SELECT in 7.04 seconds
+2021-12-02 20:50:23.497284 (ThreadPoolExecutor-0_0): On list_integrationtests: Close
+2021-12-02 20:50:23.502186 (ThreadPoolExecutor-1_0): Acquiring new redshift connection "list_integrationtests_test_dbt".
+2021-12-02 20:50:23.513741 (ThreadPoolExecutor-1_0): Using redshift connection "list_integrationtests_test_dbt".
+2021-12-02 20:50:23.515734 (ThreadPoolExecutor-1_0): On list_integrationtests_test_dbt: BEGIN
+2021-12-02 20:50:23.517172 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-12-02 20:50:23.518714 (ThreadPoolExecutor-1_0): Connecting to Redshift using 'database' credentials
+2021-12-02 20:50:29.434305 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 5.92 seconds
+2021-12-02 20:50:29.437849 (ThreadPoolExecutor-1_0): Using redshift connection "list_integrationtests_test_dbt".
+2021-12-02 20:50:29.440102 (ThreadPoolExecutor-1_0): On list_integrationtests_test_dbt: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "connection_name": "list_integrationtests_test_dbt"} */
+select
+      'integrationtests' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'test_dbt'
+    union all
+    select
+      'integrationtests' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'test_dbt'
+  
+2021-12-02 20:50:30.357634 (ThreadPoolExecutor-1_0): SQL status: SELECT in 0.92 seconds
+2021-12-02 20:50:30.362572 (ThreadPoolExecutor-1_0): On list_integrationtests_test_dbt: ROLLBACK
+2021-12-02 20:50:31.279837 (ThreadPoolExecutor-1_0): On list_integrationtests_test_dbt: Close
+2021-12-02 20:50:31.291939 (MainThread): Using redshift connection "master".
+2021-12-02 20:50:31.293600 (MainThread): On master: BEGIN
+2021-12-02 20:50:31.295168 (MainThread): Opening a new connection, currently in state init
+2021-12-02 20:50:31.296689 (MainThread): Connecting to Redshift using 'database' credentials
+2021-12-02 20:50:37.949809 (MainThread): SQL status: BEGIN in 6.65 seconds
+2021-12-02 20:50:37.952941 (MainThread): Using redshift connection "master".
+2021-12-02 20:50:37.954839 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2021-12-02 20:50:43.481431 (MainThread): SQL status: SELECT in 5.52 seconds
+2021-12-02 20:50:43.506946 (MainThread): On master: ROLLBACK
+2021-12-02 20:50:44.403503 (MainThread): Using redshift connection "master".
+2021-12-02 20:50:44.406123 (MainThread): On master: BEGIN
+2021-12-02 20:50:45.934344 (MainThread): SQL status: BEGIN in 1.53 seconds
+2021-12-02 20:50:45.938113 (MainThread): On master: COMMIT
+2021-12-02 20:50:45.940301 (MainThread): Using redshift connection "master".
+2021-12-02 20:50:45.942551 (MainThread): On master: COMMIT
+2021-12-02 20:50:46.725076 (MainThread): SQL status: COMMIT in 0.78 seconds
+2021-12-02 20:50:46.729100 (MainThread): On master: Close
+2021-12-02 20:50:46.733048 (MainThread): 20:50:46 | Concurrency: 32 threads (target='prod')
+2021-12-02 20:50:46.735087 (MainThread): 20:50:46 | 
+2021-12-02 20:50:46.757511 (Thread-1): Began running node model.incremental_test_schema_change.change_column_names
+2021-12-02 20:50:46.757894 (Thread-2): Began running node model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:50:46.759049 (Thread-3): Began running node model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:50:46.759633 (Thread-4): Began running node model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:50:46.759963 (Thread-5): Began running node model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:50:46.760455 (Thread-6): Began running node model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:50:46.760955 (Thread-7): Began running node model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:50:46.773606 (Thread-7): 20:50:46 | 7 of 14 START incremental model test_dbt.convert_column_float_to_int......................................... [RUN]
+2021-12-02 20:50:46.761707 (Thread-8): Began running node model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:50:46.761991 (Thread-9): Began running node model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:50:46.762431 (Thread-10): Began running node model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:50:46.762787 (Thread-11): Began running node model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:50:46.783598 (Thread-11): 20:50:46 | 11 of 14 START incremental model test_dbt.convert_column_int_to_string....................................... [RUN]
+2021-12-02 20:50:46.763324 (Thread-13): Began running node model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:50:46.787556 (Thread-13): 20:50:46 | 13 of 14 START incremental model test_dbt.convert_column_string_to_float..................................... [RUN]
+2021-12-02 20:50:46.764299 (Thread-2): 20:50:46 | 2 of 14 START incremental model test_dbt.column_with_quotes.................................................. [RUN]
+2021-12-02 20:50:46.766551 (Thread-3): 20:50:46 | 3 of 14 START incremental model test_dbt.convert_column_boolean_to_float..................................... [RUN]
+2021-12-02 20:50:46.768435 (Thread-4): 20:50:46 | 4 of 14 START incremental model test_dbt.convert_column_boolean_to_int....................................... [RUN]
+2021-12-02 20:50:46.770272 (Thread-5): 20:50:46 | 5 of 14 START incremental model test_dbt.convert_column_boolean_to_string.................................... [RUN]
+2021-12-02 20:50:46.771956 (Thread-6): 20:50:46 | 6 of 14 START incremental model test_dbt.convert_column_float_to_boolean..................................... [RUN]
+2021-12-02 20:50:46.761341 (Thread-1): 20:50:46 | 1 of 14 START incremental model test_dbt.change_column_names................................................. [RUN]
+2021-12-02 20:50:46.775861 (Thread-7): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:50:46.777718 (Thread-8): 20:50:46 | 8 of 14 START incremental model test_dbt.convert_column_float_to_string...................................... [RUN]
+2021-12-02 20:50:46.779707 (Thread-9): 20:50:46 | 9 of 14 START incremental model test_dbt.convert_column_int_to_boolean....................................... [RUN]
+2021-12-02 20:50:46.781757 (Thread-10): 20:50:46 | 10 of 14 START incremental model test_dbt.convert_column_int_to_float........................................ [RUN]
+2021-12-02 20:50:46.763019 (Thread-12): Began running node model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:50:46.807415 (Thread-12): 20:50:46 | 12 of 14 START incremental model test_dbt.convert_column_string_to_boolean................................... [RUN]
+2021-12-02 20:50:46.763632 (Thread-14): Began running node model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:50:46.789564 (Thread-13): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:50:46.792001 (Thread-2): Acquiring new redshift connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:50:46.793064 (Thread-3): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:50:46.794805 (Thread-4): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:50:46.796964 (Thread-5): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:50:46.798744 (Thread-6): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:50:46.818827 (Thread-6): Compiling model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:50:46.801148 (Thread-7): Compiling model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:50:46.803381 (Thread-8): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:50:46.805040 (Thread-9): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:50:46.806499 (Thread-10): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:50:46.785548 (Thread-11): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:50:46.809250 (Thread-12): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:50:46.810892 (Thread-14): 20:50:46 | 14 of 14 START incremental model test_dbt.convert_column_string_to_int....................................... [RUN]
+2021-12-02 20:50:46.812073 (Thread-13): Compiling model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:50:46.813659 (Thread-2): Compiling model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:50:46.815046 (Thread-3): Compiling model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:50:46.816117 (Thread-4): Compiling model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:50:46.817513 (Thread-5): Compiling model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:50:46.800065 (Thread-1): Acquiring new redshift connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:50:46.823081 (Thread-6): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_boolean"
+2021-12-02 20:50:46.826387 (Thread-7): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_int"
+2021-12-02 20:50:46.827775 (Thread-8): Compiling model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:50:46.829590 (Thread-9): Compiling model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:50:46.831040 (Thread-10): Compiling model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:50:46.832810 (Thread-11): Compiling model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:50:46.834189 (Thread-12): Compiling model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:50:46.836273 (Thread-14): Acquiring new redshift connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:50:46.840166 (Thread-13): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_float"
+2021-12-02 20:50:46.844268 (Thread-2): Writing injected SQL for node "model.incremental_test_schema_change.column_with_quotes"
+2021-12-02 20:50:46.848548 (Thread-3): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_float"
+2021-12-02 20:50:46.852482 (Thread-4): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_int"
+2021-12-02 20:50:46.856248 (Thread-5): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_string"
+2021-12-02 20:50:46.857519 (Thread-1): Compiling model.incremental_test_schema_change.change_column_names
+2021-12-02 20:50:46.864181 (Thread-8): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_string"
+2021-12-02 20:50:46.867602 (Thread-9): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_boolean"
+2021-12-02 20:50:46.873310 (Thread-10): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_float"
+2021-12-02 20:50:46.877152 (Thread-11): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_string"
+2021-12-02 20:50:46.880866 (Thread-12): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_boolean"
+2021-12-02 20:50:46.881942 (Thread-14): Compiling model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:50:46.884881 (Thread-6): finished collecting timing info
+2021-12-02 20:50:46.887103 (Thread-7): finished collecting timing info
+2021-12-02 20:50:46.889398 (Thread-2): finished collecting timing info
+2021-12-02 20:50:46.890473 (Thread-13): finished collecting timing info
+2021-12-02 20:50:46.892134 (Thread-3): finished collecting timing info
+2021-12-02 20:50:46.895493 (Thread-1): Writing injected SQL for node "model.incremental_test_schema_change.change_column_names"
+2021-12-02 20:50:46.896660 (Thread-4): finished collecting timing info
+2021-12-02 20:50:46.899159 (Thread-5): finished collecting timing info
+2021-12-02 20:50:46.900781 (Thread-8): finished collecting timing info
+2021-12-02 20:50:46.903153 (Thread-9): finished collecting timing info
+2021-12-02 20:50:46.906095 (Thread-14): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_int"
+2021-12-02 20:50:46.907278 (Thread-10): finished collecting timing info
+2021-12-02 20:50:46.923717 (Thread-11): finished collecting timing info
+2021-12-02 20:50:46.934929 (Thread-12): finished collecting timing info
+2021-12-02 20:50:47.113149 (Thread-4): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_int"
+2021-12-02 20:50:47.117405 (Thread-3): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_float"
+2021-12-02 20:50:47.119567 (Thread-6): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_boolean"
+2021-12-02 20:50:47.122012 (Thread-2): Writing runtime SQL for node "model.incremental_test_schema_change.column_with_quotes"
+2021-12-02 20:50:47.123892 (Thread-13): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_float"
+2021-12-02 20:50:47.127041 (Thread-7): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_int"
+2021-12-02 20:50:47.131565 (Thread-5): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_string"
+2021-12-02 20:50:47.131938 (Thread-1): finished collecting timing info
+2021-12-02 20:50:47.137140 (Thread-8): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_string"
+2021-12-02 20:50:47.141993 (Thread-9): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_boolean"
+2021-12-02 20:50:47.148732 (Thread-10): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_float"
+2021-12-02 20:50:47.150282 (Thread-14): finished collecting timing info
+2021-12-02 20:50:47.153824 (Thread-11): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_string"
+2021-12-02 20:50:47.158779 (Thread-12): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_boolean"
+2021-12-02 20:50:47.174807 (Thread-1): Writing runtime SQL for node "model.incremental_test_schema_change.change_column_names"
+2021-12-02 20:50:47.182025 (Thread-2): Using redshift connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:50:47.195506 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: BEGIN
+2021-12-02 20:50:47.187195 (Thread-13): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:50:47.188624 (Thread-5): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:50:47.200920 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: BEGIN
+2021-12-02 20:50:47.202532 (Thread-5): Opening a new connection, currently in state init
+2021-12-02 20:50:47.195065 (Thread-4): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:50:47.186538 (Thread-14): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_int"
+2021-12-02 20:50:47.197474 (Thread-7): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:50:47.207997 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: BEGIN
+2021-12-02 20:50:47.198717 (Thread-1): Using redshift connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:50:47.198990 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: BEGIN
+2021-12-02 20:50:47.200123 (Thread-9): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:50:47.213218 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: BEGIN
+2021-12-02 20:50:47.202215 (Thread-10): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:50:47.192779 (Thread-6): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:50:47.203820 (Thread-8): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:50:47.218156 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: BEGIN
+2021-12-02 20:50:47.205199 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: BEGIN
+2021-12-02 20:50:47.206172 (Thread-11): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:50:47.197657 (Thread-2): Opening a new connection, currently in state init
+2021-12-02 20:50:47.208155 (Thread-12): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:50:47.209423 (Thread-7): Opening a new connection, currently in state init
+2021-12-02 20:50:47.210663 (Thread-14): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:50:47.210885 (Thread-1): On model.incremental_test_schema_change.change_column_names: BEGIN
+2021-12-02 20:50:47.212093 (Thread-13): Opening a new connection, currently in state init
+2021-12-02 20:50:47.190659 (Thread-3): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:50:47.214294 (Thread-9): Opening a new connection, currently in state init
+2021-12-02 20:50:47.215550 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: BEGIN
+2021-12-02 20:50:47.216983 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: BEGIN
+2021-12-02 20:50:47.203975 (Thread-5): Connecting to Redshift using 'database' credentials
+2021-12-02 20:50:47.219549 (Thread-8): Opening a new connection, currently in state init
+2021-12-02 20:50:47.221271 (Thread-4): Opening a new connection, currently in state init
+2021-12-02 20:50:47.223533 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: BEGIN
+2021-12-02 20:50:47.225689 (Thread-2): Connecting to Redshift using 'database' credentials
+2021-12-02 20:50:47.227806 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: BEGIN
+2021-12-02 20:50:47.229914 (Thread-7): Connecting to Redshift using 'database' credentials
+2021-12-02 20:50:47.231990 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: BEGIN
+2021-12-02 20:50:47.234258 (Thread-1): Opening a new connection, currently in state closed
+2021-12-02 20:50:47.236638 (Thread-13): Connecting to Redshift using 'database' credentials
+2021-12-02 20:50:47.239455 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: BEGIN
+2021-12-02 20:50:47.241493 (Thread-9): Connecting to Redshift using 'database' credentials
+2021-12-02 20:50:47.243252 (Thread-10): Opening a new connection, currently in state init
+2021-12-02 20:50:47.244932 (Thread-6): Opening a new connection, currently in state init
+2021-12-02 20:50:47.247239 (Thread-8): Connecting to Redshift using 'database' credentials
+2021-12-02 20:50:47.250047 (Thread-4): Connecting to Redshift using 'database' credentials
+2021-12-02 20:50:47.251625 (Thread-11): Opening a new connection, currently in state init
+2021-12-02 20:50:47.254828 (Thread-12): Opening a new connection, currently in state init
+2021-12-02 20:50:47.287448 (Thread-12): Connecting to Redshift using 'database' credentials
+2021-12-02 20:50:47.260084 (Thread-1): Connecting to Redshift using 'database' credentials
+2021-12-02 20:50:47.263026 (Thread-3): Opening a new connection, currently in state init
+2021-12-02 20:50:47.266035 (Thread-10): Connecting to Redshift using 'database' credentials
+2021-12-02 20:50:47.267762 (Thread-6): Connecting to Redshift using 'database' credentials
+2021-12-02 20:50:47.280950 (Thread-11): Connecting to Redshift using 'database' credentials
+2021-12-02 20:50:47.258666 (Thread-14): Opening a new connection, currently in state init
+2021-12-02 20:50:47.298854 (Thread-3): Connecting to Redshift using 'database' credentials
+2021-12-02 20:50:47.315995 (Thread-14): Connecting to Redshift using 'database' credentials
+2021-12-02 20:50:53.850978 (Thread-5): SQL status: BEGIN in 6.65 seconds
+2021-12-02 20:50:53.853874 (Thread-5): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:50:53.855705 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+      
+
+  create  table
+    "integrationtests"."test_dbt"."convert_column_boolean_to_string__dbt_tmp"
+    
+    
+  as (
+    select
+    true as column_boolean_to_string,
+    getdate() as insert_time
+  );
+  
+2021-12-02 20:50:53.895876 (Thread-10): SQL status: BEGIN in 6.65 seconds
+2021-12-02 20:50:53.896295 (Thread-11): SQL status: BEGIN in 6.64 seconds
+2021-12-02 20:50:53.897149 (Thread-13): SQL status: BEGIN in 6.68 seconds
+2021-12-02 20:50:53.898709 (Thread-10): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:50:53.899694 (Thread-9): SQL status: BEGIN in 6.69 seconds
+2021-12-02 20:50:53.901245 (Thread-11): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:50:53.903040 (Thread-13): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:50:53.904741 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+      
+
+  create  table
+    "integrationtests"."test_dbt"."convert_column_int_to_float__dbt_tmp"
+    
+    
+  as (
+    select
+    1 as column_int_to_float,
+    getdate() as insert_time
+  );
+  
+2021-12-02 20:50:53.906508 (Thread-9): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:50:53.907908 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+      
+
+  create  table
+    "integrationtests"."test_dbt"."convert_column_int_to_string__dbt_tmp"
+    
+    
+  as (
+    select
+    1 as column_int_to_string,
+    getdate() as insert_time
+  );
+  
+2021-12-02 20:50:53.909616 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+
+      
+
+  create  table
+    "integrationtests"."test_dbt"."convert_column_string_to_float__dbt_tmp"
+    
+    
+  as (
+    select
+    '1.1' as column_string_to_float,
+    getdate() as insert_time
+  );
+  
+2021-12-02 20:50:53.913546 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+
+      
+
+  create  table
+    "integrationtests"."test_dbt"."convert_column_int_to_boolean__dbt_tmp"
+    
+    
+  as (
+    select
+    1 as column_int_to_boolean,
+    getdate() as insert_time
+  );
+  
+2021-12-02 20:50:53.942249 (Thread-4): SQL status: BEGIN in 6.72 seconds
+2021-12-02 20:50:53.945699 (Thread-4): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:50:53.947728 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+
+      
+
+  create  table
+    "integrationtests"."test_dbt"."convert_column_boolean_to_int__dbt_tmp"
+    
+    
+  as (
+    select
+    true as column_boolean_to_int,
+    getdate() as insert_time
+  );
+  
+2021-12-02 20:50:53.974225 (Thread-1): SQL status: BEGIN in 6.74 seconds
+2021-12-02 20:50:53.975091 (Thread-2): SQL status: BEGIN in 6.78 seconds
+2021-12-02 20:50:53.977675 (Thread-1): Using redshift connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:50:53.978461 (Thread-12): SQL status: BEGIN in 6.72 seconds
+2021-12-02 20:50:53.979902 (Thread-2): Using redshift connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:50:53.982070 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+
+      
+
+  create  table
+    "integrationtests"."test_dbt"."change_column_names__dbt_tmp"
+    
+    
+  as (
+    select
+    'a column with underscore' as column_name,
+    'a column to rename' as column_to_rename,
+    'a column to be deleted' as column_to_delete,
+    getdate() as insert_time
+  );
+  
+2021-12-02 20:50:53.983862 (Thread-12): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:50:53.985259 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.column_with_quotes"} */
+
+      
+
+  create  table
+    "integrationtests"."test_dbt"."column_with_quotes__dbt_tmp"
+    
+    
+  as (
+    select
+    'a column with tricky name with quotes' as  "column`_'with""_quotes",
+    getdate() as insert_time
+  );
+  
+2021-12-02 20:50:53.988540 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+
+      
+
+  create  table
+    "integrationtests"."test_dbt"."convert_column_string_to_boolean__dbt_tmp"
+    
+    
+  as (
+    select
+    'true' as column_string_to_boolean,
+    getdate() as insert_time
+  );
+  
+2021-12-02 20:50:54.040781 (Thread-6): SQL status: BEGIN in 6.80 seconds
+2021-12-02 20:50:54.041487 (Thread-3): SQL status: BEGIN in 6.78 seconds
+2021-12-02 20:50:54.044247 (Thread-6): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:50:54.046694 (Thread-3): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:50:54.048843 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+
+      
+
+  create  table
+    "integrationtests"."test_dbt"."convert_column_float_to_boolean__dbt_tmp"
+    
+    
+  as (
+    select
+    1.1 as column_float_to_boolean,
+    getdate() as insert_time
+  );
+  
+2021-12-02 20:50:54.050513 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+
+      
+
+  create  table
+    "integrationtests"."test_dbt"."convert_column_boolean_to_float__dbt_tmp"
+    
+    
+  as (
+    select
+    true as column_boolean_to_float,
+    getdate() as insert_time
+  );
+  
+2021-12-02 20:50:54.592233 (Thread-5): SQL status: SELECT in 0.73 seconds
+2021-12-02 20:50:54.594076 (Thread-14): SQL status: BEGIN in 7.34 seconds
+2021-12-02 20:50:54.605124 (Thread-5): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:50:54.606185 (Thread-14): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:50:54.607795 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+alter table "integrationtests"."test_dbt"."convert_column_boolean_to_string" rename to "convert_column_boolean_to_string__dbt_backup"
+2021-12-02 20:50:54.609438 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+
+      
+
+  create  table
+    "integrationtests"."test_dbt"."convert_column_string_to_int__dbt_tmp"
+    
+    
+  as (
+    select
+    '1' as column_string_to_int,
+    getdate() as insert_time
+  );
+  
+2021-12-02 20:50:54.770640 (Thread-10): SQL status: SELECT in 0.86 seconds
+2021-12-02 20:50:54.776307 (Thread-10): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:50:54.778017 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+alter table "integrationtests"."test_dbt"."convert_column_int_to_float" rename to "convert_column_int_to_float__dbt_backup"
+2021-12-02 20:50:54.781762 (Thread-9): SQL status: SELECT in 0.86 seconds
+2021-12-02 20:50:54.786609 (Thread-9): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:50:54.788259 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+alter table "integrationtests"."test_dbt"."convert_column_int_to_boolean" rename to "convert_column_int_to_boolean__dbt_backup"
+2021-12-02 20:50:54.830090 (Thread-13): SQL status: SELECT in 0.91 seconds
+2021-12-02 20:50:54.837303 (Thread-13): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:50:54.839098 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+alter table "integrationtests"."test_dbt"."convert_column_string_to_float" rename to "convert_column_string_to_float__dbt_backup"
+2021-12-02 20:50:54.861126 (Thread-11): SQL status: SELECT in 0.95 seconds
+2021-12-02 20:50:54.867896 (Thread-11): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:50:54.869788 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+alter table "integrationtests"."test_dbt"."convert_column_int_to_string" rename to "convert_column_int_to_string__dbt_backup"
+2021-12-02 20:50:54.920792 (Thread-4): SQL status: SELECT in 0.97 seconds
+2021-12-02 20:50:54.927984 (Thread-4): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:50:54.928299 (Thread-12): SQL status: SELECT in 0.94 seconds
+2021-12-02 20:50:54.929663 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+alter table "integrationtests"."test_dbt"."convert_column_boolean_to_int" rename to "convert_column_boolean_to_int__dbt_backup"
+2021-12-02 20:50:54.934603 (Thread-12): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:50:54.934999 (Thread-1): SQL status: SELECT in 0.95 seconds
+2021-12-02 20:50:54.937858 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+alter table "integrationtests"."test_dbt"."convert_column_string_to_boolean" rename to "convert_column_string_to_boolean__dbt_backup"
+2021-12-02 20:50:54.938985 (Thread-2): SQL status: SELECT in 0.95 seconds
+2021-12-02 20:50:54.942203 (Thread-1): Using redshift connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:50:54.948239 (Thread-2): Using redshift connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:50:54.949925 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+alter table "integrationtests"."test_dbt"."change_column_names" rename to "change_column_names__dbt_backup"
+2021-12-02 20:50:54.951443 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.column_with_quotes"} */
+alter table "integrationtests"."test_dbt"."column_with_quotes" rename to "column_with_quotes__dbt_backup"
+2021-12-02 20:50:54.959067 (Thread-6): SQL status: SELECT in 0.91 seconds
+2021-12-02 20:50:54.963461 (Thread-6): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:50:54.965909 (Thread-3): SQL status: SELECT in 0.91 seconds
+2021-12-02 20:50:54.966450 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+alter table "integrationtests"."test_dbt"."convert_column_float_to_boolean" rename to "convert_column_float_to_boolean__dbt_backup"
+2021-12-02 20:50:54.975036 (Thread-3): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:50:54.977814 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+alter table "integrationtests"."test_dbt"."convert_column_boolean_to_float" rename to "convert_column_boolean_to_float__dbt_backup"
+2021-12-02 20:50:55.295844 (Thread-5): SQL status: ALTER TABLE in 0.68 seconds
+2021-12-02 20:50:55.302599 (Thread-5): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:50:55.304608 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+alter table "integrationtests"."test_dbt"."convert_column_boolean_to_string__dbt_tmp" rename to "convert_column_boolean_to_string"
+2021-12-02 20:50:55.346817 (Thread-14): SQL status: SELECT in 0.73 seconds
+2021-12-02 20:50:55.353353 (Thread-14): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:50:55.355260 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+alter table "integrationtests"."test_dbt"."convert_column_string_to_int" rename to "convert_column_string_to_int__dbt_backup"
+2021-12-02 20:50:55.481969 (Thread-10): SQL status: ALTER TABLE in 0.70 seconds
+2021-12-02 20:50:55.489225 (Thread-10): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:50:55.491285 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+alter table "integrationtests"."test_dbt"."convert_column_int_to_float__dbt_tmp" rename to "convert_column_int_to_float"
+2021-12-02 20:50:55.496943 (Thread-9): SQL status: ALTER TABLE in 0.71 seconds
+2021-12-02 20:50:55.501021 (Thread-9): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:50:55.502747 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+alter table "integrationtests"."test_dbt"."convert_column_int_to_boolean__dbt_tmp" rename to "convert_column_int_to_boolean"
+2021-12-02 20:50:55.544324 (Thread-13): SQL status: ALTER TABLE in 0.70 seconds
+2021-12-02 20:50:55.551309 (Thread-13): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:50:55.553130 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+alter table "integrationtests"."test_dbt"."convert_column_string_to_float__dbt_tmp" rename to "convert_column_string_to_float"
+2021-12-02 20:50:55.588115 (Thread-11): SQL status: ALTER TABLE in 0.72 seconds
+2021-12-02 20:50:55.595143 (Thread-11): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:50:55.596883 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+alter table "integrationtests"."test_dbt"."convert_column_int_to_string__dbt_tmp" rename to "convert_column_int_to_string"
+2021-12-02 20:50:55.664050 (Thread-4): SQL status: ALTER TABLE in 0.73 seconds
+2021-12-02 20:50:55.672529 (Thread-4): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:50:55.672822 (Thread-12): SQL status: ALTER TABLE in 0.73 seconds
+2021-12-02 20:50:55.673569 (Thread-2): SQL status: ALTER TABLE in 0.72 seconds
+2021-12-02 20:50:55.673816 (Thread-1): SQL status: ALTER TABLE in 0.72 seconds
+2021-12-02 20:50:55.674729 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+alter table "integrationtests"."test_dbt"."convert_column_boolean_to_int__dbt_tmp" rename to "convert_column_boolean_to_int"
+2021-12-02 20:50:55.679117 (Thread-12): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:50:55.726019 (Thread-3): SQL status: ALTER TABLE in 0.75 seconds
+2021-12-02 20:50:55.729223 (Thread-2): Using redshift connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:50:55.729621 (Thread-6): SQL status: ALTER TABLE in 0.75 seconds
+2021-12-02 20:50:55.733744 (Thread-1): Using redshift connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:50:55.749308 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+alter table "integrationtests"."test_dbt"."change_column_names__dbt_tmp" rename to "change_column_names"
+2021-12-02 20:50:55.741536 (Thread-3): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:50:55.743287 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.column_with_quotes"} */
+alter table "integrationtests"."test_dbt"."column_with_quotes__dbt_tmp" rename to "column_with_quotes"
+2021-12-02 20:50:55.747625 (Thread-6): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:50:55.737047 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+alter table "integrationtests"."test_dbt"."convert_column_string_to_boolean__dbt_tmp" rename to "convert_column_string_to_boolean"
+2021-12-02 20:50:55.752341 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+alter table "integrationtests"."test_dbt"."convert_column_boolean_to_float__dbt_tmp" rename to "convert_column_boolean_to_float"
+2021-12-02 20:50:55.755543 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+alter table "integrationtests"."test_dbt"."convert_column_float_to_boolean__dbt_tmp" rename to "convert_column_float_to_boolean"
+2021-12-02 20:50:56.027376 (Thread-5): SQL status: ALTER TABLE in 0.72 seconds
+2021-12-02 20:50:56.049524 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: COMMIT
+2021-12-02 20:50:56.051744 (Thread-5): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:50:56.053590 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: COMMIT
+2021-12-02 20:50:56.084764 (Thread-14): SQL status: ALTER TABLE in 0.73 seconds
+2021-12-02 20:50:56.090187 (Thread-14): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:50:56.091934 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+alter table "integrationtests"."test_dbt"."convert_column_string_to_int__dbt_tmp" rename to "convert_column_string_to_int"
+2021-12-02 20:50:56.216970 (Thread-10): SQL status: ALTER TABLE in 0.72 seconds
+2021-12-02 20:50:56.222487 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: COMMIT
+2021-12-02 20:50:56.222791 (Thread-9): SQL status: ALTER TABLE in 0.72 seconds
+2021-12-02 20:50:56.224753 (Thread-10): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:50:56.227912 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: COMMIT
+2021-12-02 20:50:56.229546 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: COMMIT
+2021-12-02 20:50:56.231108 (Thread-9): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:50:56.234075 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: COMMIT
+2021-12-02 20:50:56.279120 (Thread-13): SQL status: ALTER TABLE in 0.72 seconds
+2021-12-02 20:50:56.284571 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: COMMIT
+2021-12-02 20:50:56.286471 (Thread-13): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:50:56.287973 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: COMMIT
+2021-12-02 20:50:56.314175 (Thread-11): SQL status: ALTER TABLE in 0.72 seconds
+2021-12-02 20:50:56.318959 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: COMMIT
+2021-12-02 20:50:56.320881 (Thread-11): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:50:56.322521 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: COMMIT
+2021-12-02 20:50:56.464694 (Thread-4): SQL status: ALTER TABLE in 0.73 seconds
+2021-12-02 20:50:56.469859 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: COMMIT
+2021-12-02 20:50:56.472109 (Thread-4): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:50:56.473803 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: COMMIT
+2021-12-02 20:50:56.485281 (Thread-2): SQL status: ALTER TABLE in 0.73 seconds
+2021-12-02 20:50:56.485803 (Thread-1): SQL status: ALTER TABLE in 0.74 seconds
+2021-12-02 20:50:56.488762 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: COMMIT
+2021-12-02 20:50:56.489095 (Thread-12): SQL status: ALTER TABLE in 0.73 seconds
+2021-12-02 20:50:56.491919 (Thread-1): On model.incremental_test_schema_change.change_column_names: COMMIT
+2021-12-02 20:50:56.499627 (Thread-1): Using redshift connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:50:56.494062 (Thread-2): Using redshift connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:50:56.495254 (Thread-6): SQL status: ALTER TABLE in 0.73 seconds
+2021-12-02 20:50:56.497451 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: COMMIT
+2021-12-02 20:50:56.492772 (Thread-3): SQL status: ALTER TABLE in 0.73 seconds
+2021-12-02 20:50:56.501309 (Thread-1): On model.incremental_test_schema_change.change_column_names: COMMIT
+2021-12-02 20:50:56.503040 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: COMMIT
+2021-12-02 20:50:56.506273 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: COMMIT
+2021-12-02 20:50:56.507848 (Thread-12): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:50:56.510811 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: COMMIT
+2021-12-02 20:50:56.518428 (Thread-3): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:50:56.516702 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: COMMIT
+2021-12-02 20:50:56.515127 (Thread-6): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:50:56.519910 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: COMMIT
+2021-12-02 20:50:56.523080 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: COMMIT
+2021-12-02 20:50:56.624053 (Thread-7): SQL status: BEGIN in 9.41 seconds
+2021-12-02 20:50:56.627251 (Thread-7): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:50:56.629286 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+      
+
+  create  table
+    "integrationtests"."test_dbt"."convert_column_float_to_int__dbt_tmp"
+    
+    
+  as (
+    select
+    1.1 as column_float_to_int,
+    getdate() as insert_time
+  );
+  
+2021-12-02 20:50:56.817865 (Thread-14): SQL status: ALTER TABLE in 0.72 seconds
+2021-12-02 20:50:56.823190 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: COMMIT
+2021-12-02 20:50:56.825143 (Thread-14): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:50:56.827063 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: COMMIT
+2021-12-02 20:50:57.236129 (Thread-5): SQL status: COMMIT in 1.18 seconds
+2021-12-02 20:50:57.239678 (Thread-5): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:50:57.242102 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: BEGIN
+2021-12-02 20:50:57.457801 (Thread-10): SQL status: COMMIT in 1.23 seconds
+2021-12-02 20:50:57.493096 (Thread-7): SQL status: SELECT in 0.86 seconds
+2021-12-02 20:50:57.500769 (Thread-7): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:50:57.502605 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+alter table "integrationtests"."test_dbt"."convert_column_float_to_int" rename to "convert_column_float_to_int__dbt_backup"
+2021-12-02 20:50:57.732920 (Thread-9): SQL status: COMMIT in 1.50 seconds
+2021-12-02 20:50:57.733634 (Thread-13): SQL status: COMMIT in 1.44 seconds
+2021-12-02 20:50:57.734109 (Thread-11): SQL status: COMMIT in 1.41 seconds
+2021-12-02 20:50:57.734735 (Thread-4): SQL status: COMMIT in 1.26 seconds
+2021-12-02 20:50:57.742338 (Thread-14): SQL status: COMMIT in 0.91 seconds
+2021-12-02 20:50:57.742928 (Thread-1): SQL status: COMMIT in 1.23 seconds
+2021-12-02 20:50:57.743494 (Thread-12): SQL status: COMMIT in 1.22 seconds
+2021-12-02 20:50:57.744961 (Thread-2): SQL status: COMMIT in 1.23 seconds
+2021-12-02 20:50:57.751319 (Thread-3): SQL status: COMMIT in 1.23 seconds
+2021-12-02 20:50:57.753812 (Thread-6): SQL status: COMMIT in 1.23 seconds
+2021-12-02 20:50:57.954940 (Thread-5): SQL status: BEGIN in 0.71 seconds
+2021-12-02 20:50:57.965612 (Thread-5): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:50:57.967742 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+drop table if exists "integrationtests"."test_dbt"."convert_column_boolean_to_string__dbt_backup" cascade
+2021-12-02 20:50:58.208783 (Thread-7): SQL status: ALTER TABLE in 0.70 seconds
+2021-12-02 20:50:58.215743 (Thread-7): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:50:58.217739 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+alter table "integrationtests"."test_dbt"."convert_column_float_to_int__dbt_tmp" rename to "convert_column_float_to_int"
+2021-12-02 20:50:58.725851 (Thread-5): SQL status: DROP TABLE in 0.76 seconds
+2021-12-02 20:50:58.729881 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: COMMIT
+2021-12-02 20:50:58.731908 (Thread-5): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:50:58.733923 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: COMMIT
+2021-12-02 20:50:58.837176 (Thread-8): SQL status: BEGIN in 11.62 seconds
+2021-12-02 20:50:58.840197 (Thread-8): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:50:58.842758 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+      
+
+  create  table
+    "integrationtests"."test_dbt"."convert_column_float_to_string__dbt_tmp"
+    
+    
+  as (
+    select
+    1.1 as column_float_to_string,
+    getdate() as insert_time
+  );
+  
+2021-12-02 20:50:58.955919 (Thread-7): SQL status: ALTER TABLE in 0.74 seconds
+2021-12-02 20:50:58.961082 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: COMMIT
+2021-12-02 20:50:58.963440 (Thread-7): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:50:58.965510 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: COMMIT
+2021-12-02 20:50:59.694056 (Thread-5): SQL status: COMMIT in 0.96 seconds
+2021-12-02 20:50:59.697718 (Thread-5): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:50:59.700065 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: BEGIN
+2021-12-02 20:50:59.713903 (Thread-8): SQL status: SELECT in 0.87 seconds
+2021-12-02 20:50:59.718650 (Thread-8): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:50:59.720350 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+alter table "integrationtests"."test_dbt"."convert_column_float_to_string" rename to "convert_column_float_to_string__dbt_backup"
+2021-12-02 20:50:59.842010 (Thread-7): SQL status: COMMIT in 0.87 seconds
+2021-12-02 20:51:00.415492 (Thread-5): SQL status: BEGIN in 0.71 seconds
+2021-12-02 20:51:00.419789 (Thread-5): finished collecting timing info
+2021-12-02 20:51:00.420142 (Thread-10): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:51:00.422027 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: ROLLBACK
+2021-12-02 20:51:00.423773 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: BEGIN
+2021-12-02 20:51:00.466771 (Thread-8): SQL status: ALTER TABLE in 0.74 seconds
+2021-12-02 20:51:00.474370 (Thread-8): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:51:00.476676 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+alter table "integrationtests"."test_dbt"."convert_column_float_to_string__dbt_tmp" rename to "convert_column_float_to_string"
+2021-12-02 20:51:01.074744 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: Close
+2021-12-02 20:51:01.075213 (Thread-10): SQL status: BEGIN in 0.65 seconds
+2021-12-02 20:51:01.078614 (Thread-5): 20:51:01 | 5 of 14 OK created incremental model test_dbt.convert_column_boolean_to_string............................... [SELECT in 14.28s]
+2021-12-02 20:51:01.081523 (Thread-10): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:51:01.083283 (Thread-5): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:51:01.085716 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+drop table if exists "integrationtests"."test_dbt"."convert_column_int_to_float__dbt_backup" cascade
+2021-12-02 20:51:01.146092 (Thread-8): SQL status: ALTER TABLE in 0.67 seconds
+2021-12-02 20:51:01.151884 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: COMMIT
+2021-12-02 20:51:01.154008 (Thread-8): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:51:01.155727 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: COMMIT
+2021-12-02 20:51:01.770057 (Thread-10): SQL status: DROP TABLE in 0.68 seconds
+2021-12-02 20:51:01.774568 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: COMMIT
+2021-12-02 20:51:01.776633 (Thread-10): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:51:01.778614 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: COMMIT
+2021-12-02 20:51:01.963718 (Thread-8): SQL status: COMMIT in 0.81 seconds
+2021-12-02 20:51:02.583975 (Thread-10): SQL status: COMMIT in 0.80 seconds
+2021-12-02 20:51:02.587658 (Thread-10): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:51:02.589738 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: BEGIN
+2021-12-02 20:51:03.435888 (Thread-10): SQL status: BEGIN in 0.84 seconds
+2021-12-02 20:51:03.440332 (Thread-10): finished collecting timing info
+2021-12-02 20:51:03.440621 (Thread-9): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:51:03.445504 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: BEGIN
+2021-12-02 20:51:03.442965 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: ROLLBACK
+2021-12-02 20:51:04.358305 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: Close
+2021-12-02 20:51:04.359117 (Thread-9): SQL status: BEGIN in 0.91 seconds
+2021-12-02 20:51:04.366705 (Thread-9): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:51:04.363329 (Thread-10): 20:51:04 | 10 of 14 OK created incremental model test_dbt.convert_column_int_to_float................................... [SELECT in 17.56s]
+2021-12-02 20:51:04.368287 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+drop table if exists "integrationtests"."test_dbt"."convert_column_int_to_boolean__dbt_backup" cascade
+2021-12-02 20:51:04.369910 (Thread-10): Finished running node model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:51:05.190399 (Thread-9): SQL status: DROP TABLE in 0.82 seconds
+2021-12-02 20:51:05.195218 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: COMMIT
+2021-12-02 20:51:05.197371 (Thread-9): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:51:05.199275 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: COMMIT
+2021-12-02 20:51:06.023867 (Thread-9): SQL status: COMMIT in 0.82 seconds
+2021-12-02 20:51:06.027469 (Thread-9): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:51:06.029764 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: BEGIN
+2021-12-02 20:51:06.735960 (Thread-9): SQL status: BEGIN in 0.70 seconds
+2021-12-02 20:51:06.740344 (Thread-9): finished collecting timing info
+2021-12-02 20:51:06.740808 (Thread-13): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:51:06.742842 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: ROLLBACK
+2021-12-02 20:51:06.744843 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: BEGIN
+2021-12-02 20:51:07.531879 (Thread-13): SQL status: BEGIN in 0.78 seconds
+2021-12-02 20:51:07.532541 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: Close
+2021-12-02 20:51:07.542077 (Thread-13): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:51:07.544028 (Thread-9): 20:51:07 | 9 of 14 OK created incremental model test_dbt.convert_column_int_to_boolean.................................. [SELECT in 20.74s]
+2021-12-02 20:51:07.545199 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+drop table if exists "integrationtests"."test_dbt"."convert_column_string_to_float__dbt_backup" cascade
+2021-12-02 20:51:07.546990 (Thread-9): Finished running node model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:51:08.340731 (Thread-13): SQL status: DROP TABLE in 0.79 seconds
+2021-12-02 20:51:08.345667 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: COMMIT
+2021-12-02 20:51:08.347497 (Thread-13): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:51:08.349495 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: COMMIT
+2021-12-02 20:51:09.386480 (Thread-13): SQL status: COMMIT in 1.04 seconds
+2021-12-02 20:51:09.390546 (Thread-13): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:51:09.392609 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: BEGIN
+2021-12-02 20:51:10.032453 (Thread-13): SQL status: BEGIN in 0.64 seconds
+2021-12-02 20:51:10.035564 (Thread-13): finished collecting timing info
+2021-12-02 20:51:10.035764 (Thread-11): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:51:10.037601 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: ROLLBACK
+2021-12-02 20:51:10.039390 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: BEGIN
+2021-12-02 20:51:10.783852 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: Close
+2021-12-02 20:51:10.784358 (Thread-11): SQL status: BEGIN in 0.74 seconds
+2021-12-02 20:51:10.788496 (Thread-13): 20:51:10 | 13 of 14 OK created incremental model test_dbt.convert_column_string_to_float................................ [SELECT in 24.00s]
+2021-12-02 20:51:10.792685 (Thread-11): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:51:10.794484 (Thread-13): Finished running node model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:51:10.796627 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+drop table if exists "integrationtests"."test_dbt"."convert_column_int_to_string__dbt_backup" cascade
+2021-12-02 20:51:11.504038 (Thread-11): SQL status: DROP TABLE in 0.70 seconds
+2021-12-02 20:51:11.507192 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: COMMIT
+2021-12-02 20:51:11.509254 (Thread-11): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:51:11.511268 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: COMMIT
+2021-12-02 20:51:12.352788 (Thread-11): SQL status: COMMIT in 0.84 seconds
+2021-12-02 20:51:12.356308 (Thread-11): Using redshift connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:51:12.358580 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: BEGIN
+2021-12-02 20:51:13.140675 (Thread-11): SQL status: BEGIN in 0.78 seconds
+2021-12-02 20:51:13.144721 (Thread-11): finished collecting timing info
+2021-12-02 20:51:13.145074 (Thread-4): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:51:13.147235 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: ROLLBACK
+2021-12-02 20:51:13.149203 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: BEGIN
+2021-12-02 20:51:13.961648 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: Close
+2021-12-02 20:51:13.962667 (Thread-4): SQL status: BEGIN in 0.81 seconds
+2021-12-02 20:51:13.966410 (Thread-11): 20:51:13 | 11 of 14 OK created incremental model test_dbt.convert_column_int_to_string.................................. [SELECT in 27.18s]
+2021-12-02 20:51:13.969292 (Thread-4): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:51:13.971082 (Thread-11): Finished running node model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:51:13.972824 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+drop table if exists "integrationtests"."test_dbt"."convert_column_boolean_to_int__dbt_backup" cascade
+2021-12-02 20:51:14.785308 (Thread-4): SQL status: DROP TABLE in 0.81 seconds
+2021-12-02 20:51:14.788330 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: COMMIT
+2021-12-02 20:51:14.790077 (Thread-4): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:51:14.791665 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: COMMIT
+2021-12-02 20:51:15.670793 (Thread-4): SQL status: COMMIT in 0.88 seconds
+2021-12-02 20:51:15.674556 (Thread-4): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:51:15.676809 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: BEGIN
+2021-12-02 20:51:16.438500 (Thread-4): SQL status: BEGIN in 0.76 seconds
+2021-12-02 20:51:16.441645 (Thread-4): finished collecting timing info
+2021-12-02 20:51:16.442028 (Thread-14): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:51:16.443695 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: ROLLBACK
+2021-12-02 20:51:16.445535 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: BEGIN
+2021-12-02 20:51:17.256910 (Thread-14): SQL status: BEGIN in 0.81 seconds
+2021-12-02 20:51:17.258576 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: Close
+2021-12-02 20:51:17.263071 (Thread-14): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:51:17.265517 (Thread-4): 20:51:17 | 4 of 14 OK created incremental model test_dbt.convert_column_boolean_to_int.................................. [SELECT in 30.47s]
+2021-12-02 20:51:17.266596 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+drop table if exists "integrationtests"."test_dbt"."convert_column_string_to_int__dbt_backup" cascade
+2021-12-02 20:51:17.268441 (Thread-4): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:51:18.055562 (Thread-14): SQL status: DROP TABLE in 0.79 seconds
+2021-12-02 20:51:18.060714 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: COMMIT
+2021-12-02 20:51:18.063187 (Thread-14): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:51:18.065256 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: COMMIT
+2021-12-02 20:51:18.956732 (Thread-14): SQL status: COMMIT in 0.89 seconds
+2021-12-02 20:51:18.960197 (Thread-14): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:51:18.962756 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: BEGIN
+2021-12-02 20:51:19.805290 (Thread-14): SQL status: BEGIN in 0.84 seconds
+2021-12-02 20:51:19.810483 (Thread-14): finished collecting timing info
+2021-12-02 20:51:19.810709 (Thread-1): Using redshift connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:51:19.814057 (Thread-1): On model.incremental_test_schema_change.change_column_names: BEGIN
+2021-12-02 20:51:19.812540 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: ROLLBACK
+2021-12-02 20:51:20.644870 (Thread-1): SQL status: BEGIN in 0.83 seconds
+2021-12-02 20:51:20.645635 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: Close
+2021-12-02 20:51:20.651006 (Thread-1): Using redshift connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:51:20.654142 (Thread-14): 20:51:20 | 14 of 14 OK created incremental model test_dbt.convert_column_string_to_int.................................. [SELECT in 33.82s]
+2021-12-02 20:51:20.655273 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+drop table if exists "integrationtests"."test_dbt"."change_column_names__dbt_backup" cascade
+2021-12-02 20:51:20.657496 (Thread-14): Finished running node model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:51:21.259324 (Thread-1): SQL status: DROP TABLE in 0.60 seconds
+2021-12-02 20:51:21.263613 (Thread-1): On model.incremental_test_schema_change.change_column_names: COMMIT
+2021-12-02 20:51:21.266026 (Thread-1): Using redshift connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:51:21.268053 (Thread-1): On model.incremental_test_schema_change.change_column_names: COMMIT
+2021-12-02 20:51:21.877620 (Thread-1): SQL status: COMMIT in 0.61 seconds
+2021-12-02 20:51:21.881208 (Thread-1): Using redshift connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:51:21.883689 (Thread-1): On model.incremental_test_schema_change.change_column_names: BEGIN
+2021-12-02 20:51:22.398411 (Thread-1): SQL status: BEGIN in 0.51 seconds
+2021-12-02 20:51:22.402688 (Thread-1): finished collecting timing info
+2021-12-02 20:51:22.403092 (Thread-12): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:51:22.406844 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: BEGIN
+2021-12-02 20:51:22.405142 (Thread-1): On model.incremental_test_schema_change.change_column_names: ROLLBACK
+2021-12-02 20:51:22.942299 (Thread-1): On model.incremental_test_schema_change.change_column_names: Close
+2021-12-02 20:51:22.946707 (Thread-1): 20:51:22 | 1 of 14 OK created incremental model test_dbt.change_column_names............................................ [SELECT in 36.15s]
+2021-12-02 20:51:22.949050 (Thread-1): Finished running node model.incremental_test_schema_change.change_column_names
+2021-12-02 20:51:22.949403 (Thread-12): SQL status: BEGIN in 0.54 seconds
+2021-12-02 20:51:22.954652 (Thread-12): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:51:22.956302 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+drop table if exists "integrationtests"."test_dbt"."convert_column_string_to_boolean__dbt_backup" cascade
+2021-12-02 20:51:23.544666 (Thread-12): SQL status: DROP TABLE in 0.59 seconds
+2021-12-02 20:51:23.549437 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: COMMIT
+2021-12-02 20:51:23.551648 (Thread-12): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:51:23.553374 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: COMMIT
+2021-12-02 20:51:24.334450 (Thread-12): SQL status: COMMIT in 0.78 seconds
+2021-12-02 20:51:24.337723 (Thread-12): Using redshift connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:51:24.339806 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: BEGIN
+2021-12-02 20:51:25.000370 (Thread-12): SQL status: BEGIN in 0.66 seconds
+2021-12-02 20:51:25.004574 (Thread-12): finished collecting timing info
+2021-12-02 20:51:25.005038 (Thread-2): Using redshift connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:51:25.007074 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: ROLLBACK
+2021-12-02 20:51:25.009364 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: BEGIN
+2021-12-02 20:51:25.664830 (Thread-2): SQL status: BEGIN in 0.65 seconds
+2021-12-02 20:51:25.665540 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: Close
+2021-12-02 20:51:25.671980 (Thread-2): Using redshift connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:51:25.674848 (Thread-12): 20:51:25 | 12 of 14 OK created incremental model test_dbt.convert_column_string_to_boolean.............................. [SELECT in 38.87s]
+2021-12-02 20:51:25.677126 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.column_with_quotes"} */
+drop table if exists "integrationtests"."test_dbt"."column_with_quotes__dbt_backup" cascade
+2021-12-02 20:51:25.679323 (Thread-12): Finished running node model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:51:26.469525 (Thread-2): SQL status: DROP TABLE in 0.79 seconds
+2021-12-02 20:51:26.474096 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: COMMIT
+2021-12-02 20:51:26.476336 (Thread-2): Using redshift connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:51:26.478253 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: COMMIT
+2021-12-02 20:51:27.261481 (Thread-2): SQL status: COMMIT in 0.78 seconds
+2021-12-02 20:51:27.265177 (Thread-2): Using redshift connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:51:27.267314 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: BEGIN
+2021-12-02 20:51:28.005774 (Thread-2): SQL status: BEGIN in 0.74 seconds
+2021-12-02 20:51:28.009505 (Thread-2): finished collecting timing info
+2021-12-02 20:51:28.009836 (Thread-3): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:51:28.011555 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: ROLLBACK
+2021-12-02 20:51:28.013594 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: BEGIN
+2021-12-02 20:51:28.677295 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: Close
+2021-12-02 20:51:28.681700 (Thread-2): 20:51:28 | 2 of 14 OK created incremental model test_dbt.column_with_quotes............................................. [SELECT in 41.89s]
+2021-12-02 20:51:28.682240 (Thread-3): SQL status: BEGIN in 0.67 seconds
+2021-12-02 20:51:28.684385 (Thread-2): Finished running node model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:51:28.688429 (Thread-3): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:51:28.691405 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+drop table if exists "integrationtests"."test_dbt"."convert_column_boolean_to_float__dbt_backup" cascade
+2021-12-02 20:51:29.371411 (Thread-3): SQL status: DROP TABLE in 0.68 seconds
+2021-12-02 20:51:29.375701 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: COMMIT
+2021-12-02 20:51:29.378119 (Thread-3): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:51:29.379832 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: COMMIT
+2021-12-02 20:51:30.177454 (Thread-3): SQL status: COMMIT in 0.80 seconds
+2021-12-02 20:51:30.181072 (Thread-3): Using redshift connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:51:30.183199 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: BEGIN
+2021-12-02 20:51:30.846251 (Thread-3): SQL status: BEGIN in 0.66 seconds
+2021-12-02 20:51:30.850199 (Thread-3): finished collecting timing info
+2021-12-02 20:51:30.850598 (Thread-6): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:51:30.852372 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: ROLLBACK
+2021-12-02 20:51:30.855271 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: BEGIN
+2021-12-02 20:51:31.507718 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: Close
+2021-12-02 20:51:31.508496 (Thread-6): SQL status: BEGIN in 0.65 seconds
+2021-12-02 20:51:31.512486 (Thread-3): 20:51:31 | 3 of 14 OK created incremental model test_dbt.convert_column_boolean_to_float................................ [SELECT in 44.72s]
+2021-12-02 20:51:31.515685 (Thread-6): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:51:31.517486 (Thread-3): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:51:31.519712 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+drop table if exists "integrationtests"."test_dbt"."convert_column_float_to_boolean__dbt_backup" cascade
+2021-12-02 20:51:32.180777 (Thread-6): SQL status: DROP TABLE in 0.66 seconds
+2021-12-02 20:51:32.185007 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: COMMIT
+2021-12-02 20:51:32.187147 (Thread-6): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:51:32.189135 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: COMMIT
+2021-12-02 20:51:33.023596 (Thread-6): SQL status: COMMIT in 0.83 seconds
+2021-12-02 20:51:33.026641 (Thread-6): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:51:33.028479 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: BEGIN
+2021-12-02 20:51:33.765422 (Thread-6): SQL status: BEGIN in 0.73 seconds
+2021-12-02 20:51:33.769373 (Thread-6): finished collecting timing info
+2021-12-02 20:51:33.769778 (Thread-7): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:51:33.771353 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: ROLLBACK
+2021-12-02 20:51:33.773087 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: BEGIN
+2021-12-02 20:51:34.516600 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: Close
+2021-12-02 20:51:34.521007 (Thread-6): 20:51:34 | 6 of 14 OK created incremental model test_dbt.convert_column_float_to_boolean................................ [SELECT in 47.72s]
+2021-12-02 20:51:34.523186 (Thread-6): Finished running node model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:51:34.525461 (Thread-7): SQL status: BEGIN in 0.75 seconds
+2021-12-02 20:51:34.529331 (Thread-7): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:51:34.530991 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+drop table if exists "integrationtests"."test_dbt"."convert_column_float_to_int__dbt_backup" cascade
+2021-12-02 20:51:35.323546 (Thread-7): SQL status: DROP TABLE in 0.79 seconds
+2021-12-02 20:51:35.326770 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: COMMIT
+2021-12-02 20:51:35.328690 (Thread-7): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:51:35.330427 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: COMMIT
+2021-12-02 20:51:36.285770 (Thread-7): SQL status: COMMIT in 0.95 seconds
+2021-12-02 20:51:36.289616 (Thread-7): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:51:36.291505 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: BEGIN
+2021-12-02 20:51:37.231509 (Thread-7): SQL status: BEGIN in 0.94 seconds
+2021-12-02 20:51:37.235110 (Thread-7): finished collecting timing info
+2021-12-02 20:51:37.235336 (Thread-8): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:51:37.237587 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: ROLLBACK
+2021-12-02 20:51:37.239723 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: BEGIN
+2021-12-02 20:51:38.001901 (Thread-8): SQL status: BEGIN in 0.76 seconds
+2021-12-02 20:51:38.002744 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: Close
+2021-12-02 20:51:38.008667 (Thread-8): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:51:38.011615 (Thread-7): 20:51:38 | 7 of 14 OK created incremental model test_dbt.convert_column_float_to_int.................................... [SELECT in 51.24s]
+2021-12-02 20:51:38.012852 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+drop table if exists "integrationtests"."test_dbt"."convert_column_float_to_string__dbt_backup" cascade
+2021-12-02 20:51:38.014977 (Thread-7): Finished running node model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:51:38.742929 (Thread-8): SQL status: DROP TABLE in 0.73 seconds
+2021-12-02 20:51:38.747443 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: COMMIT
+2021-12-02 20:51:38.749709 (Thread-8): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:51:38.751475 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: COMMIT
+2021-12-02 20:51:39.699571 (Thread-8): SQL status: COMMIT in 0.95 seconds
+2021-12-02 20:51:39.703114 (Thread-8): Using redshift connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:51:39.705616 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: BEGIN
+2021-12-02 20:51:40.519609 (Thread-8): SQL status: BEGIN in 0.81 seconds
+2021-12-02 20:51:40.523719 (Thread-8): finished collecting timing info
+2021-12-02 20:51:40.526723 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: ROLLBACK
+2021-12-02 20:51:41.400814 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: Close
+2021-12-02 20:51:41.405411 (Thread-8): 20:51:41 | 8 of 14 OK created incremental model test_dbt.convert_column_float_to_string................................. [SELECT in 54.60s]
+2021-12-02 20:51:41.407722 (Thread-8): Finished running node model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:51:41.415792 (MainThread): Acquiring new redshift connection "master".
+2021-12-02 20:51:41.417470 (MainThread): Using redshift connection "master".
+2021-12-02 20:51:41.418959 (MainThread): On master: BEGIN
+2021-12-02 20:51:41.420531 (MainThread): Opening a new connection, currently in state closed
+2021-12-02 20:51:41.422232 (MainThread): Connecting to Redshift using 'database' credentials
+2021-12-02 20:51:48.607431 (MainThread): SQL status: BEGIN in 7.19 seconds
+2021-12-02 20:51:48.610746 (MainThread): On master: COMMIT
+2021-12-02 20:51:48.612884 (MainThread): Using redshift connection "master".
+2021-12-02 20:51:48.615073 (MainThread): On master: COMMIT
+2021-12-02 20:51:49.089937 (MainThread): SQL status: COMMIT in 0.47 seconds
+2021-12-02 20:51:49.094239 (MainThread): On master: Close
+2021-12-02 20:51:49.097222 (MainThread): 20:51:49 | 
+2021-12-02 20:51:49.098949 (MainThread): 20:51:49 | Finished running 14 incremental models in 92.67s.
+2021-12-02 20:51:49.100844 (MainThread): Connection 'master' was properly closed.
+2021-12-02 20:51:49.102960 (MainThread): Connection 'model.incremental_test_schema_change.change_column_names' was properly closed.
+2021-12-02 20:51:49.104746 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_int' was properly closed.
+2021-12-02 20:51:49.106330 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_string' was properly closed.
+2021-12-02 20:51:49.108600 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_float' was properly closed.
+2021-12-02 20:51:49.110208 (MainThread): Connection 'model.incremental_test_schema_change.column_with_quotes' was properly closed.
+2021-12-02 20:51:49.111905 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_float' was properly closed.
+2021-12-02 20:51:49.113787 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_int' was properly closed.
+2021-12-02 20:51:49.115605 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_string' was properly closed.
+2021-12-02 20:51:49.117216 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_boolean' was properly closed.
+2021-12-02 20:51:49.118963 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_string' was properly closed.
+2021-12-02 20:51:49.120570 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_boolean' was properly closed.
+2021-12-02 20:51:49.122125 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_float' was properly closed.
+2021-12-02 20:51:49.123609 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_boolean' was properly closed.
+2021-12-02 20:51:49.125157 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_int' was properly closed.
+2021-12-02 20:51:49.141493 (MainThread): 
+2021-12-02 20:51:49.143103 (MainThread): Completed successfully
+2021-12-02 20:51:49.144761 (MainThread): 
+Done. PASS=14 WARN=0 ERROR=0 SKIP=0 TOTAL=14
+2021-12-02 20:51:49.147230 (MainThread): Flushing usage events

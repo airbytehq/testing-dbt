@@ -1,0 +1,3640 @@
+2021-12-02 20:46:04.481124 (MainThread): Running with dbt=0.21.1
+2021-12-02 20:46:04.590337 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/data/db_mssql', project_dir='/data/first_project', record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-12-02 20:46:04.599322 (MainThread): Tracking: do not track
+2021-12-02 20:46:04.618007 (MainThread): Unable to do partial parsing because target/partial_parse.msgpack not found
+2021-12-02 20:46:04.689979 (MainThread): Parsing ../macros/boolean_values.sql
+2021-12-02 20:46:04.696053 (MainThread): Parsing ../macros/normalize_identifier.sql
+2021-12-02 20:46:04.700009 (MainThread): Parsing macros/merge.sql
+2021-12-02 20:46:04.703399 (MainThread): Parsing macros/catalog.sql
+2021-12-02 20:46:04.705978 (MainThread): Parsing macros/indexes.sql
+2021-12-02 20:46:04.717580 (MainThread): Parsing macros/adapters.sql
+2021-12-02 20:46:04.793335 (MainThread): Parsing macros/materializations/test.sql
+2021-12-02 20:46:04.804302 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-02 20:46:04.816025 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-02 20:46:04.819671 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-02 20:46:04.822462 (MainThread): Parsing macros/core.sql
+2021-12-02 20:46:04.828654 (MainThread): Parsing macros/etc/datetime.sql
+2021-12-02 20:46:04.842489 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-12-02 20:46:04.846138 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-12-02 20:46:04.850918 (MainThread): Parsing macros/etc/query.sql
+2021-12-02 20:46:04.853324 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-12-02 20:46:04.857151 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-12-02 20:46:04.860346 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-12-02 20:46:04.863748 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-12-02 20:46:04.867338 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-12-02 20:46:04.869895 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-12-02 20:46:04.874104 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-12-02 20:46:04.876934 (MainThread): Parsing macros/materializations/helpers.sql
+2021-12-02 20:46:04.893080 (MainThread): Parsing macros/materializations/test.sql
+2021-12-02 20:46:04.904385 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-02 20:46:04.941335 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-02 20:46:04.995650 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-02 20:46:05.022049 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-12-02 20:46:05.026030 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-12-02 20:46:05.049466 (MainThread): Parsing macros/materializations/table/table.sql
+2021-12-02 20:46:05.062084 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-12-02 20:46:05.069129 (MainThread): Parsing macros/materializations/view/view.sql
+2021-12-02 20:46:05.081222 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-12-02 20:46:05.114617 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-12-02 20:46:05.118855 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-12-02 20:46:05.135084 (MainThread): Parsing macros/adapters/common.sql
+2021-12-02 20:46:05.511199 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:46:05.529210 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:46:05.538936 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:46:05.546453 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:46:05.552565 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:46:05.558363 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:46:05.563732 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:46:05.568989 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:46:05.574477 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:46:05.580738 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:46:05.585837 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:46:05.591225 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:46:05.596308 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:46:05.601472 (MainThread): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:46:05.660957 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-12-02 20:46:05.663858 (MainThread): Found 14 models, 0 tests, 0 snapshots, 0 analyses, 194 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-12-02 20:46:05.669493 (MainThread): 
+2021-12-02 20:46:05.671629 (MainThread): Acquiring new sqlserver connection "master".
+2021-12-02 20:46:05.675601 (ThreadPoolExecutor-0_0): Acquiring new sqlserver connection "list_test_dbt".
+2021-12-02 20:46:05.688351 (ThreadPoolExecutor-0_0): Using sqlserver connection "list_test_dbt".
+2021-12-02 20:46:05.690131 (ThreadPoolExecutor-0_0): On list_test_dbt: USE "test_dbt";
+    select  name as [schema]
+    from sys.schemas
+  
+2021-12-02 20:46:05.691430 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-12-02 20:46:05.692802 (ThreadPoolExecutor-0_0): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:46:05.707767 (ThreadPoolExecutor-0_0): Connected to db: test_dbt
+2021-12-02 20:46:05.709906 (ThreadPoolExecutor-0_0): SQL status: OK in 0.02 seconds
+2021-12-02 20:46:05.712577 (ThreadPoolExecutor-0_0): On list_test_dbt: Close
+2021-12-02 20:46:05.715903 (ThreadPoolExecutor-1_0): Acquiring new sqlserver connection "list_test_dbt_test_dbt".
+2021-12-02 20:46:05.722561 (ThreadPoolExecutor-1_0): Using sqlserver connection "list_test_dbt_test_dbt".
+2021-12-02 20:46:05.723785 (ThreadPoolExecutor-1_0): On list_test_dbt_test_dbt: select
+      table_catalog as [database],
+      table_name as [name],
+      table_schema as [schema],
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           else table_type
+      end as table_type
+
+    from [test_dbt].information_schema.tables
+    where table_schema like 'test_dbt'
+  
+2021-12-02 20:46:05.724884 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-12-02 20:46:05.726034 (ThreadPoolExecutor-1_0): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:46:05.734630 (ThreadPoolExecutor-1_0): Connected to db: test_dbt
+2021-12-02 20:46:05.739252 (ThreadPoolExecutor-1_0): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:05.741959 (ThreadPoolExecutor-1_0): On list_test_dbt_test_dbt: ROLLBACK
+2021-12-02 20:46:05.743411 (ThreadPoolExecutor-1_0): On list_test_dbt_test_dbt: Close
+2021-12-02 20:46:05.746127 (MainThread): On master: COMMIT
+2021-12-02 20:46:05.747669 (MainThread): 20:46:05 | Concurrency: 32 threads (target='prod')
+2021-12-02 20:46:05.753171 (MainThread): 20:46:05 | 
+2021-12-02 20:46:05.772053 (Thread-1): Began running node model.incremental_test_schema_change.change_column_names
+2021-12-02 20:46:05.772339 (Thread-2): Began running node model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:46:05.783136 (Thread-2): 20:46:05 | 2 of 14 START incremental model test_dbt.column_with_quotes.................................................. [RUN]
+2021-12-02 20:46:05.773153 (Thread-4): Began running node model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:46:05.773467 (Thread-5): Began running node model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:46:05.773836 (Thread-6): Began running node model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:46:05.774101 (Thread-7): Began running node model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:46:05.774559 (Thread-8): Began running node model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:46:05.792689 (Thread-8): 20:46:05 | 8 of 14 START incremental model test_dbt.convert_column_float_to_string...................................... [RUN]
+2021-12-02 20:46:05.774882 (Thread-9): Began running node model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:46:05.795998 (Thread-9): 20:46:05 | 9 of 14 START incremental model test_dbt.convert_column_int_to_boolean....................................... [RUN]
+2021-12-02 20:46:05.775855 (Thread-11): Began running node model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:46:05.799257 (Thread-11): 20:46:05 | 11 of 14 START incremental model test_dbt.convert_column_int_to_string....................................... [RUN]
+2021-12-02 20:46:05.776102 (Thread-13): Began running node model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:46:05.776342 (Thread-14): Began running node model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:46:05.772659 (Thread-3): Began running node model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:46:05.805127 (Thread-3): 20:46:05 | 3 of 14 START incremental model test_dbt.convert_column_boolean_to_float..................................... [RUN]
+2021-12-02 20:46:05.787451 (Thread-4): 20:46:05 | 4 of 14 START incremental model test_dbt.convert_column_boolean_to_int....................................... [RUN]
+2021-12-02 20:46:05.788892 (Thread-5): 20:46:05 | 5 of 14 START incremental model test_dbt.convert_column_boolean_to_string.................................... [RUN]
+2021-12-02 20:46:05.790147 (Thread-6): 20:46:05 | 6 of 14 START incremental model test_dbt.convert_column_float_to_boolean..................................... [RUN]
+2021-12-02 20:46:05.791451 (Thread-7): 20:46:05 | 7 of 14 START incremental model test_dbt.convert_column_float_to_int......................................... [RUN]
+2021-12-02 20:46:05.774419 (Thread-1): 20:46:05 | 1 of 14 START incremental model test_dbt.change_column_names................................................. [RUN]
+2021-12-02 20:46:05.794260 (Thread-8): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:46:05.775151 (Thread-10): Began running node model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:46:05.816965 (Thread-10): 20:46:05 | 10 of 14 START incremental model test_dbt.convert_column_int_to_float........................................ [RUN]
+2021-12-02 20:46:05.818812 (Thread-10): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:46:05.820354 (Thread-10): Compiling model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:46:05.802343 (Thread-13): 20:46:05 | 13 of 14 START incremental model test_dbt.convert_column_string_to_float..................................... [RUN]
+2021-12-02 20:46:05.803728 (Thread-14): 20:46:05 | 14 of 14 START incremental model test_dbt.convert_column_string_to_int....................................... [RUN]
+2021-12-02 20:46:05.785466 (Thread-2): Acquiring new sqlserver connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:46:05.828429 (Thread-2): Compiling model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:46:05.808760 (Thread-4): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:46:05.810390 (Thread-5): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:46:05.811705 (Thread-6): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:46:05.813707 (Thread-7): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:46:05.814472 (Thread-1): Acquiring new sqlserver connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:46:05.815672 (Thread-8): Compiling model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:46:05.798280 (Thread-9): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:46:05.843354 (Thread-9): Compiling model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:46:05.846722 (Thread-9): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_boolean"
+2021-12-02 20:46:05.823941 (Thread-10): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_float"
+2021-12-02 20:46:05.825577 (Thread-13): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:46:05.827156 (Thread-14): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:46:05.806781 (Thread-3): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:46:05.852720 (Thread-3): Compiling model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:46:05.833822 (Thread-4): Compiling model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:46:05.835251 (Thread-5): Compiling model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:46:05.836336 (Thread-6): Compiling model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:46:05.837713 (Thread-7): Compiling model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:46:05.873833 (Thread-7): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_int"
+2021-12-02 20:46:05.842069 (Thread-8): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_string"
+2021-12-02 20:46:05.775969 (Thread-12): Began running node model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:46:05.878398 (Thread-12): 20:46:05 | 12 of 14 START incremental model test_dbt.convert_column_string_to_boolean................................... [RUN]
+2021-12-02 20:46:05.849905 (Thread-13): Compiling model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:46:05.851338 (Thread-14): Compiling model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:46:05.832337 (Thread-2): Writing injected SQL for node "model.incremental_test_schema_change.column_with_quotes"
+2021-12-02 20:46:05.857366 (Thread-3): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_float"
+2021-12-02 20:46:05.861281 (Thread-4): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_int"
+2021-12-02 20:46:05.865470 (Thread-5): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_string"
+2021-12-02 20:46:05.869487 (Thread-6): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_boolean"
+2021-12-02 20:46:05.871112 (Thread-9): finished collecting timing info
+2021-12-02 20:46:05.871425 (Thread-10): finished collecting timing info
+2021-12-02 20:46:05.838886 (Thread-1): Compiling model.incremental_test_schema_change.change_column_names
+2021-12-02 20:46:05.801291 (Thread-11): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:46:05.878742 (Thread-7): finished collecting timing info
+2021-12-02 20:46:05.880188 (Thread-12): Acquiring new sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:46:05.881244 (Thread-8): finished collecting timing info
+2021-12-02 20:46:05.883827 (Thread-13): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_float"
+2021-12-02 20:46:05.888502 (Thread-14): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_int"
+2021-12-02 20:46:05.893875 (Thread-2): finished collecting timing info
+2021-12-02 20:46:05.895942 (Thread-3): finished collecting timing info
+2021-12-02 20:46:05.902703 (Thread-4): finished collecting timing info
+2021-12-02 20:46:05.937163 (Thread-5): finished collecting timing info
+2021-12-02 20:46:05.960974 (Thread-1): Writing injected SQL for node "model.incremental_test_schema_change.change_column_names"
+2021-12-02 20:46:05.969105 (Thread-6): finished collecting timing info
+2021-12-02 20:46:05.996651 (Thread-11): Compiling model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:46:06.004922 (Thread-10): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:46:06.006298 (Thread-9): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:46:06.010466 (Thread-7): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:46:06.012061 (Thread-12): Compiling model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:46:06.016895 (Thread-8): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:46:06.024694 (Thread-2): Using sqlserver connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:46:06.061395 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: 
+    
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."column_with_quotes__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."column_with_quotes__dbt_tmp_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."#column_with_quotes__dbt_tmp"','U') is not null
+      begin
+      drop table "test_dbt"."#column_with_quotes__dbt_tmp"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."column_with_quotes__dbt_tmp_temp_view" as
+    select
+    ''a column with tricky name with quotes'' as  "column`_''with""_quotes",
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."#column_with_quotes__dbt_tmp" FROM
+    "test_dbt"."test_dbt"."column_with_quotes__dbt_tmp_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."column_with_quotes__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."column_with_quotes__dbt_tmp_temp_view"
+      end
+
+    
+   
+
+
+  
+2021-12-02 20:46:06.029719 (Thread-13): finished collecting timing info
+2021-12-02 20:46:06.031074 (Thread-14): finished collecting timing info
+2021-12-02 20:46:06.035657 (Thread-4): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:46:06.074409 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: 
+    
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_boolean_to_int__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_boolean_to_int__dbt_tmp_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."#convert_column_boolean_to_int__dbt_tmp"','U') is not null
+      begin
+      drop table "test_dbt"."#convert_column_boolean_to_int__dbt_tmp"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_boolean_to_int__dbt_tmp_temp_view" as
+    select
+    cast(1 as BIT) as column_boolean_to_int,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."#convert_column_boolean_to_int__dbt_tmp" FROM
+    "test_dbt"."test_dbt"."convert_column_boolean_to_int__dbt_tmp_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_boolean_to_int__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_boolean_to_int__dbt_tmp_temp_view"
+      end
+
+    
+   
+
+
+  
+2021-12-02 20:46:06.075953 (Thread-4): Opening a new connection, currently in state init
+2021-12-02 20:46:06.048134 (Thread-1): finished collecting timing info
+2021-12-02 20:46:06.050643 (Thread-11): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_string"
+2021-12-02 20:46:06.052092 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: 
+    
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_int_to_float__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_int_to_float__dbt_tmp_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."#convert_column_int_to_float__dbt_tmp"','U') is not null
+      begin
+      drop table "test_dbt"."#convert_column_int_to_float__dbt_tmp"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_int_to_float__dbt_tmp_temp_view" as
+    select
+    1 as column_int_to_float,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."#convert_column_int_to_float__dbt_tmp" FROM
+    "test_dbt"."test_dbt"."convert_column_int_to_float__dbt_tmp_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_int_to_float__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_int_to_float__dbt_tmp_temp_view"
+      end
+
+    
+   
+
+
+  
+2021-12-02 20:46:06.053438 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: 
+    
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_int_to_boolean__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_int_to_boolean__dbt_tmp_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."#convert_column_int_to_boolean__dbt_tmp"','U') is not null
+      begin
+      drop table "test_dbt"."#convert_column_int_to_boolean__dbt_tmp"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_int_to_boolean__dbt_tmp_temp_view" as
+    select
+    1 as column_int_to_boolean,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."#convert_column_int_to_boolean__dbt_tmp" FROM
+    "test_dbt"."test_dbt"."convert_column_int_to_boolean__dbt_tmp_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_int_to_boolean__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_int_to_boolean__dbt_tmp_temp_view"
+      end
+
+    
+   
+
+
+  
+2021-12-02 20:46:06.054757 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: 
+    
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_float_to_int__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_float_to_int__dbt_tmp_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."#convert_column_float_to_int__dbt_tmp"','U') is not null
+      begin
+      drop table "test_dbt"."#convert_column_float_to_int__dbt_tmp"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_float_to_int__dbt_tmp_temp_view" as
+    select
+    1.1 as column_float_to_int,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."#convert_column_float_to_int__dbt_tmp" FROM
+    "test_dbt"."test_dbt"."convert_column_float_to_int__dbt_tmp_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_float_to_int__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_float_to_int__dbt_tmp_temp_view"
+      end
+
+    
+   
+
+
+  
+2021-12-02 20:46:06.058384 (Thread-12): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_boolean"
+2021-12-02 20:46:06.060038 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: 
+    
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_float_to_string__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_float_to_string__dbt_tmp_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."#convert_column_float_to_string__dbt_tmp"','U') is not null
+      begin
+      drop table "test_dbt"."#convert_column_float_to_string__dbt_tmp"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_float_to_string__dbt_tmp_temp_view" as
+    select
+    1.1 as column_float_to_string,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."#convert_column_float_to_string__dbt_tmp" FROM
+    "test_dbt"."test_dbt"."convert_column_float_to_string__dbt_tmp_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_float_to_string__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_float_to_string__dbt_tmp_temp_view"
+      end
+
+    
+   
+
+
+  
+2021-12-02 20:46:06.029254 (Thread-3): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:46:06.063405 (Thread-2): Opening a new connection, currently in state init
+2021-12-02 20:46:06.068232 (Thread-13): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:46:06.095518 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: 
+    
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_string_to_float__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_string_to_float__dbt_tmp_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."#convert_column_string_to_float__dbt_tmp"','U') is not null
+      begin
+      drop table "test_dbt"."#convert_column_string_to_float__dbt_tmp"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_string_to_float__dbt_tmp_temp_view" as
+    select
+    ''1.1'' as column_string_to_float,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."#convert_column_string_to_float__dbt_tmp" FROM
+    "test_dbt"."test_dbt"."convert_column_string_to_float__dbt_tmp_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_string_to_float__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_string_to_float__dbt_tmp_temp_view"
+      end
+
+    
+   
+
+
+  
+2021-12-02 20:46:06.040625 (Thread-5): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:46:06.098229 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: 
+    
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_boolean_to_string__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_boolean_to_string__dbt_tmp_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."#convert_column_boolean_to_string__dbt_tmp"','U') is not null
+      begin
+      drop table "test_dbt"."#convert_column_boolean_to_string__dbt_tmp"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_boolean_to_string__dbt_tmp_temp_view" as
+    select
+    cast(1 as BIT) as column_boolean_to_string,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."#convert_column_boolean_to_string__dbt_tmp" FROM
+    "test_dbt"."test_dbt"."convert_column_boolean_to_string__dbt_tmp_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_boolean_to_string__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_boolean_to_string__dbt_tmp_temp_view"
+      end
+
+    
+   
+
+
+  
+2021-12-02 20:46:06.100123 (Thread-5): Opening a new connection, currently in state init
+2021-12-02 20:46:06.101310 (Thread-5): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:46:06.084994 (Thread-10): Opening a new connection, currently in state init
+2021-12-02 20:46:06.086461 (Thread-11): finished collecting timing info
+2021-12-02 20:46:06.086778 (Thread-9): Opening a new connection, currently in state init
+2021-12-02 20:46:06.088608 (Thread-7): Opening a new connection, currently in state init
+2021-12-02 20:46:06.091103 (Thread-8): Opening a new connection, currently in state init
+2021-12-02 20:46:06.092769 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: 
+    
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_boolean_to_float__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_boolean_to_float__dbt_tmp_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."#convert_column_boolean_to_float__dbt_tmp"','U') is not null
+      begin
+      drop table "test_dbt"."#convert_column_boolean_to_float__dbt_tmp"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_boolean_to_float__dbt_tmp_temp_view" as
+    select
+    cast(1 as BIT) as column_boolean_to_float,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."#convert_column_boolean_to_float__dbt_tmp" FROM
+    "test_dbt"."test_dbt"."convert_column_boolean_to_float__dbt_tmp_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_boolean_to_float__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_boolean_to_float__dbt_tmp_temp_view"
+      end
+
+    
+   
+
+
+  
+2021-12-02 20:46:06.093114 (Thread-12): finished collecting timing info
+2021-12-02 20:46:06.094334 (Thread-2): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:46:06.072969 (Thread-14): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:46:06.127672 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: 
+    
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_string_to_int__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_string_to_int__dbt_tmp_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."#convert_column_string_to_int__dbt_tmp"','U') is not null
+      begin
+      drop table "test_dbt"."#convert_column_string_to_int__dbt_tmp"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_string_to_int__dbt_tmp_temp_view" as
+    select
+    ''1'' as column_string_to_int,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."#convert_column_string_to_int__dbt_tmp" FROM
+    "test_dbt"."test_dbt"."convert_column_string_to_int__dbt_tmp_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_string_to_int__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_string_to_int__dbt_tmp_temp_view"
+      end
+
+    
+   
+
+
+  
+2021-12-02 20:46:06.129777 (Thread-14): Opening a new connection, currently in state init
+2021-12-02 20:46:06.131237 (Thread-14): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:46:06.081936 (Thread-1): Using sqlserver connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:46:06.133942 (Thread-1): On model.incremental_test_schema_change.change_column_names: 
+    
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."change_column_names__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."change_column_names__dbt_tmp_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."#change_column_names__dbt_tmp"','U') is not null
+      begin
+      drop table "test_dbt"."#change_column_names__dbt_tmp"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."change_column_names__dbt_tmp_temp_view" as
+    select
+    ''a column with underscore'' as column_name,
+    ''a column to rename'' as column_to_rename,
+    ''a column to be deleted'' as column_to_delete,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."#change_column_names__dbt_tmp" FROM
+    "test_dbt"."test_dbt"."change_column_names__dbt_tmp_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."change_column_names__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."change_column_names__dbt_tmp_temp_view"
+      end
+
+    
+   
+
+
+  
+2021-12-02 20:46:06.136005 (Thread-1): Opening a new connection, currently in state closed
+2021-12-02 20:46:06.114193 (Thread-5): Connected to db: test_dbt
+2021-12-02 20:46:06.115706 (Thread-9): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:46:06.116932 (Thread-7): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:46:06.118341 (Thread-8): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:46:06.119864 (Thread-3): Opening a new connection, currently in state init
+2021-12-02 20:46:06.124516 (Thread-12): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:46:06.096938 (Thread-13): Opening a new connection, currently in state init
+2021-12-02 20:46:06.046986 (Thread-6): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:46:06.077103 (Thread-4): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:46:06.105970 (Thread-10): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:46:06.134951 (Thread-2): Connected to db: test_dbt
+2021-12-02 20:46:06.137158 (Thread-1): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:46:06.113973 (Thread-11): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:46:06.177193 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: 
+    
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_int_to_string__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_int_to_string__dbt_tmp_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."#convert_column_int_to_string__dbt_tmp"','U') is not null
+      begin
+      drop table "test_dbt"."#convert_column_int_to_string__dbt_tmp"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_int_to_string__dbt_tmp_temp_view" as
+    select
+    1 as column_int_to_string,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."#convert_column_int_to_string__dbt_tmp" FROM
+    "test_dbt"."test_dbt"."convert_column_int_to_string__dbt_tmp_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_int_to_string__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_int_to_string__dbt_tmp_temp_view"
+      end
+
+    
+   
+
+
+  
+2021-12-02 20:46:06.180470 (Thread-11): Opening a new connection, currently in state init
+2021-12-02 20:46:06.155025 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: 
+    
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_string_to_boolean__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_string_to_boolean__dbt_tmp_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."#convert_column_string_to_boolean__dbt_tmp"','U') is not null
+      begin
+      drop table "test_dbt"."#convert_column_string_to_boolean__dbt_tmp"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_string_to_boolean__dbt_tmp_temp_view" as
+    select
+    ''true'' as column_string_to_boolean,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."#convert_column_string_to_boolean__dbt_tmp" FROM
+    "test_dbt"."test_dbt"."convert_column_string_to_boolean__dbt_tmp_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_string_to_boolean__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_string_to_boolean__dbt_tmp_temp_view"
+      end
+
+    
+   
+
+
+  
+2021-12-02 20:46:06.159010 (Thread-9): Connected to db: test_dbt
+2021-12-02 20:46:06.159426 (Thread-5): SQL status: OK in 0.06 seconds
+2021-12-02 20:46:06.160431 (Thread-13): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:46:06.161371 (Thread-7): Connected to db: test_dbt
+2021-12-02 20:46:06.161636 (Thread-8): Connected to db: test_dbt
+2021-12-02 20:46:06.163336 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: 
+    
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_float_to_boolean__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_float_to_boolean__dbt_tmp_temp_view"
+      end
+
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."#convert_column_float_to_boolean__dbt_tmp"','U') is not null
+      begin
+      drop table "test_dbt"."#convert_column_float_to_boolean__dbt_tmp"
+      end
+
+
+   USE [test_dbt];
+   EXEC('create view "test_dbt"."convert_column_float_to_boolean__dbt_tmp_temp_view" as
+    select
+    1.1 as column_float_to_boolean,
+    SYSDATETIME() as insert_time
+    ');
+
+   SELECT * INTO "test_dbt"."test_dbt"."#convert_column_float_to_boolean__dbt_tmp" FROM
+    "test_dbt"."test_dbt"."convert_column_float_to_boolean__dbt_tmp_temp_view"
+
+   
+   
+  USE [test_dbt];
+  if object_id ('"test_dbt"."convert_column_float_to_boolean__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "test_dbt"."convert_column_float_to_boolean__dbt_tmp_temp_view"
+      end
+
+    
+   
+
+
+  
+2021-12-02 20:46:06.142003 (Thread-14): Connected to db: test_dbt
+2021-12-02 20:46:06.179267 (Thread-10): Connected to db: test_dbt
+2021-12-02 20:46:06.152228 (Thread-3): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:46:06.182208 (Thread-11): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:46:06.183686 (Thread-12): Opening a new connection, currently in state init
+2021-12-02 20:46:06.193714 (Thread-4): Connected to db: test_dbt
+2021-12-02 20:46:06.193902 (Thread-1): Connected to db: test_dbt
+2021-12-02 20:46:06.194201 (Thread-2): SQL status: OK in 0.13 seconds
+2021-12-02 20:46:06.201450 (Thread-9): SQL status: OK in 0.11 seconds
+2021-12-02 20:46:06.201084 (Thread-5): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:46:06.209390 (Thread-6): Opening a new connection, currently in state init
+2021-12-02 20:46:06.222998 (Thread-12): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:46:06.232636 (Thread-2): Using sqlserver connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:46:06.248381 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#column_with_quotes__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#column_with_quotes__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:06.239503 (Thread-11): Connected to db: test_dbt
+2021-12-02 20:46:06.240274 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_boolean_to_string__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_boolean_to_string__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:06.241479 (Thread-3): Connected to db: test_dbt
+2021-12-02 20:46:06.242167 (Thread-6): Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,4000;Database=test_dbt;UID={SA};PWD=***;Application Name=dbt-sqlserver/0.21.1
+2021-12-02 20:46:06.243666 (Thread-8): SQL status: OK in 0.15 seconds
+2021-12-02 20:46:06.244723 (Thread-14): SQL status: OK in 0.11 seconds
+2021-12-02 20:46:06.244981 (Thread-10): SQL status: OK in 0.16 seconds
+2021-12-02 20:46:06.246930 (Thread-7): SQL status: OK in 0.16 seconds
+2021-12-02 20:46:06.247472 (Thread-13): Connected to db: test_dbt
+2021-12-02 20:46:06.239025 (Thread-9): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:46:06.266242 (Thread-1): SQL status: OK in 0.13 seconds
+2021-12-02 20:46:06.273107 (Thread-4): SQL status: OK in 0.20 seconds
+2021-12-02 20:46:06.274417 (Thread-12): Connected to db: test_dbt
+2021-12-02 20:46:06.275015 (Thread-11): SQL status: OK in 0.09 seconds
+2021-12-02 20:46:06.276158 (Thread-8): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:46:06.305876 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_float_to_string__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_float_to_string__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:06.279859 (Thread-6): Connected to db: test_dbt
+2021-12-02 20:46:06.280118 (Thread-3): SQL status: OK in 0.16 seconds
+2021-12-02 20:46:06.283961 (Thread-10): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:46:06.286848 (Thread-7): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:46:06.290500 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_int_to_boolean__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_int_to_boolean__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:06.294214 (Thread-1): Using sqlserver connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:46:06.323425 (Thread-1): On model.incremental_test_schema_change.change_column_names: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#change_column_names__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#change_column_names__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:06.304104 (Thread-11): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:46:06.305566 (Thread-13): SQL status: OK in 0.21 seconds
+2021-12-02 20:46:06.279405 (Thread-14): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:46:06.334286 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_string_to_int__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_string_to_int__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:06.318745 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_int_to_float__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_int_to_float__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:06.319730 (Thread-6): SQL status: OK in 0.11 seconds
+2021-12-02 20:46:06.320852 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_float_to_int__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_float_to_int__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:06.298210 (Thread-4): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:46:06.326614 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_int_to_string__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_int_to_string__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:06.333265 (Thread-13): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:46:06.313819 (Thread-3): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:46:06.350085 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_boolean_to_float__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_boolean_to_float__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:06.344650 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_boolean_to_int__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_boolean_to_int__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:06.348138 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_string_to_float__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_string_to_float__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:06.342469 (Thread-6): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:46:06.350841 (Thread-12): SQL status: OK in 0.17 seconds
+2021-12-02 20:46:06.357320 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_float_to_boolean__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_float_to_boolean__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:06.362718 (Thread-12): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:46:06.367002 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_string_to_boolean__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_string_to_boolean__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.021121 (Thread-12): SQL status: OK in 0.65 seconds
+2021-12-02 20:46:07.021868 (Thread-14): SQL status: OK in 0.69 seconds
+2021-12-02 20:46:07.029425 (Thread-12): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:46:07.033527 (Thread-14): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:46:07.035861 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_string_to_boolean'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_string_to_boolean%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.037940 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_string_to_int'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_string_to_int%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.061526 (Thread-9): SQL status: OK in 0.74 seconds
+2021-12-02 20:46:07.066897 (Thread-9): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:46:07.068662 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_int_to_boolean'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_int_to_boolean%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.081458 (Thread-13): SQL status: OK in 0.73 seconds
+2021-12-02 20:46:07.091137 (Thread-13): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:46:07.093845 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_string_to_float'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_string_to_float%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.106410 (Thread-4): SQL status: OK in 0.75 seconds
+2021-12-02 20:46:07.106841 (Thread-6): SQL status: OK in 0.74 seconds
+2021-12-02 20:46:07.112641 (Thread-4): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:46:07.117181 (Thread-6): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:46:07.118161 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_boolean_to_int'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_boolean_to_int%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.120252 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_float_to_boolean'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_float_to_boolean%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.199193 (Thread-5): SQL status: OK in 0.95 seconds
+2021-12-02 20:46:07.204076 (Thread-5): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:46:07.205412 (Thread-3): SQL status: OK in 0.85 seconds
+2021-12-02 20:46:07.205946 (Thread-8): SQL status: OK in 0.90 seconds
+2021-12-02 20:46:07.206297 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_boolean_to_string'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_boolean_to_string%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.212153 (Thread-3): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:46:07.219796 (Thread-8): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:46:07.222284 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_boolean_to_float'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_boolean_to_float%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.223869 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_float_to_string'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_float_to_string%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.227658 (Thread-10): SQL status: OK in 0.89 seconds
+2021-12-02 20:46:07.228910 (Thread-11): SQL status: OK in 0.88 seconds
+2021-12-02 20:46:07.234113 (Thread-10): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:46:07.237630 (Thread-11): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:46:07.239831 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_int_to_float'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_int_to_float%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.241791 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_int_to_string'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_int_to_string%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.278791 (Thread-1): SQL status: OK in 0.95 seconds
+2021-12-02 20:46:07.284161 (Thread-1): Using sqlserver connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:46:07.285821 (Thread-1): On model.incremental_test_schema_change.change_column_names: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'change_column_names'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'change_column_names%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.304585 (Thread-2): SQL status: OK in 1.05 seconds
+2021-12-02 20:46:07.311748 (Thread-2): Using sqlserver connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:46:07.313504 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'column_with_quotes'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'column_with_quotes%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.323680 (Thread-9): SQL status: OK in 0.25 seconds
+2021-12-02 20:46:07.347936 (Thread-9): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:46:07.349941 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_int_to_boolean__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_int_to_boolean__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.380654 (Thread-9): SQL status: OK in 0.03 seconds
+2021-12-02 20:46:07.385826 (Thread-9): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:46:07.387327 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_int_to_boolean'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_int_to_boolean%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.400441 (Thread-9): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:07.419551 (Thread-9): 
+    In "test_dbt"."test_dbt"."convert_column_int_to_boolean":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:46:07.419912 (Thread-10): SQL status: OK in 0.18 seconds
+2021-12-02 20:46:07.428929 (Thread-6): SQL status: OK in 0.31 seconds
+2021-12-02 20:46:07.439173 (Thread-6): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:46:07.441080 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_float_to_boolean__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_float_to_boolean__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.433621 (Thread-3): SQL status: OK in 0.21 seconds
+2021-12-02 20:46:07.428730 (Thread-9): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:46:07.433323 (Thread-10): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:46:07.453824 (Thread-3): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:46:07.454834 (Thread-11): SQL status: OK in 0.21 seconds
+2021-12-02 20:46:07.469996 (Thread-11): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:46:07.457985 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_int_to_float__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_int_to_float__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.461440 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_boolean_to_float__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_boolean_to_float__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.464415 (Thread-8): SQL status: OK in 0.24 seconds
+2021-12-02 20:46:07.456022 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_int_to_boolean'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_int_to_boolean%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.471802 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_int_to_string__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_int_to_string__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.476262 (Thread-10): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:07.487789 (Thread-6): SQL status: OK in 0.04 seconds
+2021-12-02 20:46:07.486621 (Thread-8): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:46:07.495519 (Thread-10): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:46:07.497072 (Thread-11): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:07.501016 (Thread-6): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:46:07.515950 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_float_to_boolean'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_float_to_boolean%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.504348 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_float_to_string__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_float_to_string__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.506447 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_int_to_float'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_int_to_float%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.513368 (Thread-11): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:46:07.501275 (Thread-9): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:07.526777 (Thread-9): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_boolean"
+2021-12-02 20:46:07.522933 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_int_to_string'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_int_to_string%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.540375 (Thread-8): SQL status: OK in 0.02 seconds
+2021-12-02 20:46:07.549795 (Thread-8): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:46:07.552219 (Thread-6): SQL status: OK in 0.03 seconds
+2021-12-02 20:46:07.553419 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_float_to_string'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_float_to_string%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.558056 (Thread-6): 
+    In "test_dbt"."test_dbt"."convert_column_float_to_boolean":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:46:07.558886 (Thread-9): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:46:07.564297 (Thread-6): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:46:07.566061 (Thread-11): SQL status: OK in 0.04 seconds
+2021-12-02 20:46:07.566682 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: 
+      
+
+    insert into "test_dbt"."test_dbt"."convert_column_int_to_boolean" ("column_int_to_boolean", "insert_time")
+    (
+       select "column_int_to_boolean", "insert_time"
+       from "test_dbt"."test_dbt"."#convert_column_int_to_boolean__dbt_tmp"
+    );
+  
+2021-12-02 20:46:07.569121 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_float_to_boolean'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_float_to_boolean%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.570623 (Thread-8): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:07.573727 (Thread-11): 
+    In "test_dbt"."test_dbt"."convert_column_int_to_string":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:46:07.575492 (Thread-1): SQL status: OK in 0.29 seconds
+2021-12-02 20:46:07.585962 (Thread-8): 
+    In "test_dbt"."test_dbt"."convert_column_float_to_string":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:46:07.586629 (Thread-6): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:07.589204 (Thread-11): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:46:07.589735 (Thread-2): SQL status: OK in 0.27 seconds
+2021-12-02 20:46:07.595850 (Thread-1): Using sqlserver connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:46:07.601879 (Thread-8): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:46:07.602778 (Thread-14): SQL status: OK in 0.56 seconds
+2021-12-02 20:46:07.625448 (Thread-14): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:46:07.606702 (Thread-9): SQL status: OK in 0.03 seconds
+2021-12-02 20:46:07.607995 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_int_to_string'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_int_to_string%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.614461 (Thread-2): Using sqlserver connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:46:07.617083 (Thread-1): On model.incremental_test_schema_change.change_column_names: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#change_column_names__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#change_column_names__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.619877 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_float_to_string'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_float_to_string%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.606179 (Thread-6): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_boolean"
+2021-12-02 20:46:07.627670 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_string_to_int__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_string_to_int__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.642939 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: COMMIT
+2021-12-02 20:46:07.646007 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#column_with_quotes__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#column_with_quotes__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.653464 (Thread-1): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:07.655509 (Thread-11): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:07.657016 (Thread-9): finished collecting timing info
+2021-12-02 20:46:07.658868 (Thread-8): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:07.659439 (Thread-6): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:46:07.665900 (Thread-1): Using sqlserver connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:46:07.669164 (Thread-11): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_string"
+2021-12-02 20:46:07.669928 (Thread-4): SQL status: OK in 0.55 seconds
+2021-12-02 20:46:07.690637 (Thread-4): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:46:07.678110 (Thread-2): SQL status: OK in 0.02 seconds
+2021-12-02 20:46:07.679825 (Thread-8): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_string"
+2021-12-02 20:46:07.680285 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: 
+      
+
+    insert into "test_dbt"."test_dbt"."convert_column_float_to_boolean" ("column_float_to_boolean", "insert_time")
+    (
+       select "column_float_to_boolean", "insert_time"
+       from "test_dbt"."test_dbt"."#convert_column_float_to_boolean__dbt_tmp"
+    );
+  
+2021-12-02 20:46:07.681993 (Thread-1): On model.incremental_test_schema_change.change_column_names: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'change_column_names'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'change_column_names%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.671464 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: Close
+2021-12-02 20:46:07.692293 (Thread-11): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:46:07.692494 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_boolean_to_int__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_boolean_to_int__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.699417 (Thread-2): Using sqlserver connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:46:07.699858 (Thread-7): SQL status: OK in 1.36 seconds
+2021-12-02 20:46:07.706451 (Thread-8): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:46:07.707979 (Thread-9): 20:46:07 | 9 of 14 OK created incremental model test_dbt.convert_column_int_to_boolean.................................. [OK in 1.91s]
+2021-12-02 20:46:07.708892 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: 
+      
+
+    insert into "test_dbt"."test_dbt"."convert_column_int_to_string" ("column_int_to_string", "insert_time")
+    (
+       select "column_int_to_string", "insert_time"
+       from "test_dbt"."test_dbt"."#convert_column_int_to_string__dbt_tmp"
+    );
+  
+2021-12-02 20:46:07.710379 (Thread-1): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:07.733065 (Thread-1): 
+    In "test_dbt"."test_dbt"."change_column_names":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:46:07.719073 (Thread-7): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:46:07.720487 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: 
+      
+
+    insert into "test_dbt"."test_dbt"."convert_column_float_to_string" ("column_float_to_string", "insert_time")
+    (
+       select "column_float_to_string", "insert_time"
+       from "test_dbt"."test_dbt"."#convert_column_float_to_string__dbt_tmp"
+    );
+  
+2021-12-02 20:46:07.722282 (Thread-4): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:07.722710 (Thread-9): Finished running node model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:46:07.712801 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'column_with_quotes'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'column_with_quotes%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.733348 (Thread-6): SQL status: OK in 0.03 seconds
+2021-12-02 20:46:07.736833 (Thread-1): Using sqlserver connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:46:07.737240 (Thread-12): SQL status: OK in 0.70 seconds
+2021-12-02 20:46:07.739077 (Thread-13): SQL status: OK in 0.64 seconds
+2021-12-02 20:46:07.739511 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_float_to_int'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_float_to_int%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.746520 (Thread-4): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:46:07.753840 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: COMMIT
+2021-12-02 20:46:07.754439 (Thread-2): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:07.831891 (Thread-2): 
+    In "test_dbt"."test_dbt"."column_with_quotes":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:46:07.763829 (Thread-12): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:46:07.765210 (Thread-8): SQL status: OK in 0.02 seconds
+2021-12-02 20:46:07.819119 (Thread-10): SQL status: OK in 0.30 seconds
+2021-12-02 20:46:07.820630 (Thread-13): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:46:07.821077 (Thread-5): SQL status: OK in 0.60 seconds
+2021-12-02 20:46:07.821390 (Thread-14): SQL status: OK in 0.17 seconds
+2021-12-02 20:46:07.822263 (Thread-3): SQL status: OK in 0.35 seconds
+2021-12-02 20:46:07.822501 (Thread-11): SQL status: OK in 0.10 seconds
+2021-12-02 20:46:07.825482 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_boolean_to_int'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_boolean_to_int%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.827974 (Thread-6): finished collecting timing info
+2021-12-02 20:46:07.755688 (Thread-1): On model.incremental_test_schema_change.change_column_names: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'change_column_names'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'change_column_names%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.835436 (Thread-2): Using sqlserver connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:46:07.837292 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_string_to_boolean__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_string_to_boolean__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.840739 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: COMMIT
+2021-12-02 20:46:07.844080 (Thread-10): 
+    In "test_dbt"."test_dbt"."convert_column_int_to_float":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:46:07.885146 (Thread-10): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:46:07.852779 (Thread-5): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:46:07.857949 (Thread-14): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:46:07.863030 (Thread-3): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:46:07.892206 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_boolean_to_float'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_boolean_to_float%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.870024 (Thread-4): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:07.870320 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: Close
+2021-12-02 20:46:07.873995 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'column_with_quotes'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'column_with_quotes%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.874920 (Thread-1): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:07.877754 (Thread-7): SQL status: OK in 0.05 seconds
+2021-12-02 20:46:07.880331 (Thread-8): finished collecting timing info
+2021-12-02 20:46:07.846381 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_string_to_float__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_string_to_float__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.887443 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_int_to_float'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_int_to_float%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.889021 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_boolean_to_string__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_boolean_to_string__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.890774 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_string_to_int'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_string_to_int%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.866282 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: COMMIT
+2021-12-02 20:46:07.896226 (Thread-4): 
+    In "test_dbt"."test_dbt"."convert_column_boolean_to_int":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:46:07.899462 (Thread-6): 20:46:07 | 6 of 14 OK created incremental model test_dbt.convert_column_float_to_boolean................................ [OK in 2.09s]
+2021-12-02 20:46:07.903826 (Thread-2): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:07.907479 (Thread-7): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:46:07.948763 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = '#convert_column_float_to_int__dbt_tmp'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like '#convert_column_float_to_int__dbt_tmp%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.909413 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: Close
+2021-12-02 20:46:07.916308 (Thread-10): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:07.917609 (Thread-12): SQL status: OK in 0.04 seconds
+2021-12-02 20:46:07.918628 (Thread-13): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:07.930633 (Thread-14): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:07.932074 (Thread-11): finished collecting timing info
+2021-12-02 20:46:07.938861 (Thread-4): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:46:07.939667 (Thread-3): SQL status: OK in 0.05 seconds
+2021-12-02 20:46:07.942127 (Thread-6): Finished running node model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:46:07.947815 (Thread-2): Writing runtime SQL for node "model.incremental_test_schema_change.column_with_quotes"
+2021-12-02 20:46:07.904615 (Thread-1): Writing runtime SQL for node "model.incremental_test_schema_change.change_column_names"
+2021-12-02 20:46:07.952284 (Thread-7): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:07.953143 (Thread-8): 20:46:07 | 8 of 14 OK created incremental model test_dbt.convert_column_float_to_string................................. [OK in 2.16s]
+2021-12-02 20:46:07.955656 (Thread-10): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_float"
+2021-12-02 20:46:07.956758 (Thread-5): SQL status: OK in 0.04 seconds
+2021-12-02 20:46:07.960433 (Thread-12): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:46:07.964285 (Thread-13): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:46:07.968093 (Thread-14): 
+    In "test_dbt"."test_dbt"."convert_column_string_to_int":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:46:07.969507 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: Close
+2021-12-02 20:46:07.971100 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_boolean_to_int'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_boolean_to_int%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.973735 (Thread-3): 
+    In "test_dbt"."test_dbt"."convert_column_boolean_to_float":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:46:07.979097 (Thread-2): Using sqlserver connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:46:07.982086 (Thread-7): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:46:07.982938 (Thread-8): Finished running node model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:46:07.983347 (Thread-1): Using sqlserver connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:46:07.988767 (Thread-5): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:46:07.989802 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_string_to_boolean'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_string_to_boolean%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.991111 (Thread-10): Using sqlserver connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:46:07.991401 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_string_to_float'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_string_to_float%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:07.995407 (Thread-14): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:46:07.997495 (Thread-11): 20:46:07 | 11 of 14 OK created incremental model test_dbt.convert_column_int_to_string.................................. [OK in 2.20s]
+2021-12-02 20:46:08.001340 (Thread-4): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:08.004610 (Thread-3): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:46:08.005982 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: 
+      
+
+    insert into "test_dbt"."test_dbt"."column_with_quotes" ("column`_'with"_quotes", "insert_time")
+    (
+       select "column`_'with"_quotes", "insert_time"
+       from "test_dbt"."test_dbt"."#column_with_quotes__dbt_tmp"
+    );
+  
+2021-12-02 20:46:08.007040 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_float_to_int'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_float_to_int%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:08.009962 (Thread-1): On model.incremental_test_schema_change.change_column_names: 
+      
+
+    insert into "test_dbt"."test_dbt"."change_column_names" ("column_name", "column_to_rename", "column_to_delete", "insert_time")
+    (
+       select "column_name", "column_to_rename", "column_to_delete", "insert_time"
+       from "test_dbt"."test_dbt"."#change_column_names__dbt_tmp"
+    );
+  
+2021-12-02 20:46:08.011063 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_boolean_to_string'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_boolean_to_string%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:08.014199 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: 
+      
+
+    insert into "test_dbt"."test_dbt"."convert_column_int_to_float" ("column_int_to_float", "insert_time")
+    (
+       select "column_int_to_float", "insert_time"
+       from "test_dbt"."test_dbt"."#convert_column_int_to_float__dbt_tmp"
+    );
+  
+2021-12-02 20:46:08.017239 (Thread-13): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:08.018504 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_string_to_int'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_string_to_int%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:08.020399 (Thread-11): Finished running node model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:46:08.023671 (Thread-4): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_int"
+2021-12-02 20:46:08.024254 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_boolean_to_float'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_boolean_to_float%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:08.026274 (Thread-2): Database error: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Incorrect syntax near '_quotes'. (102) (SQLExecDirectW)")
+2021-12-02 20:46:08.028631 (Thread-7): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:08.033217 (Thread-5): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:08.035012 (Thread-1): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:08.037904 (Thread-13): 
+    In "test_dbt"."test_dbt"."convert_column_string_to_float":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:46:08.039477 (Thread-10): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:08.058969 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: COMMIT
+2021-12-02 20:46:08.044017 (Thread-12): SQL status: OK in 0.03 seconds
+2021-12-02 20:46:08.045826 (Thread-3): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:08.046212 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: ROLLBACK
+2021-12-02 20:46:08.046494 (Thread-4): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:46:08.069121 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: 
+      
+
+    insert into "test_dbt"."test_dbt"."convert_column_boolean_to_int" ("column_boolean_to_int", "insert_time")
+    (
+       select "column_boolean_to_int", "insert_time"
+       from "test_dbt"."test_dbt"."#convert_column_boolean_to_int__dbt_tmp"
+    );
+  
+2021-12-02 20:46:08.051898 (Thread-5): 
+    In "test_dbt"."test_dbt"."convert_column_boolean_to_string":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:46:08.054166 (Thread-1): On model.incremental_test_schema_change.change_column_names: COMMIT
+2021-12-02 20:46:08.056775 (Thread-13): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:46:08.039753 (Thread-14): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:08.060471 (Thread-10): finished collecting timing info
+2021-12-02 20:46:08.063283 (Thread-12): 
+    In "test_dbt"."test_dbt"."convert_column_string_to_boolean":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:46:08.066289 (Thread-3): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_float"
+2021-12-02 20:46:08.068150 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: Close
+2021-12-02 20:46:08.049422 (Thread-7): 
+    In "test_dbt"."test_dbt"."convert_column_float_to_int":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:46:08.075318 (Thread-5): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:46:08.075856 (Thread-4): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:08.077106 (Thread-1): finished collecting timing info
+2021-12-02 20:46:08.078371 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_string_to_float'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_string_to_float%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:08.080834 (Thread-14): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_int"
+2021-12-02 20:46:08.082170 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: Close
+2021-12-02 20:46:08.084975 (Thread-12): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:46:08.087944 (Thread-2): finished collecting timing info
+2021-12-02 20:46:08.091356 (Thread-7): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:46:08.091635 (Thread-3): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:46:08.092984 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_boolean_to_string'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_boolean_to_string%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:08.095172 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: COMMIT
+2021-12-02 20:46:08.095785 (Thread-1): On model.incremental_test_schema_change.change_column_names: Close
+2021-12-02 20:46:08.097935 (Thread-13): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:08.100042 (Thread-10): 20:46:08 | 10 of 14 OK created incremental model test_dbt.convert_column_int_to_float................................... [OK in 2.28s]
+2021-12-02 20:46:08.101172 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_string_to_boolean'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_string_to_boolean%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:08.102251 (Thread-14): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:46:08.102764 (Thread-2): Database Error in model column_with_quotes (models/column_with_quotes.sql)
+  ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Incorrect syntax near '_quotes'. (102) (SQLExecDirectW)")
+  compiled SQL at target/run/incremental_test_schema_change/models/column_with_quotes.sql
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sqlserver/connections.py", line 281, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sqlserver/connections.py", line 425, in add_query
+    cursor.execute(sql)
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Incorrect syntax near '_quotes'. (102) (SQLExecDirectW)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 169, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sqlserver/connections.py", line 460, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sqlserver/connections.py", line 435, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sqlserver/connections.py", line 293, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model column_with_quotes (models/column_with_quotes.sql)
+  ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Incorrect syntax near '_quotes'. (102) (SQLExecDirectW)")
+  compiled SQL at target/run/incremental_test_schema_change/models/column_with_quotes.sql
+2021-12-02 20:46:08.105663 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: 
+      SELECT
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+      FROM
+          (select
+              ordinal_position,
+              column_name,
+              data_type,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from [test_dbt].INFORMATION_SCHEMA.COLUMNS
+          where table_name = 'convert_column_float_to_int'
+            and table_schema = 'test_dbt'
+          UNION ALL
+          select
+              ordinal_position,
+              column_name collate database_default,
+              data_type collate database_default,
+              character_maximum_length,
+              numeric_precision,
+              numeric_scale
+          from tempdb.INFORMATION_SCHEMA.COLUMNS
+          where table_name like 'convert_column_float_to_int%') cols
+      order by ordinal_position
+
+
+  
+2021-12-02 20:46:08.106865 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: 
+      
+
+    insert into "test_dbt"."test_dbt"."convert_column_boolean_to_float" ("column_boolean_to_float", "insert_time")
+    (
+       select "column_boolean_to_float", "insert_time"
+       from "test_dbt"."test_dbt"."#convert_column_boolean_to_float__dbt_tmp"
+    );
+  
+2021-12-02 20:46:08.108757 (Thread-5): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:08.109912 (Thread-4): finished collecting timing info
+2021-12-02 20:46:08.112985 (Thread-1): 20:46:08 | 1 of 14 OK created incremental model test_dbt.change_column_names............................................ [OK in 2.30s]
+2021-12-02 20:46:08.114668 (Thread-13): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_float"
+2021-12-02 20:46:08.116095 (Thread-10): Finished running node model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:46:08.118931 (Thread-12): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:08.119410 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: 
+      
+
+    insert into "test_dbt"."test_dbt"."convert_column_string_to_int" ("column_string_to_int", "insert_time")
+    (
+       select "column_string_to_int", "insert_time"
+       from "test_dbt"."test_dbt"."#convert_column_string_to_int__dbt_tmp"
+    );
+  
+2021-12-02 20:46:08.121679 (Thread-2): 20:46:08 | 2 of 14 ERROR creating incremental model test_dbt.column_with_quotes......................................... [ERROR in 2.34s]
+2021-12-02 20:46:08.123829 (Thread-7): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:08.127882 (Thread-5): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_string"
+2021-12-02 20:46:08.129328 (Thread-3): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:08.129607 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: Close
+2021-12-02 20:46:08.130915 (Thread-1): Finished running node model.incremental_test_schema_change.change_column_names
+2021-12-02 20:46:08.137078 (Thread-12): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_boolean"
+2021-12-02 20:46:08.137862 (Thread-13): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:46:08.141321 (Thread-2): Finished running node model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:46:08.144108 (Thread-14): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:08.158326 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: COMMIT
+2021-12-02 20:46:08.148265 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: COMMIT
+2021-12-02 20:46:08.149308 (Thread-5): Using sqlserver connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:46:08.150121 (Thread-4): 20:46:08 | 4 of 14 OK created incremental model test_dbt.convert_column_boolean_to_int.................................. [OK in 2.34s]
+2021-12-02 20:46:08.154707 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: 
+      
+
+    insert into "test_dbt"."test_dbt"."convert_column_string_to_float" ("column_string_to_float", "insert_time")
+    (
+       select "column_string_to_float", "insert_time"
+       from "test_dbt"."test_dbt"."#convert_column_string_to_float__dbt_tmp"
+    );
+  
+2021-12-02 20:46:08.144833 (Thread-7): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_int"
+2021-12-02 20:46:08.158654 (Thread-12): Using sqlserver connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:46:08.159919 (Thread-14): finished collecting timing info
+2021-12-02 20:46:08.161478 (Thread-3): finished collecting timing info
+2021-12-02 20:46:08.162833 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: 
+      
+
+    insert into "test_dbt"."test_dbt"."convert_column_boolean_to_string" ("column_boolean_to_string", "insert_time")
+    (
+       select "column_boolean_to_string", "insert_time"
+       from "test_dbt"."test_dbt"."#convert_column_boolean_to_string__dbt_tmp"
+    );
+  
+2021-12-02 20:46:08.164034 (Thread-4): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:46:08.169513 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: 
+      
+
+    insert into "test_dbt"."test_dbt"."convert_column_string_to_boolean" ("column_string_to_boolean", "insert_time")
+    (
+       select "column_string_to_boolean", "insert_time"
+       from "test_dbt"."test_dbt"."#convert_column_string_to_boolean__dbt_tmp"
+    );
+  
+2021-12-02 20:46:08.170407 (Thread-13): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:08.170931 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: Close
+2021-12-02 20:46:08.171802 (Thread-7): Using sqlserver connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:46:08.172243 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: Close
+2021-12-02 20:46:08.178426 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: COMMIT
+2021-12-02 20:46:08.178771 (Thread-5): SQL status: OK in 0.01 seconds
+2021-12-02 20:46:08.179825 (Thread-12): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:08.180378 (Thread-14): 20:46:08 | 14 of 14 OK created incremental model test_dbt.convert_column_string_to_int.................................. [OK in 2.35s]
+2021-12-02 20:46:08.191289 (Thread-14): Finished running node model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:46:08.183958 (Thread-3): 20:46:08 | 3 of 14 OK created incremental model test_dbt.convert_column_boolean_to_float................................ [OK in 2.38s]
+2021-12-02 20:46:08.185449 (Thread-13): finished collecting timing info
+2021-12-02 20:46:08.187987 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: COMMIT
+2021-12-02 20:46:08.190231 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: COMMIT
+2021-12-02 20:46:08.181703 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: 
+      
+
+    insert into "test_dbt"."test_dbt"."convert_column_float_to_int" ("column_float_to_int", "insert_time")
+    (
+       select "column_float_to_int", "insert_time"
+       from "test_dbt"."test_dbt"."#convert_column_float_to_int__dbt_tmp"
+    );
+  
+2021-12-02 20:46:08.193791 (Thread-3): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:46:08.195298 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: Close
+2021-12-02 20:46:08.197000 (Thread-5): finished collecting timing info
+2021-12-02 20:46:08.198781 (Thread-12): finished collecting timing info
+2021-12-02 20:46:08.204575 (Thread-7): SQL status: OK in 0.00 seconds
+2021-12-02 20:46:08.205675 (Thread-13): 20:46:08 | 13 of 14 OK created incremental model test_dbt.convert_column_string_to_float................................ [OK in 2.38s]
+2021-12-02 20:46:08.206991 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: Close
+2021-12-02 20:46:08.208276 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: Close
+2021-12-02 20:46:08.210383 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: COMMIT
+2021-12-02 20:46:08.211737 (Thread-13): Finished running node model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:46:08.214495 (Thread-5): 20:46:08 | 5 of 14 OK created incremental model test_dbt.convert_column_boolean_to_string............................... [OK in 2.40s]
+2021-12-02 20:46:08.215815 (Thread-12): 20:46:08 | 12 of 14 OK created incremental model test_dbt.convert_column_string_to_boolean.............................. [OK in 2.34s]
+2021-12-02 20:46:08.217100 (Thread-7): finished collecting timing info
+2021-12-02 20:46:08.219815 (Thread-5): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:46:08.221389 (Thread-12): Finished running node model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:46:08.222743 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: Close
+2021-12-02 20:46:08.227990 (Thread-7): 20:46:08 | 7 of 14 OK created incremental model test_dbt.convert_column_float_to_int.................................... [OK in 2.41s]
+2021-12-02 20:46:08.229157 (Thread-7): Finished running node model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:46:08.234447 (MainThread): Acquiring new sqlserver connection "master".
+2021-12-02 20:46:08.235812 (MainThread): On master: COMMIT
+2021-12-02 20:46:08.237245 (MainThread): 20:46:08 | 
+2021-12-02 20:46:08.238394 (MainThread): 20:46:08 | Finished running 14 incremental models in 2.57s.
+2021-12-02 20:46:08.240053 (MainThread): Connection 'master' was properly closed.
+2021-12-02 20:46:08.241381 (MainThread): Connection 'model.incremental_test_schema_change.change_column_names' was properly closed.
+2021-12-02 20:46:08.242769 (MainThread): Connection 'model.incremental_test_schema_change.column_with_quotes' was properly closed.
+2021-12-02 20:46:08.244161 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_string' was properly closed.
+2021-12-02 20:46:08.245335 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_boolean' was properly closed.
+2021-12-02 20:46:08.246681 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_string' was properly closed.
+2021-12-02 20:46:08.248134 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_float' was properly closed.
+2021-12-02 20:46:08.249473 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_int' was properly closed.
+2021-12-02 20:46:08.251030 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_string' was properly closed.
+2021-12-02 20:46:08.252185 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_boolean' was properly closed.
+2021-12-02 20:46:08.254291 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_int' was properly closed.
+2021-12-02 20:46:08.255678 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_float' was properly closed.
+2021-12-02 20:46:08.256994 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_float' was properly closed.
+2021-12-02 20:46:08.258006 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_int' was properly closed.
+2021-12-02 20:46:08.259232 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_boolean' was properly closed.
+2021-12-02 20:46:08.277538 (MainThread): 
+2021-12-02 20:46:08.278931 (MainThread): Completed with 1 error and 0 warnings:
+2021-12-02 20:46:08.280276 (MainThread): 
+2021-12-02 20:46:08.281942 (MainThread): Database Error in model column_with_quotes (models/column_with_quotes.sql)
+2021-12-02 20:46:08.283276 (MainThread):   ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Incorrect syntax near '_quotes'. (102) (SQLExecDirectW)")
+2021-12-02 20:46:08.284583 (MainThread):   compiled SQL at target/run/incremental_test_schema_change/models/column_with_quotes.sql
+2021-12-02 20:46:08.285928 (MainThread): 
+Done. PASS=13 WARN=0 ERROR=1 SKIP=0 TOTAL=14
+2021-12-02 20:46:08.287404 (MainThread): Flushing usage events

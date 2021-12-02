@@ -1,0 +1,667 @@
+2021-12-02 20:44:52.039327 (MainThread): Running with dbt=0.21.0
+2021-12-02 20:44:52.275577 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=True, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/data/db_postgres', project_dir='/data/first_project', record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-12-02 20:44:52.284790 (MainThread): Tracking: do not track
+2021-12-02 20:44:52.306381 (MainThread): Unable to do partial parsing because target/partial_parse.msgpack not found
+2021-12-02 20:44:52.379471 (MainThread): Parsing ../macros/boolean_values.sql
+2021-12-02 20:44:52.385044 (MainThread): Parsing ../macros/normalize_identifier.sql
+2021-12-02 20:44:52.389778 (MainThread): Parsing macros/catalog.sql
+2021-12-02 20:44:52.394817 (MainThread): Parsing macros/relations.sql
+2021-12-02 20:44:52.398854 (MainThread): Parsing macros/adapters.sql
+2021-12-02 20:44:52.438302 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2021-12-02 20:44:52.443002 (MainThread): Parsing macros/core.sql
+2021-12-02 20:44:52.450708 (MainThread): Parsing macros/etc/datetime.sql
+2021-12-02 20:44:52.465578 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-12-02 20:44:52.470871 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-12-02 20:44:52.475928 (MainThread): Parsing macros/etc/query.sql
+2021-12-02 20:44:52.479116 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-12-02 20:44:52.483113 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-12-02 20:44:52.486989 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-12-02 20:44:52.490564 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-12-02 20:44:52.494166 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-12-02 20:44:52.497255 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-12-02 20:44:52.501725 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-12-02 20:44:52.504685 (MainThread): Parsing macros/materializations/helpers.sql
+2021-12-02 20:44:52.521117 (MainThread): Parsing macros/materializations/test.sql
+2021-12-02 20:44:52.534068 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-02 20:44:52.574007 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-02 20:44:52.641971 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-02 20:44:52.676411 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-12-02 20:44:52.681116 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-12-02 20:44:52.719395 (MainThread): Parsing macros/materializations/table/table.sql
+2021-12-02 20:44:52.737198 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-12-02 20:44:52.745956 (MainThread): Parsing macros/materializations/view/view.sql
+2021-12-02 20:44:52.762443 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-12-02 20:44:52.804969 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-12-02 20:44:52.810773 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-12-02 20:44:52.834677 (MainThread): Parsing macros/adapters/common.sql
+2021-12-02 20:44:53.248935 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:44:53.317488 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:44:53.329537 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:44:53.341053 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:44:53.350190 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:44:53.358788 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:44:53.366561 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:44:53.375107 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:44:53.383477 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:44:53.392421 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:44:53.402222 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:44:53.411183 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:44:53.420431 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:44:53.430834 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:44:53.515728 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-12-02 20:44:53.519982 (MainThread): Found 14 models, 0 tests, 0 snapshots, 0 analyses, 171 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-12-02 20:44:53.526563 (MainThread): 
+2021-12-02 20:44:53.529428 (MainThread): Acquiring new postgres connection "master".
+2021-12-02 20:44:53.534952 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_postgres".
+2021-12-02 20:44:53.554279 (ThreadPoolExecutor-0_0): Using postgres connection "list_postgres".
+2021-12-02 20:44:53.556449 (ThreadPoolExecutor-0_0): On list_postgres: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+2021-12-02 20:44:53.559356 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-12-02 20:44:53.574654 (ThreadPoolExecutor-0_0): SQL status: SELECT 4 in 0.02 seconds
+2021-12-02 20:44:53.578741 (ThreadPoolExecutor-0_0): On list_postgres: Close
+2021-12-02 20:44:53.583910 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "create_postgres_tests".
+2021-12-02 20:44:53.586121 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "create_postgres_tests".
+2021-12-02 20:44:53.587779 (ThreadPoolExecutor-0_0): Creating schema ""postgres"."tests""
+2021-12-02 20:44:53.597788 (ThreadPoolExecutor-0_0): Using postgres connection "create_postgres_tests".
+2021-12-02 20:44:53.599860 (ThreadPoolExecutor-0_0): On create_postgres_tests: BEGIN
+2021-12-02 20:44:53.602404 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state closed
+2021-12-02 20:44:53.614176 (ThreadPoolExecutor-0_0): SQL status: BEGIN in 0.01 seconds
+2021-12-02 20:44:53.616864 (ThreadPoolExecutor-0_0): Using postgres connection "create_postgres_tests".
+2021-12-02 20:44:53.619384 (ThreadPoolExecutor-0_0): On create_postgres_tests: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "connection_name": "create_postgres_tests"} */
+create schema if not exists "tests"
+2021-12-02 20:44:53.623112 (ThreadPoolExecutor-0_0): SQL status: CREATE SCHEMA in 0.00 seconds
+2021-12-02 20:44:53.625526 (ThreadPoolExecutor-0_0): On create_postgres_tests: COMMIT
+2021-12-02 20:44:53.627270 (ThreadPoolExecutor-0_0): Using postgres connection "create_postgres_tests".
+2021-12-02 20:44:53.629166 (ThreadPoolExecutor-0_0): On create_postgres_tests: COMMIT
+2021-12-02 20:44:53.631761 (ThreadPoolExecutor-0_0): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:44:53.634990 (ThreadPoolExecutor-0_0): On create_postgres_tests: Close
+2021-12-02 20:44:53.641355 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "list_postgres_tests".
+2021-12-02 20:44:53.654370 (ThreadPoolExecutor-1_0): Using postgres connection "list_postgres_tests".
+2021-12-02 20:44:53.656937 (ThreadPoolExecutor-1_0): On list_postgres_tests: BEGIN
+2021-12-02 20:44:53.659035 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-12-02 20:44:53.671597 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.01 seconds
+2021-12-02 20:44:53.673901 (ThreadPoolExecutor-1_0): Using postgres connection "list_postgres_tests".
+2021-12-02 20:44:53.675838 (ThreadPoolExecutor-1_0): On list_postgres_tests: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "connection_name": "list_postgres_tests"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'tests'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'tests'
+  
+2021-12-02 20:44:53.682057 (ThreadPoolExecutor-1_0): SQL status: SELECT 0 in 0.00 seconds
+2021-12-02 20:44:53.686498 (ThreadPoolExecutor-1_0): On list_postgres_tests: ROLLBACK
+2021-12-02 20:44:53.688851 (ThreadPoolExecutor-1_0): On list_postgres_tests: Close
+2021-12-02 20:44:53.704317 (MainThread): Using postgres connection "master".
+2021-12-02 20:44:53.707009 (MainThread): On master: BEGIN
+2021-12-02 20:44:53.709215 (MainThread): Opening a new connection, currently in state init
+2021-12-02 20:44:53.721301 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-12-02 20:44:53.723437 (MainThread): Using postgres connection "master".
+2021-12-02 20:44:53.725488 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2021-12-02 20:44:53.732778 (MainThread): SQL status: SELECT 0 in 0.00 seconds
+2021-12-02 20:44:53.736151 (MainThread): On master: ROLLBACK
+2021-12-02 20:44:53.738213 (MainThread): Using postgres connection "master".
+2021-12-02 20:44:53.739746 (MainThread): On master: BEGIN
+2021-12-02 20:44:53.742041 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-12-02 20:44:53.743842 (MainThread): On master: COMMIT
+2021-12-02 20:44:53.745838 (MainThread): Using postgres connection "master".
+2021-12-02 20:44:53.747550 (MainThread): On master: COMMIT
+2021-12-02 20:44:53.750023 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:44:53.751768 (MainThread): On master: Close
+2021-12-02 20:44:53.753720 (MainThread): 20:44:53 | Concurrency: 32 threads (target='prod')
+2021-12-02 20:44:53.755228 (MainThread): 20:44:53 | 
+2021-12-02 20:44:53.775198 (Thread-1): Began running node model.incremental_test_schema_change.change_column_names
+2021-12-02 20:44:53.775595 (Thread-2): Began running node model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:44:53.776147 (Thread-3): Began running node model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:44:53.776459 (Thread-4): Began running node model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:44:53.776757 (Thread-5): Began running node model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:44:53.777001 (Thread-6): Began running node model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:44:53.777293 (Thread-7): Began running node model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:44:53.777736 (Thread-8): Began running node model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:44:53.778382 (Thread-9): Began running node model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:44:53.778944 (Thread-10): Began running node model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:44:53.797976 (Thread-10): 20:44:53 | 10 of 14 START incremental model tests.convert_column_int_to_float........................................... [RUN]
+2021-12-02 20:44:53.779352 (Thread-12): Began running node model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:44:53.802558 (Thread-12): 20:44:53 | 12 of 14 START incremental model tests.convert_column_string_to_boolean...................................... [RUN]
+2021-12-02 20:44:53.779829 (Thread-14): Began running node model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:44:53.780590 (Thread-1): 20:44:53 | 1 of 14 START incremental model tests.change_column_names.................................................... [RUN]
+2021-12-02 20:44:53.782590 (Thread-2): 20:44:53 | 2 of 14 START incremental model tests.column_with_quotes..................................................... [RUN]
+2021-12-02 20:44:53.785276 (Thread-3): 20:44:53 | 3 of 14 START incremental model tests.convert_column_boolean_to_float........................................ [RUN]
+2021-12-02 20:44:53.787200 (Thread-4): 20:44:53 | 4 of 14 START incremental model tests.convert_column_boolean_to_int.......................................... [RUN]
+2021-12-02 20:44:53.789069 (Thread-5): 20:44:53 | 5 of 14 START incremental model tests.convert_column_boolean_to_string....................................... [RUN]
+2021-12-02 20:44:53.790899 (Thread-6): 20:44:53 | 6 of 14 START incremental model tests.convert_column_float_to_boolean........................................ [RUN]
+2021-12-02 20:44:53.792612 (Thread-7): 20:44:53 | 7 of 14 START incremental model tests.convert_column_float_to_int............................................ [RUN]
+2021-12-02 20:44:53.794188 (Thread-8): 20:44:53 | 8 of 14 START incremental model tests.convert_column_float_to_string......................................... [RUN]
+2021-12-02 20:44:53.796040 (Thread-9): 20:44:53 | 9 of 14 START incremental model tests.convert_column_int_to_boolean.......................................... [RUN]
+2021-12-02 20:44:53.779155 (Thread-11): Began running node model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:44:53.853091 (Thread-11): 20:44:53 | 11 of 14 START incremental model tests.convert_column_int_to_string.......................................... [RUN]
+2021-12-02 20:44:53.779552 (Thread-13): Began running node model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:44:53.856504 (Thread-13): 20:44:53 | 13 of 14 START incremental model tests.convert_column_string_to_float........................................ [RUN]
+2021-12-02 20:44:53.807321 (Thread-14): 20:44:53 | 14 of 14 START incremental model tests.convert_column_string_to_int.......................................... [RUN]
+2021-12-02 20:44:53.811134 (Thread-1): Acquiring new postgres connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:44:53.813037 (Thread-2): Acquiring new postgres connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:44:53.816586 (Thread-3): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:44:53.818167 (Thread-4): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:44:53.821217 (Thread-5): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:44:53.841721 (Thread-6): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:44:53.844023 (Thread-7): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:44:53.870246 (Thread-7): Compiling model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:44:53.850935 (Thread-9): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:44:53.800564 (Thread-10): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:44:53.876893 (Thread-10): Compiling model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:44:53.804967 (Thread-12): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:44:53.859139 (Thread-13): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:44:53.883150 (Thread-13): Compiling model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:44:53.862446 (Thread-1): Compiling model.incremental_test_schema_change.change_column_names
+2021-12-02 20:44:53.863942 (Thread-2): Compiling model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:44:53.865321 (Thread-3): Compiling model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:44:53.866858 (Thread-4): Compiling model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:44:53.868063 (Thread-5): Compiling model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:44:53.869195 (Thread-6): Compiling model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:44:53.847164 (Thread-8): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:44:53.873967 (Thread-7): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_int"
+2021-12-02 20:44:53.875580 (Thread-9): Compiling model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:44:53.854984 (Thread-11): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:44:53.919287 (Thread-11): Compiling model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:44:53.881703 (Thread-12): Compiling model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:44:53.860954 (Thread-14): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:44:53.928496 (Thread-14): Compiling model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:44:53.890464 (Thread-1): Writing injected SQL for node "model.incremental_test_schema_change.change_column_names"
+2021-12-02 20:44:53.894542 (Thread-2): Writing injected SQL for node "model.incremental_test_schema_change.column_with_quotes"
+2021-12-02 20:44:53.898799 (Thread-3): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_float"
+2021-12-02 20:44:53.903304 (Thread-4): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_int"
+2021-12-02 20:44:53.907948 (Thread-5): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_string"
+2021-12-02 20:44:53.911323 (Thread-6): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_boolean"
+2021-12-02 20:44:53.912594 (Thread-8): Compiling model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:44:53.917288 (Thread-9): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_boolean"
+2021-12-02 20:44:53.880156 (Thread-10): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_float"
+2021-12-02 20:44:53.922831 (Thread-11): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_string"
+2021-12-02 20:44:53.926962 (Thread-12): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_boolean"
+2021-12-02 20:44:53.886732 (Thread-13): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_float"
+2021-12-02 20:44:53.932002 (Thread-14): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_int"
+2021-12-02 20:44:53.936397 (Thread-7): finished collecting timing info
+2021-12-02 20:44:53.938179 (Thread-1): finished collecting timing info
+2021-12-02 20:44:53.939906 (Thread-2): finished collecting timing info
+2021-12-02 20:44:53.941494 (Thread-3): finished collecting timing info
+2021-12-02 20:44:53.943776 (Thread-4): finished collecting timing info
+2021-12-02 20:44:53.946281 (Thread-8): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_string"
+2021-12-02 20:44:53.948216 (Thread-5): finished collecting timing info
+2021-12-02 20:44:53.950841 (Thread-6): finished collecting timing info
+2021-12-02 20:44:53.952995 (Thread-9): finished collecting timing info
+2021-12-02 20:44:53.954804 (Thread-10): finished collecting timing info
+2021-12-02 20:44:53.969630 (Thread-11): finished collecting timing info
+2021-12-02 20:44:53.976128 (Thread-13): finished collecting timing info
+2021-12-02 20:44:53.976909 (Thread-12): finished collecting timing info
+2021-12-02 20:44:53.976360 (Thread-14): finished collecting timing info
+2021-12-02 20:44:54.067050 (Thread-2): Writing runtime SQL for node "model.incremental_test_schema_change.column_with_quotes"
+2021-12-02 20:44:54.070716 (Thread-7): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_int"
+2021-12-02 20:44:54.073960 (Thread-3): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_float"
+2021-12-02 20:44:54.079593 (Thread-1): Writing runtime SQL for node "model.incremental_test_schema_change.change_column_names"
+2021-12-02 20:44:54.083472 (Thread-4): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_int"
+2021-12-02 20:44:54.089178 (Thread-5): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_string"
+2021-12-02 20:44:54.090583 (Thread-8): finished collecting timing info
+2021-12-02 20:44:54.093178 (Thread-6): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_boolean"
+2021-12-02 20:44:54.096877 (Thread-9): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_boolean"
+2021-12-02 20:44:54.100414 (Thread-10): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_float"
+2021-12-02 20:44:54.104167 (Thread-11): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_string"
+2021-12-02 20:44:54.108561 (Thread-13): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_float"
+2021-12-02 20:44:54.112100 (Thread-12): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_boolean"
+2021-12-02 20:44:54.115892 (Thread-14): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_int"
+2021-12-02 20:44:54.128429 (Thread-8): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_string"
+2021-12-02 20:44:54.138128 (Thread-9): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:44:54.138583 (Thread-1): Using postgres connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:44:54.141444 (Thread-6): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:44:54.142067 (Thread-2): Using postgres connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:44:54.143221 (Thread-11): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:44:54.143545 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: BEGIN
+2021-12-02 20:44:54.144908 (Thread-10): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:44:54.161606 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: BEGIN
+2021-12-02 20:44:54.146573 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: BEGIN
+2021-12-02 20:44:54.147472 (Thread-5): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:44:54.167713 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: BEGIN
+2021-12-02 20:44:54.170021 (Thread-5): Opening a new connection, currently in state init
+2021-12-02 20:44:54.155907 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: BEGIN
+2021-12-02 20:44:54.175793 (Thread-11): Opening a new connection, currently in state init
+2021-12-02 20:44:54.158983 (Thread-9): Opening a new connection, currently in state init
+2021-12-02 20:44:54.145101 (Thread-1): On model.incremental_test_schema_change.change_column_names: BEGIN
+2021-12-02 20:44:54.163540 (Thread-4): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:44:54.163816 (Thread-10): Opening a new connection, currently in state init
+2021-12-02 20:44:54.165962 (Thread-6): Opening a new connection, currently in state init
+2021-12-02 20:44:54.167520 (Thread-7): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:44:54.201840 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: BEGIN
+2021-12-02 20:44:54.153747 (Thread-13): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:44:54.205522 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: BEGIN
+2021-12-02 20:44:54.158153 (Thread-3): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:44:54.178850 (Thread-14): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:44:54.180067 (Thread-5): SQL status: BEGIN in 0.01 seconds
+2021-12-02 20:44:54.213086 (Thread-5): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:44:54.187866 (Thread-11): SQL status: BEGIN in 0.01 seconds
+2021-12-02 20:44:54.188984 (Thread-1): Opening a new connection, currently in state closed
+2021-12-02 20:44:54.190954 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: BEGIN
+2021-12-02 20:44:54.191306 (Thread-9): SQL status: BEGIN in 0.03 seconds
+2021-12-02 20:44:54.221138 (Thread-9): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:44:54.224713 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+
+      
+
+  create  table "postgres"."tests"."convert_column_int_to_boolean"
+  as (
+    select
+    1 as column_int_to_boolean,
+    now() as insert_time
+  );
+  
+2021-12-02 20:44:54.174267 (Thread-12): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:44:54.227660 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: BEGIN
+2021-12-02 20:44:54.208438 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: BEGIN
+2021-12-02 20:44:54.230283 (Thread-3): Opening a new connection, currently in state init
+2021-12-02 20:44:54.210405 (Thread-10): SQL status: BEGIN in 0.05 seconds
+2021-12-02 20:44:54.212493 (Thread-6): SQL status: BEGIN in 0.05 seconds
+2021-12-02 20:44:54.185831 (Thread-8): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:44:54.214941 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+      
+
+  create  table "postgres"."tests"."convert_column_boolean_to_string"
+  as (
+    select
+    true as column_boolean_to_string,
+    now() as insert_time
+  );
+  
+2021-12-02 20:44:54.216740 (Thread-11): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:44:54.219838 (Thread-4): Opening a new connection, currently in state init
+2021-12-02 20:44:54.149430 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: BEGIN
+2021-12-02 20:44:54.242599 (Thread-2): Opening a new connection, currently in state init
+2021-12-02 20:44:54.226756 (Thread-1): SQL status: BEGIN in 0.04 seconds
+2021-12-02 20:44:54.206904 (Thread-13): Opening a new connection, currently in state init
+2021-12-02 20:44:54.227896 (Thread-9): SQL status: SELECT 1 in 0.00 seconds
+2021-12-02 20:44:54.228912 (Thread-12): Opening a new connection, currently in state init
+2021-12-02 20:44:54.209894 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: BEGIN
+2021-12-02 20:44:54.273101 (Thread-14): Opening a new connection, currently in state init
+2021-12-02 20:44:54.234980 (Thread-6): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:44:54.236155 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: BEGIN
+2021-12-02 20:44:54.277367 (Thread-8): Opening a new connection, currently in state init
+2021-12-02 20:44:54.238923 (Thread-5): SQL status: SELECT 1 in 0.00 seconds
+2021-12-02 20:44:54.242335 (Thread-3): SQL status: BEGIN in 0.01 seconds
+2021-12-02 20:44:54.203862 (Thread-7): Opening a new connection, currently in state init
+2021-12-02 20:44:54.247037 (Thread-1): Using postgres connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:44:54.265993 (Thread-4): SQL status: BEGIN in 0.05 seconds
+2021-12-02 20:44:54.266530 (Thread-2): SQL status: BEGIN in 0.02 seconds
+2021-12-02 20:44:54.270756 (Thread-13): SQL status: BEGIN in 0.06 seconds
+2021-12-02 20:44:54.270322 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: COMMIT
+2021-12-02 20:44:54.233379 (Thread-10): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:44:54.275890 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+
+      
+
+  create  table "postgres"."tests"."convert_column_float_to_boolean"
+  as (
+    select
+    1.1 as column_float_to_boolean,
+    now() as insert_time
+  );
+  
+2021-12-02 20:44:54.238312 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+      
+
+  create  table "postgres"."tests"."convert_column_int_to_string"
+  as (
+    select
+    1 as column_int_to_string,
+    now() as insert_time
+  );
+  
+2021-12-02 20:44:54.283697 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: COMMIT
+2021-12-02 20:44:54.309406 (Thread-5): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:44:54.286821 (Thread-3): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:44:54.312864 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+
+      
+
+  create  table "postgres"."tests"."convert_column_boolean_to_float"
+  as (
+    select
+    true as column_boolean_to_float,
+    now() as insert_time
+  );
+  
+2021-12-02 20:44:54.291417 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+
+      
+
+  create  table "postgres"."tests"."change_column_names"
+  as (
+    select
+    'a column with underscore' as column_name,
+    'a column to rename' as column_to_rename,
+    'a column to be deleted' as column_to_delete,
+    now() as insert_time
+  );
+  
+2021-12-02 20:44:54.294111 (Thread-4): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:44:54.296366 (Thread-2): Using postgres connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:44:54.298348 (Thread-14): SQL status: BEGIN in 0.03 seconds
+2021-12-02 20:44:54.298711 (Thread-13): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:44:54.300523 (Thread-9): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:44:54.303530 (Thread-7): SQL status: BEGIN in 0.10 seconds
+2021-12-02 20:44:54.303987 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+      
+
+  create  table "postgres"."tests"."convert_column_int_to_float"
+  as (
+    select
+    1 as column_int_to_float,
+    now() as insert_time
+  );
+  
+2021-12-02 20:44:54.285136 (Thread-12): SQL status: BEGIN in 0.06 seconds
+2021-12-02 20:44:54.309889 (Thread-11): SQL status: SELECT 1 in 0.00 seconds
+2021-12-02 20:44:54.311147 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: COMMIT
+2021-12-02 20:44:54.290271 (Thread-8): SQL status: BEGIN in 0.01 seconds
+2021-12-02 20:44:54.313382 (Thread-6): SQL status: SELECT 1 in 0.01 seconds
+2021-12-02 20:44:54.318525 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+
+      
+
+  create  table "postgres"."tests"."convert_column_boolean_to_int"
+  as (
+    select
+    true as column_boolean_to_int,
+    now() as insert_time
+  );
+  
+2021-12-02 20:44:54.320502 (Thread-3): SQL status: SELECT 1 in 0.01 seconds
+2021-12-02 20:44:54.320893 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.column_with_quotes"} */
+
+      
+
+  create  table "postgres"."tests"."column_with_quotes"
+  as (
+    select
+    'a column with tricky name with quotes' as  "column`_'with""_quotes",
+    now() as insert_time
+  );
+  
+2021-12-02 20:44:54.323288 (Thread-14): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:44:54.323788 (Thread-1): SQL status: SELECT 1 in 0.01 seconds
+2021-12-02 20:44:54.325159 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+
+      
+
+  create  table "postgres"."tests"."convert_column_string_to_float"
+  as (
+    select
+    '1.1' as column_string_to_float,
+    now() as insert_time
+  );
+  
+2021-12-02 20:44:54.327104 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: COMMIT
+2021-12-02 20:44:54.329036 (Thread-7): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:44:54.366301 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+      
+
+  create  table "postgres"."tests"."convert_column_float_to_int"
+  as (
+    select
+    1.1 as column_float_to_int,
+    now() as insert_time
+  );
+  
+2021-12-02 20:44:54.333510 (Thread-10): SQL status: SELECT 1 in 0.00 seconds
+2021-12-02 20:44:54.336201 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: COMMIT
+2021-12-02 20:44:54.340825 (Thread-5): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:44:54.341260 (Thread-8): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:44:54.344981 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: COMMIT
+2021-12-02 20:44:54.350437 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: COMMIT
+2021-12-02 20:44:54.350888 (Thread-4): SQL status: SELECT 1 in 0.00 seconds
+2021-12-02 20:44:54.353863 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+
+      
+
+  create  table "postgres"."tests"."convert_column_string_to_int"
+  as (
+    select
+    '1' as column_string_to_int,
+    now() as insert_time
+  );
+  
+2021-12-02 20:44:54.360154 (Thread-1): On model.incremental_test_schema_change.change_column_names: COMMIT
+2021-12-02 20:44:54.360742 (Thread-2): SQL status: SELECT 1 in 0.01 seconds
+2021-12-02 20:44:54.395287 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: COMMIT
+2021-12-02 20:44:54.332538 (Thread-12): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:44:54.372797 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: COMMIT
+2021-12-02 20:44:54.373238 (Thread-13): SQL status: SELECT 1 in 0.01 seconds
+2021-12-02 20:44:54.374376 (Thread-7): SQL status: SELECT 1 in 0.01 seconds
+2021-12-02 20:44:54.374990 (Thread-11): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:44:54.377525 (Thread-5): finished collecting timing info
+2021-12-02 20:44:54.379900 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+      
+
+  create  table "postgres"."tests"."convert_column_float_to_string"
+  as (
+    select
+    1.1 as column_float_to_string,
+    now() as insert_time
+  );
+  
+2021-12-02 20:44:54.382150 (Thread-6): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:44:54.384089 (Thread-3): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:44:54.387066 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: COMMIT
+2021-12-02 20:44:54.391924 (Thread-1): Using postgres connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:44:54.393446 (Thread-14): SQL status: SELECT 1 in 0.00 seconds
+2021-12-02 20:44:54.365819 (Thread-9): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:44:54.397311 (Thread-2): Using postgres connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:44:54.400141 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+
+      
+
+  create  table "postgres"."tests"."convert_column_string_to_boolean"
+  as (
+    select
+    'true' as column_string_to_boolean,
+    now() as insert_time
+  );
+  
+2021-12-02 20:44:54.402257 (Thread-10): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:44:54.406181 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: COMMIT
+2021-12-02 20:44:54.409545 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: COMMIT
+2021-12-02 20:44:54.411988 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: COMMIT
+2021-12-02 20:44:54.414429 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: Close
+2021-12-02 20:44:54.418488 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: COMMIT
+2021-12-02 20:44:54.420308 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: COMMIT
+2021-12-02 20:44:54.423469 (Thread-4): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:44:54.424867 (Thread-8): SQL status: SELECT 1 in 0.01 seconds
+2021-12-02 20:44:54.456813 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: COMMIT
+2021-12-02 20:44:54.429434 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: COMMIT
+2021-12-02 20:44:54.431866 (Thread-9): finished collecting timing info
+2021-12-02 20:44:54.433713 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: COMMIT
+2021-12-02 20:44:54.437473 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: COMMIT
+2021-12-02 20:44:54.439794 (Thread-13): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:44:54.470317 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: COMMIT
+2021-12-02 20:44:54.441800 (Thread-7): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:44:54.444729 (Thread-11): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:44:54.446858 (Thread-5): 20:44:54 | 5 of 14 OK created incremental model tests.convert_column_boolean_to_string.................................. [SELECT 1 in 0.63s]
+2021-12-02 20:44:54.449824 (Thread-6): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:44:54.451336 (Thread-3): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:44:54.452439 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: COMMIT
+2021-12-02 20:44:54.426225 (Thread-1): On model.incremental_test_schema_change.change_column_names: COMMIT
+2021-12-02 20:44:54.458780 (Thread-8): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:44:54.460820 (Thread-14): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:44:54.463262 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: Close
+2021-12-02 20:44:54.466240 (Thread-2): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:44:54.467500 (Thread-10): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:44:54.440050 (Thread-12): SQL status: SELECT 1 in 0.00 seconds
+2021-12-02 20:44:54.474452 (Thread-13): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:44:54.475414 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: COMMIT
+2021-12-02 20:44:54.477933 (Thread-11): finished collecting timing info
+2021-12-02 20:44:54.479880 (Thread-5): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:44:54.481952 (Thread-6): finished collecting timing info
+2021-12-02 20:44:54.483950 (Thread-3): finished collecting timing info
+2021-12-02 20:44:54.486557 (Thread-4): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:44:54.488497 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:44:54.513759 (Thread-1): finished collecting timing info
+2021-12-02 20:44:54.490715 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: COMMIT
+2021-12-02 20:44:54.492943 (Thread-9): 20:44:54 | 9 of 14 OK created incremental model tests.convert_column_int_to_boolean..................................... [SELECT 1 in 0.64s]
+2021-12-02 20:44:54.494755 (Thread-2): finished collecting timing info
+2021-12-02 20:44:54.496919 (Thread-10): finished collecting timing info
+2021-12-02 20:44:54.499843 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: COMMIT
+2021-12-02 20:44:54.501854 (Thread-13): finished collecting timing info
+2021-12-02 20:44:54.504587 (Thread-7): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:44:54.505142 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: Close
+2021-12-02 20:44:54.508234 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: Close
+2021-12-02 20:44:54.510026 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: Close
+2021-12-02 20:44:54.511623 (Thread-4): finished collecting timing info
+2021-12-02 20:44:54.489085 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: COMMIT
+2021-12-02 20:44:54.515046 (Thread-1): On model.incremental_test_schema_change.change_column_names: Close
+2021-12-02 20:44:54.517087 (Thread-14): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:44:54.517621 (Thread-9): Finished running node model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:44:54.518853 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: Close
+2021-12-02 20:44:54.520059 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: Close
+2021-12-02 20:44:54.521241 (Thread-12): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:44:54.522590 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: Close
+2021-12-02 20:44:54.524289 (Thread-7): finished collecting timing info
+2021-12-02 20:44:54.526078 (Thread-11): 20:44:54 | 11 of 14 OK created incremental model tests.convert_column_int_to_string..................................... [SELECT 1 in 0.67s]
+2021-12-02 20:44:54.529045 (Thread-6): 20:44:54 | 6 of 14 OK created incremental model tests.convert_column_float_to_boolean................................... [SELECT 1 in 0.69s]
+2021-12-02 20:44:54.531823 (Thread-3): 20:44:54 | 3 of 14 OK created incremental model tests.convert_column_boolean_to_float................................... [SELECT 1 in 0.72s]
+2021-12-02 20:44:54.534074 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: Close
+2021-12-02 20:44:54.536285 (Thread-8): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:44:54.559990 (Thread-8): finished collecting timing info
+2021-12-02 20:44:54.540022 (Thread-14): finished collecting timing info
+2021-12-02 20:44:54.542973 (Thread-2): 20:44:54 | 2 of 14 OK created incremental model tests.column_with_quotes................................................ [SELECT 1 in 0.73s]
+2021-12-02 20:44:54.546218 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: COMMIT
+2021-12-02 20:44:54.548052 (Thread-10): 20:44:54 | 10 of 14 OK created incremental model tests.convert_column_int_to_float...................................... [SELECT 1 in 0.75s]
+2021-12-02 20:44:54.548654 (Thread-13): 20:44:54 | 13 of 14 OK created incremental model tests.convert_column_string_to_float................................... [SELECT 1 in 0.69s]
+2021-12-02 20:44:54.550964 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: Close
+2021-12-02 20:44:54.552067 (Thread-11): Finished running node model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:44:54.553173 (Thread-6): Finished running node model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:44:54.554734 (Thread-3): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:44:54.556992 (Thread-4): 20:44:54 | 4 of 14 OK created incremental model tests.convert_column_boolean_to_int..................................... [SELECT 1 in 0.74s]
+2021-12-02 20:44:54.537118 (Thread-1): 20:44:54 | 1 of 14 OK created incremental model tests.change_column_names............................................... [SELECT 1 in 0.73s]
+2021-12-02 20:44:54.576812 (Thread-1): Finished running node model.incremental_test_schema_change.change_column_names
+2021-12-02 20:44:54.562887 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: Close
+2021-12-02 20:44:54.564617 (Thread-2): Finished running node model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:44:54.566483 (Thread-12): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:44:54.566852 (Thread-10): Finished running node model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:44:54.567920 (Thread-13): Finished running node model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:44:54.571955 (Thread-7): 20:44:54 | 7 of 14 OK created incremental model tests.convert_column_float_to_int....................................... [SELECT 1 in 0.73s]
+2021-12-02 20:44:54.575303 (Thread-4): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:44:54.561544 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: Close
+2021-12-02 20:44:54.581824 (Thread-14): 20:44:54 | 14 of 14 OK created incremental model tests.convert_column_string_to_int..................................... [SELECT 1 in 0.72s]
+2021-12-02 20:44:54.584570 (Thread-12): finished collecting timing info
+2021-12-02 20:44:54.588368 (Thread-7): Finished running node model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:44:54.591060 (Thread-8): 20:44:54 | 8 of 14 OK created incremental model tests.convert_column_float_to_string.................................... [SELECT 1 in 0.74s]
+2021-12-02 20:44:54.591855 (Thread-14): Finished running node model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:44:54.593361 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: Close
+2021-12-02 20:44:54.596578 (Thread-8): Finished running node model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:44:54.601938 (Thread-12): 20:44:54 | 12 of 14 OK created incremental model tests.convert_column_string_to_boolean................................. [SELECT 1 in 0.80s]
+2021-12-02 20:44:54.603962 (Thread-12): Finished running node model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:44:54.610135 (MainThread): Acquiring new postgres connection "master".
+2021-12-02 20:44:54.611514 (MainThread): Using postgres connection "master".
+2021-12-02 20:44:54.612709 (MainThread): On master: BEGIN
+2021-12-02 20:44:54.614210 (MainThread): Opening a new connection, currently in state closed
+2021-12-02 20:44:54.622637 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-12-02 20:44:54.624949 (MainThread): On master: COMMIT
+2021-12-02 20:44:54.626322 (MainThread): Using postgres connection "master".
+2021-12-02 20:44:54.629239 (MainThread): On master: COMMIT
+2021-12-02 20:44:54.632828 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:44:54.634771 (MainThread): On master: Close
+2021-12-02 20:44:54.636486 (MainThread): 20:44:54 | 
+2021-12-02 20:44:54.637857 (MainThread): 20:44:54 | Finished running 14 incremental models in 1.11s.
+2021-12-02 20:44:54.639401 (MainThread): Connection 'master' was properly closed.
+2021-12-02 20:44:54.641232 (MainThread): Connection 'model.incremental_test_schema_change.change_column_names' was properly closed.
+2021-12-02 20:44:54.642843 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_float' was properly closed.
+2021-12-02 20:44:54.644289 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_boolean' was properly closed.
+2021-12-02 20:44:54.645553 (MainThread): Connection 'model.incremental_test_schema_change.column_with_quotes' was properly closed.
+2021-12-02 20:44:54.647208 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_float' was properly closed.
+2021-12-02 20:44:54.648551 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_int' was properly closed.
+2021-12-02 20:44:54.649883 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_string' was properly closed.
+2021-12-02 20:44:54.651083 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_boolean' was properly closed.
+2021-12-02 20:44:54.652306 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_int' was properly closed.
+2021-12-02 20:44:54.653559 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_string' was properly closed.
+2021-12-02 20:44:54.654749 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_boolean' was properly closed.
+2021-12-02 20:44:54.656011 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_string' was properly closed.
+2021-12-02 20:44:54.657020 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_float' was properly closed.
+2021-12-02 20:44:54.658063 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_int' was properly closed.
+2021-12-02 20:44:54.670181 (MainThread): 
+2021-12-02 20:44:54.671471 (MainThread): Completed successfully
+2021-12-02 20:44:54.672795 (MainThread): 
+Done. PASS=14 WARN=0 ERROR=0 SKIP=0 TOTAL=14
+2021-12-02 20:44:54.674078 (MainThread): Flushing usage events

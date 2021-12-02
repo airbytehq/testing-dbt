@@ -1,0 +1,2980 @@
+2021-12-02 20:45:09.294876 (MainThread): Running with dbt=0.21.0
+2021-12-02 20:45:09.444021 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/data/db_postgres', project_dir='/data/second_project', record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-12-02 20:45:09.454084 (MainThread): Tracking: do not track
+2021-12-02 20:45:09.473393 (MainThread): Unable to do partial parsing because target/partial_parse.msgpack not found
+2021-12-02 20:45:09.539876 (MainThread): Parsing ../macros/boolean_values.sql
+2021-12-02 20:45:09.544984 (MainThread): Parsing ../macros/normalize_identifier.sql
+2021-12-02 20:45:09.549923 (MainThread): Parsing macros/catalog.sql
+2021-12-02 20:45:09.554737 (MainThread): Parsing macros/relations.sql
+2021-12-02 20:45:09.558239 (MainThread): Parsing macros/adapters.sql
+2021-12-02 20:45:09.594624 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2021-12-02 20:45:09.598626 (MainThread): Parsing macros/core.sql
+2021-12-02 20:45:09.605400 (MainThread): Parsing macros/etc/datetime.sql
+2021-12-02 20:45:09.619555 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-12-02 20:45:09.623016 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-12-02 20:45:09.627719 (MainThread): Parsing macros/etc/query.sql
+2021-12-02 20:45:09.629916 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-12-02 20:45:09.633350 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-12-02 20:45:09.636422 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-12-02 20:45:09.639677 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-12-02 20:45:09.643079 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-12-02 20:45:09.645796 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-12-02 20:45:09.649947 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-12-02 20:45:09.652809 (MainThread): Parsing macros/materializations/helpers.sql
+2021-12-02 20:45:09.669092 (MainThread): Parsing macros/materializations/test.sql
+2021-12-02 20:45:09.680722 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-02 20:45:09.717324 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-02 20:45:09.770216 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-02 20:45:09.796690 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-12-02 20:45:09.801062 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-12-02 20:45:09.825007 (MainThread): Parsing macros/materializations/table/table.sql
+2021-12-02 20:45:09.837579 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-12-02 20:45:09.844426 (MainThread): Parsing macros/materializations/view/view.sql
+2021-12-02 20:45:09.856353 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-12-02 20:45:09.890338 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-12-02 20:45:09.894215 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-12-02 20:45:09.910107 (MainThread): Parsing macros/adapters/common.sql
+2021-12-02 20:45:10.242030 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:45:10.294315 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:45:10.301478 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:45:10.308358 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:45:10.315160 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:45:10.324298 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:45:10.329494 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:45:10.334497 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:45:10.339717 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:45:10.346008 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:45:10.351461 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:45:10.356880 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:45:10.361924 (MainThread): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:45:10.414373 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-12-02 20:45:10.416765 (MainThread): Found 13 models, 0 tests, 0 snapshots, 0 analyses, 171 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-12-02 20:45:10.420483 (MainThread): 
+2021-12-02 20:45:10.422294 (MainThread): Acquiring new postgres connection "master".
+2021-12-02 20:45:10.425285 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_postgres".
+2021-12-02 20:45:10.436990 (ThreadPoolExecutor-0_0): Using postgres connection "list_postgres".
+2021-12-02 20:45:10.439209 (ThreadPoolExecutor-0_0): On list_postgres: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+2021-12-02 20:45:10.440452 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-12-02 20:45:10.449328 (ThreadPoolExecutor-0_0): SQL status: SELECT 31 in 0.01 seconds
+2021-12-02 20:45:10.451689 (ThreadPoolExecutor-0_0): On list_postgres: Close
+2021-12-02 20:45:10.454736 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "list_postgres_tests".
+2021-12-02 20:45:10.461819 (ThreadPoolExecutor-1_0): Using postgres connection "list_postgres_tests".
+2021-12-02 20:45:10.463242 (ThreadPoolExecutor-1_0): On list_postgres_tests: BEGIN
+2021-12-02 20:45:10.464763 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-12-02 20:45:10.472808 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.01 seconds
+2021-12-02 20:45:10.474326 (ThreadPoolExecutor-1_0): Using postgres connection "list_postgres_tests".
+2021-12-02 20:45:10.475216 (ThreadPoolExecutor-1_0): On list_postgres_tests: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "connection_name": "list_postgres_tests"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'tests'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'tests'
+  
+2021-12-02 20:45:10.478466 (ThreadPoolExecutor-1_0): SQL status: SELECT 14 in 0.00 seconds
+2021-12-02 20:45:10.481539 (ThreadPoolExecutor-1_0): On list_postgres_tests: ROLLBACK
+2021-12-02 20:45:10.482955 (ThreadPoolExecutor-1_0): On list_postgres_tests: Close
+2021-12-02 20:45:10.489714 (MainThread): Using postgres connection "master".
+2021-12-02 20:45:10.491224 (MainThread): On master: BEGIN
+2021-12-02 20:45:10.492684 (MainThread): Opening a new connection, currently in state init
+2021-12-02 20:45:10.501274 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-12-02 20:45:10.502636 (MainThread): Using postgres connection "master".
+2021-12-02 20:45:10.503728 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2021-12-02 20:45:10.527996 (MainThread): SQL status: SELECT 0 in 0.02 seconds
+2021-12-02 20:45:10.530998 (MainThread): On master: ROLLBACK
+2021-12-02 20:45:10.533189 (MainThread): Using postgres connection "master".
+2021-12-02 20:45:10.534585 (MainThread): On master: BEGIN
+2021-12-02 20:45:10.536446 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-12-02 20:45:10.537763 (MainThread): On master: COMMIT
+2021-12-02 20:45:10.539109 (MainThread): Using postgres connection "master".
+2021-12-02 20:45:10.540291 (MainThread): On master: COMMIT
+2021-12-02 20:45:10.541809 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:45:10.543134 (MainThread): On master: Close
+2021-12-02 20:45:10.544605 (MainThread): 20:45:10 | Concurrency: 32 threads (target='prod')
+2021-12-02 20:45:10.546056 (MainThread): 20:45:10 | 
+2021-12-02 20:45:10.562534 (Thread-1): Began running node model.incremental_test_schema_change.change_column_names
+2021-12-02 20:45:10.565246 (Thread-1): 20:45:10 | 1 of 13 START incremental model tests.change_column_names.................................................... [RUN]
+2021-12-02 20:45:10.563193 (Thread-3): Began running node model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:45:10.569663 (Thread-3): 20:45:10 | 3 of 13 START incremental model tests.convert_column_boolean_to_int.......................................... [RUN]
+2021-12-02 20:45:10.564106 (Thread-5): Began running node model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:45:10.564509 (Thread-6): Began running node model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:45:10.562840 (Thread-2): Began running node model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:45:10.565478 (Thread-7): Began running node model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:45:10.566001 (Thread-8): Began running node model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:45:10.566234 (Thread-9): Began running node model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:45:10.566921 (Thread-10): Began running node model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:45:10.567373 (Thread-11): Began running node model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:45:10.567550 (Thread-12): Began running node model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:45:10.568228 (Thread-13): Began running node model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:45:10.569388 (Thread-1): Acquiring new postgres connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:45:10.563820 (Thread-4): Began running node model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:45:10.571208 (Thread-3): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:45:10.573523 (Thread-5): 20:45:10 | 5 of 13 START incremental model tests.convert_column_float_to_boolean........................................ [RUN]
+2021-12-02 20:45:10.575238 (Thread-6): 20:45:10 | 6 of 13 START incremental model tests.convert_column_float_to_int............................................ [RUN]
+2021-12-02 20:45:10.578981 (Thread-2): 20:45:10 | 2 of 13 START incremental model tests.convert_column_boolean_to_float........................................ [RUN]
+2021-12-02 20:45:10.580903 (Thread-7): 20:45:10 | 7 of 13 START incremental model tests.convert_column_float_to_string......................................... [RUN]
+2021-12-02 20:45:10.582415 (Thread-8): 20:45:10 | 8 of 13 START incremental model tests.convert_column_int_to_boolean.......................................... [RUN]
+2021-12-02 20:45:10.583721 (Thread-9): 20:45:10 | 9 of 13 START incremental model tests.convert_column_int_to_float............................................ [RUN]
+2021-12-02 20:45:10.585269 (Thread-10): 20:45:10 | 10 of 13 START incremental model tests.convert_column_int_to_string.......................................... [RUN]
+2021-12-02 20:45:10.586621 (Thread-11): 20:45:10 | 11 of 13 START incremental model tests.convert_column_string_to_boolean...................................... [RUN]
+2021-12-02 20:45:10.587969 (Thread-12): 20:45:10 | 12 of 13 START incremental model tests.convert_column_string_to_float........................................ [RUN]
+2021-12-02 20:45:10.589485 (Thread-13): 20:45:10 | 13 of 13 START incremental model tests.convert_column_string_to_int.......................................... [RUN]
+2021-12-02 20:45:10.590793 (Thread-1): Compiling model.incremental_test_schema_change.change_column_names
+2021-12-02 20:45:10.592143 (Thread-4): 20:45:10 | 4 of 13 START incremental model tests.convert_column_boolean_to_string....................................... [RUN]
+2021-12-02 20:45:10.593319 (Thread-3): Compiling model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:45:10.594972 (Thread-5): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:45:10.597093 (Thread-6): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:45:10.599452 (Thread-2): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:45:10.600621 (Thread-7): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:45:10.602651 (Thread-8): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:45:10.604883 (Thread-9): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:45:10.606278 (Thread-10): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:45:10.608074 (Thread-11): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:45:10.630548 (Thread-11): Compiling model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:45:10.610458 (Thread-13): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:45:10.614675 (Thread-1): Writing injected SQL for node "model.incremental_test_schema_change.change_column_names"
+2021-12-02 20:45:10.616344 (Thread-4): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:45:10.619524 (Thread-3): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_int"
+2021-12-02 20:45:10.621008 (Thread-5): Compiling model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:45:10.622642 (Thread-6): Compiling model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:45:10.623909 (Thread-2): Compiling model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:45:10.625666 (Thread-7): Compiling model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:45:10.626847 (Thread-8): Compiling model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:45:10.628015 (Thread-9): Compiling model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:45:10.629311 (Thread-10): Compiling model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:45:10.609180 (Thread-12): Acquiring new postgres connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:45:10.668625 (Thread-12): Compiling model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:45:10.636525 (Thread-13): Compiling model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:45:10.639110 (Thread-4): Compiling model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:45:10.643793 (Thread-5): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_boolean"
+2021-12-02 20:45:10.647461 (Thread-6): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_int"
+2021-12-02 20:45:10.651228 (Thread-2): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_float"
+2021-12-02 20:45:10.654755 (Thread-7): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_string"
+2021-12-02 20:45:10.659590 (Thread-8): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_boolean"
+2021-12-02 20:45:10.660728 (Thread-1): finished collecting timing info
+2021-12-02 20:45:10.663750 (Thread-9): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_float"
+2021-12-02 20:45:10.664943 (Thread-3): finished collecting timing info
+2021-12-02 20:45:10.667270 (Thread-10): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_string"
+2021-12-02 20:45:10.635154 (Thread-11): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_boolean"
+2021-12-02 20:45:10.671736 (Thread-12): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_float"
+2021-12-02 20:45:10.674895 (Thread-13): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_int"
+2021-12-02 20:45:10.678338 (Thread-4): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_string"
+2021-12-02 20:45:10.683140 (Thread-5): finished collecting timing info
+2021-12-02 20:45:10.688965 (Thread-6): finished collecting timing info
+2021-12-02 20:45:10.692617 (Thread-2): finished collecting timing info
+2021-12-02 20:45:10.716469 (Thread-8): finished collecting timing info
+2021-12-02 20:45:10.730009 (Thread-7): finished collecting timing info
+2021-12-02 20:45:10.762981 (Thread-3): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:45:10.763675 (Thread-1): Using postgres connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:45:10.764301 (Thread-9): finished collecting timing info
+2021-12-02 20:45:10.768452 (Thread-10): finished collecting timing info
+2021-12-02 20:45:10.770111 (Thread-11): finished collecting timing info
+2021-12-02 20:45:10.772250 (Thread-12): finished collecting timing info
+2021-12-02 20:45:10.777360 (Thread-5): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:45:10.778419 (Thread-13): finished collecting timing info
+2021-12-02 20:45:10.778776 (Thread-4): finished collecting timing info
+2021-12-02 20:45:10.782911 (Thread-6): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:45:10.787305 (Thread-2): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:45:10.826502 (Thread-2): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+
+    
+
+  create temporary table "convert_column_boolean_to_float__dbt_tmp204510786140"
+  as (
+    select
+    2.2 as column_boolean_to_float,
+    now() as insert_time
+  );
+  
+2021-12-02 20:45:10.795669 (Thread-7): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:45:10.796966 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+
+    
+
+  create temporary table "convert_column_boolean_to_int__dbt_tmp204510761676"
+  as (
+    select
+    2 as column_boolean_to_int,
+    now() as insert_time
+  );
+  
+2021-12-02 20:45:10.798310 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+
+    
+
+  create temporary table "change_column_names__dbt_tmp204510736609"
+  as (
+    select
+    'replacing underscore with space' as "new column name",
+    'a renamed column' as renamed_column,
+    'a new column is added' as new_column,
+    now() as insert_time
+  );
+  
+2021-12-02 20:45:10.802274 (Thread-9): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:45:10.833326 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+    
+
+  create temporary table "convert_column_int_to_float__dbt_tmp204510801029"
+  as (
+    select
+    2.2 as column_int_to_float,
+    now() as insert_time
+  );
+  
+2021-12-02 20:45:10.810409 (Thread-11): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:45:10.814150 (Thread-12): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:45:10.815516 (Thread-5): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+
+    
+
+  create temporary table "convert_column_float_to_boolean__dbt_tmp204510776141"
+  as (
+    select
+    false as column_float_to_boolean,
+    now() as insert_time
+  );
+  
+2021-12-02 20:45:10.819570 (Thread-13): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:45:10.823713 (Thread-4): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:45:10.825080 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+    
+
+  create temporary table "convert_column_float_to_int__dbt_tmp204510781335"
+  as (
+    select
+    2 as column_float_to_int,
+    now() as insert_time
+  );
+  
+2021-12-02 20:45:10.791651 (Thread-8): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:45:10.827783 (Thread-2): Opening a new connection, currently in state init
+2021-12-02 20:45:10.829097 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+    
+
+  create temporary table "convert_column_float_to_string__dbt_tmp204510794522"
+  as (
+    select
+    '2.2' as column_float_to_string,
+    now() as insert_time
+  );
+  
+2021-12-02 20:45:10.830367 (Thread-3): Opening a new connection, currently in state init
+2021-12-02 20:45:10.832052 (Thread-1): Opening a new connection, currently in state closed
+2021-12-02 20:45:10.853993 (Thread-2): SQL status: SELECT 1 in 0.03 seconds
+2021-12-02 20:45:10.834530 (Thread-9): Opening a new connection, currently in state init
+2021-12-02 20:45:10.835882 (Thread-11): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+
+    
+
+  create temporary table "convert_column_string_to_boolean__dbt_tmp204510809192"
+  as (
+    select
+    false as column_string_to_boolean,
+    now() as insert_time
+  );
+  
+2021-12-02 20:45:10.837763 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+
+    
+
+  create temporary table "convert_column_string_to_float__dbt_tmp204510812945"
+  as (
+    select
+    2.2 as column_string_to_float,
+    now() as insert_time
+  );
+  
+2021-12-02 20:45:10.872010 (Thread-12): Opening a new connection, currently in state init
+2021-12-02 20:45:10.840365 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+
+    
+
+  create temporary table "convert_column_string_to_int__dbt_tmp204510818466"
+  as (
+    select
+    2 as column_string_to_int,
+    now() as insert_time
+  );
+  
+2021-12-02 20:45:10.875921 (Thread-13): Opening a new connection, currently in state init
+2021-12-02 20:45:10.842886 (Thread-6): Opening a new connection, currently in state init
+2021-12-02 20:45:10.844105 (Thread-8): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+
+    
+
+  create temporary table "convert_column_int_to_boolean__dbt_tmp204510790496"
+  as (
+    select
+    false as column_int_to_boolean,
+    now() as insert_time
+  );
+  
+2021-12-02 20:45:10.847663 (Thread-7): Opening a new connection, currently in state init
+2021-12-02 20:45:10.806367 (Thread-10): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:45:10.889088 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+    
+
+  create temporary table "convert_column_int_to_string__dbt_tmp204510805203"
+  as (
+    select
+    '2' as column_int_to_string,
+    now() as insert_time
+  );
+  
+2021-12-02 20:45:10.869264 (Thread-1): SQL status: SELECT 1 in 0.04 seconds
+2021-12-02 20:45:10.870781 (Thread-11): Opening a new connection, currently in state init
+2021-12-02 20:45:10.839222 (Thread-5): Opening a new connection, currently in state init
+2021-12-02 20:45:10.872513 (Thread-3): SQL status: SELECT 1 in 0.04 seconds
+2021-12-02 20:45:10.841480 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+    
+
+  create temporary table "convert_column_boolean_to_string__dbt_tmp204510822542"
+  as (
+    select
+    'false' as column_boolean_to_string,
+    now() as insert_time
+  );
+  
+2021-12-02 20:45:10.879563 (Thread-9): SQL status: SELECT 1 in 0.04 seconds
+2021-12-02 20:45:10.882823 (Thread-8): Opening a new connection, currently in state init
+2021-12-02 20:45:10.885665 (Thread-12): SQL status: SELECT 1 in 0.01 seconds
+2021-12-02 20:45:10.866501 (Thread-2): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:45:10.889419 (Thread-6): SQL status: SELECT 1 in 0.05 seconds
+2021-12-02 20:45:10.891111 (Thread-10): Opening a new connection, currently in state init
+2021-12-02 20:45:10.892153 (Thread-13): SQL status: SELECT 1 in 0.02 seconds
+2021-12-02 20:45:10.896669 (Thread-1): Using postgres connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:45:10.904251 (Thread-3): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:45:10.906781 (Thread-7): SQL status: SELECT 1 in 0.06 seconds
+2021-12-02 20:45:10.907766 (Thread-4): Opening a new connection, currently in state init
+2021-12-02 20:45:10.912393 (Thread-9): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:45:10.912797 (Thread-11): SQL status: SELECT 1 in 0.04 seconds
+2021-12-02 20:45:10.913290 (Thread-5): SQL status: SELECT 1 in 0.07 seconds
+2021-12-02 20:45:10.919417 (Thread-12): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:45:10.960235 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_float: BEGIN
+2021-12-02 20:45:10.925791 (Thread-6): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:45:10.928196 (Thread-8): SQL status: SELECT 1 in 0.05 seconds
+2021-12-02 20:45:10.937182 (Thread-13): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:45:10.938674 (Thread-1): On model.incremental_test_schema_change.change_column_names: BEGIN
+2021-12-02 20:45:10.940540 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_int: BEGIN
+2021-12-02 20:45:10.945220 (Thread-7): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:45:10.946446 (Thread-10): SQL status: SELECT 1 in 0.06 seconds
+2021-12-02 20:45:10.948512 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: BEGIN
+2021-12-02 20:45:10.953232 (Thread-11): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:45:10.958325 (Thread-5): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:45:10.920992 (Thread-2): On model.incremental_test_schema_change.convert_column_boolean_to_float: BEGIN
+2021-12-02 20:45:10.962320 (Thread-12): SQL status: BEGIN in 0.00 seconds
+2021-12-02 20:45:10.984103 (Thread-12): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:45:10.963317 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: BEGIN
+2021-12-02 20:45:10.967124 (Thread-8): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:45:10.968301 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_int: BEGIN
+2021-12-02 20:45:10.969944 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-12-02 20:45:10.971497 (Thread-3): SQL status: BEGIN in 0.00 seconds
+2021-12-02 20:45:10.972201 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: BEGIN
+2021-12-02 20:45:10.976121 (Thread-10): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:45:10.978739 (Thread-9): SQL status: BEGIN in 0.00 seconds
+2021-12-02 20:45:10.979517 (Thread-11): On model.incremental_test_schema_change.convert_column_string_to_boolean: BEGIN
+2021-12-02 20:45:10.981386 (Thread-5): On model.incremental_test_schema_change.convert_column_float_to_boolean: BEGIN
+2021-12-02 20:45:10.983121 (Thread-2): SQL status: BEGIN in 0.00 seconds
+2021-12-02 20:45:10.962609 (Thread-4): SQL status: SELECT 1 in 0.05 seconds
+2021-12-02 20:45:11.004578 (Thread-4): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:45:10.987519 (Thread-6): SQL status: BEGIN in 0.00 seconds
+2021-12-02 20:45:10.988722 (Thread-8): On model.incremental_test_schema_change.convert_column_int_to_boolean: BEGIN
+2021-12-02 20:45:10.990701 (Thread-13): SQL status: BEGIN in 0.00 seconds
+2021-12-02 20:45:10.991534 (Thread-1): Using postgres connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:45:10.993055 (Thread-3): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:45:10.994988 (Thread-7): SQL status: BEGIN in 0.00 seconds
+2021-12-02 20:45:10.995853 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: BEGIN
+2021-12-02 20:45:10.997170 (Thread-9): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:45:10.998666 (Thread-11): SQL status: BEGIN in 0.00 seconds
+2021-12-02 20:45:11.000128 (Thread-5): SQL status: BEGIN in 0.00 seconds
+2021-12-02 20:45:11.001118 (Thread-2): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:45:10.985729 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_string_to_float__dbt_tmp204510812945'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.005679 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: BEGIN
+2021-12-02 20:45:11.007190 (Thread-6): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:45:11.008853 (Thread-8): SQL status: BEGIN in 0.00 seconds
+2021-12-02 20:45:11.009673 (Thread-13): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:45:11.011016 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'change_column_names__dbt_tmp204510736609'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.012244 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_boolean_to_int__dbt_tmp204510761676'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.013422 (Thread-7): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:45:11.015186 (Thread-10): SQL status: BEGIN in 0.00 seconds
+2021-12-02 20:45:11.015912 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_int_to_float__dbt_tmp204510801029'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.017073 (Thread-11): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:45:11.018606 (Thread-5): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:45:11.019725 (Thread-2): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_boolean_to_float__dbt_tmp204510786140'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.026099 (Thread-4): SQL status: BEGIN in 0.00 seconds
+2021-12-02 20:45:11.056799 (Thread-4): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:45:11.027255 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_float_to_int__dbt_tmp204510781335'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.029408 (Thread-8): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:45:11.066344 (Thread-8): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_int_to_boolean__dbt_tmp204510790496'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.038114 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_float_to_string__dbt_tmp204510794522'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.038470 (Thread-1): SQL status: SELECT 4 in 0.01 seconds
+2021-12-02 20:45:11.039539 (Thread-3): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.039871 (Thread-10): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:45:11.047510 (Thread-9): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.048677 (Thread-11): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_string_to_boolean__dbt_tmp204510809192'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.050242 (Thread-5): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_float_to_boolean__dbt_tmp204510776141'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.026985 (Thread-12): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.057525 (Thread-2): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.058391 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_boolean_to_string__dbt_tmp204510822542'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.065623 (Thread-6): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.030767 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_string_to_int__dbt_tmp204510818466'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.080890 (Thread-1): Using postgres connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:45:11.081207 (Thread-8): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.081517 (Thread-7): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.084738 (Thread-3): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:45:11.086526 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_int_to_string__dbt_tmp204510805203'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.092877 (Thread-9): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:45:11.100888 (Thread-12): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:45:11.131427 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_string_to_float'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.105447 (Thread-2): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:45:11.107350 (Thread-5): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.113509 (Thread-6): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:45:11.113889 (Thread-4): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.144205 (Thread-4): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:45:11.121576 (Thread-8): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:45:11.125282 (Thread-7): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:45:11.126786 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_boolean_to_int'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.129698 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_int_to_float'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.131063 (Thread-13): SQL status: SELECT 2 in 0.02 seconds
+2021-12-02 20:45:11.101275 (Thread-11): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.134489 (Thread-2): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_boolean_to_float'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.138613 (Thread-5): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:45:11.138858 (Thread-12): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.139150 (Thread-10): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.140119 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_float_to_int'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.117614 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'change_column_names'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.145371 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_boolean_to_string'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.146718 (Thread-8): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_int_to_boolean'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.148159 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_float_to_string'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.154738 (Thread-13): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:45:11.155194 (Thread-3): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.155435 (Thread-9): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.158960 (Thread-11): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:45:11.162593 (Thread-5): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_float_to_boolean'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.175281 (Thread-2): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.179486 (Thread-12): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:45:11.181966 (Thread-10): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:45:11.186636 (Thread-6): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.189729 (Thread-1): SQL status: SELECT 4 in 0.00 seconds
+2021-12-02 20:45:11.190764 (Thread-4): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.192606 (Thread-8): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.192791 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_string_to_int'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.198229 (Thread-3): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:45:11.198544 (Thread-7): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.204841 (Thread-9): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:45:11.206456 (Thread-11): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_string_to_boolean'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.211586 (Thread-2): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:45:11.212813 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_string_to_float__dbt_tmp204510812945'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.213356 (Thread-5): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.214680 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_int_to_string'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.218890 (Thread-6): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:45:11.257808 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_float_to_int__dbt_tmp204510781335'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.230095 (Thread-4): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:45:11.260283 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_boolean_to_string__dbt_tmp204510822542'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.237070 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_boolean_to_int__dbt_tmp204510761676'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.241466 (Thread-7): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:45:11.241975 (Thread-13): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.243220 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_int_to_float__dbt_tmp204510801029'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.247298 (Thread-2): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_boolean_to_float__dbt_tmp204510786140'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.254106 (Thread-5): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:45:11.254371 (Thread-11): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.254617 (Thread-12): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.222727 (Thread-1): Using postgres connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:45:11.234194 (Thread-8): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:45:11.264274 (Thread-10): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.264460 (Thread-4): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.266459 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_float_to_string__dbt_tmp204510794522'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.267238 (Thread-6): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.267880 (Thread-3): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.274820 (Thread-13): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:45:11.279629 (Thread-2): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.281122 (Thread-5): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_float_to_boolean__dbt_tmp204510776141'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.282116 (Thread-9): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.285645 (Thread-11): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:45:11.289461 (Thread-12): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:45:11.290814 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'change_column_names__dbt_tmp204510736609'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.292353 (Thread-8): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_int_to_boolean__dbt_tmp204510790496'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.296263 (Thread-10): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:45:11.327109 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_int_to_string__dbt_tmp204510805203'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.329175 (Thread-1): SQL status: SELECT 4 in 0.00 seconds
+2021-12-02 20:45:11.306459 (Thread-7): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.309963 (Thread-3): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:45:11.311279 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_string_to_int__dbt_tmp204510818466'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.314914 (Thread-2): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:45:11.320487 (Thread-9): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:45:11.320803 (Thread-5): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.321963 (Thread-11): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_string_to_boolean__dbt_tmp204510809192'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.323283 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_string_to_float'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.301135 (Thread-4): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:45:11.306204 (Thread-6): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:45:11.329605 (Thread-8): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.333485 (Thread-1): Using postgres connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:45:11.333938 (Thread-10): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.337439 (Thread-7): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:45:11.338832 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_boolean_to_int'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.341016 (Thread-2): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_boolean_to_float'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.342515 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_int_to_float'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.346697 (Thread-5): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:45:11.374009 (Thread-5): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_float_to_boolean'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.350912 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_boolean_to_string'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.351235 (Thread-11): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.352266 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_float_to_int'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.356623 (Thread-8): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:45:11.356841 (Thread-12): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.358076 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'change_column_names'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.363444 (Thread-10): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:45:11.365289 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_float_to_string'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.371577 (Thread-3): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.406297 (Thread-3): 
+    In "postgres"."tests"."convert_column_boolean_to_int":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'column_boolean_to_int', 'new_type': 'integer'}]
+  
+2021-12-02 20:45:11.347120 (Thread-13): SQL status: SELECT 2 in 0.01 seconds
+2021-12-02 20:45:11.374811 (Thread-9): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.377895 (Thread-5): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.381986 (Thread-11): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:45:11.382257 (Thread-4): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.385772 (Thread-6): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.386290 (Thread-8): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_int_to_boolean'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.398387 (Thread-12): 
+    In "postgres"."tests"."convert_column_string_to_float":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'column_string_to_float', 'new_type': 'numeric'}]
+  
+2021-12-02 20:45:11.401953 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_int_to_string'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.403174 (Thread-1): SQL status: SELECT 4 in 0.00 seconds
+2021-12-02 20:45:11.372259 (Thread-2): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.407259 (Thread-7): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.423780 (Thread-3): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:45:11.426621 (Thread-13): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:45:11.429491 (Thread-9): 
+    In "postgres"."tests"."convert_column_int_to_float":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'column_int_to_float', 'new_type': 'numeric'}]
+  
+2021-12-02 20:45:11.432573 (Thread-5): 
+    In "postgres"."tests"."convert_column_float_to_boolean":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'column_float_to_boolean', 'new_type': 'boolean'}]
+  
+2021-12-02 20:45:11.434154 (Thread-11): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_string_to_boolean'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.436557 (Thread-4): 
+    In "postgres"."tests"."convert_column_boolean_to_string":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'column_boolean_to_string', 'new_type': 'text'}]
+  
+2021-12-02 20:45:11.439271 (Thread-6): 
+    In "postgres"."tests"."convert_column_float_to_int":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'column_float_to_int', 'new_type': 'integer'}]
+  
+2021-12-02 20:45:11.442200 (Thread-12): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:45:11.443529 (Thread-8): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.446600 (Thread-1): 
+    In "postgres"."tests"."change_column_names":
+        Schema changed: True
+        Source columns not in target: [<Column new column name (text)>, <Column renamed_column (text)>, <Column new_column (text)>]
+        Target columns not in source: [<Column column_name (text)>, <Column column_to_rename (text)>, <Column column_to_delete (text)>]
+        New column types: []
+  
+2021-12-02 20:45:11.446953 (Thread-10): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.450745 (Thread-2): 
+    In "postgres"."tests"."convert_column_boolean_to_float":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'column_boolean_to_float', 'new_type': 'numeric'}]
+  
+2021-12-02 20:45:11.453593 (Thread-7): 
+    In "postgres"."tests"."convert_column_float_to_string":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'column_float_to_string', 'new_type': 'text'}]
+  
+2021-12-02 20:45:11.455022 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+
+    alter table "postgres"."tests"."convert_column_boolean_to_int" add column "column_boolean_to_int__dbt_alter" integer;
+    update "postgres"."tests"."convert_column_boolean_to_int" set "column_boolean_to_int__dbt_alter" = "column_boolean_to_int";
+    alter table "postgres"."tests"."convert_column_boolean_to_int" drop column "column_boolean_to_int" cascade;
+    alter table "postgres"."tests"."convert_column_boolean_to_int" rename column "column_boolean_to_int__dbt_alter" to "column_boolean_to_int"
+  
+2021-12-02 20:45:11.456183 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_string_to_int'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.459988 (Thread-9): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:45:11.461900 (Thread-5): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:45:11.494752 (Thread-5): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+
+    alter table "postgres"."tests"."convert_column_float_to_boolean" add column "column_float_to_boolean__dbt_alter" boolean;
+    update "postgres"."tests"."convert_column_float_to_boolean" set "column_float_to_boolean__dbt_alter" = "column_float_to_boolean";
+    alter table "postgres"."tests"."convert_column_float_to_boolean" drop column "column_float_to_boolean" cascade;
+    alter table "postgres"."tests"."convert_column_float_to_boolean" rename column "column_float_to_boolean__dbt_alter" to "column_float_to_boolean"
+  
+2021-12-02 20:45:11.465582 (Thread-11): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.467222 (Thread-6): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:45:11.468353 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+
+    alter table "postgres"."tests"."convert_column_string_to_float" add column "column_string_to_float__dbt_alter" numeric;
+    update "postgres"."tests"."convert_column_string_to_float" set "column_string_to_float__dbt_alter" = "column_string_to_float";
+    alter table "postgres"."tests"."convert_column_string_to_float" drop column "column_string_to_float" cascade;
+    alter table "postgres"."tests"."convert_column_string_to_float" rename column "column_string_to_float__dbt_alter" to "column_string_to_float"
+  
+2021-12-02 20:45:11.470939 (Thread-8): 
+    In "postgres"."tests"."convert_column_int_to_boolean":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'column_int_to_boolean', 'new_type': 'boolean'}]
+  
+2021-12-02 20:45:11.482535 (Thread-1): Using postgres connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:45:11.484894 (Thread-10): 
+    In "postgres"."tests"."convert_column_int_to_string":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'column_int_to_string', 'new_type': 'text'}]
+  
+2021-12-02 20:45:11.487375 (Thread-2): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:45:11.489124 (Thread-7): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:45:11.491621 (Thread-3): Postgres error: column "column_boolean_to_int__dbt_alter" is of type integer but expression is of type boolean
+LINE 4: ..._to_int" set "column_boolean_to_int__dbt_alter" = "column_bo...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+2021-12-02 20:45:11.493444 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+    alter table "postgres"."tests"."convert_column_int_to_float" add column "column_int_to_float__dbt_alter" numeric;
+    update "postgres"."tests"."convert_column_int_to_float" set "column_int_to_float__dbt_alter" = "column_int_to_float";
+    alter table "postgres"."tests"."convert_column_int_to_float" drop column "column_int_to_float" cascade;
+    alter table "postgres"."tests"."convert_column_int_to_float" rename column "column_int_to_float__dbt_alter" to "column_int_to_float"
+  
+2021-12-02 20:45:11.465380 (Thread-4): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:45:11.495842 (Thread-13): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.497420 (Thread-5): Postgres error: column "column_float_to_boolean__dbt_alter" is of type boolean but expression is of type numeric
+LINE 4: ...olean" set "column_float_to_boolean__dbt_alter" = "column_fl...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+2021-12-02 20:45:11.499286 (Thread-11): 
+    In "postgres"."tests"."convert_column_string_to_boolean":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'column_string_to_boolean', 'new_type': 'boolean'}]
+  
+2021-12-02 20:45:11.500585 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+    alter table "postgres"."tests"."convert_column_float_to_int" add column "column_float_to_int__dbt_alter" integer;
+    update "postgres"."tests"."convert_column_float_to_int" set "column_float_to_int__dbt_alter" = "column_float_to_int";
+    alter table "postgres"."tests"."convert_column_float_to_int" drop column "column_float_to_int" cascade;
+    alter table "postgres"."tests"."convert_column_float_to_int" rename column "column_float_to_int__dbt_alter" to "column_float_to_int"
+  
+2021-12-02 20:45:11.502696 (Thread-12): Postgres error: column "column_string_to_float__dbt_alter" is of type numeric but expression is of type text
+LINE 4: ..._float" set "column_string_to_float__dbt_alter" = "column_st...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+2021-12-02 20:45:11.503838 (Thread-8): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:45:11.505225 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+
+    alter table "postgres"."tests"."change_column_names"
+       
+            
+               add column new column name text,
+            
+               add column renamed_column text,
+            
+               add column new_column text
+            ,
+            
+            
+                drop column column_name,
+            
+                drop column column_to_rename,
+            
+                drop column column_to_delete
+            
+  
+2021-12-02 20:45:11.506793 (Thread-10): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:45:11.508216 (Thread-2): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+
+    alter table "postgres"."tests"."convert_column_boolean_to_float" add column "column_boolean_to_float__dbt_alter" numeric;
+    update "postgres"."tests"."convert_column_boolean_to_float" set "column_boolean_to_float__dbt_alter" = "column_boolean_to_float";
+    alter table "postgres"."tests"."convert_column_boolean_to_float" drop column "column_boolean_to_float" cascade;
+    alter table "postgres"."tests"."convert_column_boolean_to_float" rename column "column_boolean_to_float__dbt_alter" to "column_boolean_to_float"
+  
+2021-12-02 20:45:11.509518 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+    alter table "postgres"."tests"."convert_column_float_to_string" add column "column_float_to_string__dbt_alter" text;
+    update "postgres"."tests"."convert_column_float_to_string" set "column_float_to_string__dbt_alter" = "column_float_to_string";
+    alter table "postgres"."tests"."convert_column_float_to_string" drop column "column_float_to_string" cascade;
+    alter table "postgres"."tests"."convert_column_float_to_string" rename column "column_float_to_string__dbt_alter" to "column_float_to_string"
+  
+2021-12-02 20:45:11.510987 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_int: ROLLBACK
+2021-12-02 20:45:11.514688 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+    alter table "postgres"."tests"."convert_column_boolean_to_string" add column "column_boolean_to_string__dbt_alter" text;
+    update "postgres"."tests"."convert_column_boolean_to_string" set "column_boolean_to_string__dbt_alter" = "column_boolean_to_string";
+    alter table "postgres"."tests"."convert_column_boolean_to_string" drop column "column_boolean_to_string" cascade;
+    alter table "postgres"."tests"."convert_column_boolean_to_string" rename column "column_boolean_to_string__dbt_alter" to "column_boolean_to_string"
+  
+2021-12-02 20:45:11.516207 (Thread-9): SQL status: ALTER TABLE in 0.00 seconds
+2021-12-02 20:45:11.518477 (Thread-13): 
+    In "postgres"."tests"."convert_column_string_to_int":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'column_string_to_int', 'new_type': 'integer'}]
+  
+2021-12-02 20:45:11.519903 (Thread-5): On model.incremental_test_schema_change.convert_column_float_to_boolean: ROLLBACK
+2021-12-02 20:45:11.521728 (Thread-11): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:45:11.524223 (Thread-6): SQL status: ALTER TABLE in 0.00 seconds
+2021-12-02 20:45:11.524625 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_float: ROLLBACK
+2021-12-02 20:45:11.525812 (Thread-8): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+
+    alter table "postgres"."tests"."convert_column_int_to_boolean" add column "column_int_to_boolean__dbt_alter" boolean;
+    update "postgres"."tests"."convert_column_int_to_boolean" set "column_int_to_boolean__dbt_alter" = "column_int_to_boolean";
+    alter table "postgres"."tests"."convert_column_int_to_boolean" drop column "column_int_to_boolean" cascade;
+    alter table "postgres"."tests"."convert_column_int_to_boolean" rename column "column_int_to_boolean__dbt_alter" to "column_int_to_boolean"
+  
+2021-12-02 20:45:11.528237 (Thread-1): Postgres error: syntax error at or near "column"
+LINE 6:                add column new column name text,
+                                      ^
+
+2021-12-02 20:45:11.528986 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+    alter table "postgres"."tests"."convert_column_int_to_string" add column "column_int_to_string__dbt_alter" text;
+    update "postgres"."tests"."convert_column_int_to_string" set "column_int_to_string__dbt_alter" = "column_int_to_string";
+    alter table "postgres"."tests"."convert_column_int_to_string" drop column "column_int_to_string" cascade;
+    alter table "postgres"."tests"."convert_column_int_to_string" rename column "column_int_to_string__dbt_alter" to "column_int_to_string"
+  
+2021-12-02 20:45:11.533803 (Thread-2): Postgres error: column "column_boolean_to_float__dbt_alter" is of type numeric but expression is of type boolean
+LINE 4: ...float" set "column_boolean_to_float__dbt_alter" = "column_bo...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+2021-12-02 20:45:11.535041 (Thread-7): SQL status: ALTER TABLE in 0.00 seconds
+2021-12-02 20:45:11.536073 (Thread-3): finished collecting timing info
+2021-12-02 20:45:11.538716 (Thread-9): 
+    In "postgres"."tests"."convert_column_int_to_float":
+        Schema change approach: sync_all_columns
+        Columns added: []
+        Columns removed: []
+        Data types changed: [{'column_name': 'column_int_to_float', 'new_type': 'numeric'}]
+  
+2021-12-02 20:45:11.539219 (Thread-4): SQL status: ALTER TABLE in 0.00 seconds
+2021-12-02 20:45:11.540616 (Thread-13): Using postgres connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:45:11.542343 (Thread-5): finished collecting timing info
+2021-12-02 20:45:11.543139 (Thread-11): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+
+    alter table "postgres"."tests"."convert_column_string_to_boolean" add column "column_string_to_boolean__dbt_alter" boolean;
+    update "postgres"."tests"."convert_column_string_to_boolean" set "column_string_to_boolean__dbt_alter" = "column_string_to_boolean";
+    alter table "postgres"."tests"."convert_column_string_to_boolean" drop column "column_string_to_boolean" cascade;
+    alter table "postgres"."tests"."convert_column_string_to_boolean" rename column "column_string_to_boolean__dbt_alter" to "column_string_to_boolean"
+  
+2021-12-02 20:45:11.545067 (Thread-6): 
+    In "postgres"."tests"."convert_column_float_to_int":
+        Schema change approach: sync_all_columns
+        Columns added: []
+        Columns removed: []
+        Data types changed: [{'column_name': 'column_float_to_int', 'new_type': 'integer'}]
+  
+2021-12-02 20:45:11.546855 (Thread-12): finished collecting timing info
+2021-12-02 20:45:11.548647 (Thread-8): Postgres error: column "column_int_to_boolean__dbt_alter" is of type boolean but expression is of type integer
+LINE 4: ...boolean" set "column_int_to_boolean__dbt_alter" = "column_in...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+2021-12-02 20:45:11.574102 (Thread-8): On model.incremental_test_schema_change.convert_column_int_to_boolean: ROLLBACK
+2021-12-02 20:45:11.552436 (Thread-2): On model.incremental_test_schema_change.convert_column_boolean_to_float: ROLLBACK
+2021-12-02 20:45:11.552819 (Thread-10): SQL status: ALTER TABLE in 0.00 seconds
+2021-12-02 20:45:11.554532 (Thread-7): 
+    In "postgres"."tests"."convert_column_float_to_string":
+        Schema change approach: sync_all_columns
+        Columns added: []
+        Columns removed: []
+        Data types changed: [{'column_name': 'column_float_to_string', 'new_type': 'text'}]
+  
+2021-12-02 20:45:11.555854 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_int: Close
+2021-12-02 20:45:11.562779 (Thread-9): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:45:11.564647 (Thread-4): 
+    In "postgres"."tests"."convert_column_boolean_to_string":
+        Schema change approach: sync_all_columns
+        Columns added: []
+        Columns removed: []
+        Data types changed: [{'column_name': 'column_boolean_to_string', 'new_type': 'text'}]
+  
+2021-12-02 20:45:11.565845 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+
+    alter table "postgres"."tests"."convert_column_string_to_int" add column "column_string_to_int__dbt_alter" integer;
+    update "postgres"."tests"."convert_column_string_to_int" set "column_string_to_int__dbt_alter" = "column_string_to_int";
+    alter table "postgres"."tests"."convert_column_string_to_int" drop column "column_string_to_int" cascade;
+    alter table "postgres"."tests"."convert_column_string_to_int" rename column "column_string_to_int__dbt_alter" to "column_string_to_int"
+  
+2021-12-02 20:45:11.566970 (Thread-5): On model.incremental_test_schema_change.convert_column_float_to_boolean: Close
+2021-12-02 20:45:11.568883 (Thread-11): Postgres error: column "column_string_to_boolean__dbt_alter" is of type boolean but expression is of type text
+LINE 4: ...lean" set "column_string_to_boolean__dbt_alter" = "column_st...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+2021-12-02 20:45:11.571628 (Thread-6): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:45:11.572698 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_float: Close
+2021-12-02 20:45:11.549107 (Thread-1): On model.incremental_test_schema_change.change_column_names: ROLLBACK
+2021-12-02 20:45:11.576100 (Thread-8): finished collecting timing info
+2021-12-02 20:45:11.577383 (Thread-2): finished collecting timing info
+2021-12-02 20:45:11.578686 (Thread-10): 
+    In "postgres"."tests"."convert_column_int_to_string":
+        Schema change approach: sync_all_columns
+        Columns added: []
+        Columns removed: []
+        Data types changed: [{'column_name': 'column_int_to_string', 'new_type': 'text'}]
+  
+2021-12-02 20:45:11.581638 (Thread-7): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:45:11.606245 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_float_to_string'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.583185 (Thread-3): Database Error in model convert_column_boolean_to_int (models/change_column_types/convert_column_boolean_to_int.sql)
+  column "column_boolean_to_int__dbt_alter" is of type integer but expression is of type boolean
+  LINE 4: ..._to_int" set "column_boolean_to_int__dbt_alter" = "column_bo...
+                                                               ^
+  HINT:  You will need to rewrite or cast the expression.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 56, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.DatatypeMismatch: column "column_boolean_to_int__dbt_alter" is of type integer but expression is of type boolean
+LINE 4: ..._to_int" set "column_boolean_to_int__dbt_alter" = "column_bo...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 148, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 55, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 67, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model convert_column_boolean_to_int (models/change_column_types/convert_column_boolean_to_int.sql)
+  column "column_boolean_to_int__dbt_alter" is of type integer but expression is of type boolean
+  LINE 4: ..._to_int" set "column_boolean_to_int__dbt_alter" = "column_bo...
+                                                               ^
+  HINT:  You will need to rewrite or cast the expression.
+2021-12-02 20:45:11.609459 (Thread-3): 20:45:11 | 3 of 13 ERROR creating incremental model tests.convert_column_boolean_to_int................................. [ERROR in 1.04s]
+2021-12-02 20:45:11.591788 (Thread-13): Postgres error: column "column_string_to_int__dbt_alter" is of type integer but expression is of type text
+LINE 4: ...g_to_int" set "column_string_to_int__dbt_alter" = "column_st...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+2021-12-02 20:45:11.594712 (Thread-11): On model.incremental_test_schema_change.convert_column_string_to_boolean: ROLLBACK
+2021-12-02 20:45:11.595493 (Thread-5): Database Error in model convert_column_float_to_boolean (models/change_column_types/convert_column_float_to_boolean.sql)
+  column "column_float_to_boolean__dbt_alter" is of type boolean but expression is of type numeric
+  LINE 4: ...olean" set "column_float_to_boolean__dbt_alter" = "column_fl...
+                                                               ^
+  HINT:  You will need to rewrite or cast the expression.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 56, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.DatatypeMismatch: column "column_float_to_boolean__dbt_alter" is of type boolean but expression is of type numeric
+LINE 4: ...olean" set "column_float_to_boolean__dbt_alter" = "column_fl...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 148, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 55, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 67, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model convert_column_float_to_boolean (models/change_column_types/convert_column_float_to_boolean.sql)
+  column "column_float_to_boolean__dbt_alter" is of type boolean but expression is of type numeric
+  LINE 4: ...olean" set "column_float_to_boolean__dbt_alter" = "column_fl...
+                                                               ^
+  HINT:  You will need to rewrite or cast the expression.
+2021-12-02 20:45:11.596547 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_float_to_int'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.597776 (Thread-12): Database Error in model convert_column_string_to_float (models/change_column_types/convert_column_string_to_float.sql)
+  column "column_string_to_float__dbt_alter" is of type numeric but expression is of type text
+  LINE 4: ..._float" set "column_string_to_float__dbt_alter" = "column_st...
+                                                               ^
+  HINT:  You will need to rewrite or cast the expression.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 56, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.DatatypeMismatch: column "column_string_to_float__dbt_alter" is of type numeric but expression is of type text
+LINE 4: ..._float" set "column_string_to_float__dbt_alter" = "column_st...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 148, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 55, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 67, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model convert_column_string_to_float (models/change_column_types/convert_column_string_to_float.sql)
+  column "column_string_to_float__dbt_alter" is of type numeric but expression is of type text
+  LINE 4: ..._float" set "column_string_to_float__dbt_alter" = "column_st...
+                                                               ^
+  HINT:  You will need to rewrite or cast the expression.
+2021-12-02 20:45:11.600589 (Thread-8): On model.incremental_test_schema_change.convert_column_int_to_boolean: Close
+2021-12-02 20:45:11.622079 (Thread-8): Database Error in model convert_column_int_to_boolean (models/change_column_types/convert_column_int_to_boolean.sql)
+  column "column_int_to_boolean__dbt_alter" is of type boolean but expression is of type integer
+  LINE 4: ...boolean" set "column_int_to_boolean__dbt_alter" = "column_in...
+                                                               ^
+  HINT:  You will need to rewrite or cast the expression.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 56, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.DatatypeMismatch: column "column_int_to_boolean__dbt_alter" is of type boolean but expression is of type integer
+LINE 4: ...boolean" set "column_int_to_boolean__dbt_alter" = "column_in...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 148, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 55, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 67, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model convert_column_int_to_boolean (models/change_column_types/convert_column_int_to_boolean.sql)
+  column "column_int_to_boolean__dbt_alter" is of type boolean but expression is of type integer
+  LINE 4: ...boolean" set "column_int_to_boolean__dbt_alter" = "column_in...
+                                                               ^
+  HINT:  You will need to rewrite or cast the expression.
+2021-12-02 20:45:11.601764 (Thread-2): On model.incremental_test_schema_change.convert_column_boolean_to_float: Close
+2021-12-02 20:45:11.604873 (Thread-10): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:45:11.628785 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_int_to_string'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.589423 (Thread-4): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:45:11.610064 (Thread-7): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.612377 (Thread-3): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:45:11.612737 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_int: ROLLBACK
+2021-12-02 20:45:11.614429 (Thread-11): finished collecting timing info
+2021-12-02 20:45:11.616227 (Thread-5): 20:45:11 | 5 of 13 ERROR creating incremental model tests.convert_column_float_to_boolean............................... [ERROR in 1.02s]
+2021-12-02 20:45:11.619715 (Thread-6): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.620349 (Thread-12): 20:45:11 | 12 of 13 ERROR creating incremental model tests.convert_column_string_to_float............................... [ERROR in 1.01s]
+2021-12-02 20:45:11.600363 (Thread-1): finished collecting timing info
+2021-12-02 20:45:11.625431 (Thread-8): 20:45:11 | 8 of 13 ERROR creating incremental model tests.convert_column_int_to_boolean................................. [ERROR in 1.02s]
+2021-12-02 20:45:11.626920 (Thread-2): Database Error in model convert_column_boolean_to_float (models/change_column_types/convert_column_boolean_to_float.sql)
+  column "column_boolean_to_float__dbt_alter" is of type numeric but expression is of type boolean
+  LINE 4: ...float" set "column_boolean_to_float__dbt_alter" = "column_bo...
+                                                               ^
+  HINT:  You will need to rewrite or cast the expression.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 56, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.DatatypeMismatch: column "column_boolean_to_float__dbt_alter" is of type numeric but expression is of type boolean
+LINE 4: ...float" set "column_boolean_to_float__dbt_alter" = "column_bo...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 148, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 55, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 67, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model convert_column_boolean_to_float (models/change_column_types/convert_column_boolean_to_float.sql)
+  column "column_boolean_to_float__dbt_alter" is of type numeric but expression is of type boolean
+  LINE 4: ...float" set "column_boolean_to_float__dbt_alter" = "column_bo...
+                                                               ^
+  HINT:  You will need to rewrite or cast the expression.
+2021-12-02 20:45:11.586243 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_int_to_float'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.630911 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'convert_column_boolean_to_string'
+        
+        and table_schema = 'tests'
+        
+      order by ordinal_position
+
+  
+2021-12-02 20:45:11.633464 (Thread-7): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_string"
+2021-12-02 20:45:11.633744 (Thread-10): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.636379 (Thread-13): finished collecting timing info
+2021-12-02 20:45:11.637125 (Thread-11): On model.incremental_test_schema_change.convert_column_string_to_boolean: Close
+2021-12-02 20:45:11.638722 (Thread-5): Finished running node model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:45:11.641421 (Thread-6): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_int"
+2021-12-02 20:45:11.663151 (Thread-11): Database Error in model convert_column_string_to_boolean (models/change_column_types/convert_column_string_to_boolean.sql)
+  column "column_string_to_boolean__dbt_alter" is of type boolean but expression is of type text
+  LINE 4: ...lean" set "column_string_to_boolean__dbt_alter" = "column_st...
+                                                               ^
+  HINT:  You will need to rewrite or cast the expression.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 56, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.DatatypeMismatch: column "column_string_to_boolean__dbt_alter" is of type boolean but expression is of type text
+LINE 4: ...lean" set "column_string_to_boolean__dbt_alter" = "column_st...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 148, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 55, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 67, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model convert_column_string_to_boolean (models/change_column_types/convert_column_string_to_boolean.sql)
+  column "column_string_to_boolean__dbt_alter" is of type boolean but expression is of type text
+  LINE 4: ...lean" set "column_string_to_boolean__dbt_alter" = "column_st...
+                                                               ^
+  HINT:  You will need to rewrite or cast the expression.
+2021-12-02 20:45:11.644077 (Thread-1): On model.incremental_test_schema_change.change_column_names: Close
+2021-12-02 20:45:11.645483 (Thread-8): Finished running node model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:45:11.647943 (Thread-2): 20:45:11 | 2 of 13 ERROR creating incremental model tests.convert_column_boolean_to_float............................... [ERROR in 1.05s]
+2021-12-02 20:45:11.651930 (Thread-9): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.654652 (Thread-4): SQL status: SELECT 2 in 0.00 seconds
+2021-12-02 20:45:11.657598 (Thread-10): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_string"
+2021-12-02 20:45:11.658846 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_int: Close
+2021-12-02 20:45:11.681000 (Thread-13): Database Error in model convert_column_string_to_int (models/change_column_types/convert_column_string_to_int.sql)
+  column "column_string_to_int__dbt_alter" is of type integer but expression is of type text
+  LINE 4: ...g_to_int" set "column_string_to_int__dbt_alter" = "column_st...
+                                                               ^
+  HINT:  You will need to rewrite or cast the expression.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 56, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.DatatypeMismatch: column "column_string_to_int__dbt_alter" is of type integer but expression is of type text
+LINE 4: ...g_to_int" set "column_string_to_int__dbt_alter" = "column_st...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 148, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 55, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 67, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model convert_column_string_to_int (models/change_column_types/convert_column_string_to_int.sql)
+  column "column_string_to_int__dbt_alter" is of type integer but expression is of type text
+  LINE 4: ...g_to_int" set "column_string_to_int__dbt_alter" = "column_st...
+                                                               ^
+  HINT:  You will need to rewrite or cast the expression.
+2021-12-02 20:45:11.665848 (Thread-11): 20:45:11 | 11 of 13 ERROR creating incremental model tests.convert_column_string_to_boolean............................. [ERROR in 1.06s]
+2021-12-02 20:45:11.667733 (Thread-1): Database Error in model change_column_names (models/change_column_names.sql)
+  syntax error at or near "column"
+  LINE 6:                add column new column name text,
+                                        ^
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 56, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.SyntaxError: syntax error at or near "column"
+LINE 6:                add column new column name text,
+                                      ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 148, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 39, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 88, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 33, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 67, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model change_column_names (models/change_column_names.sql)
+  syntax error at or near "column"
+  LINE 6:                add column new column name text,
+                                        ^
+2021-12-02 20:45:11.671263 (Thread-2): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:45:11.674237 (Thread-9): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_float"
+2021-12-02 20:45:11.675800 (Thread-6): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:45:11.677411 (Thread-4): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_string"
+2021-12-02 20:45:11.679669 (Thread-7): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:45:11.642678 (Thread-12): Finished running node model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:45:11.684852 (Thread-13): 20:45:11 | 13 of 13 ERROR creating incremental model tests.convert_column_string_to_int................................. [ERROR in 1.07s]
+2021-12-02 20:45:11.701313 (Thread-13): Finished running node model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:45:11.687324 (Thread-11): Finished running node model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:45:11.690669 (Thread-1): 20:45:11 | 1 of 13 ERROR creating incremental model tests.change_column_names........................................... [ERROR in 1.12s]
+2021-12-02 20:45:11.695636 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+      
+
+    insert into "postgres"."tests"."convert_column_float_to_int" ("insert_time", "column_float_to_int")
+    (
+       select "insert_time", "column_float_to_int"
+       from "convert_column_float_to_int__dbt_tmp204510781335"
+    );
+  
+2021-12-02 20:45:11.697674 (Thread-9): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:45:11.698360 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+      
+
+    insert into "postgres"."tests"."convert_column_float_to_string" ("insert_time", "column_float_to_string")
+    (
+       select "insert_time", "column_float_to_string"
+       from "convert_column_float_to_string__dbt_tmp204510794522"
+    );
+  
+2021-12-02 20:45:11.700283 (Thread-4): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:45:11.685544 (Thread-10): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:45:11.711626 (Thread-1): Finished running node model.incremental_test_schema_change.change_column_names
+2021-12-02 20:45:11.718177 (Thread-6): SQL status: INSERT 0 1 in 0.00 seconds
+2021-12-02 20:45:11.722074 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+      
+
+    insert into "postgres"."tests"."convert_column_int_to_float" ("insert_time", "column_int_to_float")
+    (
+       select "insert_time", "column_int_to_float"
+       from "convert_column_int_to_float__dbt_tmp204510801029"
+    );
+  
+2021-12-02 20:45:11.723879 (Thread-7): SQL status: INSERT 0 1 in 0.00 seconds
+2021-12-02 20:45:11.725644 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+      
+
+    insert into "postgres"."tests"."convert_column_boolean_to_string" ("insert_time", "column_boolean_to_string")
+    (
+       select "insert_time", "column_boolean_to_string"
+       from "convert_column_boolean_to_string__dbt_tmp204510822542"
+    );
+  
+2021-12-02 20:45:11.727351 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+      
+
+    insert into "postgres"."tests"."convert_column_int_to_string" ("insert_time", "column_int_to_string")
+    (
+       select "insert_time", "column_int_to_string"
+       from "convert_column_int_to_string__dbt_tmp204510805203"
+    );
+  
+2021-12-02 20:45:11.742722 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: COMMIT
+2021-12-02 20:45:11.744625 (Thread-9): SQL status: INSERT 0 1 in 0.00 seconds
+2021-12-02 20:45:11.753278 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: COMMIT
+2021-12-02 20:45:11.748799 (Thread-4): SQL status: INSERT 0 1 in 0.00 seconds
+2021-12-02 20:45:11.750225 (Thread-10): SQL status: INSERT 0 1 in 0.00 seconds
+2021-12-02 20:45:11.750967 (Thread-6): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:45:11.746881 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: COMMIT
+2021-12-02 20:45:11.761317 (Thread-7): Using postgres connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:45:11.756649 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: COMMIT
+2021-12-02 20:45:11.758782 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: COMMIT
+2021-12-02 20:45:11.760061 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: COMMIT
+2021-12-02 20:45:11.754609 (Thread-9): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:45:11.767951 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: COMMIT
+2021-12-02 20:45:11.763634 (Thread-4): Using postgres connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:45:11.764980 (Thread-10): Using postgres connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:45:11.767346 (Thread-6): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:45:11.762541 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: COMMIT
+2021-12-02 20:45:11.769884 (Thread-9): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:45:11.770321 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: COMMIT
+2021-12-02 20:45:11.771571 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: COMMIT
+2021-12-02 20:45:11.773347 (Thread-6): finished collecting timing info
+2021-12-02 20:45:11.775328 (Thread-7): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:45:11.781501 (Thread-7): finished collecting timing info
+2021-12-02 20:45:11.778547 (Thread-4): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:45:11.779654 (Thread-10): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:45:11.779971 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: Close
+2021-12-02 20:45:11.776402 (Thread-9): finished collecting timing info
+2021-12-02 20:45:11.789352 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: Close
+2021-12-02 20:45:11.784289 (Thread-4): finished collecting timing info
+2021-12-02 20:45:11.785661 (Thread-10): finished collecting timing info
+2021-12-02 20:45:11.787633 (Thread-6): 20:45:11 | 6 of 13 OK created incremental model tests.convert_column_float_to_int....................................... [INSERT 0 1 in 1.19s]
+2021-12-02 20:45:11.782616 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: Close
+2021-12-02 20:45:11.795366 (Thread-9): 20:45:11 | 9 of 13 OK created incremental model tests.convert_column_int_to_float....................................... [INSERT 0 1 in 1.19s]
+2021-12-02 20:45:11.804635 (Thread-9): Finished running node model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:45:11.797091 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: Close
+2021-12-02 20:45:11.798450 (Thread-6): Finished running node model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:45:11.803609 (Thread-7): 20:45:11 | 7 of 13 OK created incremental model tests.convert_column_float_to_string.................................... [INSERT 0 1 in 1.20s]
+2021-12-02 20:45:11.795648 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: Close
+2021-12-02 20:45:11.808126 (Thread-10): 20:45:11 | 10 of 13 OK created incremental model tests.convert_column_int_to_string..................................... [INSERT 0 1 in 1.20s]
+2021-12-02 20:45:11.811125 (Thread-7): Finished running node model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:45:11.815285 (Thread-10): Finished running node model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:45:11.815968 (Thread-4): 20:45:11 | 4 of 13 OK created incremental model tests.convert_column_boolean_to_string.................................. [INSERT 0 1 in 1.20s]
+2021-12-02 20:45:11.819622 (Thread-4): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:45:11.825154 (MainThread): Acquiring new postgres connection "master".
+2021-12-02 20:45:11.826470 (MainThread): Using postgres connection "master".
+2021-12-02 20:45:11.827597 (MainThread): On master: BEGIN
+2021-12-02 20:45:11.828700 (MainThread): Opening a new connection, currently in state closed
+2021-12-02 20:45:11.836622 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-12-02 20:45:11.838124 (MainThread): On master: COMMIT
+2021-12-02 20:45:11.839535 (MainThread): Using postgres connection "master".
+2021-12-02 20:45:11.841279 (MainThread): On master: COMMIT
+2021-12-02 20:45:11.842827 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-12-02 20:45:11.843954 (MainThread): On master: Close
+2021-12-02 20:45:11.845554 (MainThread): 20:45:11 | 
+2021-12-02 20:45:11.847563 (MainThread): 20:45:11 | Finished running 13 incremental models in 1.42s.
+2021-12-02 20:45:11.848891 (MainThread): Connection 'master' was properly closed.
+2021-12-02 20:45:11.850154 (MainThread): Connection 'model.incremental_test_schema_change.change_column_names' was properly closed.
+2021-12-02 20:45:11.851295 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_int' was properly closed.
+2021-12-02 20:45:11.852604 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_boolean' was properly closed.
+2021-12-02 20:45:11.853692 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_int' was properly closed.
+2021-12-02 20:45:11.854935 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_float' was properly closed.
+2021-12-02 20:45:11.856338 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_string' was properly closed.
+2021-12-02 20:45:11.857488 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_boolean' was properly closed.
+2021-12-02 20:45:11.858749 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_float' was properly closed.
+2021-12-02 20:45:11.859875 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_string' was properly closed.
+2021-12-02 20:45:11.860796 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_boolean' was properly closed.
+2021-12-02 20:45:11.861963 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_float' was properly closed.
+2021-12-02 20:45:11.863283 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_int' was properly closed.
+2021-12-02 20:45:11.864595 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_string' was properly closed.
+2021-12-02 20:45:11.876614 (MainThread): 
+2021-12-02 20:45:11.877941 (MainThread): Completed with 8 errors and 0 warnings:
+2021-12-02 20:45:11.879529 (MainThread): 
+2021-12-02 20:45:11.880884 (MainThread): Database Error in model convert_column_boolean_to_int (models/change_column_types/convert_column_boolean_to_int.sql)
+2021-12-02 20:45:11.882572 (MainThread):   column "column_boolean_to_int__dbt_alter" is of type integer but expression is of type boolean
+2021-12-02 20:45:11.884489 (MainThread):   LINE 4: ..._to_int" set "column_boolean_to_int__dbt_alter" = "column_bo...
+2021-12-02 20:45:11.886360 (MainThread):                                                                ^
+2021-12-02 20:45:11.888053 (MainThread):   HINT:  You will need to rewrite or cast the expression.
+2021-12-02 20:45:11.889604 (MainThread): 
+2021-12-02 20:45:11.891305 (MainThread): Database Error in model convert_column_float_to_boolean (models/change_column_types/convert_column_float_to_boolean.sql)
+2021-12-02 20:45:11.892772 (MainThread):   column "column_float_to_boolean__dbt_alter" is of type boolean but expression is of type numeric
+2021-12-02 20:45:11.893996 (MainThread):   LINE 4: ...olean" set "column_float_to_boolean__dbt_alter" = "column_fl...
+2021-12-02 20:45:11.895473 (MainThread):                                                                ^
+2021-12-02 20:45:11.897085 (MainThread):   HINT:  You will need to rewrite or cast the expression.
+2021-12-02 20:45:11.898468 (MainThread): 
+2021-12-02 20:45:11.899883 (MainThread): Database Error in model convert_column_int_to_boolean (models/change_column_types/convert_column_int_to_boolean.sql)
+2021-12-02 20:45:11.901311 (MainThread):   column "column_int_to_boolean__dbt_alter" is of type boolean but expression is of type integer
+2021-12-02 20:45:11.903311 (MainThread):   LINE 4: ...boolean" set "column_int_to_boolean__dbt_alter" = "column_in...
+2021-12-02 20:45:11.904798 (MainThread):                                                                ^
+2021-12-02 20:45:11.906295 (MainThread):   HINT:  You will need to rewrite or cast the expression.
+2021-12-02 20:45:11.907851 (MainThread): 
+2021-12-02 20:45:11.909244 (MainThread): Database Error in model convert_column_boolean_to_float (models/change_column_types/convert_column_boolean_to_float.sql)
+2021-12-02 20:45:11.910786 (MainThread):   column "column_boolean_to_float__dbt_alter" is of type numeric but expression is of type boolean
+2021-12-02 20:45:11.912485 (MainThread):   LINE 4: ...float" set "column_boolean_to_float__dbt_alter" = "column_bo...
+2021-12-02 20:45:11.913923 (MainThread):                                                                ^
+2021-12-02 20:45:11.915441 (MainThread):   HINT:  You will need to rewrite or cast the expression.
+2021-12-02 20:45:11.916835 (MainThread): 
+2021-12-02 20:45:11.918187 (MainThread): Database Error in model convert_column_string_to_float (models/change_column_types/convert_column_string_to_float.sql)
+2021-12-02 20:45:11.919477 (MainThread):   column "column_string_to_float__dbt_alter" is of type numeric but expression is of type text
+2021-12-02 20:45:11.920940 (MainThread):   LINE 4: ..._float" set "column_string_to_float__dbt_alter" = "column_st...
+2021-12-02 20:45:11.922245 (MainThread):                                                                ^
+2021-12-02 20:45:11.923641 (MainThread):   HINT:  You will need to rewrite or cast the expression.
+2021-12-02 20:45:11.926159 (MainThread): 
+2021-12-02 20:45:11.927778 (MainThread): Database Error in model convert_column_string_to_int (models/change_column_types/convert_column_string_to_int.sql)
+2021-12-02 20:45:11.929734 (MainThread):   column "column_string_to_int__dbt_alter" is of type integer but expression is of type text
+2021-12-02 20:45:11.931632 (MainThread):   LINE 4: ...g_to_int" set "column_string_to_int__dbt_alter" = "column_st...
+2021-12-02 20:45:11.933177 (MainThread):                                                                ^
+2021-12-02 20:45:11.934697 (MainThread):   HINT:  You will need to rewrite or cast the expression.
+2021-12-02 20:45:11.936143 (MainThread): 
+2021-12-02 20:45:11.937843 (MainThread): Database Error in model convert_column_string_to_boolean (models/change_column_types/convert_column_string_to_boolean.sql)
+2021-12-02 20:45:11.939388 (MainThread):   column "column_string_to_boolean__dbt_alter" is of type boolean but expression is of type text
+2021-12-02 20:45:11.940740 (MainThread):   LINE 4: ...lean" set "column_string_to_boolean__dbt_alter" = "column_st...
+2021-12-02 20:45:11.942326 (MainThread):                                                                ^
+2021-12-02 20:45:11.943870 (MainThread):   HINT:  You will need to rewrite or cast the expression.
+2021-12-02 20:45:11.945232 (MainThread): 
+2021-12-02 20:45:11.946880 (MainThread): Database Error in model change_column_names (models/change_column_names.sql)
+2021-12-02 20:45:11.948653 (MainThread):   syntax error at or near "column"
+2021-12-02 20:45:11.950251 (MainThread):   LINE 6:                add column new column name text,
+2021-12-02 20:45:11.951578 (MainThread):                                         ^
+2021-12-02 20:45:11.953094 (MainThread): 
+Done. PASS=5 WARN=0 ERROR=8 SKIP=0 TOTAL=13
+2021-12-02 20:45:11.954956 (MainThread): Flushing usage events

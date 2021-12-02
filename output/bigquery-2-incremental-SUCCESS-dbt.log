@@ -1,0 +1,922 @@
+2021-12-02 20:46:57.067309 (MainThread): Running with dbt=0.21.0
+2021-12-02 20:46:57.390515 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/data/db_bigquery', project_dir='/data/first_project', record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-12-02 20:46:57.403896 (MainThread): Tracking: do not track
+2021-12-02 20:46:57.425498 (MainThread): Unable to do partial parsing because target/partial_parse.msgpack not found
+2021-12-02 20:46:57.502620 (MainThread): Parsing ../macros/boolean_values.sql
+2021-12-02 20:46:57.507939 (MainThread): Parsing ../macros/normalize_identifier.sql
+2021-12-02 20:46:57.511368 (MainThread): Parsing macros/catalog.sql
+2021-12-02 20:46:57.523204 (MainThread): Parsing macros/etc.sql
+2021-12-02 20:46:57.527397 (MainThread): Parsing macros/adapters.sql
+2021-12-02 20:46:57.564104 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-12-02 20:46:57.568363 (MainThread): Parsing macros/materializations/copy.sql
+2021-12-02 20:46:57.572964 (MainThread): Parsing macros/materializations/seed.sql
+2021-12-02 20:46:57.578066 (MainThread): Parsing macros/materializations/table.sql
+2021-12-02 20:46:57.592703 (MainThread): Parsing macros/materializations/view.sql
+2021-12-02 20:46:57.598749 (MainThread): Parsing macros/materializations/incremental.sql
+2021-12-02 20:46:57.620595 (MainThread): Parsing macros/core.sql
+2021-12-02 20:46:57.627649 (MainThread): Parsing macros/etc/datetime.sql
+2021-12-02 20:46:57.643091 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-12-02 20:46:57.647109 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-12-02 20:46:57.651783 (MainThread): Parsing macros/etc/query.sql
+2021-12-02 20:46:57.654338 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-12-02 20:46:57.657864 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-12-02 20:46:57.661123 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-12-02 20:46:57.664516 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-12-02 20:46:57.668046 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-12-02 20:46:57.670796 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-12-02 20:46:57.675240 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-12-02 20:46:57.678210 (MainThread): Parsing macros/materializations/helpers.sql
+2021-12-02 20:46:57.693978 (MainThread): Parsing macros/materializations/test.sql
+2021-12-02 20:46:57.706389 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-02 20:46:57.743900 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-02 20:46:57.798011 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-02 20:46:57.824508 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-12-02 20:46:57.829288 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-12-02 20:46:57.852373 (MainThread): Parsing macros/materializations/table/table.sql
+2021-12-02 20:46:57.864281 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-12-02 20:46:57.871226 (MainThread): Parsing macros/materializations/view/view.sql
+2021-12-02 20:46:57.882806 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-12-02 20:46:57.917819 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-12-02 20:46:57.922465 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-12-02 20:46:57.939609 (MainThread): Parsing macros/adapters/common.sql
+2021-12-02 20:46:58.293898 (MainThread): Acquiring new bigquery connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:46:58.314056 (MainThread): Acquiring new bigquery connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:46:58.324862 (MainThread): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:46:58.332732 (MainThread): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:46:58.338563 (MainThread): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:46:58.344355 (MainThread): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:46:58.349926 (MainThread): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:46:58.355116 (MainThread): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:46:58.360755 (MainThread): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:46:58.366760 (MainThread): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:46:58.372838 (MainThread): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:46:58.378876 (MainThread): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:46:58.389375 (MainThread): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:46:58.397392 (MainThread): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:46:58.457861 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-12-02 20:46:58.460271 (MainThread): Found 14 models, 0 tests, 0 snapshots, 0 analyses, 193 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-12-02 20:46:58.464380 (MainThread): 
+2021-12-02 20:46:58.466455 (MainThread): Acquiring new bigquery connection "master".
+2021-12-02 20:46:58.469413 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_dataline-integration-testing".
+2021-12-02 20:46:58.470456 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-12-02 20:47:01.883859 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_dataline-integration-testing_test_dbt".
+2021-12-02 20:47:01.886523 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-12-02 20:47:01.895199 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:04.904303 (MainThread): 20:47:04 | Concurrency: 32 threads (target='prod')
+2021-12-02 20:47:04.906562 (MainThread): 20:47:04 | 
+2021-12-02 20:47:04.927819 (Thread-1): Began running node model.incremental_test_schema_change.change_column_names
+2021-12-02 20:47:04.928822 (Thread-2): Began running node model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:47:04.929497 (Thread-3): Began running node model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:47:04.929918 (Thread-4): Began running node model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:47:04.931030 (Thread-5): Began running node model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:47:04.931359 (Thread-6): Began running node model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:47:04.931884 (Thread-1): 20:47:04 | 1 of 14 START incremental model test_dbt.change_column_names................................................. [RUN]
+2021-12-02 20:47:04.944277 (Thread-1): Acquiring new bigquery connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:47:04.932416 (Thread-8): Began running node model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:47:04.932813 (Thread-9): Began running node model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:47:04.933084 (Thread-10): Began running node model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:47:04.933375 (Thread-11): Began running node model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:47:04.933663 (Thread-12): Began running node model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:47:04.934093 (Thread-13): Began running node model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:47:04.934386 (Thread-14): Began running node model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:47:04.934843 (Thread-2): 20:47:04 | 2 of 14 START incremental model test_dbt.column_with_quotes.................................................. [RUN]
+2021-12-02 20:47:04.936526 (Thread-3): 20:47:04 | 3 of 14 START incremental model test_dbt.convert_column_boolean_to_float..................................... [RUN]
+2021-12-02 20:47:04.938346 (Thread-4): 20:47:04 | 4 of 14 START incremental model test_dbt.convert_column_boolean_to_int....................................... [RUN]
+2021-12-02 20:47:04.940356 (Thread-5): 20:47:04 | 5 of 14 START incremental model test_dbt.convert_column_boolean_to_string.................................... [RUN]
+2021-12-02 20:47:04.942131 (Thread-6): 20:47:04 | 6 of 14 START incremental model test_dbt.convert_column_float_to_boolean..................................... [RUN]
+2021-12-02 20:47:04.932071 (Thread-7): Began running node model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:47:04.971966 (Thread-7): 20:47:04 | 7 of 14 START incremental model test_dbt.convert_column_float_to_int......................................... [RUN]
+2021-12-02 20:47:04.950543 (Thread-8): 20:47:04 | 8 of 14 START incremental model test_dbt.convert_column_float_to_string...................................... [RUN]
+2021-12-02 20:47:04.952875 (Thread-9): 20:47:04 | 9 of 14 START incremental model test_dbt.convert_column_int_to_boolean....................................... [RUN]
+2021-12-02 20:47:04.954799 (Thread-10): 20:47:04 | 10 of 14 START incremental model test_dbt.convert_column_int_to_float........................................ [RUN]
+2021-12-02 20:47:04.956585 (Thread-11): 20:47:04 | 11 of 14 START incremental model test_dbt.convert_column_int_to_string....................................... [RUN]
+2021-12-02 20:47:04.958230 (Thread-12): 20:47:04 | 12 of 14 START incremental model test_dbt.convert_column_string_to_boolean................................... [RUN]
+2021-12-02 20:47:04.959802 (Thread-13): 20:47:04 | 13 of 14 START incremental model test_dbt.convert_column_string_to_float..................................... [RUN]
+2021-12-02 20:47:04.961186 (Thread-14): 20:47:04 | 14 of 14 START incremental model test_dbt.convert_column_string_to_int....................................... [RUN]
+2021-12-02 20:47:04.964728 (Thread-2): Acquiring new bigquery connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:47:04.965195 (Thread-3): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:47:04.966821 (Thread-4): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:47:04.969263 (Thread-5): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:47:04.970744 (Thread-6): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.65.3', 65284), raddr=('216.58.201.234', 443)>
+2021-12-02 20:47:04.947870 (Thread-1): Compiling model.incremental_test_schema_change.change_column_names
+2021-12-02 20:47:04.973397 (Thread-7): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:47:04.976279 (Thread-8): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:47:04.977207 (Thread-9): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:47:04.979293 (Thread-10): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:47:04.981137 (Thread-11): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:47:04.982250 (Thread-12): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:47:04.983934 (Thread-13): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:47:04.985175 (Thread-14): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:47:04.986976 (Thread-2): Compiling model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:47:04.988325 (Thread-3): Compiling model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:47:04.989992 (Thread-4): Compiling model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:47:04.991736 (Thread-5): Compiling model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:47:04.993427 (Thread-6): unclosed <ssl.SSLSocket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.65.3', 58772), raddr=('216.58.204.138', 443)>
+2021-12-02 20:47:05.000357 (Thread-1): Writing injected SQL for node "model.incremental_test_schema_change.change_column_names"
+2021-12-02 20:47:05.002298 (Thread-7): Compiling model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:47:05.004432 (Thread-8): Compiling model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:47:05.005956 (Thread-9): Compiling model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:47:05.007581 (Thread-10): Compiling model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:47:05.009003 (Thread-11): Compiling model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:47:05.010448 (Thread-12): Compiling model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:47:05.011893 (Thread-13): Compiling model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:47:05.013371 (Thread-14): Compiling model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:47:05.017827 (Thread-2): Writing injected SQL for node "model.incremental_test_schema_change.column_with_quotes"
+2021-12-02 20:47:05.022029 (Thread-3): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_float"
+2021-12-02 20:47:05.025807 (Thread-4): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_int"
+2021-12-02 20:47:05.029803 (Thread-5): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_string"
+2021-12-02 20:47:05.031151 (Thread-6): unclosed <ssl.SSLSocket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.65.3', 65288), raddr=('216.58.201.234', 443)>
+2021-12-02 20:47:05.036559 (Thread-7): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_int"
+2021-12-02 20:47:05.040862 (Thread-8): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_string"
+2021-12-02 20:47:05.044446 (Thread-9): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_boolean"
+2021-12-02 20:47:05.048163 (Thread-10): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_float"
+2021-12-02 20:47:05.051844 (Thread-11): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_string"
+2021-12-02 20:47:05.053132 (Thread-1): finished collecting timing info
+2021-12-02 20:47:05.055358 (Thread-12): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_boolean"
+2021-12-02 20:47:05.059090 (Thread-13): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_float"
+2021-12-02 20:47:05.062546 (Thread-14): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_int"
+2021-12-02 20:47:05.068804 (Thread-2): finished collecting timing info
+2021-12-02 20:47:05.070875 (Thread-6): unclosed <ssl.SSLSocket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.65.3', 58776), raddr=('216.58.204.138', 443)>
+2021-12-02 20:47:05.074967 (Thread-3): finished collecting timing info
+2021-12-02 20:47:05.077043 (Thread-4): finished collecting timing info
+2021-12-02 20:47:05.080105 (Thread-5): finished collecting timing info
+2021-12-02 20:47:05.081814 (Thread-7): finished collecting timing info
+2021-12-02 20:47:05.105875 (Thread-9): finished collecting timing info
+2021-12-02 20:47:05.111603 (Thread-10): finished collecting timing info
+2021-12-02 20:47:05.123011 (Thread-11): finished collecting timing info
+2021-12-02 20:47:05.132807 (Thread-8): finished collecting timing info
+2021-12-02 20:47:05.149597 (Thread-12): finished collecting timing info
+2021-12-02 20:47:05.163117 (Thread-1): Opening a new connection, currently in state closed
+2021-12-02 20:47:05.164080 (Thread-13): finished collecting timing info
+2021-12-02 20:47:05.228186 (Thread-13): Opening a new connection, currently in state init
+2021-12-02 20:47:05.173753 (Thread-6): Acquiring new bigquery connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:47:05.174400 (Thread-14): finished collecting timing info
+2021-12-02 20:47:05.178543 (Thread-3): Opening a new connection, currently in state init
+2021-12-02 20:47:05.182581 (Thread-4): Opening a new connection, currently in state init
+2021-12-02 20:47:05.186459 (Thread-5): Opening a new connection, currently in state init
+2021-12-02 20:47:05.194302 (Thread-7): Opening a new connection, currently in state init
+2021-12-02 20:47:05.198223 (Thread-9): Opening a new connection, currently in state init
+2021-12-02 20:47:05.203186 (Thread-10): Opening a new connection, currently in state init
+2021-12-02 20:47:05.208820 (Thread-11): Opening a new connection, currently in state init
+2021-12-02 20:47:05.214233 (Thread-8): Opening a new connection, currently in state init
+2021-12-02 20:47:05.218192 (Thread-12): Opening a new connection, currently in state init
+2021-12-02 20:47:05.224168 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+
+    
+
+  create or replace table `dataline-integration-testing`.`test_dbt`.`change_column_names__dbt_tmp`
+  
+  
+  OPTIONS(
+      expiration_timestamp=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 12 hour)
+    )
+  as (
+    select
+    'a column with underscore' as column_name,
+    'a column to rename' as column_to_rename,
+    'a column to be deleted' as column_to_delete,
+    CURRENT_TIMESTAMP() as insert_time
+  );
+  
+2021-12-02 20:47:05.169914 (Thread-2): Opening a new connection, currently in state init
+2021-12-02 20:47:05.231334 (Thread-6): Compiling model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:47:05.235536 (Thread-14): Opening a new connection, currently in state init
+2021-12-02 20:47:05.236395 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+
+    
+
+  create or replace table `dataline-integration-testing`.`test_dbt`.`convert_column_string_to_float__dbt_tmp`
+  
+  
+  OPTIONS(
+      expiration_timestamp=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 12 hour)
+    )
+  as (
+    select
+    '1.1' as column_string_to_float,
+    CURRENT_TIMESTAMP() as insert_time
+  );
+  
+2021-12-02 20:47:05.241719 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+
+    
+
+  create or replace table `dataline-integration-testing`.`test_dbt`.`convert_column_boolean_to_float__dbt_tmp`
+  
+  
+  OPTIONS(
+      expiration_timestamp=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 12 hour)
+    )
+  as (
+    select
+    true as column_boolean_to_float,
+    CURRENT_TIMESTAMP() as insert_time
+  );
+  
+2021-12-02 20:47:05.242553 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+
+    
+
+  create or replace table `dataline-integration-testing`.`test_dbt`.`convert_column_boolean_to_int__dbt_tmp`
+  
+  
+  OPTIONS(
+      expiration_timestamp=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 12 hour)
+    )
+  as (
+    select
+    true as column_boolean_to_int,
+    CURRENT_TIMESTAMP() as insert_time
+  );
+  
+2021-12-02 20:47:05.248886 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+    
+
+  create or replace table `dataline-integration-testing`.`test_dbt`.`convert_column_float_to_int__dbt_tmp`
+  
+  
+  OPTIONS(
+      expiration_timestamp=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 12 hour)
+    )
+  as (
+    select
+    1.1 as column_float_to_int,
+    CURRENT_TIMESTAMP() as insert_time
+  );
+  
+2021-12-02 20:47:05.252614 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+
+    
+
+  create or replace table `dataline-integration-testing`.`test_dbt`.`convert_column_int_to_boolean__dbt_tmp`
+  
+  
+  OPTIONS(
+      expiration_timestamp=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 12 hour)
+    )
+  as (
+    select
+    1 as column_int_to_boolean,
+    CURRENT_TIMESTAMP() as insert_time
+  );
+  
+2021-12-02 20:47:05.253309 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+    
+
+  create or replace table `dataline-integration-testing`.`test_dbt`.`convert_column_boolean_to_string__dbt_tmp`
+  
+  
+  OPTIONS(
+      expiration_timestamp=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 12 hour)
+    )
+  as (
+    select
+    true as column_boolean_to_string,
+    CURRENT_TIMESTAMP() as insert_time
+  );
+  
+2021-12-02 20:47:05.254738 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+    
+
+  create or replace table `dataline-integration-testing`.`test_dbt`.`convert_column_int_to_float__dbt_tmp`
+  
+  
+  OPTIONS(
+      expiration_timestamp=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 12 hour)
+    )
+  as (
+    select
+    1 as column_int_to_float,
+    CURRENT_TIMESTAMP() as insert_time
+  );
+  
+2021-12-02 20:47:05.258348 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+    
+
+  create or replace table `dataline-integration-testing`.`test_dbt`.`convert_column_int_to_string__dbt_tmp`
+  
+  
+  OPTIONS(
+      expiration_timestamp=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 12 hour)
+    )
+  as (
+    select
+    1 as column_int_to_string,
+    CURRENT_TIMESTAMP() as insert_time
+  );
+  
+2021-12-02 20:47:05.268773 (Thread-6): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_boolean"
+2021-12-02 20:47:05.269102 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+
+    
+
+  create or replace table `dataline-integration-testing`.`test_dbt`.`convert_column_string_to_boolean__dbt_tmp`
+  
+  
+  OPTIONS(
+      expiration_timestamp=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 12 hour)
+    )
+  as (
+    select
+    'true' as column_string_to_boolean,
+    CURRENT_TIMESTAMP() as insert_time
+  );
+  
+2021-12-02 20:47:05.269336 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+    
+
+  create or replace table `dataline-integration-testing`.`test_dbt`.`convert_column_float_to_string__dbt_tmp`
+  
+  
+  OPTIONS(
+      expiration_timestamp=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 12 hour)
+    )
+  as (
+    select
+    1.1 as column_float_to_string,
+    CURRENT_TIMESTAMP() as insert_time
+  );
+  
+2021-12-02 20:47:05.270299 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.column_with_quotes"} */
+
+    
+
+  create or replace table `dataline-integration-testing`.`test_dbt`.`column_with_quotes__dbt_tmp`
+  
+  
+  OPTIONS(
+      expiration_timestamp=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 12 hour)
+    )
+  as (
+    select
+    'a column with tricky name with quotes' as  -- BigQuery does not support special characters in column names, replacing them by '_'
+  column___with___quotes,
+    CURRENT_TIMESTAMP() as insert_time
+  );
+  
+2021-12-02 20:47:05.281869 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+
+    
+
+  create or replace table `dataline-integration-testing`.`test_dbt`.`convert_column_string_to_int__dbt_tmp`
+  
+  
+  OPTIONS(
+      expiration_timestamp=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 12 hour)
+    )
+  as (
+    select
+    '1' as column_string_to_int,
+    CURRENT_TIMESTAMP() as insert_time
+  );
+  
+2021-12-02 20:47:05.313834 (Thread-6): finished collecting timing info
+2021-12-02 20:47:05.331932 (Thread-6): Opening a new connection, currently in state init
+2021-12-02 20:47:05.337053 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+
+    
+
+  create or replace table `dataline-integration-testing`.`test_dbt`.`convert_column_float_to_boolean__dbt_tmp`
+  
+  
+  OPTIONS(
+      expiration_timestamp=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 12 hour)
+    )
+  as (
+    select
+    1.1 as column_float_to_boolean,
+    CURRENT_TIMESTAMP() as insert_time
+  );
+  
+2021-12-02 20:47:11.049427 (Thread-7): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.061102 (Thread-10): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.062322 (Thread-5): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.070964 (Thread-13): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.082487 (Thread-6): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.091669 (Thread-1): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.109854 (Thread-8): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.178142 (Thread-12): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.247160 (Thread-9): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.309624 (Thread-2): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.310833 (Thread-14): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.311811 (Thread-3): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.344044 (Thread-4): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.419862 (Thread-11): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.646626 (Thread-13): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.677052 (Thread-7): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.680925 (Thread-5): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.683828 (Thread-6): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.689063 (Thread-10): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.694183 (Thread-1): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.709893 (Thread-8): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.802862 (Thread-12): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.865938 (Thread-9): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.915396 (Thread-3): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.938064 (Thread-2): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.954130 (Thread-14): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:11.964057 (Thread-4): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:12.032735 (Thread-11): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:12.308216 (Thread-13): 
+    In `dataline-integration-testing`.`test_dbt`.`convert_column_string_to_float`:
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:47:12.310977 (Thread-10): 
+    In `dataline-integration-testing`.`test_dbt`.`convert_column_int_to_float`:
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:47:12.314796 (Thread-10): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:12.312236 (Thread-13): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:12.327564 (Thread-7): 
+    In `dataline-integration-testing`.`test_dbt`.`convert_column_float_to_int`:
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:47:12.329203 (Thread-7): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:12.334877 (Thread-5): 
+    In `dataline-integration-testing`.`test_dbt`.`convert_column_boolean_to_string`:
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:47:12.336557 (Thread-5): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:12.352229 (Thread-6): 
+    In `dataline-integration-testing`.`test_dbt`.`convert_column_float_to_boolean`:
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:47:12.354064 (Thread-6): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:12.364867 (Thread-1): 
+    In `dataline-integration-testing`.`test_dbt`.`change_column_names`:
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:47:12.366523 (Thread-1): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:12.370010 (Thread-8): 
+    In `dataline-integration-testing`.`test_dbt`.`convert_column_float_to_string`:
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:47:12.371787 (Thread-8): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:12.475995 (Thread-12): 
+    In `dataline-integration-testing`.`test_dbt`.`convert_column_string_to_boolean`:
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:47:12.479242 (Thread-12): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:12.558370 (Thread-3): 
+    In `dataline-integration-testing`.`test_dbt`.`convert_column_boolean_to_float`:
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:47:12.561716 (Thread-3): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:12.576221 (Thread-9): 
+    In `dataline-integration-testing`.`test_dbt`.`convert_column_int_to_boolean`:
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:47:12.578090 (Thread-9): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:12.598355 (Thread-2): 
+    In `dataline-integration-testing`.`test_dbt`.`column_with_quotes`:
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:47:12.600583 (Thread-2): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:12.618622 (Thread-14): 
+    In `dataline-integration-testing`.`test_dbt`.`convert_column_string_to_int`:
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:47:12.620916 (Thread-14): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:12.625301 (Thread-4): 
+    In `dataline-integration-testing`.`test_dbt`.`convert_column_boolean_to_int`:
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:47:12.627136 (Thread-4): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:12.684154 (Thread-11): 
+    In `dataline-integration-testing`.`test_dbt`.`convert_column_int_to_string`:
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+2021-12-02 20:47:12.687949 (Thread-11): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-12-02 20:47:13.004245 (Thread-5): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_string"
+2021-12-02 20:47:13.009133 (Thread-13): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_float"
+2021-12-02 20:47:13.010989 (Thread-7): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_int"
+2021-12-02 20:47:13.012852 (Thread-10): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_float"
+2021-12-02 20:47:13.017156 (Thread-1): Writing runtime SQL for node "model.incremental_test_schema_change.change_column_names"
+2021-12-02 20:47:13.035768 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+        
+    
+
+    
+
+    merge into `dataline-integration-testing`.`test_dbt`.`convert_column_int_to_float` as DBT_INTERNAL_DEST
+        using (
+          select * from `dataline-integration-testing`.`test_dbt`.`convert_column_int_to_float__dbt_tmp`
+        ) as DBT_INTERNAL_SOURCE
+        on FALSE
+
+    
+
+    when not matched then insert
+        (`column_int_to_float`, `insert_time`)
+    values
+        (`column_int_to_float`, `insert_time`)
+
+
+  
+2021-12-02 20:47:13.036502 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+
+        
+    
+
+    
+
+    merge into `dataline-integration-testing`.`test_dbt`.`change_column_names` as DBT_INTERNAL_DEST
+        using (
+          select * from `dataline-integration-testing`.`test_dbt`.`change_column_names__dbt_tmp`
+        ) as DBT_INTERNAL_SOURCE
+        on FALSE
+
+    
+
+    when not matched then insert
+        (`column_name`, `column_to_rename`, `column_to_delete`, `insert_time`)
+    values
+        (`column_name`, `column_to_rename`, `column_to_delete`, `insert_time`)
+
+
+  
+2021-12-02 20:47:13.039908 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+        
+    
+
+    
+
+    merge into `dataline-integration-testing`.`test_dbt`.`convert_column_boolean_to_string` as DBT_INTERNAL_DEST
+        using (
+          select * from `dataline-integration-testing`.`test_dbt`.`convert_column_boolean_to_string__dbt_tmp`
+        ) as DBT_INTERNAL_SOURCE
+        on FALSE
+
+    
+
+    when not matched then insert
+        (`column_boolean_to_string`, `insert_time`)
+    values
+        (`column_boolean_to_string`, `insert_time`)
+
+
+  
+2021-12-02 20:47:13.041125 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+
+        
+    
+
+    
+
+    merge into `dataline-integration-testing`.`test_dbt`.`convert_column_string_to_float` as DBT_INTERNAL_DEST
+        using (
+          select * from `dataline-integration-testing`.`test_dbt`.`convert_column_string_to_float__dbt_tmp`
+        ) as DBT_INTERNAL_SOURCE
+        on FALSE
+
+    
+
+    when not matched then insert
+        (`column_string_to_float`, `insert_time`)
+    values
+        (`column_string_to_float`, `insert_time`)
+
+
+  
+2021-12-02 20:47:13.044120 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+        
+    
+
+    
+
+    merge into `dataline-integration-testing`.`test_dbt`.`convert_column_float_to_int` as DBT_INTERNAL_DEST
+        using (
+          select * from `dataline-integration-testing`.`test_dbt`.`convert_column_float_to_int__dbt_tmp`
+        ) as DBT_INTERNAL_SOURCE
+        on FALSE
+
+    
+
+    when not matched then insert
+        (`column_float_to_int`, `insert_time`)
+    values
+        (`column_float_to_int`, `insert_time`)
+
+
+  
+2021-12-02 20:47:13.057031 (Thread-6): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_boolean"
+2021-12-02 20:47:13.057921 (Thread-8): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_string"
+2021-12-02 20:47:13.062572 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+
+        
+    
+
+    
+
+    merge into `dataline-integration-testing`.`test_dbt`.`convert_column_float_to_boolean` as DBT_INTERNAL_DEST
+        using (
+          select * from `dataline-integration-testing`.`test_dbt`.`convert_column_float_to_boolean__dbt_tmp`
+        ) as DBT_INTERNAL_SOURCE
+        on FALSE
+
+    
+
+    when not matched then insert
+        (`column_float_to_boolean`, `insert_time`)
+    values
+        (`column_float_to_boolean`, `insert_time`)
+
+
+  
+2021-12-02 20:47:13.066750 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+        
+    
+
+    
+
+    merge into `dataline-integration-testing`.`test_dbt`.`convert_column_float_to_string` as DBT_INTERNAL_DEST
+        using (
+          select * from `dataline-integration-testing`.`test_dbt`.`convert_column_float_to_string__dbt_tmp`
+        ) as DBT_INTERNAL_SOURCE
+        on FALSE
+
+    
+
+    when not matched then insert
+        (`column_float_to_string`, `insert_time`)
+    values
+        (`column_float_to_string`, `insert_time`)
+
+
+  
+2021-12-02 20:47:13.191169 (Thread-12): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_boolean"
+2021-12-02 20:47:13.198560 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+
+        
+    
+
+    
+
+    merge into `dataline-integration-testing`.`test_dbt`.`convert_column_string_to_boolean` as DBT_INTERNAL_DEST
+        using (
+          select * from `dataline-integration-testing`.`test_dbt`.`convert_column_string_to_boolean__dbt_tmp`
+        ) as DBT_INTERNAL_SOURCE
+        on FALSE
+
+    
+
+    when not matched then insert
+        (`column_string_to_boolean`, `insert_time`)
+    values
+        (`column_string_to_boolean`, `insert_time`)
+
+
+  
+2021-12-02 20:47:13.265507 (Thread-3): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_float"
+2021-12-02 20:47:13.273370 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+
+        
+    
+
+    
+
+    merge into `dataline-integration-testing`.`test_dbt`.`convert_column_boolean_to_float` as DBT_INTERNAL_DEST
+        using (
+          select * from `dataline-integration-testing`.`test_dbt`.`convert_column_boolean_to_float__dbt_tmp`
+        ) as DBT_INTERNAL_SOURCE
+        on FALSE
+
+    
+
+    when not matched then insert
+        (`column_boolean_to_float`, `insert_time`)
+    values
+        (`column_boolean_to_float`, `insert_time`)
+
+
+  
+2021-12-02 20:47:13.280017 (Thread-9): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_boolean"
+2021-12-02 20:47:13.285189 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+
+        
+    
+
+    
+
+    merge into `dataline-integration-testing`.`test_dbt`.`convert_column_int_to_boolean` as DBT_INTERNAL_DEST
+        using (
+          select * from `dataline-integration-testing`.`test_dbt`.`convert_column_int_to_boolean__dbt_tmp`
+        ) as DBT_INTERNAL_SOURCE
+        on FALSE
+
+    
+
+    when not matched then insert
+        (`column_int_to_boolean`, `insert_time`)
+    values
+        (`column_int_to_boolean`, `insert_time`)
+
+
+  
+2021-12-02 20:47:13.298227 (Thread-14): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_int"
+2021-12-02 20:47:13.305981 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+
+        
+    
+
+    
+
+    merge into `dataline-integration-testing`.`test_dbt`.`convert_column_string_to_int` as DBT_INTERNAL_DEST
+        using (
+          select * from `dataline-integration-testing`.`test_dbt`.`convert_column_string_to_int__dbt_tmp`
+        ) as DBT_INTERNAL_SOURCE
+        on FALSE
+
+    
+
+    when not matched then insert
+        (`column_string_to_int`, `insert_time`)
+    values
+        (`column_string_to_int`, `insert_time`)
+
+
+  
+2021-12-02 20:47:13.316562 (Thread-2): Writing runtime SQL for node "model.incremental_test_schema_change.column_with_quotes"
+2021-12-02 20:47:13.322629 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.column_with_quotes"} */
+
+        
+    
+
+    
+
+    merge into `dataline-integration-testing`.`test_dbt`.`column_with_quotes` as DBT_INTERNAL_DEST
+        using (
+          select * from `dataline-integration-testing`.`test_dbt`.`column_with_quotes__dbt_tmp`
+        ) as DBT_INTERNAL_SOURCE
+        on FALSE
+
+    
+
+    when not matched then insert
+        (`column___with___quotes`, `insert_time`)
+    values
+        (`column___with___quotes`, `insert_time`)
+
+
+  
+2021-12-02 20:47:13.344376 (Thread-4): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_int"
+2021-12-02 20:47:13.350919 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+
+        
+    
+
+    
+
+    merge into `dataline-integration-testing`.`test_dbt`.`convert_column_boolean_to_int` as DBT_INTERNAL_DEST
+        using (
+          select * from `dataline-integration-testing`.`test_dbt`.`convert_column_boolean_to_int__dbt_tmp`
+        ) as DBT_INTERNAL_SOURCE
+        on FALSE
+
+    
+
+    when not matched then insert
+        (`column_boolean_to_int`, `insert_time`)
+    values
+        (`column_boolean_to_int`, `insert_time`)
+
+
+  
+2021-12-02 20:47:13.382287 (Thread-11): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_string"
+2021-12-02 20:47:13.388130 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+        
+    
+
+    
+
+    merge into `dataline-integration-testing`.`test_dbt`.`convert_column_int_to_string` as DBT_INTERNAL_DEST
+        using (
+          select * from `dataline-integration-testing`.`test_dbt`.`convert_column_int_to_string__dbt_tmp`
+        ) as DBT_INTERNAL_SOURCE
+        on FALSE
+
+    
+
+    when not matched then insert
+        (`column_int_to_string`, `insert_time`)
+    values
+        (`column_int_to_string`, `insert_time`)
+
+
+  
+2021-12-02 20:47:15.867416 (Thread-5): finished collecting timing info
+2021-12-02 20:47:15.870558 (Thread-5): 20:47:15 | 5 of 14 OK created incremental model test_dbt.convert_column_boolean_to_string............................... [MERGE (1.0 rows, 9.0 Bytes processed) in 10.90s]
+2021-12-02 20:47:15.872476 (Thread-5): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:47:15.902577 (Thread-8): finished collecting timing info
+2021-12-02 20:47:15.905526 (Thread-13): finished collecting timing info
+2021-12-02 20:47:15.907494 (Thread-8): 20:47:15 | 8 of 14 OK created incremental model test_dbt.convert_column_float_to_string................................. [MERGE (1.0 rows, 16.0 Bytes processed) in 10.93s]
+2021-12-02 20:47:15.909750 (Thread-13): 20:47:15 | 13 of 14 OK created incremental model test_dbt.convert_column_string_to_float................................ [MERGE (1.0 rows, 13.0 Bytes processed) in 10.93s]
+2021-12-02 20:47:15.911677 (Thread-8): Finished running node model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:47:15.913801 (Thread-13): Finished running node model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:47:15.988187 (Thread-6): finished collecting timing info
+2021-12-02 20:47:15.991590 (Thread-6): 20:47:15 | 6 of 14 OK created incremental model test_dbt.convert_column_float_to_boolean................................ [MERGE (1.0 rows, 16.0 Bytes processed) in 11.02s]
+2021-12-02 20:47:15.993618 (Thread-6): Finished running node model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:47:16.064450 (Thread-7): finished collecting timing info
+2021-12-02 20:47:16.067534 (Thread-1): finished collecting timing info
+2021-12-02 20:47:16.069030 (Thread-7): 20:47:16 | 7 of 14 OK created incremental model test_dbt.convert_column_float_to_int.................................... [MERGE (1.0 rows, 16.0 Bytes processed) in 11.10s]
+2021-12-02 20:47:16.071192 (Thread-1): 20:47:16 | 1 of 14 OK created incremental model test_dbt.change_column_names............................................ [MERGE (1.0 rows, 78.0 Bytes processed) in 11.13s]
+2021-12-02 20:47:16.074057 (Thread-7): Finished running node model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:47:16.075921 (Thread-1): Finished running node model.incremental_test_schema_change.change_column_names
+2021-12-02 20:47:16.218716 (Thread-12): finished collecting timing info
+2021-12-02 20:47:16.221810 (Thread-12): 20:47:16 | 12 of 14 OK created incremental model test_dbt.convert_column_string_to_boolean.............................. [MERGE (1.0 rows, 14.0 Bytes processed) in 11.24s]
+2021-12-02 20:47:16.223681 (Thread-12): Finished running node model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:47:16.255079 (Thread-3): finished collecting timing info
+2021-12-02 20:47:16.258505 (Thread-3): 20:47:16 | 3 of 14 OK created incremental model test_dbt.convert_column_boolean_to_float................................ [MERGE (1.0 rows, 9.0 Bytes processed) in 11.29s]
+2021-12-02 20:47:16.260499 (Thread-3): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:47:16.275299 (Thread-10): finished collecting timing info
+2021-12-02 20:47:16.277961 (Thread-10): 20:47:16 | 10 of 14 OK created incremental model test_dbt.convert_column_int_to_float................................... [MERGE (1.0 rows, 16.0 Bytes processed) in 11.30s]
+2021-12-02 20:47:16.279844 (Thread-10): Finished running node model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:47:16.357981 (Thread-14): finished collecting timing info
+2021-12-02 20:47:16.361263 (Thread-14): 20:47:16 | 14 of 14 OK created incremental model test_dbt.convert_column_string_to_int.................................. [MERGE (1.0 rows, 11.0 Bytes processed) in 11.38s]
+2021-12-02 20:47:16.364217 (Thread-14): Finished running node model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:47:16.571539 (Thread-4): finished collecting timing info
+2021-12-02 20:47:16.574765 (Thread-4): 20:47:16 | 4 of 14 OK created incremental model test_dbt.convert_column_boolean_to_int.................................. [MERGE (1.0 rows, 9.0 Bytes processed) in 11.61s]
+2021-12-02 20:47:16.596600 (Thread-4): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:47:16.632730 (Thread-9): finished collecting timing info
+2021-12-02 20:47:16.635885 (Thread-9): 20:47:16 | 9 of 14 OK created incremental model test_dbt.convert_column_int_to_boolean.................................. [MERGE (1.0 rows, 16.0 Bytes processed) in 11.66s]
+2021-12-02 20:47:16.637733 (Thread-9): Finished running node model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:47:16.652676 (Thread-2): finished collecting timing info
+2021-12-02 20:47:16.654939 (Thread-2): 20:47:16 | 2 of 14 OK created incremental model test_dbt.column_with_quotes............................................. [MERGE (1.0 rows, 47.0 Bytes processed) in 11.69s]
+2021-12-02 20:47:16.656649 (Thread-2): Finished running node model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:47:16.702879 (Thread-11): finished collecting timing info
+2021-12-02 20:47:16.706047 (Thread-11): 20:47:16 | 11 of 14 OK created incremental model test_dbt.convert_column_int_to_string.................................. [MERGE (1.0 rows, 16.0 Bytes processed) in 11.73s]
+2021-12-02 20:47:16.708776 (Thread-11): Finished running node model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:47:16.717158 (MainThread): Acquiring new bigquery connection "master".
+2021-12-02 20:47:16.719088 (MainThread): 20:47:16 | 
+2021-12-02 20:47:16.720549 (MainThread): 20:47:16 | Finished running 14 incremental models in 18.25s.
+2021-12-02 20:47:16.722749 (MainThread): Connection 'master' was properly closed.
+2021-12-02 20:47:16.724818 (MainThread): Connection 'model.incremental_test_schema_change.change_column_names' was properly closed.
+2021-12-02 20:47:16.726491 (MainThread): Connection 'model.incremental_test_schema_change.column_with_quotes' was properly closed.
+2021-12-02 20:47:16.728071 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_float' was properly closed.
+2021-12-02 20:47:16.729885 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_int' was properly closed.
+2021-12-02 20:47:16.731781 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_string' was properly closed.
+2021-12-02 20:47:16.733834 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_int' was properly closed.
+2021-12-02 20:47:16.735454 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_string' was properly closed.
+2021-12-02 20:47:16.737453 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_boolean' was properly closed.
+2021-12-02 20:47:16.739062 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_float' was properly closed.
+2021-12-02 20:47:16.740679 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_string' was properly closed.
+2021-12-02 20:47:16.742215 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_boolean' was properly closed.
+2021-12-02 20:47:16.743788 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_float' was properly closed.
+2021-12-02 20:47:16.745199 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_int' was properly closed.
+2021-12-02 20:47:16.747696 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_boolean' was properly closed.
+2021-12-02 20:47:16.762866 (MainThread): 
+2021-12-02 20:47:16.764454 (MainThread): Completed successfully
+2021-12-02 20:47:16.765945 (MainThread): 
+Done. PASS=14 WARN=0 ERROR=0 SKIP=0 TOTAL=14
+2021-12-02 20:47:16.767494 (MainThread): Flushing usage events

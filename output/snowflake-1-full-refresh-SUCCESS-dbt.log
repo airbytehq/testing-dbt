@@ -1,0 +1,409 @@
+2021-12-02 20:48:04.189115 (MainThread): Running with dbt=0.21.0
+2021-12-02 20:48:04.684859 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=True, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/data/db_snowflake', project_dir='/data/first_project', record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-12-02 20:48:04.693477 (MainThread): Tracking: do not track
+2021-12-02 20:48:04.712820 (MainThread): Unable to do partial parsing because target/partial_parse.msgpack not found
+2021-12-02 20:48:04.786421 (MainThread): Parsing ../macros/boolean_values.sql
+2021-12-02 20:48:04.791929 (MainThread): Parsing ../macros/normalize_identifier.sql
+2021-12-02 20:48:04.796696 (MainThread): Parsing macros/catalog.sql
+2021-12-02 20:48:04.800664 (MainThread): Parsing macros/adapters.sql
+2021-12-02 20:48:04.859983 (MainThread): Parsing macros/materializations/merge.sql
+2021-12-02 20:48:04.867185 (MainThread): Parsing macros/materializations/seed.sql
+2021-12-02 20:48:04.875144 (MainThread): Parsing macros/materializations/table.sql
+2021-12-02 20:48:04.880738 (MainThread): Parsing macros/materializations/view.sql
+2021-12-02 20:48:04.884105 (MainThread): Parsing macros/materializations/incremental.sql
+2021-12-02 20:48:04.900044 (MainThread): Parsing macros/core.sql
+2021-12-02 20:48:04.906544 (MainThread): Parsing macros/etc/datetime.sql
+2021-12-02 20:48:04.920453 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-12-02 20:48:04.924385 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-12-02 20:48:04.929228 (MainThread): Parsing macros/etc/query.sql
+2021-12-02 20:48:04.931832 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-12-02 20:48:04.935162 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-12-02 20:48:04.938208 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-12-02 20:48:04.941557 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-12-02 20:48:04.945075 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-12-02 20:48:04.947601 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-12-02 20:48:04.951799 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-12-02 20:48:04.954706 (MainThread): Parsing macros/materializations/helpers.sql
+2021-12-02 20:48:04.970492 (MainThread): Parsing macros/materializations/test.sql
+2021-12-02 20:48:04.981559 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-02 20:48:05.018697 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-02 20:48:05.071603 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-02 20:48:05.097899 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-12-02 20:48:05.101978 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-12-02 20:48:05.125244 (MainThread): Parsing macros/materializations/table/table.sql
+2021-12-02 20:48:05.137938 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-12-02 20:48:05.144999 (MainThread): Parsing macros/materializations/view/view.sql
+2021-12-02 20:48:05.156713 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-12-02 20:48:05.190354 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-12-02 20:48:05.196211 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-12-02 20:48:05.212741 (MainThread): Parsing macros/adapters/common.sql
+2021-12-02 20:48:05.553453 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:48:05.572155 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:48:05.582091 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:48:05.589831 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:48:05.596073 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:48:05.602417 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:48:05.607742 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:48:05.614006 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:48:05.619912 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:48:05.625655 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:48:05.630844 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:48:05.636175 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:48:05.642390 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:48:05.647893 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:48:05.751872 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-12-02 20:48:05.754901 (MainThread): Found 14 models, 0 tests, 0 snapshots, 0 analyses, 181 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-12-02 20:48:05.759634 (MainThread): 
+2021-12-02 20:48:05.761885 (MainThread): Acquiring new snowflake connection "master".
+2021-12-02 20:48:05.765861 (ThreadPoolExecutor-0_0): Acquiring new snowflake connection "list_AIRBYTE_DATABASE".
+2021-12-02 20:48:05.785968 (ThreadPoolExecutor-0_0): Using snowflake connection "list_AIRBYTE_DATABASE".
+2021-12-02 20:48:05.787714 (ThreadPoolExecutor-0_0): On list_AIRBYTE_DATABASE: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "connection_name": "list_AIRBYTE_DATABASE"} */
+
+    show terse schemas in database AIRBYTE_DATABASE
+    limit 10000
+2021-12-02 20:48:05.789121 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-12-02 20:48:12.509322 (ThreadPoolExecutor-0_0): SQL status: SUCCESS 796 in 6.72 seconds
+2021-12-02 20:48:12.554893 (ThreadPoolExecutor-0_0): On list_AIRBYTE_DATABASE: Close
+2021-12-02 20:48:13.538212 (ThreadPoolExecutor-1_0): Acquiring new snowflake connection "list_AIRBYTE_DATABASE_TEST_DBT".
+2021-12-02 20:48:13.550632 (ThreadPoolExecutor-1_0): Using snowflake connection "list_AIRBYTE_DATABASE_TEST_DBT".
+2021-12-02 20:48:13.552601 (ThreadPoolExecutor-1_0): On list_AIRBYTE_DATABASE_TEST_DBT: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "connection_name": "list_AIRBYTE_DATABASE_TEST_DBT"} */
+
+    show terse objects in AIRBYTE_DATABASE.TEST_DBT
+2021-12-02 20:48:13.554100 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state init
+2021-12-02 20:48:18.513730 (ThreadPoolExecutor-1_0): SQL status: SUCCESS 14 in 4.96 seconds
+2021-12-02 20:48:18.519464 (ThreadPoolExecutor-1_0): On list_AIRBYTE_DATABASE_TEST_DBT: Close
+2021-12-02 20:48:19.857735 (MainThread): 20:48:19 | Concurrency: 32 threads (target='prod')
+2021-12-02 20:48:19.860534 (MainThread): 20:48:19 | 
+2021-12-02 20:48:19.881716 (Thread-1): Began running node model.incremental_test_schema_change.change_column_names
+2021-12-02 20:48:19.882092 (Thread-2): Began running node model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:48:19.882725 (Thread-3): Began running node model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:48:19.883062 (Thread-4): Began running node model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:48:19.883413 (Thread-5): Began running node model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:48:19.883806 (Thread-6): Began running node model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:48:19.884397 (Thread-7): Began running node model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:48:19.884703 (Thread-8): Began running node model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:48:19.899864 (Thread-8): 20:48:19 | 8 of 14 START incremental model TEST_DBT.convert_column_float_to_string...................................... [RUN]
+2021-12-02 20:48:19.885459 (Thread-1): 20:48:19 | 1 of 14 START incremental model TEST_DBT.change_column_names................................................. [RUN]
+2021-12-02 20:48:19.885752 (Thread-10): Began running node model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:48:19.886119 (Thread-11): Began running node model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:48:19.886505 (Thread-12): Began running node model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:48:19.886714 (Thread-13): Began running node model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:48:19.887089 (Thread-14): Began running node model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:48:19.888631 (Thread-2): 20:48:19 | 2 of 14 START incremental model TEST_DBT.column_with_quotes.................................................. [RUN]
+2021-12-02 20:48:19.890597 (Thread-3): 20:48:19 | 3 of 14 START incremental model TEST_DBT.convert_column_boolean_to_float..................................... [RUN]
+2021-12-02 20:48:19.892543 (Thread-4): 20:48:19 | 4 of 14 START incremental model TEST_DBT.convert_column_boolean_to_int....................................... [RUN]
+2021-12-02 20:48:19.894349 (Thread-5): 20:48:19 | 5 of 14 START incremental model TEST_DBT.convert_column_boolean_to_string.................................... [RUN]
+2021-12-02 20:48:19.896098 (Thread-6): 20:48:19 | 6 of 14 START incremental model TEST_DBT.convert_column_float_to_boolean..................................... [RUN]
+2021-12-02 20:48:19.898016 (Thread-7): 20:48:19 | 7 of 14 START incremental model TEST_DBT.convert_column_float_to_int......................................... [RUN]
+2021-12-02 20:48:19.884969 (Thread-9): Began running node model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:48:19.932876 (Thread-9): 20:48:19 | 9 of 14 START incremental model TEST_DBT.convert_column_int_to_boolean....................................... [RUN]
+2021-12-02 20:48:19.935999 (Thread-9): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:48:19.907094 (Thread-10): 20:48:19 | 10 of 14 START incremental model TEST_DBT.convert_column_int_to_float........................................ [RUN]
+2021-12-02 20:48:19.909389 (Thread-11): 20:48:19 | 11 of 14 START incremental model TEST_DBT.convert_column_int_to_string....................................... [RUN]
+2021-12-02 20:48:19.911357 (Thread-12): 20:48:19 | 12 of 14 START incremental model TEST_DBT.convert_column_string_to_boolean................................... [RUN]
+2021-12-02 20:48:19.912992 (Thread-13): 20:48:19 | 13 of 14 START incremental model TEST_DBT.convert_column_string_to_float..................................... [RUN]
+2021-12-02 20:48:19.915340 (Thread-14): 20:48:19 | 14 of 14 START incremental model TEST_DBT.convert_column_string_to_int....................................... [RUN]
+2021-12-02 20:48:19.917701 (Thread-2): Acquiring new snowflake connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:48:19.921063 (Thread-3): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:48:19.923725 (Thread-4): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:48:19.924940 (Thread-5): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:48:19.926487 (Thread-6): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:48:19.930964 (Thread-7): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:48:19.902327 (Thread-8): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:48:19.904519 (Thread-1): Acquiring new snowflake connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:48:19.938034 (Thread-9): Compiling model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:48:19.940696 (Thread-10): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:48:19.943088 (Thread-11): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:48:19.944779 (Thread-12): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:48:19.976096 (Thread-12): Compiling model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:48:19.954580 (Thread-14): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:48:19.956784 (Thread-2): Compiling model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:48:19.958788 (Thread-3): Compiling model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:48:19.961044 (Thread-4): Compiling model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:48:19.962502 (Thread-5): Compiling model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:48:19.963966 (Thread-6): Compiling model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:48:19.965392 (Thread-7): Compiling model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:48:19.966693 (Thread-8): Compiling model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:48:19.967976 (Thread-1): Compiling model.incremental_test_schema_change.change_column_names
+2021-12-02 20:48:19.971767 (Thread-9): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_boolean"
+2021-12-02 20:48:19.973621 (Thread-10): Compiling model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:48:19.974885 (Thread-11): Compiling model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:48:19.949741 (Thread-13): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:48:20.019895 (Thread-13): Compiling model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:48:19.980726 (Thread-14): Compiling model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:48:19.984513 (Thread-2): Writing injected SQL for node "model.incremental_test_schema_change.column_with_quotes"
+2021-12-02 20:48:19.987910 (Thread-3): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_float"
+2021-12-02 20:48:19.991732 (Thread-4): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_int"
+2021-12-02 20:48:19.996293 (Thread-5): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_string"
+2021-12-02 20:48:19.999768 (Thread-6): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_boolean"
+2021-12-02 20:48:20.002843 (Thread-7): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_int"
+2021-12-02 20:48:20.006321 (Thread-8): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_string"
+2021-12-02 20:48:20.009278 (Thread-1): Writing injected SQL for node "model.incremental_test_schema_change.change_column_names"
+2021-12-02 20:48:20.015009 (Thread-10): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_float"
+2021-12-02 20:48:20.018370 (Thread-11): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_string"
+2021-12-02 20:48:19.979590 (Thread-12): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_boolean"
+2021-12-02 20:48:20.023693 (Thread-13): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_float"
+2021-12-02 20:48:20.027129 (Thread-14): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_int"
+2021-12-02 20:48:20.035135 (Thread-9): finished collecting timing info
+2021-12-02 20:48:20.035920 (Thread-2): finished collecting timing info
+2021-12-02 20:48:20.037881 (Thread-4): finished collecting timing info
+2021-12-02 20:48:20.039910 (Thread-3): finished collecting timing info
+2021-12-02 20:48:20.042138 (Thread-5): finished collecting timing info
+2021-12-02 20:48:20.043129 (Thread-1): finished collecting timing info
+2021-12-02 20:48:20.045013 (Thread-6): finished collecting timing info
+2021-12-02 20:48:20.047079 (Thread-7): finished collecting timing info
+2021-12-02 20:48:20.060287 (Thread-13): finished collecting timing info
+2021-12-02 20:48:20.091612 (Thread-14): finished collecting timing info
+2021-12-02 20:48:20.097423 (Thread-10): finished collecting timing info
+2021-12-02 20:48:20.097735 (Thread-11): finished collecting timing info
+2021-12-02 20:48:20.098166 (Thread-12): finished collecting timing info
+2021-12-02 20:48:20.124942 (Thread-8): finished collecting timing info
+2021-12-02 20:48:20.182698 (Thread-3): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_float"
+2021-12-02 20:48:20.192517 (Thread-9): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_boolean"
+2021-12-02 20:48:20.195020 (Thread-4): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_int"
+2021-12-02 20:48:20.199156 (Thread-2): Writing runtime SQL for node "model.incremental_test_schema_change.column_with_quotes"
+2021-12-02 20:48:20.200544 (Thread-5): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_string"
+2021-12-02 20:48:20.203345 (Thread-1): Writing runtime SQL for node "model.incremental_test_schema_change.change_column_names"
+2021-12-02 20:48:20.207765 (Thread-6): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_boolean"
+2021-12-02 20:48:20.211513 (Thread-7): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_int"
+2021-12-02 20:48:20.214986 (Thread-13): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_float"
+2021-12-02 20:48:20.221613 (Thread-14): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_int"
+2021-12-02 20:48:20.225056 (Thread-10): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_float"
+2021-12-02 20:48:20.228771 (Thread-11): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_int_to_string"
+2021-12-02 20:48:20.232969 (Thread-12): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_string_to_boolean"
+2021-12-02 20:48:20.237937 (Thread-8): Writing runtime SQL for node "model.incremental_test_schema_change.convert_column_float_to_string"
+2021-12-02 20:48:20.262137 (Thread-13): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:48:20.262869 (Thread-2): Using snowflake connection "model.incremental_test_schema_change.column_with_quotes".
+2021-12-02 20:48:20.264966 (Thread-11): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:48:20.270048 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+
+      create or replace transient table AIRBYTE_DATABASE.TEST_DBT.convert_column_int_to_string  as
+      (select
+    1 as column_int_to_string,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:48:20.266133 (Thread-1): Using snowflake connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:48:20.267588 (Thread-8): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:48:20.267781 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.column_with_quotes"} */
+
+
+      create or replace transient table AIRBYTE_DATABASE.TEST_DBT.column_with_quotes  as
+      (select
+    'a column with tricky name with quotes' as  "column`_'with""_quotes",
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:48:20.269715 (Thread-7): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:48:20.265123 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+
+
+      create or replace transient table AIRBYTE_DATABASE.TEST_DBT.convert_column_string_to_float  as
+      (select
+    '1.1' as column_string_to_float,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:48:20.271162 (Thread-11): Opening a new connection, currently in state init
+2021-12-02 20:48:20.272883 (Thread-3): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:48:20.273408 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+
+
+      create or replace transient table AIRBYTE_DATABASE.TEST_DBT.change_column_names  as
+      (select
+    'a column with underscore' as column_name,
+    'a column to rename' as column_to_rename,
+    'a column to be deleted' as column_to_delete,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:48:20.274684 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+
+      create or replace transient table AIRBYTE_DATABASE.TEST_DBT.convert_column_float_to_string  as
+      (select
+    1.1 as column_float_to_string,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:48:20.275859 (Thread-4): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:48:20.304830 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+
+
+      create or replace transient table AIRBYTE_DATABASE.TEST_DBT.convert_column_boolean_to_int  as
+      (select
+    true as column_boolean_to_int,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:48:20.307453 (Thread-4): Opening a new connection, currently in state init
+2021-12-02 20:48:20.279740 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+
+      create or replace transient table AIRBYTE_DATABASE.TEST_DBT.convert_column_float_to_int  as
+      (select
+    1.1 as column_float_to_int,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:48:20.282340 (Thread-14): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:48:20.283352 (Thread-13): Opening a new connection, currently in state init
+2021-12-02 20:48:20.288039 (Thread-9): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:48:20.292363 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+
+
+      create or replace transient table AIRBYTE_DATABASE.TEST_DBT.convert_column_boolean_to_float  as
+      (select
+    true as column_boolean_to_float,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:48:20.295103 (Thread-6): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:48:20.326756 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+
+
+      create or replace transient table AIRBYTE_DATABASE.TEST_DBT.convert_column_float_to_boolean  as
+      (select
+    1.1 as column_float_to_boolean,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:48:20.298776 (Thread-10): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:48:20.300309 (Thread-8): Opening a new connection, currently in state init
+2021-12-02 20:48:20.301939 (Thread-12): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:48:20.277826 (Thread-5): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:48:20.343125 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+
+      create or replace transient table AIRBYTE_DATABASE.TEST_DBT.convert_column_boolean_to_string  as
+      (select
+    true as column_boolean_to_string,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:48:20.313185 (Thread-7): Opening a new connection, currently in state init
+2021-12-02 20:48:20.315658 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+
+
+      create or replace transient table AIRBYTE_DATABASE.TEST_DBT.convert_column_string_to_int  as
+      (select
+    '1' as column_string_to_int,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:48:20.321423 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+
+
+      create or replace transient table AIRBYTE_DATABASE.TEST_DBT.convert_column_int_to_boolean  as
+      (select
+    1 as column_int_to_boolean,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:48:20.324865 (Thread-3): Opening a new connection, currently in state init
+2021-12-02 20:48:20.297583 (Thread-1): Opening a new connection, currently in state closed
+2021-12-02 20:48:20.328651 (Thread-6): Opening a new connection, currently in state init
+2021-12-02 20:48:20.330781 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+
+      create or replace transient table AIRBYTE_DATABASE.TEST_DBT.convert_column_int_to_float  as
+      (select
+    1 as column_int_to_float,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:48:20.339703 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+
+
+      create or replace transient table AIRBYTE_DATABASE.TEST_DBT.convert_column_string_to_boolean  as
+      (select
+    'true' as column_string_to_boolean,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:48:20.278030 (Thread-2): Opening a new connection, currently in state closed
+2021-12-02 20:48:20.345377 (Thread-5): Opening a new connection, currently in state init
+2021-12-02 20:48:20.352926 (Thread-14): Opening a new connection, currently in state init
+2021-12-02 20:48:20.356322 (Thread-9): Opening a new connection, currently in state init
+2021-12-02 20:48:20.371459 (Thread-10): Opening a new connection, currently in state init
+2021-12-02 20:48:20.373679 (Thread-12): Opening a new connection, currently in state init
+2021-12-02 20:48:26.945935 (Thread-4): SQL status: SUCCESS 1 in 6.64 seconds
+2021-12-02 20:48:26.964914 (Thread-4): finished collecting timing info
+2021-12-02 20:48:26.967178 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_int: Close
+2021-12-02 20:48:27.695613 (Thread-3): SQL status: SUCCESS 1 in 7.37 seconds
+2021-12-02 20:48:27.700645 (Thread-3): finished collecting timing info
+2021-12-02 20:48:27.702496 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_float: Close
+2021-12-02 20:48:27.740406 (Thread-6): SQL status: SUCCESS 1 in 7.41 seconds
+2021-12-02 20:48:27.747222 (Thread-6): finished collecting timing info
+2021-12-02 20:48:27.749066 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_boolean: Close
+2021-12-02 20:48:28.484231 (Thread-1): SQL status: SUCCESS 1 in 8.19 seconds
+2021-12-02 20:48:28.489787 (Thread-1): finished collecting timing info
+2021-12-02 20:48:28.492131 (Thread-1): On model.incremental_test_schema_change.change_column_names: Close
+2021-12-02 20:48:28.605817 (Thread-8): SQL status: SUCCESS 1 in 8.31 seconds
+2021-12-02 20:48:28.610859 (Thread-8): finished collecting timing info
+2021-12-02 20:48:28.612443 (Thread-14): SQL status: SUCCESS 1 in 8.26 seconds
+2021-12-02 20:48:28.613572 (Thread-8): On model.incremental_test_schema_change.convert_column_float_to_string: Close
+2021-12-02 20:48:28.614904 (Thread-12): SQL status: SUCCESS 1 in 8.24 seconds
+2021-12-02 20:48:28.618317 (Thread-14): finished collecting timing info
+2021-12-02 20:48:28.624704 (Thread-12): finished collecting timing info
+2021-12-02 20:48:28.626479 (Thread-14): On model.incremental_test_schema_change.convert_column_string_to_int: Close
+2021-12-02 20:48:28.628164 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_boolean: Close
+2021-12-02 20:48:28.808075 (Thread-9): SQL status: SUCCESS 1 in 8.45 seconds
+2021-12-02 20:48:28.812568 (Thread-9): finished collecting timing info
+2021-12-02 20:48:28.814596 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_boolean: Close
+2021-12-02 20:48:28.865663 (Thread-10): SQL status: SUCCESS 1 in 8.49 seconds
+2021-12-02 20:48:28.871403 (Thread-10): finished collecting timing info
+2021-12-02 20:48:28.873397 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_float: Close
+2021-12-02 20:48:29.701681 (Thread-3): 20:48:29 | 3 of 14 OK created incremental model TEST_DBT.convert_column_boolean_to_float................................ [SUCCESS 1 in 9.78s]
+2021-12-02 20:48:29.703838 (Thread-3): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:48:29.837302 (Thread-6): 20:48:29 | 6 of 14 OK created incremental model TEST_DBT.convert_column_float_to_boolean................................ [SUCCESS 1 in 9.91s]
+2021-12-02 20:48:29.839765 (Thread-6): Finished running node model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:48:30.168914 (Thread-4): 20:48:30 | 4 of 14 OK created incremental model TEST_DBT.convert_column_boolean_to_int.................................. [SUCCESS 1 in 10.25s]
+2021-12-02 20:48:30.171203 (Thread-4): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:48:30.383386 (Thread-1): 20:48:30 | 1 of 14 OK created incremental model TEST_DBT.change_column_names............................................ [SUCCESS 1 in 10.48s]
+2021-12-02 20:48:30.386098 (Thread-1): Finished running node model.incremental_test_schema_change.change_column_names
+2021-12-02 20:48:30.517971 (Thread-12): 20:48:30 | 12 of 14 OK created incremental model TEST_DBT.convert_column_string_to_boolean.............................. [SUCCESS 1 in 10.57s]
+2021-12-02 20:48:30.519782 (Thread-14): 20:48:30 | 14 of 14 OK created incremental model TEST_DBT.convert_column_string_to_int.................................. [SUCCESS 1 in 10.57s]
+2021-12-02 20:48:30.521427 (Thread-12): Finished running node model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:48:30.524713 (Thread-14): Finished running node model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:48:30.526968 (Thread-8): 20:48:30 | 8 of 14 OK created incremental model TEST_DBT.convert_column_float_to_string................................. [SUCCESS 1 in 10.63s]
+2021-12-02 20:48:30.531991 (Thread-8): Finished running node model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:48:30.699628 (Thread-9): 20:48:30 | 9 of 14 OK created incremental model TEST_DBT.convert_column_int_to_boolean.................................. [SUCCESS 1 in 10.76s]
+2021-12-02 20:48:30.702514 (Thread-9): Finished running node model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:48:30.753175 (Thread-10): 20:48:30 | 10 of 14 OK created incremental model TEST_DBT.convert_column_int_to_float................................... [SUCCESS 1 in 10.81s]
+2021-12-02 20:48:30.755523 (Thread-10): Finished running node model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:48:30.894836 (Thread-13): SQL status: SUCCESS 1 in 10.61 seconds
+2021-12-02 20:48:30.899859 (Thread-13): finished collecting timing info
+2021-12-02 20:48:30.901727 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_float: Close
+2021-12-02 20:48:30.993479 (Thread-2): SQL status: SUCCESS 1 in 10.72 seconds
+2021-12-02 20:48:30.995359 (Thread-11): SQL status: SUCCESS 1 in 10.72 seconds
+2021-12-02 20:48:30.998611 (Thread-2): finished collecting timing info
+2021-12-02 20:48:31.002085 (Thread-11): finished collecting timing info
+2021-12-02 20:48:31.003922 (Thread-2): On model.incremental_test_schema_change.column_with_quotes: Close
+2021-12-02 20:48:31.005522 (Thread-11): On model.incremental_test_schema_change.convert_column_int_to_string: Close
+2021-12-02 20:48:31.048117 (Thread-7): SQL status: SUCCESS 1 in 10.73 seconds
+2021-12-02 20:48:31.052795 (Thread-7): finished collecting timing info
+2021-12-02 20:48:31.054767 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_int: Close
+2021-12-02 20:48:31.063513 (Thread-5): SQL status: SUCCESS 1 in 10.72 seconds
+2021-12-02 20:48:31.066862 (Thread-5): finished collecting timing info
+2021-12-02 20:48:31.068447 (Thread-5): On model.incremental_test_schema_change.convert_column_boolean_to_string: Close
+2021-12-02 20:48:32.802797 (Thread-13): 20:48:32 | 13 of 14 OK created incremental model TEST_DBT.convert_column_string_to_float................................ [SUCCESS 1 in 12.85s]
+2021-12-02 20:48:32.805741 (Thread-13): Finished running node model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:48:32.994926 (Thread-2): 20:48:32 | 2 of 14 OK created incremental model TEST_DBT.column_with_quotes............................................. [SUCCESS 1 in 13.08s]
+2021-12-02 20:48:32.997454 (Thread-2): Finished running node model.incremental_test_schema_change.column_with_quotes
+2021-12-02 20:48:33.005719 (Thread-11): 20:48:33 | 11 of 14 OK created incremental model TEST_DBT.convert_column_int_to_string.................................. [SUCCESS 1 in 13.06s]
+2021-12-02 20:48:33.009058 (Thread-7): 20:48:33 | 7 of 14 OK created incremental model TEST_DBT.convert_column_float_to_int.................................... [SUCCESS 1 in 13.08s]
+2021-12-02 20:48:33.009444 (Thread-11): Finished running node model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:48:33.012534 (Thread-7): Finished running node model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:48:33.019042 (Thread-5): 20:48:33 | 5 of 14 OK created incremental model TEST_DBT.convert_column_boolean_to_string............................... [SUCCESS 1 in 13.09s]
+2021-12-02 20:48:33.020756 (Thread-5): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:48:33.028626 (MainThread): Acquiring new snowflake connection "master".
+2021-12-02 20:48:33.030913 (MainThread): 20:48:33 | 
+2021-12-02 20:48:33.032752 (MainThread): 20:48:33 | Finished running 14 incremental models in 27.27s.
+2021-12-02 20:48:33.035365 (MainThread): Connection 'master' was properly closed.
+2021-12-02 20:48:33.037424 (MainThread): Connection 'model.incremental_test_schema_change.column_with_quotes' was properly closed.
+2021-12-02 20:48:33.039130 (MainThread): Connection 'model.incremental_test_schema_change.change_column_names' was properly closed.
+2021-12-02 20:48:33.041178 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_string' was properly closed.
+2021-12-02 20:48:33.042914 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_float' was properly closed.
+2021-12-02 20:48:33.045037 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_int' was properly closed.
+2021-12-02 20:48:33.046617 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_string' was properly closed.
+2021-12-02 20:48:33.047970 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_boolean' was properly closed.
+2021-12-02 20:48:33.049462 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_int' was properly closed.
+2021-12-02 20:48:33.050905 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_boolean' was properly closed.
+2021-12-02 20:48:33.052365 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_float' was properly closed.
+2021-12-02 20:48:33.054038 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_string' was properly closed.
+2021-12-02 20:48:33.055604 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_boolean' was properly closed.
+2021-12-02 20:48:33.057983 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_float' was properly closed.
+2021-12-02 20:48:33.059557 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_int' was properly closed.
+2021-12-02 20:48:33.075477 (MainThread): 
+2021-12-02 20:48:33.077032 (MainThread): Completed successfully
+2021-12-02 20:48:33.079006 (MainThread): 
+Done. PASS=14 WARN=0 ERROR=0 SKIP=0 TOTAL=14
+2021-12-02 20:48:33.080794 (MainThread): Flushing usage events

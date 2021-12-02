@@ -1,0 +1,2459 @@
+2021-12-02 20:49:22.742911 (MainThread): Running with dbt=0.21.0
+2021-12-02 20:49:23.237304 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/data/db_snowflake', project_dir='/data/second_project', record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-12-02 20:49:23.246392 (MainThread): Tracking: do not track
+2021-12-02 20:49:23.264720 (MainThread): Unable to do partial parsing because target/partial_parse.msgpack not found
+2021-12-02 20:49:23.330998 (MainThread): Parsing ../macros/boolean_values.sql
+2021-12-02 20:49:23.336858 (MainThread): Parsing ../macros/normalize_identifier.sql
+2021-12-02 20:49:23.340952 (MainThread): Parsing macros/catalog.sql
+2021-12-02 20:49:23.345089 (MainThread): Parsing macros/adapters.sql
+2021-12-02 20:49:23.404618 (MainThread): Parsing macros/materializations/merge.sql
+2021-12-02 20:49:23.411882 (MainThread): Parsing macros/materializations/seed.sql
+2021-12-02 20:49:23.419753 (MainThread): Parsing macros/materializations/table.sql
+2021-12-02 20:49:23.425364 (MainThread): Parsing macros/materializations/view.sql
+2021-12-02 20:49:23.428652 (MainThread): Parsing macros/materializations/incremental.sql
+2021-12-02 20:49:23.441886 (MainThread): Parsing macros/core.sql
+2021-12-02 20:49:23.453549 (MainThread): Parsing macros/etc/datetime.sql
+2021-12-02 20:49:23.470012 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-12-02 20:49:23.474456 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-12-02 20:49:23.479476 (MainThread): Parsing macros/etc/query.sql
+2021-12-02 20:49:23.482428 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-12-02 20:49:23.486712 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-12-02 20:49:23.490405 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-12-02 20:49:23.493604 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-12-02 20:49:23.496890 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-12-02 20:49:23.499730 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-12-02 20:49:23.504092 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-12-02 20:49:23.507067 (MainThread): Parsing macros/materializations/helpers.sql
+2021-12-02 20:49:23.522728 (MainThread): Parsing macros/materializations/test.sql
+2021-12-02 20:49:23.534545 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-02 20:49:23.571755 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-02 20:49:23.628565 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-02 20:49:23.655515 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-12-02 20:49:23.659237 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-12-02 20:49:23.682714 (MainThread): Parsing macros/materializations/table/table.sql
+2021-12-02 20:49:23.694982 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-12-02 20:49:23.702102 (MainThread): Parsing macros/materializations/view/view.sql
+2021-12-02 20:49:23.713454 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-12-02 20:49:23.747291 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-12-02 20:49:23.752322 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-12-02 20:49:23.768589 (MainThread): Parsing macros/adapters/common.sql
+2021-12-02 20:49:24.112662 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:49:24.134832 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:49:24.141913 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:49:24.147152 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:49:24.152061 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:49:24.159252 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:49:24.164949 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:49:24.170128 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:49:24.175840 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:49:24.181254 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:49:24.186484 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:49:24.192562 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:49:24.198657 (MainThread): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:49:24.302471 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-12-02 20:49:24.305371 (MainThread): Found 13 models, 0 tests, 0 snapshots, 0 analyses, 181 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-12-02 20:49:24.310152 (MainThread): 
+2021-12-02 20:49:24.313054 (MainThread): Acquiring new snowflake connection "master".
+2021-12-02 20:49:24.316501 (ThreadPoolExecutor-0_0): Acquiring new snowflake connection "list_AIRBYTE_DATABASE".
+2021-12-02 20:49:24.336916 (ThreadPoolExecutor-0_0): Using snowflake connection "list_AIRBYTE_DATABASE".
+2021-12-02 20:49:24.338586 (ThreadPoolExecutor-0_0): On list_AIRBYTE_DATABASE: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "connection_name": "list_AIRBYTE_DATABASE"} */
+
+    show terse schemas in database AIRBYTE_DATABASE
+    limit 10000
+2021-12-02 20:49:24.339898 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-12-02 20:49:34.681959 (ThreadPoolExecutor-0_0): SQL status: SUCCESS 796 in 10.34 seconds
+2021-12-02 20:49:34.726881 (ThreadPoolExecutor-0_0): On list_AIRBYTE_DATABASE: Close
+2021-12-02 20:49:36.203496 (ThreadPoolExecutor-1_0): Acquiring new snowflake connection "list_AIRBYTE_DATABASE_TEST_DBT".
+2021-12-02 20:49:36.216148 (ThreadPoolExecutor-1_0): Using snowflake connection "list_AIRBYTE_DATABASE_TEST_DBT".
+2021-12-02 20:49:36.218036 (ThreadPoolExecutor-1_0): On list_AIRBYTE_DATABASE_TEST_DBT: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "connection_name": "list_AIRBYTE_DATABASE_TEST_DBT"} */
+
+    show terse objects in AIRBYTE_DATABASE.TEST_DBT
+2021-12-02 20:49:36.220539 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state init
+2021-12-02 20:49:41.545811 (ThreadPoolExecutor-1_0): SQL status: SUCCESS 14 in 5.33 seconds
+2021-12-02 20:49:41.551885 (ThreadPoolExecutor-1_0): On list_AIRBYTE_DATABASE_TEST_DBT: Close
+2021-12-02 20:49:43.541808 (MainThread): 20:49:43 | Concurrency: 32 threads (target='prod')
+2021-12-02 20:49:43.544810 (MainThread): 20:49:43 | 
+2021-12-02 20:49:43.561051 (Thread-1): Began running node model.incremental_test_schema_change.change_column_names
+2021-12-02 20:49:43.564922 (Thread-1): 20:49:43 | 1 of 13 START incremental model TEST_DBT.change_column_names................................................. [RUN]
+2021-12-02 20:49:43.561857 (Thread-3): Began running node model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:49:43.562631 (Thread-4): Began running node model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:49:43.563209 (Thread-5): Began running node model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:49:43.564135 (Thread-6): Began running node model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:49:43.564510 (Thread-7): Began running node model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:49:43.580908 (Thread-7): 20:49:43 | 7 of 13 START incremental model TEST_DBT.convert_column_float_to_string...................................... [RUN]
+2021-12-02 20:49:43.565535 (Thread-8): Began running node model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:49:43.566141 (Thread-9): Began running node model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:49:43.566729 (Thread-10): Began running node model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:49:43.567962 (Thread-11): Began running node model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:49:43.569032 (Thread-12): Began running node model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:49:43.570087 (Thread-1): Acquiring new snowflake connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:49:43.570568 (Thread-13): Began running node model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:49:43.572666 (Thread-3): 20:49:43 | 3 of 13 START incremental model TEST_DBT.convert_column_boolean_to_int....................................... [RUN]
+2021-12-02 20:49:43.574686 (Thread-4): 20:49:43 | 4 of 13 START incremental model TEST_DBT.convert_column_boolean_to_string.................................... [RUN]
+2021-12-02 20:49:43.576999 (Thread-5): 20:49:43 | 5 of 13 START incremental model TEST_DBT.convert_column_float_to_boolean..................................... [RUN]
+2021-12-02 20:49:43.578992 (Thread-6): 20:49:43 | 6 of 13 START incremental model TEST_DBT.convert_column_float_to_int......................................... [RUN]
+2021-12-02 20:49:43.561481 (Thread-2): Began running node model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:49:43.605858 (Thread-2): 20:49:43 | 2 of 13 START incremental model TEST_DBT.convert_column_boolean_to_float..................................... [RUN]
+2021-12-02 20:49:43.584845 (Thread-8): 20:49:43 | 8 of 13 START incremental model TEST_DBT.convert_column_int_to_boolean....................................... [RUN]
+2021-12-02 20:49:43.586848 (Thread-9): 20:49:43 | 9 of 13 START incremental model TEST_DBT.convert_column_int_to_float......................................... [RUN]
+2021-12-02 20:49:43.588452 (Thread-10): 20:49:43 | 10 of 13 START incremental model TEST_DBT.convert_column_int_to_string....................................... [RUN]
+2021-12-02 20:49:43.590073 (Thread-11): 20:49:43 | 11 of 13 START incremental model TEST_DBT.convert_column_string_to_boolean................................... [RUN]
+2021-12-02 20:49:43.591968 (Thread-12): 20:49:43 | 12 of 13 START incremental model TEST_DBT.convert_column_string_to_float..................................... [RUN]
+2021-12-02 20:49:43.593652 (Thread-1): Compiling model.incremental_test_schema_change.change_column_names
+2021-12-02 20:49:43.595527 (Thread-13): 20:49:43 | 13 of 13 START incremental model TEST_DBT.convert_column_string_to_int....................................... [RUN]
+2021-12-02 20:49:43.598083 (Thread-3): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:49:43.600157 (Thread-4): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:49:43.601497 (Thread-5): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:49:43.604612 (Thread-6): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:49:43.583001 (Thread-7): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:49:43.632780 (Thread-7): Compiling model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:49:43.613721 (Thread-8): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:49:43.614748 (Thread-9): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:49:43.617144 (Thread-10): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:49:43.618261 (Thread-11): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:49:43.619453 (Thread-12): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:49:43.623934 (Thread-1): Writing injected SQL for node "model.incremental_test_schema_change.change_column_names"
+2021-12-02 20:49:43.625603 (Thread-13): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:49:43.627231 (Thread-3): Compiling model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:49:43.628527 (Thread-4): Compiling model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:49:43.630124 (Thread-5): Compiling model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:49:43.631463 (Thread-6): Compiling model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:49:43.608834 (Thread-2): Acquiring new snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:49:43.661569 (Thread-2): Compiling model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:49:43.637454 (Thread-8): Compiling model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:49:43.638746 (Thread-9): Compiling model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:49:43.639984 (Thread-10): Compiling model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:49:43.641224 (Thread-11): Compiling model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:49:43.642485 (Thread-12): Compiling model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:49:43.645105 (Thread-13): Compiling model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:49:43.648406 (Thread-3): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_int"
+2021-12-02 20:49:43.651655 (Thread-4): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_string"
+2021-12-02 20:49:43.655202 (Thread-5): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_boolean"
+2021-12-02 20:49:43.659734 (Thread-6): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_int"
+2021-12-02 20:49:43.636147 (Thread-7): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_float_to_string"
+2021-12-02 20:49:43.662786 (Thread-1): finished collecting timing info
+2021-12-02 20:49:43.665347 (Thread-2): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_boolean_to_float"
+2021-12-02 20:49:43.668898 (Thread-8): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_boolean"
+2021-12-02 20:49:43.672096 (Thread-9): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_float"
+2021-12-02 20:49:43.675177 (Thread-10): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_int_to_string"
+2021-12-02 20:49:43.678597 (Thread-11): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_boolean"
+2021-12-02 20:49:43.681710 (Thread-12): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_float"
+2021-12-02 20:49:43.684862 (Thread-13): Writing injected SQL for node "model.incremental_test_schema_change.convert_column_string_to_int"
+2021-12-02 20:49:43.692695 (Thread-4): finished collecting timing info
+2021-12-02 20:49:43.709495 (Thread-3): finished collecting timing info
+2021-12-02 20:49:43.716113 (Thread-5): finished collecting timing info
+2021-12-02 20:49:43.728409 (Thread-6): finished collecting timing info
+2021-12-02 20:49:43.739706 (Thread-7): finished collecting timing info
+2021-12-02 20:49:43.745545 (Thread-2): finished collecting timing info
+2021-12-02 20:49:43.750750 (Thread-1): Using snowflake connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:49:43.755476 (Thread-8): finished collecting timing info
+2021-12-02 20:49:43.757582 (Thread-9): finished collecting timing info
+2021-12-02 20:49:43.761245 (Thread-10): finished collecting timing info
+2021-12-02 20:49:43.769889 (Thread-4): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:49:43.770107 (Thread-11): finished collecting timing info
+2021-12-02 20:49:43.775963 (Thread-3): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:49:43.776339 (Thread-12): finished collecting timing info
+2021-12-02 20:49:43.778475 (Thread-13): finished collecting timing info
+2021-12-02 20:49:43.782016 (Thread-5): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:49:43.786957 (Thread-6): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:49:43.792180 (Thread-7): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:49:43.796249 (Thread-2): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:49:43.797690 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+
+    
+
+      create or replace temporary table AIRBYTE_DATABASE.TEST_DBT.change_column_names__dbt_tmp  as
+      (select
+    'replacing underscore with space' as "new column name",
+    'a renamed column' as renamed_column,
+    'a new column is added' as new_column,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:49:43.801963 (Thread-8): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:49:43.805914 (Thread-9): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:49:43.809828 (Thread-10): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:49:43.811324 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+    
+
+      create or replace temporary table AIRBYTE_DATABASE.TEST_DBT.convert_column_boolean_to_string__dbt_tmp  as
+      (select
+    'false' as column_boolean_to_string,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:49:43.837989 (Thread-4): Opening a new connection, currently in state init
+2021-12-02 20:49:43.816961 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+
+    
+
+      create or replace temporary table AIRBYTE_DATABASE.TEST_DBT.convert_column_boolean_to_int__dbt_tmp  as
+      (select
+    2 as column_boolean_to_int,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:49:43.821256 (Thread-12): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:49:43.825402 (Thread-13): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:49:43.826828 (Thread-5): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+
+    
+
+      create or replace temporary table AIRBYTE_DATABASE.TEST_DBT.convert_column_float_to_boolean__dbt_tmp  as
+      (select
+    false as column_float_to_boolean,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:49:43.827968 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+    
+
+      create or replace temporary table AIRBYTE_DATABASE.TEST_DBT.convert_column_float_to_int__dbt_tmp  as
+      (select
+    2 as column_float_to_int,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:49:43.829355 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+    
+
+      create or replace temporary table AIRBYTE_DATABASE.TEST_DBT.convert_column_float_to_string__dbt_tmp  as
+      (select
+    '2.2' as column_float_to_string,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:49:43.830596 (Thread-2): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+
+    
+
+      create or replace temporary table AIRBYTE_DATABASE.TEST_DBT.convert_column_boolean_to_float__dbt_tmp  as
+      (select
+    2.2 as column_boolean_to_float,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:49:43.832191 (Thread-1): Opening a new connection, currently in state closed
+2021-12-02 20:49:43.833728 (Thread-8): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+
+    
+
+      create or replace temporary table AIRBYTE_DATABASE.TEST_DBT.convert_column_int_to_boolean__dbt_tmp  as
+      (select
+    false as column_int_to_boolean,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:49:43.835041 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+    
+
+      create or replace temporary table AIRBYTE_DATABASE.TEST_DBT.convert_column_int_to_float__dbt_tmp  as
+      (select
+    2.2 as column_int_to_float,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:49:43.836558 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+    
+
+      create or replace temporary table AIRBYTE_DATABASE.TEST_DBT.convert_column_int_to_string__dbt_tmp  as
+      (select
+    '2' as column_int_to_string,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:49:43.815492 (Thread-11): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:49:43.842614 (Thread-3): Opening a new connection, currently in state init
+2021-12-02 20:49:43.844613 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+
+    
+
+      create or replace temporary table AIRBYTE_DATABASE.TEST_DBT.convert_column_string_to_float__dbt_tmp  as
+      (select
+    2.2 as column_string_to_float,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:49:43.846209 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+
+    
+
+      create or replace temporary table AIRBYTE_DATABASE.TEST_DBT.convert_column_string_to_int__dbt_tmp  as
+      (select
+    2 as column_string_to_int,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:49:43.847803 (Thread-5): Opening a new connection, currently in state init
+2021-12-02 20:49:43.849347 (Thread-6): Opening a new connection, currently in state init
+2021-12-02 20:49:43.850699 (Thread-7): Opening a new connection, currently in state init
+2021-12-02 20:49:43.851950 (Thread-2): Opening a new connection, currently in state closed
+2021-12-02 20:49:43.857014 (Thread-8): Opening a new connection, currently in state init
+2021-12-02 20:49:43.858890 (Thread-9): Opening a new connection, currently in state init
+2021-12-02 20:49:43.860614 (Thread-10): Opening a new connection, currently in state init
+2021-12-02 20:49:43.861898 (Thread-11): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+
+    
+
+      create or replace temporary table AIRBYTE_DATABASE.TEST_DBT.convert_column_string_to_boolean__dbt_tmp  as
+      (select
+    false as column_string_to_boolean,
+    convert_timezone('UTC', current_timestamp()) as insert_time
+      );
+2021-12-02 20:49:43.895216 (Thread-11): Opening a new connection, currently in state init
+2021-12-02 20:49:43.868428 (Thread-13): Opening a new connection, currently in state init
+2021-12-02 20:49:43.867028 (Thread-12): Opening a new connection, currently in state init
+2021-12-02 20:49:50.749983 (Thread-6): SQL status: SUCCESS 1 in 6.90 seconds
+2021-12-02 20:49:50.767186 (Thread-6): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:49:50.769366 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_float_to_int__dbt_tmp
+2021-12-02 20:49:50.948826 (Thread-4): SQL status: SUCCESS 1 in 7.11 seconds
+2021-12-02 20:49:50.960273 (Thread-4): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:49:50.962069 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_boolean_to_string__dbt_tmp
+2021-12-02 20:49:51.194304 (Thread-13): SQL status: SUCCESS 1 in 7.33 seconds
+2021-12-02 20:49:51.200907 (Thread-13): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:49:51.203219 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_string_to_int__dbt_tmp
+2021-12-02 20:49:51.599392 (Thread-6): SQL status: SUCCESS 2 in 0.83 seconds
+2021-12-02 20:49:51.605539 (Thread-6): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:49:51.607426 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_float_to_int
+2021-12-02 20:49:51.787982 (Thread-4): SQL status: SUCCESS 2 in 0.82 seconds
+2021-12-02 20:49:51.795071 (Thread-4): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:49:51.797250 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_boolean_to_string
+2021-12-02 20:49:51.909986 (Thread-11): SQL status: SUCCESS 1 in 8.01 seconds
+2021-12-02 20:49:51.917208 (Thread-11): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:49:51.918970 (Thread-11): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_string_to_boolean__dbt_tmp
+2021-12-02 20:49:52.032575 (Thread-13): SQL status: SUCCESS 2 in 0.83 seconds
+2021-12-02 20:49:52.039697 (Thread-13): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:49:52.041448 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_string_to_int
+2021-12-02 20:49:52.178003 (Thread-2): SQL status: SUCCESS 1 in 8.33 seconds
+2021-12-02 20:49:52.184680 (Thread-2): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:49:52.186567 (Thread-2): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_boolean_to_float__dbt_tmp
+2021-12-02 20:49:52.306715 (Thread-9): SQL status: SUCCESS 1 in 8.45 seconds
+2021-12-02 20:49:52.313200 (Thread-9): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:49:52.315205 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_int_to_float__dbt_tmp
+2021-12-02 20:49:52.361923 (Thread-7): SQL status: SUCCESS 1 in 8.51 seconds
+2021-12-02 20:49:52.368849 (Thread-7): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:49:52.370408 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_float_to_string__dbt_tmp
+2021-12-02 20:49:52.396119 (Thread-3): SQL status: SUCCESS 1 in 8.55 seconds
+2021-12-02 20:49:52.402140 (Thread-3): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:49:52.404384 (Thread-12): SQL status: SUCCESS 1 in 8.54 seconds
+2021-12-02 20:49:52.405642 (Thread-6): SQL status: SUCCESS 2 in 0.80 seconds
+2021-12-02 20:49:52.405941 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_boolean_to_int__dbt_tmp
+2021-12-02 20:49:52.411079 (Thread-12): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:49:52.434708 (Thread-6): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:49:52.435666 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_string_to_float__dbt_tmp
+2021-12-02 20:49:52.436857 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_float_to_int__dbt_tmp
+2021-12-02 20:49:52.476818 (Thread-10): SQL status: SUCCESS 1 in 8.62 seconds
+2021-12-02 20:49:52.483261 (Thread-10): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:49:52.485197 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_int_to_string__dbt_tmp
+2021-12-02 20:49:52.495210 (Thread-1): SQL status: SUCCESS 1 in 8.66 seconds
+2021-12-02 20:49:52.496714 (Thread-5): SQL status: SUCCESS 1 in 8.65 seconds
+2021-12-02 20:49:52.498136 (Thread-8): SQL status: SUCCESS 1 in 8.64 seconds
+2021-12-02 20:49:52.503629 (Thread-1): Using snowflake connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:49:52.508666 (Thread-5): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:49:52.513542 (Thread-8): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:49:52.515169 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.change_column_names__dbt_tmp
+2021-12-02 20:49:52.516783 (Thread-5): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_float_to_boolean__dbt_tmp
+2021-12-02 20:49:52.518461 (Thread-8): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_int_to_boolean__dbt_tmp
+2021-12-02 20:49:52.629390 (Thread-4): SQL status: SUCCESS 2 in 0.83 seconds
+2021-12-02 20:49:52.635640 (Thread-4): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:49:52.637400 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_boolean_to_string__dbt_tmp
+2021-12-02 20:49:52.763952 (Thread-11): SQL status: SUCCESS 2 in 0.84 seconds
+2021-12-02 20:49:52.770521 (Thread-11): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:49:52.772428 (Thread-11): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_string_to_boolean
+2021-12-02 20:49:52.867446 (Thread-13): SQL status: SUCCESS 2 in 0.82 seconds
+2021-12-02 20:49:52.874384 (Thread-13): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:49:52.876165 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_string_to_int__dbt_tmp
+2021-12-02 20:49:53.028688 (Thread-2): SQL status: SUCCESS 2 in 0.84 seconds
+2021-12-02 20:49:53.035730 (Thread-2): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:49:53.037445 (Thread-2): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_boolean_to_float
+2021-12-02 20:49:53.175038 (Thread-9): SQL status: SUCCESS 2 in 0.86 seconds
+2021-12-02 20:49:53.181540 (Thread-9): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:49:53.183436 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_int_to_float
+2021-12-02 20:49:53.227600 (Thread-7): SQL status: SUCCESS 2 in 0.86 seconds
+2021-12-02 20:49:53.234726 (Thread-7): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:49:53.236824 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_float_to_string
+2021-12-02 20:49:53.278734 (Thread-3): SQL status: SUCCESS 2 in 0.85 seconds
+2021-12-02 20:49:53.281121 (Thread-12): SQL status: SUCCESS 2 in 0.84 seconds
+2021-12-02 20:49:53.286986 (Thread-3): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:49:53.288387 (Thread-6): SQL status: SUCCESS 2 in 0.85 seconds
+2021-12-02 20:49:53.292791 (Thread-12): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:49:53.294777 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_boolean_to_int
+2021-12-02 20:49:53.299649 (Thread-6): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:49:53.301399 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_string_to_float
+2021-12-02 20:49:53.307025 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+    describe table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_FLOAT_TO_INT"
+2021-12-02 20:49:53.349242 (Thread-10): SQL status: SUCCESS 2 in 0.86 seconds
+2021-12-02 20:49:53.357898 (Thread-10): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:49:53.359785 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_int_to_string
+2021-12-02 20:49:53.383827 (Thread-1): SQL status: SUCCESS 4 in 0.86 seconds
+2021-12-02 20:49:53.385266 (Thread-5): SQL status: SUCCESS 2 in 0.86 seconds
+2021-12-02 20:49:53.386869 (Thread-8): SQL status: SUCCESS 2 in 0.86 seconds
+2021-12-02 20:49:53.390872 (Thread-1): Using snowflake connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:49:53.459431 (Thread-5): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:49:53.464484 (Thread-8): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:49:53.466829 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.change_column_names
+2021-12-02 20:49:53.468554 (Thread-5): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_float_to_boolean
+2021-12-02 20:49:53.470410 (Thread-8): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_int_to_boolean
+2021-12-02 20:49:53.483061 (Thread-4): SQL status: SUCCESS 2 in 0.84 seconds
+2021-12-02 20:49:53.489215 (Thread-4): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:49:53.491213 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+    describe table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_BOOLEAN_TO_STRING"
+2021-12-02 20:49:53.608223 (Thread-11): SQL status: SUCCESS 2 in 0.83 seconds
+2021-12-02 20:49:53.615245 (Thread-11): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:49:53.616924 (Thread-11): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_string_to_boolean__dbt_tmp
+2021-12-02 20:49:53.751670 (Thread-13): SQL status: SUCCESS 2 in 0.87 seconds
+2021-12-02 20:49:53.758528 (Thread-13): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:49:53.760488 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+
+    describe table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_STRING_TO_INT"
+2021-12-02 20:49:53.900886 (Thread-2): SQL status: SUCCESS 2 in 0.86 seconds
+2021-12-02 20:49:53.907813 (Thread-2): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:49:53.909774 (Thread-2): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_boolean_to_float__dbt_tmp
+2021-12-02 20:49:54.030099 (Thread-9): SQL status: SUCCESS 2 in 0.84 seconds
+2021-12-02 20:49:54.037174 (Thread-9): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:49:54.038945 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_int_to_float__dbt_tmp
+2021-12-02 20:49:54.160034 (Thread-7): SQL status: SUCCESS 2 in 0.92 seconds
+2021-12-02 20:49:54.167087 (Thread-7): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:49:54.168438 (Thread-6): SQL status: SUCCESS 2 in 0.86 seconds
+2021-12-02 20:49:54.170174 (Thread-12): SQL status: SUCCESS 2 in 0.86 seconds
+2021-12-02 20:49:54.171373 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_float_to_string__dbt_tmp
+2021-12-02 20:49:54.188057 (Thread-6): 
+    In "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_FLOAT_TO_INT":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'COLUMN_FLOAT_TO_INT', 'new_type': 'NUMBER(1,0)'}]
+  
+2021-12-02 20:49:54.189410 (Thread-3): SQL status: SUCCESS 2 in 0.89 seconds
+2021-12-02 20:49:54.199901 (Thread-12): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:49:54.222161 (Thread-6): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_int".
+2021-12-02 20:49:54.225191 (Thread-3): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:49:54.227402 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_string_to_float__dbt_tmp
+2021-12-02 20:49:54.228691 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_int"} */
+
+    alter table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_FLOAT_TO_INT" alter "COLUMN_FLOAT_TO_INT" set data type NUMBER(1,0);
+2021-12-02 20:49:54.230032 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_boolean_to_int__dbt_tmp
+2021-12-02 20:49:54.243736 (Thread-10): SQL status: SUCCESS 2 in 0.88 seconds
+2021-12-02 20:49:54.249380 (Thread-10): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:49:54.250836 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_int_to_string__dbt_tmp
+2021-12-02 20:49:54.335273 (Thread-8): SQL status: SUCCESS 2 in 0.85 seconds
+2021-12-02 20:49:54.337096 (Thread-1): SQL status: SUCCESS 4 in 0.86 seconds
+2021-12-02 20:49:54.338721 (Thread-5): SQL status: SUCCESS 2 in 0.86 seconds
+2021-12-02 20:49:54.343981 (Thread-8): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:49:54.350227 (Thread-1): Using snowflake connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:49:54.351765 (Thread-4): SQL status: SUCCESS 2 in 0.86 seconds
+2021-12-02 20:49:54.356379 (Thread-5): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:49:54.358015 (Thread-8): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_int_to_boolean__dbt_tmp
+2021-12-02 20:49:54.359821 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.change_column_names__dbt_tmp
+2021-12-02 20:49:54.363510 (Thread-4): 
+    In "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_BOOLEAN_TO_STRING":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'COLUMN_BOOLEAN_TO_STRING', 'new_type': 'character varying(5)'}]
+  
+2021-12-02 20:49:54.365432 (Thread-5): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+
+    describe table AIRBYTE_DATABASE.TEST_DBT.convert_column_float_to_boolean__dbt_tmp
+2021-12-02 20:49:54.375120 (Thread-4): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_string".
+2021-12-02 20:49:54.381347 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_string"} */
+
+    alter table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_BOOLEAN_TO_STRING" alter "COLUMN_BOOLEAN_TO_STRING" set data type character varying(5);
+2021-12-02 20:49:54.461964 (Thread-11): SQL status: SUCCESS 2 in 0.84 seconds
+2021-12-02 20:49:54.469175 (Thread-11): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:49:54.471171 (Thread-11): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+
+    describe table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_STRING_TO_BOOLEAN"
+2021-12-02 20:49:54.618817 (Thread-13): SQL status: SUCCESS 2 in 0.86 seconds
+2021-12-02 20:49:54.624545 (Thread-13): 
+    In "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_STRING_TO_INT":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'COLUMN_STRING_TO_INT', 'new_type': 'NUMBER(1,0)'}]
+  
+2021-12-02 20:49:54.627263 (Thread-13): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_int".
+2021-12-02 20:49:54.629173 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_int"} */
+
+    alter table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_STRING_TO_INT" alter "COLUMN_STRING_TO_INT" set data type NUMBER(1,0);
+2021-12-02 20:49:54.790437 (Thread-2): SQL status: SUCCESS 2 in 0.88 seconds
+2021-12-02 20:49:54.797556 (Thread-2): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:49:54.799747 (Thread-2): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+
+    describe table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_BOOLEAN_TO_FLOAT"
+2021-12-02 20:49:54.917438 (Thread-9): SQL status: SUCCESS 2 in 0.88 seconds
+2021-12-02 20:49:54.924701 (Thread-9): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:49:54.926534 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+    describe table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_INT_TO_FLOAT"
+2021-12-02 20:49:55.063105 (Thread-7): SQL status: SUCCESS 2 in 0.86 seconds
+2021-12-02 20:49:55.070742 (Thread-7): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:49:55.071527 (Thread-12): SQL status: SUCCESS 2 in 0.84 seconds
+2021-12-02 20:49:55.072819 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+    describe table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_FLOAT_TO_STRING"
+2021-12-02 20:49:55.080067 (Thread-12): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:49:55.088040 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+
+    describe table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_STRING_TO_FLOAT"
+2021-12-02 20:49:55.090556 (Thread-3): SQL status: SUCCESS 2 in 0.85 seconds
+2021-12-02 20:49:55.098688 (Thread-3): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:49:55.103042 (Thread-6): Snowflake query id: 01a0afc1-0000-5e3b-0000-53b900e70a1a
+2021-12-02 20:49:55.103451 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+
+    describe table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_BOOLEAN_TO_INT"
+2021-12-02 20:49:55.106083 (Thread-10): SQL status: SUCCESS 2 in 0.85 seconds
+2021-12-02 20:49:55.106401 (Thread-6): Snowflake error: 040052 (22000): SQL compilation error: cannot change column COLUMN_FLOAT_TO_INT from type NUMBER(2,1) to NUMBER(1,0) because changing the scale of a number is not supported.
+
+2021-12-02 20:49:55.115141 (Thread-10): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:49:55.117052 (Thread-6): finished collecting timing info
+2021-12-02 20:49:55.118731 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+    describe table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_INT_TO_STRING"
+2021-12-02 20:49:55.120578 (Thread-6): On model.incremental_test_schema_change.convert_column_float_to_int: Close
+2021-12-02 20:49:55.239732 (Thread-8): SQL status: SUCCESS 2 in 0.87 seconds
+2021-12-02 20:49:55.248750 (Thread-8): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:49:55.250665 (Thread-8): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+
+    describe table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_INT_TO_BOOLEAN"
+2021-12-02 20:49:55.254228 (Thread-5): SQL status: SUCCESS 2 in 0.88 seconds
+2021-12-02 20:49:55.255200 (Thread-4): Snowflake query id: 01a0afc1-0000-5e3b-0000-53b900e70a22
+2021-12-02 20:49:55.263424 (Thread-5): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:49:55.265372 (Thread-4): Snowflake error: 002108 (22000): SQL compilation error: cannot change column COLUMN_BOOLEAN_TO_STRING from type BOOLEAN to VARCHAR(5)
+
+2021-12-02 20:49:55.267862 (Thread-1): SQL status: SUCCESS 4 in 0.90 seconds
+2021-12-02 20:49:55.268438 (Thread-5): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+
+    describe table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_FLOAT_TO_BOOLEAN"
+2021-12-02 20:49:55.270197 (Thread-4): finished collecting timing info
+2021-12-02 20:49:55.275919 (Thread-1): Using snowflake connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:49:55.279838 (Thread-4): On model.incremental_test_schema_change.convert_column_boolean_to_string: Close
+2021-12-02 20:49:55.281842 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+
+    describe table "AIRBYTE_DATABASE"."TEST_DBT"."CHANGE_COLUMN_NAMES"
+2021-12-02 20:49:55.339425 (Thread-11): SQL status: SUCCESS 2 in 0.87 seconds
+2021-12-02 20:49:55.344691 (Thread-11): 
+    In "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_STRING_TO_BOOLEAN":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'COLUMN_STRING_TO_BOOLEAN', 'new_type': 'BOOLEAN'}]
+  
+2021-12-02 20:49:55.347582 (Thread-11): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_boolean".
+2021-12-02 20:49:55.349135 (Thread-11): On model.incremental_test_schema_change.convert_column_string_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_boolean"} */
+
+    alter table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_STRING_TO_BOOLEAN" alter "COLUMN_STRING_TO_BOOLEAN" set data type BOOLEAN;
+2021-12-02 20:49:55.504736 (Thread-13): Snowflake query id: 01a0afc1-0000-5e3b-0000-53b900e70a26
+2021-12-02 20:49:55.507377 (Thread-13): Snowflake error: 002108 (22000): SQL compilation error: cannot change column COLUMN_STRING_TO_INT from type VARCHAR(1) to NUMBER(1,0)
+
+2021-12-02 20:49:55.509549 (Thread-13): finished collecting timing info
+2021-12-02 20:49:55.511454 (Thread-13): On model.incremental_test_schema_change.convert_column_string_to_int: Close
+2021-12-02 20:49:55.693163 (Thread-2): SQL status: SUCCESS 2 in 0.89 seconds
+2021-12-02 20:49:55.698432 (Thread-2): 
+    In "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_BOOLEAN_TO_FLOAT":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'COLUMN_BOOLEAN_TO_FLOAT', 'new_type': 'NUMBER(2,1)'}]
+  
+2021-12-02 20:49:55.700943 (Thread-2): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_float".
+2021-12-02 20:49:55.702501 (Thread-2): On model.incremental_test_schema_change.convert_column_boolean_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_float"} */
+
+    alter table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_BOOLEAN_TO_FLOAT" alter "COLUMN_BOOLEAN_TO_FLOAT" set data type NUMBER(2,1);
+2021-12-02 20:49:55.850213 (Thread-9): SQL status: SUCCESS 2 in 0.92 seconds
+2021-12-02 20:49:55.854906 (Thread-9): 
+    In "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_INT_TO_FLOAT":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'COLUMN_INT_TO_FLOAT', 'new_type': 'NUMBER(2,1)'}]
+  
+2021-12-02 20:49:55.857875 (Thread-9): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_float".
+2021-12-02 20:49:55.859842 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_float"} */
+
+    alter table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_INT_TO_FLOAT" alter "COLUMN_INT_TO_FLOAT" set data type NUMBER(2,1);
+2021-12-02 20:49:55.993829 (Thread-7): SQL status: SUCCESS 2 in 0.91 seconds
+2021-12-02 20:49:56.000956 (Thread-7): 
+    In "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_FLOAT_TO_STRING":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'COLUMN_FLOAT_TO_STRING', 'new_type': 'character varying(3)'}]
+  
+2021-12-02 20:49:56.003662 (Thread-7): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_string".
+2021-12-02 20:49:56.005980 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_string"} */
+
+    alter table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_FLOAT_TO_STRING" alter "COLUMN_FLOAT_TO_STRING" set data type character varying(3);
+2021-12-02 20:49:56.007426 (Thread-12): SQL status: SUCCESS 2 in 0.92 seconds
+2021-12-02 20:49:56.012598 (Thread-3): SQL status: SUCCESS 2 in 0.90 seconds
+2021-12-02 20:49:56.015957 (Thread-12): 
+    In "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_STRING_TO_FLOAT":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'COLUMN_STRING_TO_FLOAT', 'new_type': 'NUMBER(2,1)'}]
+  
+2021-12-02 20:49:56.019811 (Thread-3): 
+    In "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_BOOLEAN_TO_INT":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'COLUMN_BOOLEAN_TO_INT', 'new_type': 'NUMBER(1,0)'}]
+  
+2021-12-02 20:49:56.022672 (Thread-12): Using snowflake connection "model.incremental_test_schema_change.convert_column_string_to_float".
+2021-12-02 20:49:56.025032 (Thread-3): Using snowflake connection "model.incremental_test_schema_change.convert_column_boolean_to_int".
+2021-12-02 20:49:56.026778 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_float: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_string_to_float"} */
+
+    alter table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_STRING_TO_FLOAT" alter "COLUMN_STRING_TO_FLOAT" set data type NUMBER(2,1);
+2021-12-02 20:49:56.029397 (Thread-10): SQL status: SUCCESS 2 in 0.91 seconds
+2021-12-02 20:49:56.029590 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_int: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_boolean_to_int"} */
+
+    alter table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_BOOLEAN_TO_INT" alter "COLUMN_BOOLEAN_TO_INT" set data type NUMBER(1,0);
+2021-12-02 20:49:56.036405 (Thread-10): 
+    In "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_INT_TO_STRING":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'COLUMN_INT_TO_STRING', 'new_type': 'character varying(1)'}]
+  
+2021-12-02 20:49:56.042742 (Thread-10): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_string".
+2021-12-02 20:49:56.044199 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_string"} */
+
+    alter table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_INT_TO_STRING" alter "COLUMN_INT_TO_STRING" set data type character varying(1);
+2021-12-02 20:49:56.168581 (Thread-8): SQL status: SUCCESS 2 in 0.91 seconds
+2021-12-02 20:49:56.173728 (Thread-8): 
+    In "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_INT_TO_BOOLEAN":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'COLUMN_INT_TO_BOOLEAN', 'new_type': 'BOOLEAN'}]
+  
+2021-12-02 20:49:56.176111 (Thread-8): Using snowflake connection "model.incremental_test_schema_change.convert_column_int_to_boolean".
+2021-12-02 20:49:56.178087 (Thread-8): On model.incremental_test_schema_change.convert_column_int_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_int_to_boolean"} */
+
+    alter table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_INT_TO_BOOLEAN" alter "COLUMN_INT_TO_BOOLEAN" set data type BOOLEAN;
+2021-12-02 20:49:56.186150 (Thread-5): SQL status: SUCCESS 2 in 0.91 seconds
+2021-12-02 20:49:56.189868 (Thread-5): 
+    In "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_FLOAT_TO_BOOLEAN":
+        Schema changed: True
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: [{'column_name': 'COLUMN_FLOAT_TO_BOOLEAN', 'new_type': 'BOOLEAN'}]
+  
+2021-12-02 20:49:56.192266 (Thread-1): SQL status: SUCCESS 4 in 0.90 seconds
+2021-12-02 20:49:56.193347 (Thread-5): Using snowflake connection "model.incremental_test_schema_change.convert_column_float_to_boolean".
+2021-12-02 20:49:56.197763 (Thread-1): 
+    In "AIRBYTE_DATABASE"."TEST_DBT"."CHANGE_COLUMN_NAMES":
+        Schema changed: True
+        Source columns not in target: [SnowflakeColumn(column='new column name', dtype='VARCHAR', char_size=31, numeric_precision=None, numeric_scale=None), SnowflakeColumn(column='RENAMED_COLUMN', dtype='VARCHAR', char_size=16, numeric_precision=None, numeric_scale=None), SnowflakeColumn(column='NEW_COLUMN', dtype='VARCHAR', char_size=21, numeric_precision=None, numeric_scale=None)]
+        Target columns not in source: [SnowflakeColumn(column='COLUMN_NAME', dtype='VARCHAR', char_size=24, numeric_precision=None, numeric_scale=None), SnowflakeColumn(column='COLUMN_TO_RENAME', dtype='VARCHAR', char_size=18, numeric_precision=None, numeric_scale=None), SnowflakeColumn(column='COLUMN_TO_DELETE', dtype='VARCHAR', char_size=22, numeric_precision=None, numeric_scale=None)]
+        New column types: []
+  
+2021-12-02 20:49:56.199637 (Thread-5): On model.incremental_test_schema_change.convert_column_float_to_boolean: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.convert_column_float_to_boolean"} */
+
+    alter table "AIRBYTE_DATABASE"."TEST_DBT"."CONVERT_COLUMN_FLOAT_TO_BOOLEAN" alter "COLUMN_FLOAT_TO_BOOLEAN" set data type BOOLEAN;
+2021-12-02 20:49:56.214248 (Thread-1): Using snowflake connection "model.incremental_test_schema_change.change_column_names".
+2021-12-02 20:49:56.217759 (Thread-1): On model.incremental_test_schema_change.change_column_names: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "tests", "target_name": "prod", "node_id": "model.incremental_test_schema_change.change_column_names"} */
+
+    alter table "AIRBYTE_DATABASE"."TEST_DBT"."CHANGE_COLUMN_NAMES" add column
+          
+            new column name character varying(31),
+          
+            RENAMED_COLUMN character varying(16),
+          
+            NEW_COLUMN character varying(21)
+2021-12-02 20:49:56.286160 (Thread-11): Snowflake query id: 01a0afc1-0000-5e39-0000-53b900e71a6a
+2021-12-02 20:49:56.288685 (Thread-11): Snowflake error: 002108 (22000): SQL compilation error: cannot change column COLUMN_STRING_TO_BOOLEAN from type VARCHAR(4) to BOOLEAN
+
+2021-12-02 20:49:56.291386 (Thread-11): finished collecting timing info
+2021-12-02 20:49:56.293212 (Thread-11): On model.incremental_test_schema_change.convert_column_string_to_boolean: Close
+2021-12-02 20:49:56.612629 (Thread-2): Snowflake query id: 01a0afc1-0000-5e3b-0000-53b900e70a36
+2021-12-02 20:49:56.614922 (Thread-2): Snowflake error: 002108 (22000): SQL compilation error: cannot change column COLUMN_BOOLEAN_TO_FLOAT from type BOOLEAN to NUMBER(2,1)
+
+2021-12-02 20:49:56.617652 (Thread-2): finished collecting timing info
+2021-12-02 20:49:56.619728 (Thread-2): On model.incremental_test_schema_change.convert_column_boolean_to_float: Close
+2021-12-02 20:49:56.806814 (Thread-9): Snowflake query id: 01a0afc1-0000-5e39-0000-53b900e71a6e
+2021-12-02 20:49:56.809366 (Thread-9): Snowflake error: 040052 (22000): SQL compilation error: cannot change column COLUMN_INT_TO_FLOAT from type NUMBER(1,0) to NUMBER(2,1) because changing the scale of a number is not supported.
+
+2021-12-02 20:49:56.811899 (Thread-9): finished collecting timing info
+2021-12-02 20:49:56.814543 (Thread-9): On model.incremental_test_schema_change.convert_column_int_to_float: Close
+2021-12-02 20:49:56.890995 (Thread-6): Database Error in model convert_column_float_to_int (models/change_column_types/convert_column_float_to_int.sql)
+  040052 (22000): SQL compilation error: cannot change column COLUMN_FLOAT_TO_INT from type NUMBER(2,1) to NUMBER(1,0) because changing the scale of a number is not supported.
+  
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 183, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/cursor.py", line 721, in execute
+    Error.errorhandler_wrapper(
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 258, in errorhandler_wrapper
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 188, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 040052 (22000): SQL compilation error: cannot change column COLUMN_FLOAT_TO_INT from type NUMBER(2,1) to NUMBER(1,0) because changing the scale of a number is not supported.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 105, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 37, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 354, in add_query
+    connection, cursor = super().add_query(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 200, in exception_handler
+    raise DatabaseException(msg)
+dbt.exceptions.DatabaseException: Database Error in model convert_column_float_to_int (models/change_column_types/convert_column_float_to_int.sql)
+  040052 (22000): SQL compilation error: cannot change column COLUMN_FLOAT_TO_INT from type NUMBER(2,1) to NUMBER(1,0) because changing the scale of a number is not supported.
+2021-12-02 20:49:56.895985 (Thread-6): 20:49:56 | 6 of 13 ERROR creating incremental model TEST_DBT.convert_column_float_to_int................................ [ERROR in 13.29s]
+2021-12-02 20:49:56.898605 (Thread-6): Finished running node model.incremental_test_schema_change.convert_column_float_to_int
+2021-12-02 20:49:56.932404 (Thread-7): Snowflake query id: 01a0afc1-0000-5e3b-0000-53b900e70a3a
+2021-12-02 20:49:56.934990 (Thread-7): Snowflake error: 002108 (22000): SQL compilation error: cannot change column COLUMN_FLOAT_TO_STRING from type NUMBER(2,1) to VARCHAR(3)
+
+2021-12-02 20:49:56.937749 (Thread-7): finished collecting timing info
+2021-12-02 20:49:56.939746 (Thread-7): On model.incremental_test_schema_change.convert_column_float_to_string: Close
+2021-12-02 20:49:56.951217 (Thread-12): Snowflake query id: 01a0afc1-0000-5e39-0000-53b900e71a72
+2021-12-02 20:49:56.951897 (Thread-10): Snowflake query id: 01a0afc1-0000-5e3b-0000-53b900e70a3e
+2021-12-02 20:49:56.953059 (Thread-12): Snowflake error: 002108 (22000): SQL compilation error: cannot change column COLUMN_STRING_TO_FLOAT from type VARCHAR(3) to NUMBER(2,1)
+
+2021-12-02 20:49:56.954945 (Thread-10): Snowflake error: 002108 (22000): SQL compilation error: cannot change column COLUMN_INT_TO_STRING from type NUMBER(1,0) to VARCHAR(1)
+
+2021-12-02 20:49:56.956734 (Thread-12): finished collecting timing info
+2021-12-02 20:49:56.958391 (Thread-10): finished collecting timing info
+2021-12-02 20:49:56.960149 (Thread-12): On model.incremental_test_schema_change.convert_column_string_to_float: Close
+2021-12-02 20:49:56.961747 (Thread-10): On model.incremental_test_schema_change.convert_column_int_to_string: Close
+2021-12-02 20:49:56.982024 (Thread-3): Snowflake query id: 01a0afc1-0000-5e39-0000-53b900e71a76
+2021-12-02 20:49:56.983988 (Thread-3): Snowflake error: 002108 (22000): SQL compilation error: cannot change column COLUMN_BOOLEAN_TO_INT from type BOOLEAN to NUMBER(1,0)
+
+2021-12-02 20:49:56.985623 (Thread-3): finished collecting timing info
+2021-12-02 20:49:56.987204 (Thread-3): On model.incremental_test_schema_change.convert_column_boolean_to_int: Close
+2021-12-02 20:49:57.039065 (Thread-4): Database Error in model convert_column_boolean_to_string (models/change_column_types/convert_column_boolean_to_string.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_BOOLEAN_TO_STRING from type BOOLEAN to VARCHAR(5)
+  
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 183, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/cursor.py", line 721, in execute
+    Error.errorhandler_wrapper(
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 258, in errorhandler_wrapper
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 188, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 002108 (22000): SQL compilation error: cannot change column COLUMN_BOOLEAN_TO_STRING from type BOOLEAN to VARCHAR(5)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 105, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 37, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 354, in add_query
+    connection, cursor = super().add_query(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 200, in exception_handler
+    raise DatabaseException(msg)
+dbt.exceptions.DatabaseException: Database Error in model convert_column_boolean_to_string (models/change_column_types/convert_column_boolean_to_string.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_BOOLEAN_TO_STRING from type BOOLEAN to VARCHAR(5)
+2021-12-02 20:49:57.044038 (Thread-4): 20:49:57 | 4 of 13 ERROR creating incremental model TEST_DBT.convert_column_boolean_to_string........................... [ERROR in 13.44s]
+2021-12-02 20:49:57.046171 (Thread-4): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_string
+2021-12-02 20:49:57.096355 (Thread-8): Snowflake query id: 01a0afc1-0000-5e39-0000-53b900e71a7a
+2021-12-02 20:49:57.099470 (Thread-8): Snowflake error: 002108 (22000): SQL compilation error: cannot change column COLUMN_INT_TO_BOOLEAN from type NUMBER(1,0) to BOOLEAN
+
+2021-12-02 20:49:57.101665 (Thread-8): finished collecting timing info
+2021-12-02 20:49:57.103234 (Thread-8): On model.incremental_test_schema_change.convert_column_int_to_boolean: Close
+2021-12-02 20:49:57.110683 (Thread-1): Snowflake query id: 01a0afc1-0000-5e3b-0000-53b900e70a42
+2021-12-02 20:49:57.112645 (Thread-1): Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 3 at position 16 unexpected 'column'.
+2021-12-02 20:49:57.114613 (Thread-1): finished collecting timing info
+2021-12-02 20:49:57.116150 (Thread-1): On model.incremental_test_schema_change.change_column_names: Close
+2021-12-02 20:49:57.131040 (Thread-5): Snowflake query id: 01a0afc1-0000-5e39-0000-53b900e71a7e
+2021-12-02 20:49:57.132688 (Thread-5): Snowflake error: 002108 (22000): SQL compilation error: cannot change column COLUMN_FLOAT_TO_BOOLEAN from type NUMBER(2,1) to BOOLEAN
+
+2021-12-02 20:49:57.134197 (Thread-5): finished collecting timing info
+2021-12-02 20:49:57.135752 (Thread-5): On model.incremental_test_schema_change.convert_column_float_to_boolean: Close
+2021-12-02 20:49:57.342221 (Thread-13): Database Error in model convert_column_string_to_int (models/change_column_types/convert_column_string_to_int.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_STRING_TO_INT from type VARCHAR(1) to NUMBER(1,0)
+  
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 183, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/cursor.py", line 721, in execute
+    Error.errorhandler_wrapper(
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 258, in errorhandler_wrapper
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 188, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 002108 (22000): SQL compilation error: cannot change column COLUMN_STRING_TO_INT from type VARCHAR(1) to NUMBER(1,0)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 105, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 37, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 354, in add_query
+    connection, cursor = super().add_query(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 200, in exception_handler
+    raise DatabaseException(msg)
+dbt.exceptions.DatabaseException: Database Error in model convert_column_string_to_int (models/change_column_types/convert_column_string_to_int.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_STRING_TO_INT from type VARCHAR(1) to NUMBER(1,0)
+2021-12-02 20:49:57.346830 (Thread-13): 20:49:57 | 13 of 13 ERROR creating incremental model TEST_DBT.convert_column_string_to_int.............................. [ERROR in 13.72s]
+2021-12-02 20:49:57.348604 (Thread-13): Finished running node model.incremental_test_schema_change.convert_column_string_to_int
+2021-12-02 20:49:58.096583 (Thread-11): Database Error in model convert_column_string_to_boolean (models/change_column_types/convert_column_string_to_boolean.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_STRING_TO_BOOLEAN from type VARCHAR(4) to BOOLEAN
+  
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 183, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/cursor.py", line 721, in execute
+    Error.errorhandler_wrapper(
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 258, in errorhandler_wrapper
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 188, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 002108 (22000): SQL compilation error: cannot change column COLUMN_STRING_TO_BOOLEAN from type VARCHAR(4) to BOOLEAN
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 105, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 37, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 354, in add_query
+    connection, cursor = super().add_query(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 200, in exception_handler
+    raise DatabaseException(msg)
+dbt.exceptions.DatabaseException: Database Error in model convert_column_string_to_boolean (models/change_column_types/convert_column_string_to_boolean.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_STRING_TO_BOOLEAN from type VARCHAR(4) to BOOLEAN
+2021-12-02 20:49:58.101146 (Thread-11): 20:49:58 | 11 of 13 ERROR creating incremental model TEST_DBT.convert_column_string_to_boolean.......................... [ERROR in 14.48s]
+2021-12-02 20:49:58.103064 (Thread-11): Finished running node model.incremental_test_schema_change.convert_column_string_to_boolean
+2021-12-02 20:49:58.361586 (Thread-2): Database Error in model convert_column_boolean_to_float (models/change_column_types/convert_column_boolean_to_float.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_BOOLEAN_TO_FLOAT from type BOOLEAN to NUMBER(2,1)
+  
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 183, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/cursor.py", line 721, in execute
+    Error.errorhandler_wrapper(
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 258, in errorhandler_wrapper
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 188, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 002108 (22000): SQL compilation error: cannot change column COLUMN_BOOLEAN_TO_FLOAT from type BOOLEAN to NUMBER(2,1)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 105, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 37, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 354, in add_query
+    connection, cursor = super().add_query(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 200, in exception_handler
+    raise DatabaseException(msg)
+dbt.exceptions.DatabaseException: Database Error in model convert_column_boolean_to_float (models/change_column_types/convert_column_boolean_to_float.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_BOOLEAN_TO_FLOAT from type BOOLEAN to NUMBER(2,1)
+2021-12-02 20:49:58.365984 (Thread-2): 20:49:58 | 2 of 13 ERROR creating incremental model TEST_DBT.convert_column_boolean_to_float............................ [ERROR in 14.76s]
+2021-12-02 20:49:58.367975 (Thread-2): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_float
+2021-12-02 20:49:58.515891 (Thread-9): Database Error in model convert_column_int_to_float (models/change_column_types/convert_column_int_to_float.sql)
+  040052 (22000): SQL compilation error: cannot change column COLUMN_INT_TO_FLOAT from type NUMBER(1,0) to NUMBER(2,1) because changing the scale of a number is not supported.
+  
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 183, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/cursor.py", line 721, in execute
+    Error.errorhandler_wrapper(
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 258, in errorhandler_wrapper
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 188, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 040052 (22000): SQL compilation error: cannot change column COLUMN_INT_TO_FLOAT from type NUMBER(1,0) to NUMBER(2,1) because changing the scale of a number is not supported.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 105, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 37, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 354, in add_query
+    connection, cursor = super().add_query(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 200, in exception_handler
+    raise DatabaseException(msg)
+dbt.exceptions.DatabaseException: Database Error in model convert_column_int_to_float (models/change_column_types/convert_column_int_to_float.sql)
+  040052 (22000): SQL compilation error: cannot change column COLUMN_INT_TO_FLOAT from type NUMBER(1,0) to NUMBER(2,1) because changing the scale of a number is not supported.
+2021-12-02 20:49:58.521431 (Thread-9): 20:49:58 | 9 of 13 ERROR creating incremental model TEST_DBT.convert_column_int_to_float................................ [ERROR in 14.91s]
+2021-12-02 20:49:58.523698 (Thread-9): Finished running node model.incremental_test_schema_change.convert_column_int_to_float
+2021-12-02 20:49:58.627157 (Thread-7): Database Error in model convert_column_float_to_string (models/change_column_types/convert_column_float_to_string.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_FLOAT_TO_STRING from type NUMBER(2,1) to VARCHAR(3)
+  
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 183, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/cursor.py", line 721, in execute
+    Error.errorhandler_wrapper(
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 258, in errorhandler_wrapper
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 188, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 002108 (22000): SQL compilation error: cannot change column COLUMN_FLOAT_TO_STRING from type NUMBER(2,1) to VARCHAR(3)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 105, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 37, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 354, in add_query
+    connection, cursor = super().add_query(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 200, in exception_handler
+    raise DatabaseException(msg)
+dbt.exceptions.DatabaseException: Database Error in model convert_column_float_to_string (models/change_column_types/convert_column_float_to_string.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_FLOAT_TO_STRING from type NUMBER(2,1) to VARCHAR(3)
+2021-12-02 20:49:58.631809 (Thread-12): Database Error in model convert_column_string_to_float (models/change_column_types/convert_column_string_to_float.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_STRING_TO_FLOAT from type VARCHAR(3) to NUMBER(2,1)
+  
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 183, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/cursor.py", line 721, in execute
+    Error.errorhandler_wrapper(
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 258, in errorhandler_wrapper
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 188, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 002108 (22000): SQL compilation error: cannot change column COLUMN_STRING_TO_FLOAT from type VARCHAR(3) to NUMBER(2,1)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 105, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 37, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 354, in add_query
+    connection, cursor = super().add_query(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 200, in exception_handler
+    raise DatabaseException(msg)
+dbt.exceptions.DatabaseException: Database Error in model convert_column_string_to_float (models/change_column_types/convert_column_string_to_float.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_STRING_TO_FLOAT from type VARCHAR(3) to NUMBER(2,1)
+2021-12-02 20:49:58.636020 (Thread-7): 20:49:58 | 7 of 13 ERROR creating incremental model TEST_DBT.convert_column_float_to_string............................. [ERROR in 15.05s]
+2021-12-02 20:49:58.638875 (Thread-12): 20:49:58 | 12 of 13 ERROR creating incremental model TEST_DBT.convert_column_string_to_float............................ [ERROR in 15.02s]
+2021-12-02 20:49:58.640707 (Thread-7): Finished running node model.incremental_test_schema_change.convert_column_float_to_string
+2021-12-02 20:49:58.642789 (Thread-12): Finished running node model.incremental_test_schema_change.convert_column_string_to_float
+2021-12-02 20:49:58.650702 (Thread-3): Database Error in model convert_column_boolean_to_int (models/change_column_types/convert_column_boolean_to_int.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_BOOLEAN_TO_INT from type BOOLEAN to NUMBER(1,0)
+  
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 183, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/cursor.py", line 721, in execute
+    Error.errorhandler_wrapper(
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 258, in errorhandler_wrapper
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 188, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 002108 (22000): SQL compilation error: cannot change column COLUMN_BOOLEAN_TO_INT from type BOOLEAN to NUMBER(1,0)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 105, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 37, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 354, in add_query
+    connection, cursor = super().add_query(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 200, in exception_handler
+    raise DatabaseException(msg)
+dbt.exceptions.DatabaseException: Database Error in model convert_column_boolean_to_int (models/change_column_types/convert_column_boolean_to_int.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_BOOLEAN_TO_INT from type BOOLEAN to NUMBER(1,0)
+2021-12-02 20:49:58.654511 (Thread-3): 20:49:58 | 3 of 13 ERROR creating incremental model TEST_DBT.convert_column_boolean_to_int.............................. [ERROR in 15.06s]
+2021-12-02 20:49:58.656331 (Thread-3): Finished running node model.incremental_test_schema_change.convert_column_boolean_to_int
+2021-12-02 20:49:58.682657 (Thread-10): Database Error in model convert_column_int_to_string (models/change_column_types/convert_column_int_to_string.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_INT_TO_STRING from type NUMBER(1,0) to VARCHAR(1)
+  
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 183, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/cursor.py", line 721, in execute
+    Error.errorhandler_wrapper(
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 258, in errorhandler_wrapper
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 188, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 002108 (22000): SQL compilation error: cannot change column COLUMN_INT_TO_STRING from type NUMBER(1,0) to VARCHAR(1)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 105, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 37, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 354, in add_query
+    connection, cursor = super().add_query(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 200, in exception_handler
+    raise DatabaseException(msg)
+dbt.exceptions.DatabaseException: Database Error in model convert_column_int_to_string (models/change_column_types/convert_column_int_to_string.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_INT_TO_STRING from type NUMBER(1,0) to VARCHAR(1)
+2021-12-02 20:49:58.686522 (Thread-10): 20:49:58 | 10 of 13 ERROR creating incremental model TEST_DBT.convert_column_int_to_string.............................. [ERROR in 15.07s]
+2021-12-02 20:49:58.687978 (Thread-10): Finished running node model.incremental_test_schema_change.convert_column_int_to_string
+2021-12-02 20:49:58.782620 (Thread-5): Database Error in model convert_column_float_to_boolean (models/change_column_types/convert_column_float_to_boolean.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_FLOAT_TO_BOOLEAN from type NUMBER(2,1) to BOOLEAN
+  
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 183, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/cursor.py", line 721, in execute
+    Error.errorhandler_wrapper(
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 258, in errorhandler_wrapper
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 188, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 002108 (22000): SQL compilation error: cannot change column COLUMN_FLOAT_TO_BOOLEAN from type NUMBER(2,1) to BOOLEAN
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 105, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 37, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 354, in add_query
+    connection, cursor = super().add_query(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 200, in exception_handler
+    raise DatabaseException(msg)
+dbt.exceptions.DatabaseException: Database Error in model convert_column_float_to_boolean (models/change_column_types/convert_column_float_to_boolean.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_FLOAT_TO_BOOLEAN from type NUMBER(2,1) to BOOLEAN
+2021-12-02 20:49:58.787042 (Thread-8): Database Error in model convert_column_int_to_boolean (models/change_column_types/convert_column_int_to_boolean.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_INT_TO_BOOLEAN from type NUMBER(1,0) to BOOLEAN
+  
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 183, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/cursor.py", line 721, in execute
+    Error.errorhandler_wrapper(
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 258, in errorhandler_wrapper
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 188, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 002108 (22000): SQL compilation error: cannot change column COLUMN_INT_TO_BOOLEAN from type NUMBER(1,0) to BOOLEAN
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 105, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 37, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 354, in add_query
+    connection, cursor = super().add_query(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 200, in exception_handler
+    raise DatabaseException(msg)
+dbt.exceptions.DatabaseException: Database Error in model convert_column_int_to_boolean (models/change_column_types/convert_column_int_to_boolean.sql)
+  002108 (22000): SQL compilation error: cannot change column COLUMN_INT_TO_BOOLEAN from type NUMBER(1,0) to BOOLEAN
+2021-12-02 20:49:58.788519 (Thread-5): 20:49:58 | 5 of 13 ERROR creating incremental model TEST_DBT.convert_column_float_to_boolean............................ [ERROR in 15.19s]
+2021-12-02 20:49:58.792547 (Thread-1): Database Error in model change_column_names (models/change_column_names.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 3 at position 16 unexpected 'column'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 183, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/cursor.py", line 721, in execute
+    Error.errorhandler_wrapper(
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 258, in errorhandler_wrapper
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/usr/local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 188, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 001003 (42000): SQL compilation error:
+syntax error line 3 at position 16 unexpected 'column'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 105, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 39, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 24, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 53, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 33, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 354, in add_query
+    connection, cursor = super().add_query(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/snowflake/connections.py", line 200, in exception_handler
+    raise DatabaseException(msg)
+dbt.exceptions.DatabaseException: Database Error in model change_column_names (models/change_column_names.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 3 at position 16 unexpected 'column'.
+2021-12-02 20:49:58.794383 (Thread-8): 20:49:58 | 8 of 13 ERROR creating incremental model TEST_DBT.convert_column_int_to_boolean.............................. [ERROR in 15.18s]
+2021-12-02 20:49:58.800853 (Thread-8): Finished running node model.incremental_test_schema_change.convert_column_int_to_boolean
+2021-12-02 20:49:58.799249 (Thread-1): 20:49:58 | 1 of 13 ERROR creating incremental model TEST_DBT.change_column_names........................................ [ERROR in 15.23s]
+2021-12-02 20:49:58.796141 (Thread-5): Finished running node model.incremental_test_schema_change.convert_column_float_to_boolean
+2021-12-02 20:49:58.804996 (Thread-1): Finished running node model.incremental_test_schema_change.change_column_names
+2021-12-02 20:49:58.814781 (MainThread): Acquiring new snowflake connection "master".
+2021-12-02 20:49:58.816876 (MainThread): 20:49:58 | 
+2021-12-02 20:49:58.818563 (MainThread): 20:49:58 | Finished running 13 incremental models in 34.50s.
+2021-12-02 20:49:58.820578 (MainThread): Connection 'master' was properly closed.
+2021-12-02 20:49:58.823746 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_float' was properly closed.
+2021-12-02 20:49:58.826025 (MainThread): Connection 'model.incremental_test_schema_change.change_column_names' was properly closed.
+2021-12-02 20:49:58.828634 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_string' was properly closed.
+2021-12-02 20:49:58.830865 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_int' was properly closed.
+2021-12-02 20:49:58.833397 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_boolean_to_string' was properly closed.
+2021-12-02 20:49:58.835636 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_boolean' was properly closed.
+2021-12-02 20:49:58.837369 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_float_to_int' was properly closed.
+2021-12-02 20:49:58.838798 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_boolean' was properly closed.
+2021-12-02 20:49:58.840225 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_float' was properly closed.
+2021-12-02 20:49:58.841764 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_int_to_string' was properly closed.
+2021-12-02 20:49:58.843472 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_boolean' was properly closed.
+2021-12-02 20:49:58.844974 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_float' was properly closed.
+2021-12-02 20:49:58.846610 (MainThread): Connection 'model.incremental_test_schema_change.convert_column_string_to_int' was properly closed.
+2021-12-02 20:49:58.862586 (MainThread): 
+2021-12-02 20:49:58.864333 (MainThread): Completed with 13 errors and 0 warnings:
+2021-12-02 20:49:58.866242 (MainThread): 
+2021-12-02 20:49:58.867872 (MainThread): Database Error in model convert_column_float_to_int (models/change_column_types/convert_column_float_to_int.sql)
+2021-12-02 20:49:58.869079 (MainThread):   040052 (22000): SQL compilation error: cannot change column COLUMN_FLOAT_TO_INT from type NUMBER(2,1) to NUMBER(1,0) because changing the scale of a number is not supported.
+2021-12-02 20:49:58.870627 (MainThread):   
+2021-12-02 20:49:58.871989 (MainThread): 
+2021-12-02 20:49:58.873565 (MainThread): Database Error in model convert_column_boolean_to_string (models/change_column_types/convert_column_boolean_to_string.sql)
+2021-12-02 20:49:58.874996 (MainThread):   002108 (22000): SQL compilation error: cannot change column COLUMN_BOOLEAN_TO_STRING from type BOOLEAN to VARCHAR(5)
+2021-12-02 20:49:58.876699 (MainThread):   
+2021-12-02 20:49:58.878422 (MainThread): 
+2021-12-02 20:49:58.879875 (MainThread): Database Error in model convert_column_string_to_int (models/change_column_types/convert_column_string_to_int.sql)
+2021-12-02 20:49:58.881346 (MainThread):   002108 (22000): SQL compilation error: cannot change column COLUMN_STRING_TO_INT from type VARCHAR(1) to NUMBER(1,0)
+2021-12-02 20:49:58.882826 (MainThread):   
+2021-12-02 20:49:58.884442 (MainThread): 
+2021-12-02 20:49:58.886055 (MainThread): Database Error in model convert_column_string_to_boolean (models/change_column_types/convert_column_string_to_boolean.sql)
+2021-12-02 20:49:58.887666 (MainThread):   002108 (22000): SQL compilation error: cannot change column COLUMN_STRING_TO_BOOLEAN from type VARCHAR(4) to BOOLEAN
+2021-12-02 20:49:58.889122 (MainThread):   
+2021-12-02 20:49:58.890662 (MainThread): 
+2021-12-02 20:49:58.891997 (MainThread): Database Error in model convert_column_boolean_to_float (models/change_column_types/convert_column_boolean_to_float.sql)
+2021-12-02 20:49:58.893636 (MainThread):   002108 (22000): SQL compilation error: cannot change column COLUMN_BOOLEAN_TO_FLOAT from type BOOLEAN to NUMBER(2,1)
+2021-12-02 20:49:58.895042 (MainThread):   
+2021-12-02 20:49:58.896378 (MainThread): 
+2021-12-02 20:49:58.898553 (MainThread): Database Error in model convert_column_int_to_float (models/change_column_types/convert_column_int_to_float.sql)
+2021-12-02 20:49:58.899943 (MainThread):   040052 (22000): SQL compilation error: cannot change column COLUMN_INT_TO_FLOAT from type NUMBER(1,0) to NUMBER(2,1) because changing the scale of a number is not supported.
+2021-12-02 20:49:58.901436 (MainThread):   
+2021-12-02 20:49:58.902772 (MainThread): 
+2021-12-02 20:49:58.904259 (MainThread): Database Error in model convert_column_float_to_string (models/change_column_types/convert_column_float_to_string.sql)
+2021-12-02 20:49:58.905834 (MainThread):   002108 (22000): SQL compilation error: cannot change column COLUMN_FLOAT_TO_STRING from type NUMBER(2,1) to VARCHAR(3)
+2021-12-02 20:49:58.907253 (MainThread):   
+2021-12-02 20:49:58.908555 (MainThread): 
+2021-12-02 20:49:58.910040 (MainThread): Database Error in model convert_column_string_to_float (models/change_column_types/convert_column_string_to_float.sql)
+2021-12-02 20:49:58.911448 (MainThread):   002108 (22000): SQL compilation error: cannot change column COLUMN_STRING_TO_FLOAT from type VARCHAR(3) to NUMBER(2,1)
+2021-12-02 20:49:58.912876 (MainThread):   
+2021-12-02 20:49:58.914227 (MainThread): 
+2021-12-02 20:49:58.916083 (MainThread): Database Error in model convert_column_boolean_to_int (models/change_column_types/convert_column_boolean_to_int.sql)
+2021-12-02 20:49:58.917670 (MainThread):   002108 (22000): SQL compilation error: cannot change column COLUMN_BOOLEAN_TO_INT from type BOOLEAN to NUMBER(1,0)
+2021-12-02 20:49:58.919406 (MainThread):   
+2021-12-02 20:49:58.920874 (MainThread): 
+2021-12-02 20:49:58.922270 (MainThread): Database Error in model convert_column_int_to_string (models/change_column_types/convert_column_int_to_string.sql)
+2021-12-02 20:49:58.923849 (MainThread):   002108 (22000): SQL compilation error: cannot change column COLUMN_INT_TO_STRING from type NUMBER(1,0) to VARCHAR(1)
+2021-12-02 20:49:58.925407 (MainThread):   
+2021-12-02 20:49:58.926881 (MainThread): 
+2021-12-02 20:49:58.928513 (MainThread): Database Error in model convert_column_int_to_boolean (models/change_column_types/convert_column_int_to_boolean.sql)
+2021-12-02 20:49:58.929952 (MainThread):   002108 (22000): SQL compilation error: cannot change column COLUMN_INT_TO_BOOLEAN from type NUMBER(1,0) to BOOLEAN
+2021-12-02 20:49:58.931428 (MainThread):   
+2021-12-02 20:49:58.932920 (MainThread): 
+2021-12-02 20:49:58.934651 (MainThread): Database Error in model convert_column_float_to_boolean (models/change_column_types/convert_column_float_to_boolean.sql)
+2021-12-02 20:49:58.936114 (MainThread):   002108 (22000): SQL compilation error: cannot change column COLUMN_FLOAT_TO_BOOLEAN from type NUMBER(2,1) to BOOLEAN
+2021-12-02 20:49:58.937628 (MainThread):   
+2021-12-02 20:49:58.939087 (MainThread): 
+2021-12-02 20:49:58.940651 (MainThread): Database Error in model change_column_names (models/change_column_names.sql)
+2021-12-02 20:49:58.942381 (MainThread):   001003 (42000): SQL compilation error:
+2021-12-02 20:49:58.943759 (MainThread):   syntax error line 3 at position 16 unexpected 'column'.
+2021-12-02 20:49:58.953797 (MainThread): 
+Done. PASS=0 WARN=0 ERROR=13 SKIP=0 TOTAL=13
+2021-12-02 20:49:58.955824 (MainThread): Flushing usage events

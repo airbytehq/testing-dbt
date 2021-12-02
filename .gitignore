@@ -2,8 +2,6 @@ db_bigquery/
 db_redshift/
 db_snowflake/
 
+dbt_modules/
+target/
 dbt.log
-*/target/graph.gpickle
-*/target/manifest.json
-*/target/partial_parse.msgpack
-*/target/run_results.json
