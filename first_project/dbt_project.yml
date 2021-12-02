@@ -1,0 +1,21 @@
+name: 'incremental_test_schema_change'
+version: '0.1'
+profile: 'tests'
+config-version: 2
+
+source-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+data-paths: ["data"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets:
+    - "target"
+    - "dbt_modules"
+    - "logs"
+
+models:
+    incremental_test_schema_change:
+        +materialized: incremental
+        +on_schema_change: sync_all_columns
