@@ -28,3 +28,10 @@ For example:
     TARGET_DB=bigquery EXPORT_LOGS=true ./run_tests.sh
 
 For convenience, the script `./run_all_tests.sh` will run and regenerate all dbt.log for all destinations.
+
+## Related GitHub Issues:
+
+- column_with_quotes: https://github.com/dbt-labs/dbt-core/issues/4422
+- change_column_names:
+  - dbt repository: https://github.com/dbt-labs/dbt-core/issues/4423
+  - airbyte repository: https://github.com/airbytehq/airbyte/issues/8240
